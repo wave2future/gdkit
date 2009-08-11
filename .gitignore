@@ -1,0 +1,13 @@
+.DS_S*
+*.swp
+*~.nib
+*~.xib
+build/
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+gdkit.xcodeproj/*.perspective
+gdkit.xcodeproj/*.perspectivev3
+gdkit.xcodeproj/*.pbxuser

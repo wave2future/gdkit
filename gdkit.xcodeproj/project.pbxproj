@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720BF3D102F4A5200FB009B /* Cocoa.framework */; };
+		0720BFE6102F4DC100FB009B /* GDKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720BFE5102F4DC100FB009B /* GDKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720C008102F4FBB00FB009B /* NSFileManager+GDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720C00A102F503500FB009B /* NSFileManager+GDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */; };
+		0720C79A1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720C79B1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */; };
+		0720C7A21031017800FB009B /* GDCarbonEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720C7A01031017800FB009B /* GDCarbonEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720C7A31031017800FB009B /* GDCarbonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720C7A11031017800FB009B /* GDCarbonEvent.m */; };
+		0720C8241031065C00FB009B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720C8231031065C00FB009B /* Carbon.framework */; };
+		0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0720BF38102F4A4700FB009B /* GDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0720BF39102F4A4700FB009B /* GDKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDKit-Info.plist"; sourceTree = "<group>"; };
+		0720BF3D102F4A5200FB009B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0720BFE5102F4DC100FB009B /* GDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDKit.h; sourceTree = "<group>"; };
+		0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GDFileManager.h"; sourceTree = "<group>"; };
+		0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GDFileManager.m"; sourceTree = "<group>"; };
+		0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+WorkspaceAdditions.h"; sourceTree = "<group>"; };
+		0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+WorkspaceAdditions.m"; sourceTree = "<group>"; };
+		0720C7A01031017800FB009B /* GDCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEvent.h; sourceTree = "<group>"; };
+		0720C7A11031017800FB009B /* GDCarbonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEvent.m; sourceTree = "<group>"; };
+		0720C8231031065C00FB009B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+StatusItemAdditions.h"; sourceTree = "<group>"; };
+		0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+StatusItemAdditions.m"; sourceTree = "<group>"; };
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* gdkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gdkit_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0720BF36102F4A4700FB009B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */,
+				0720C8241031065C00FB009B /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0720BF38102F4A4700FB009B /* GDKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0720BF46102F4A8500FB009B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0720BFE5102F4DC100FB009B /* GDKit.h */,
+				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
+				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
+				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
+				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* gdkit */ = {
+			isa = PBXGroup;
+			children = (
+				0720BF46102F4A8500FB009B /* Headers */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				0720BF39102F4A4700FB009B /* GDKit-Info.plist */,
+				0720BF3D102F4A5200FB009B /* Cocoa.framework */,
+			);
+			name = gdkit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
+				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
+				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
+				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0720C8231031065C00FB009B /* Carbon.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* gdkit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0720BF33102F4A4700FB009B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0720BFE6102F4DC100FB009B /* GDKit.h in Headers */,
+				0720C008102F4FBB00FB009B /* NSFileManager+GDFileManager.h in Headers */,
+				0720C79A1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h in Headers */,
+				0720C7A21031017800FB009B /* GDCarbonEvent.h in Headers */,
+				0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0720BF37102F4A4700FB009B /* GDKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0720BF3C102F4A4800FB009B /* Build configuration list for PBXNativeTarget "GDKit" */;
+			buildPhases = (
+				0720BF33102F4A4700FB009B /* Headers */,
+				0720BF34102F4A4700FB009B /* Resources */,
+				0720BF35102F4A4700FB009B /* Sources */,
+				0720BF36102F4A4700FB009B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GDKit;
+			productName = GDKit;
+			productReference = 0720BF38102F4A4700FB009B /* GDKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "gdkit" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* gdkit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0720BF37102F4A4700FB009B /* GDKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0720BF34102F4A4700FB009B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0720BF35102F4A4700FB009B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0720C00A102F503500FB009B /* NSFileManager+GDFileManager.m in Sources */,
+				0720C79B1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m in Sources */,
+				0720C7A31031017800FB009B /* GDCarbonEvent.m in Sources */,
+				0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0720BF3A102F4A4800FB009B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "GDKit-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks/";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GDKit;
+			};
+			name = Debug;
+		};
+		0720BF3B102F4A4800FB009B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "GDKit-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks/";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GDKit;
+				SKIP_INSTALL = YES;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0720BF3C102F4A4800FB009B /* Build configuration list for PBXNativeTarget "GDKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0720BF3A102F4A4800FB009B /* Debug */,
+				0720BF3B102F4A4800FB009B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "gdkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
