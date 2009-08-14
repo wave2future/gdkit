@@ -10,16 +10,13 @@
 
 @implementation NSStatusItem (StatusItemAdditions)
 
-- (NSPoint) getStatusItemPosition:(NSStatusItem *) statusItem {
-	NSView *tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[statusItem length],[[statusItem statusBar] thickness])];
-	[statusItem setView:tmpView];
-	NSRect globalOrigin = [[[statusItem view] window] frame];
+- (NSPoint) position {
+	NSView *tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[self length],[[self statusBar] thickness])];
+	[self setView:tmpView];
+	NSRect globalOrigin = [[[self view] window] frame];
 	//NSLog(@"%g %g",globalOrigin.origin.x, globalOrigin.origin.y);
-	[statusItem setView:NULL];
+	[self setView:NULL];
 	return NSMakePoint(globalOrigin.origin.x,globalOrigin.origin.y);
 }
-
-
-
 
 @end

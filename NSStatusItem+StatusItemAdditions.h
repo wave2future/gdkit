@@ -8,9 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface NSStatusItem (StatusItemAdditions)
 
-- (NSPoint) getStatusItemPosition:(NSStatusItem *) item;
+- (NSPoint) position;
 
 @end

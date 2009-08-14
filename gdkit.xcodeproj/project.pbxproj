@@ -18,6 +18,8 @@
 		0720C8241031065C00FB009B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720C8231031065C00FB009B /* Carbon.framework */; };
 		0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */; };
+		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0720C8231031065C00FB009B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+StatusItemAdditions.h"; sourceTree = "<group>"; };
 		0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+StatusItemAdditions.m"; sourceTree = "<group>"; };
+		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEventManager.h; sourceTree = "<group>"; };
+		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEventManager.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			children = (
 				0720BFE5102F4DC100FB009B /* GDKit.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
+				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
+				078D52B41033A6F10033A770 /* GDCarbonEventManager.m */,
 				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
 				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
@@ -159,6 +165,7 @@
 				0720C79A1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h in Headers */,
 				0720C7A21031017800FB009B /* GDCarbonEvent.h in Headers */,
 				0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */,
+				078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 				0720C79B1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m in Sources */,
 				0720C7A31031017800FB009B /* GDCarbonEvent.m in Sources */,
 				0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */,
+				078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

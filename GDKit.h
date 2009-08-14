@@ -9,4 +9,7 @@
 
 #import "NSFileManager+GDFileManager.h"
 #import "NSWorkspace+WorkspaceAdditions.h"
+#import "NSStatusItem+StatusItemAdditions.h"
+
 #import "GDCarbonEvent.h"
+#import "GDCarbonEventManager.h"

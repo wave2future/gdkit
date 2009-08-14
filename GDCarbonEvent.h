@@ -9,12 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 
-/**
- * handler for callbacks.
- */
-static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,void * userData);
+@class GDCarbonEventManager;
 
-@interface GDCarbonEvent : NSObject {
+typedef enum _GDCarbonEventKind {
+	kGDHotKeyEvent = 1,
+	kGDFuture = 2,
+} GDCarbonEventKind;
+
+@interface GDCarbonEvent : NSObject <NSCoding> {
 	int keyCode;
 	int modifierFlags;
 	id target;
@@ -23,14 +25,20 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,v
 	NSString * notificationName;
 	NSString * sigString;
 	NSDictionary * userInfo;
+	EventHandlerRef eventRef;
+	EventHandlerUPP handlerUPP;
 	EventTypeSpec eventSpec;
 	EventHotKeyRef hotKeyRef;
 	EventHotKeyID hotKeyId;
-	NSString * testID;
+	NSString * keyChar;
+	Boolean isInstalled;
 }
 
--(void) setTestID:(NSString *) s;
--(NSString *) testID;
+/**
+ * An NSString for the actual key char - IE
+ * like "W", or "F", etc.
+ */
+@property (copy) NSString * keyChar;
 
 /**
  * The notifiation name, if this carbon event is posting
@@ -71,18 +79,34 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,v
 @property (retain) NSDictionary * userInfo;
 
 /**
- * Designated creator. Creates a global key carbon event, which calls
- * a selector on a target for you. Passing a pointer to the info you give it
- * (or null).
+ * Initialize this GDCarbonEvent with a coder - 
+ * It only sets up the keyCode, and modifierFlags
+ * from the coder. You need to continue initializing
+ * the object to setup action/target and other
+ * params.
  */
-+ (GDCarbonEvent *) createKeyEvent:(int) key modifierFlags:(int) flags whichCallsAction:(SEL) action onTarget:(id) target withUserInfo:(NSDictionary *) userInfo;
+- (id) initWithCoder:(NSCoder *) coder;
 
 /**
- * Designated creator. Creates a global key carbon evet, which posts
- * a notification to a notification center, using the user info dict
- * ast he user info in the notification.
+ * Writes the keyCode, and modifierFlags to the coder.
+ * It doesn't write anything else in the coder.
  */
-+ (GDCarbonEvent *) createKeyEvent:(int) key modifierFlags:(int) flags whichPostsNotification:(NSString *) notificationName toCenter:(NSNotificationCenter *) center withUserInfo:(NSDictionary *) userInfo;
+- (void) encodeWithCoder:(NSCoder *) coder;
+
+/**
+ * Increments the eventId, this is used as the increment
+ * has to be synchronized
+ */
+- (void) incrementEventId;
+
+/**
+ * Disposes of the internal lookup manager that's used
+ * for all GDCarbonEvents. If you use a GDCarbonEvent, then
+ * dispose of it, but aren't using anymore GDCarbonEvents,
+ * you can call this to dispose of the last NSDictionary
+ * that's used for management.
+ */
++ (void) disposeOfLookupManager;
 
 /**
  * Set the hotkey signature.
@@ -93,6 +117,10 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,v
  * Sets the hotkey id for a carbon hot key event.
  */
 - (void) setHotKeyId:(int) kid;
+
+/**
+ * Get the hotkey id.
+ */
 - (int) hotKeyId;
 
 /**
@@ -106,12 +134,17 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,v
 - (void) setEventKind:(unsigned int) eventKind;
 
 /**
+ * Returns the modifier keys converted into a cocoa modifier int.
+ */
+- (NSUInteger) cocoaModifierKeys;
+
+/**
  * Installs the event.
  */
 - (void) install;
 
 /**
- * Will uninstall the event.
+ * Uninstalls the event.
  */
 - (void) uninstall;
 
@@ -119,6 +152,12 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler,EventRef anEvent,v
  * Performs the callback action desired,
  * either target/action or notification.
  */
-- (void) call;
+- (void) invoke;
+
+- (id) initWithEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind;
+
+- (void) setNotificationName:(NSString *) name andNotificationCenter:(NSNotificationCenter *) center;
+- (void) setAction:(SEL) action andTarget:(id) target;
+- (void) setKeyCode:(NSUInteger) code andFlags:(NSUInteger) flags areFlagsCocoa:(Boolean) cocoaFlags;
 
 @end

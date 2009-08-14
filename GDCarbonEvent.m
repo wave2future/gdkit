@@ -6,30 +6,32 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+//kEventParamUserData
+//GDCarbonEvent * gde;
+//class_getInstanceSize([GDCarbonEvent class])
+//printf("RES: %i\n",GetEventParameter(anEvent,kEventParamUserData,typeWildCard,NULL,NULL,NULL,&gde));
+//[gde call];
+
 #import "GDCarbonEvent.h"
+#import <objc/objc-api.h>
+#import <objc/runtime.h>
+#import "GDCarbonEventManager.h"
 
-static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void * userData) {
-	
-	EventHotKeyID hkRef;
-	GetEventParameter(anEvent,kEventParamDirectObject,typeEventHotKeyID,NULL,sizeof(hkRef),NULL,&hkRef);
-	printf("hotKeyId: %i\n",hkRef.id);
-	
-	GDCarbonEvent * e = (GDCarbonEvent *) userData;
-	printf("ID: %s\n",[[e testID] UTF8String]);
-	
-	NSString * t = [NSString stringWithCString:(const char *)hkRef.signature];
-	printf("SIG: %s\n",[t UTF8String]);
-	
-	[e call];
-	return noErr;
-}
-
-//static int look[24];
 static NSMutableDictionary * gdceLookup = nil;
 static unsigned int eventIds = 0;
 
+static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void * userData) {
+	printf("HOT KEY HANDLER\n");
+	EventHotKeyID hkRef;
+	GetEventParameter(anEvent,kEventParamDirectObject,typeEventHotKeyID,NULL,sizeof(hkRef),NULL,&hkRef);
+	GDCarbonEvent * e = (GDCarbonEvent *)[gdceLookup valueForKey:[NSString stringWithFormat:@"%i",hkRef.id]];
+	[e invoke];
+	return noErr;
+}
+
 @implementation GDCarbonEvent
 
+@synthesize keyChar;
 @synthesize userInfo;
 @synthesize notificationName;
 @synthesize notificationCenter;
@@ -38,58 +40,70 @@ static unsigned int eventIds = 0;
 @synthesize keyCode;
 @synthesize modifierFlags;
 
-+ (GDCarbonEvent *) createKeyEvent:(int) key modifierFlags:(int) flags whichCallsAction:(SEL) action onTarget:(id) target withUserInfo:(NSDictionary *) userInfo {
-	GDCarbonEvent * ev = [[self alloc] init];
-	[ev setAction:action];
-	[ev setTestID:@"ONE"];
-	[ev setTarget:target];
-	[ev setKeyCode:key];
-	[ev setModifierFlags:flags];
-	[ev setUserInfo:userInfo];
-	[ev setEventClass:kEventClassKeyboard];
-	[ev setEventKind:kEventHotKeyPressed];
-	@synchronized(ev) {
-		eventIds+=1;
+- (id) initWithCoder:(NSCoder *) coder {
+	if(self = [super init]) {
+		if(self = [self init]) {
+			//printf("INIT WITH CODER\n");
+			[self setKeyCode:[coder decodeIntForKey:@"keyCode"]];
+			[self setModifierFlags:[coder decodeIntForKey:@"modifierFlags"]];
+			[self setEventKind:[coder decodeIntForKey:@"eventKind"]];
+			[self setEventClass:(FourCharCode)[coder decodeIntForKey:@"eventClass"]];
+			[self setKeyChar:[coder decodeObjectForKey:@"keyChar"]];
+		}
 	}
-	[ev setHotKeyId:eventIds];
-	NSString * sig = [NSString stringWithFormat:@"htk%i",eventIds];
-	[ev setHotKeySignature:sig];
-	[ev install];
-	return ev;
-}
-
-+ (GDCarbonEvent *) createKeyEvent:(int) key modifierFlags:(int) flags whichPostsNotification:(NSString *) notificationName toCenter:(NSNotificationCenter *) center withUserInfo:(NSDictionary *) userInfo {
-	GDCarbonEvent * ev = [[self alloc] init];
-	[ev setNotificationCenter:center];
-	[ev setTestID:@"TWO"];
-	[ev setNotificationName:notificationName];
-	[ev setKeyCode:key];
-	[ev setModifierFlags:flags];
-	[ev setUserInfo:userInfo];
-	[ev setEventClass:kEventClassKeyboard];
-	[ev setEventKind:kEventHotKeyPressed];
-	@synchronized(ev) {
-		eventIds+=1;
-	}
-	[ev setHotKeyId:eventIds];
-	NSString * sig = [NSString stringWithFormat:@"htk%i",eventIds];
-	[ev setHotKeySignature:sig];
-	[ev install];
-	return ev;
-}
-
-- (id) init {
-	self = [super init];
-	if(!gdceLookup) gdceLookup = [[NSMutableDictionary alloc] init];
 	return self;
 }
 
-- (NSString *) testID {
-	return testID;
+- (void) encodeWithCoder:(NSCoder *) coder {
+	//printf("ENCODE WITH CODER\n");
+	[coder encodeInt:keyCode forKey:@"keyCode"];
+	[coder encodeInt:modifierFlags forKey:@"modifierFlags"];
+	[coder encodeInt:eventSpec.eventClass forKey:@"eventClass"];
+	[coder encodeInt:eventSpec.eventKind forKey:@"eventKind"];
+	[coder encodeObject:keyChar forKey:@"keyChar"];
 }
 
-- (void) setTestID:(NSString *)s {
-	testID = [s copy];
+- (id) initWithEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind {
+	if(self = [super init]) {
+		if(self = [self init]) {
+			[self setEventClass:eventClass];
+			[self setEventKind:eventKind];
+		}
+	}
+	return self;
+}
+
+- (void) setNotificationName:(NSString *) name andNotificationCenter:(NSNotificationCenter *) center {
+	[self setNotificationName:name];
+	[self setNotificationCenter:center];
+}
+
+- (void) setAction:(SEL) actin andTarget:(id) targt {
+	[self setAction:actin];
+	[self setTarget:targt];
+}
+
+- (void) setKeyCode:(NSUInteger) code andFlags:(NSUInteger) flags areFlagsCocoa:(Boolean) cocoaFlags {
+	[self setKeyCode:code];
+	if(cocoaFlags)[self setModifierFlags:[GDCarbonEventManager cocoaToCarbonModifierFlags:flags]];
+	else [self setModifierFlags:flags];
+}
+
+- (id) init {
+	if(self = [super init]) {
+		if(!gdceLookup) gdceLookup = [[NSMutableDictionary alloc] init];
+	}
+	return self;
+}
+
++ (void) disposeOfLookupManager {
+	[gdceLookup release];
+}
+
+- (void) incrementEventId {
+	@synchronized(self) {
+		eventIds+=1;
+	}
 }
 
 - (void) setHotKeySignature:(NSString *) signature {
@@ -109,31 +123,52 @@ static unsigned int eventIds = 0;
 	eventSpec.eventClass = (OSType) eventClass;
 }
 
-- (void) setEventKind:(unsigned int) eventKind {
+- (void) setEventKind:(NSUInteger) eventKind {
 	eventSpec.eventKind = eventKind;
 }
 
+- (NSUInteger) cocoaModifierKeys {
+	return [GDCarbonEventManager carbonToCocoaModifierFlags:[self modifierFlags]];
+}
+
 - (void) install {
-	InstallApplicationEventHandler(&hotKeyHandler,1,&eventSpec,self,NULL);
-	RegisterEventHotKey(keyCode,modifierFlags,hotKeyId,GetApplicationEventTarget(),0,&hotKeyRef);
+	if(isInstalled) return;
+	printf("install handler\n");
+	if(handlerUPP == NULL) handlerUPP = NewEventHandlerUPP(hotKeyHandler);
+	@synchronized(self) {
+		if([self hotKeyId] < 1) {
+			eventIds+=1;
+			[self setHotKeyId:eventIds];
+			[self setHotKeySignature:[NSString stringWithFormat:@"htk%i",eventIds]];
+		}
+	}
+	if(eventSpec.eventClass==kEventClassKeyboard && eventSpec.eventKind == kEventHotKeyPressed) {
+		//TODO: MEM (release if installing over already existing.
+		//InstallEventHandler(GetApplicationEventTarget(),handlerUPP,1,&eventSpec,self,&eventRef);
+		RegisterEventHotKey(keyCode,modifierFlags,hotKeyId,GetApplicationEventTarget(),0,&hotKeyRef);
+		InstallApplicationEventHandler(&hotKeyHandler,1,&eventSpec,(void*)&self,&eventRef);
+		[gdceLookup setObject:self forKey:[NSString stringWithFormat:@"%i",[self hotKeyId]]];
+	}
+	isInstalled = TRUE;
 }
 
 - (void) uninstall {
-}
-
-- (void) call {
-	printf("--CALL--\n");
-	printf("ID:%s\n",[testID UTF8String]);
-	printf("kid:%i\n",hotKeyId.id);
-	if(notificationName != nil) {
-		[notificationCenter postNotificationName:notificationName object:self userInfo:userInfo];
-	} else if(target && action) {
-		[target performSelector:action withObject:userInfo];
+	if(!isInstalled) return;
+	RemoveEventHandler(eventRef);
+	if(eventSpec.eventClass==kEventClassKeyboard && eventSpec.eventKind == kEventHotKeyPressed) {
+		printf("uninstall handler\n");
+		UnregisterEventHotKey(hotKeyRef);
 	}
+	isInstalled = FALSE;
 }
 
-- (void) dealloc {
-	[self uninstall];
+- (void) invoke {
+	if(notificationName != nil) [notificationCenter postNotificationName:notificationName object:self userInfo:userInfo];
+	else if(target && action) [target performSelector:action withObject:userInfo];
+}
+
+- (void) dealloc { //TODO: There are some ways to dispose of other Event* types. see the Carbon event manager.
+	if(isInstalled) [self uninstall];
 	[sigString release];
 	[self setNotificationName:NULL];
 	[self setKeyCode:0];
