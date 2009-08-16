@@ -1,24 +1,17 @@
-//
-//  NSWorkspace+WorkspaceAdditions.h
-//  gdkit
-//
-//  Created by Aaron Smith on 8/10/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import <Cocoa/Cocoa.h>
 
 @interface NSWorkspace (WorkspaceAdditions)
 
 /**
- * Requires an application info dictionary, which must
- * contain the key "NSApplicationPath"
+ * Brings an application to the front. Requires an application
+ * info dictionary, which must contain the key "NSApplicationPath"
  */
 - (void) bringApplicationToFront:(NSDictionary *) appInfo;
 
 /**
- * Brings the current application to front, which uses
- * NSBundle internally.
+ * Brings the current application to front - uses NSBundle internally.
  */
 - (void) bringCurrentApplicationToFront;
 

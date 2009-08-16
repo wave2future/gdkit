@@ -1,10 +1,4 @@
-//
-//  NSWorkspace+WorkspaceAdditions.m
-//  gdkit
-//
-//  Created by Aaron Smith on 8/10/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import "NSWorkspace+WorkspaceAdditions.h"
 
@@ -14,18 +8,18 @@
 	if(appInfo == nil) return;
 	NSString * appath = [appInfo valueForKey:@"NSApplicationPath"];
 	if(appath == nil) return;
-	[[NSWorkspace sharedWorkspace] launchApplication:appath];
+	[self launchApplication:appath];
 }
 
 - (void) bringCurrentApplicationToFront {
 	NSBundle * bndl = [NSBundle mainBundle];
 	if(bndl == nil) return;
-	[self bringApplicationToFrontFromPath:[bndl bundlePath]];
+	[self launchApplication:[bndl bundlePath]];
 }
 
 - (void) bringApplicationToFrontFromPath:(NSString *) appPath {
-	if(appPath == nil) return;
-	[self bringApplicationToFrontFromPath:appPath];
+	if(!appPath) return;
+	[self launchApplication:appPath];
 }
 
 @end

@@ -1,27 +1,12 @@
-//
-//  CarbonEvent.m
-//  gdkit
-//
-//  Created by Aaron Smith on 8/10/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
-//kEventParamUserData
-//GDCarbonEvent * gde;
-//class_getInstanceSize([GDCarbonEvent class])
-//printf("RES: %i\n",GetEventParameter(anEvent,kEventParamUserData,typeWildCard,NULL,NULL,NULL,&gde));
-//[gde call];
+//copyright 2009 aaronsmith
 
 #import "GDCarbonEvent.h"
-#import <objc/objc-api.h>
-#import <objc/runtime.h>
 #import "GDCarbonEventManager.h"
 
 static NSMutableDictionary * gdceLookup = nil;
 static unsigned int eventIds = 0;
 
 static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void * userData) {
-	printf("HOT KEY HANDLER\n");
 	EventHotKeyID hkRef;
 	GetEventParameter(anEvent,kEventParamDirectObject,typeEventHotKeyID,NULL,sizeof(hkRef),NULL,&hkRef);
 	GDCarbonEvent * e = (GDCarbonEvent *)[gdceLookup valueForKey:[NSString stringWithFormat:@"%i",hkRef.id]];
@@ -133,7 +118,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 
 - (void) install {
 	if(isInstalled) return;
-	printf("install handler\n");
 	if(handlerUPP == NULL) handlerUPP = NewEventHandlerUPP(hotKeyHandler);
 	@synchronized(self) {
 		if([self hotKeyId] < 1) {
@@ -156,7 +140,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 	if(!isInstalled) return;
 	RemoveEventHandler(eventRef);
 	if(eventSpec.eventClass==kEventClassKeyboard && eventSpec.eventKind == kEventHotKeyPressed) {
-		printf("uninstall handler\n");
 		UnregisterEventHotKey(hotKeyRef);
 	}
 	isInstalled = FALSE;

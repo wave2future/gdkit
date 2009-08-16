@@ -1,20 +1,9 @@
-//
-//  GDCarbonEvent.h
-//  gdkit
-//
-//  Created by Aaron Smith on 8/10/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 
 @class GDCarbonEventManager;
-
-typedef enum _GDCarbonEventKind {
-	kGDHotKeyEvent = 1,
-	kGDFuture = 2,
-} GDCarbonEventKind;
 
 @interface GDCarbonEvent : NSObject <NSCoding> {
 	int keyCode;
@@ -68,7 +57,8 @@ typedef enum _GDCarbonEventKind {
 @property (assign) int keyCode;
 
 /**
- * modifier keys for a carbon hot key event (cmdKey, optionKey, shiftKey, optionKey, controlKey, kFunctionKeyCharCode)
+ * modifier keys for a carbon hot key event (cmdKey, optionKey, shiftKey, 
+ * optionKey, controlKey, kFunctionKeyCharCode)
  */
 @property (assign) int modifierFlags;
 
@@ -154,10 +144,27 @@ typedef enum _GDCarbonEventKind {
  */
 - (void) invoke;
 
+/**
+ * Initialize with event class, and event kind.
+ */
 - (id) initWithEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind;
 
+/**
+ * Set the notification name, and notification center if you want
+ * this event to post notifications.
+ */
 - (void) setNotificationName:(NSString *) name andNotificationCenter:(NSNotificationCenter *) center;
+
+/**
+ * Set the action and target for this event if you want the
+ * callback to call a selector.
+ */
 - (void) setAction:(SEL) action andTarget:(id) target;
+
+/**
+ * Set keycode, and modifier flags, optionally tell it that the flags
+ * were cocoa, and need to be converted to carbon.
+ */
 - (void) setKeyCode:(NSUInteger) code andFlags:(NSUInteger) flags areFlagsCocoa:(Boolean) cocoaFlags;
 
 @end

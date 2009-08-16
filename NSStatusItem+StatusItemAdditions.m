@@ -1,10 +1,4 @@
-//
-//  NSStatusItem+StatusItemAdditions.m
-//  gdkit
-//
-//  Created by Aaron Smith on 8/11/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import "NSStatusItem+StatusItemAdditions.h"
 
@@ -14,8 +8,8 @@
 	NSView *tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[self length],[[self statusBar] thickness])];
 	[self setView:tmpView];
 	NSRect globalOrigin = [[[self view] window] frame];
-	//NSLog(@"%g %g",globalOrigin.origin.x, globalOrigin.origin.y);
 	[self setView:NULL];
+	[tmpView release];
 	return NSMakePoint(globalOrigin.origin.x,globalOrigin.origin.y);
 }
 

@@ -1,15 +1,13 @@
-//
-//  NSStatusItem+StatusItemAdditions.h
-//  gdkit
-//
-//  Created by Aaron Smith on 8/11/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import <Cocoa/Cocoa.h>
 
 @interface NSStatusItem (StatusItemAdditions)
 
+/**
+ * Get the position (in screen coordinates) where the
+ * status item is in the menubar.
+ */
 - (NSPoint) position;
 
 @end

@@ -18,8 +18,13 @@
 		0720C8241031065C00FB009B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720C8231031065C00FB009B /* Carbon.framework */; };
 		0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */; };
+		0749DE8B1037C575001AA650 /* CocoaAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0749DE8A1037C575001AA650 /* CocoaAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
+		078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E2410366CAD0033A770 /* GDASLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078D5E2710366CAD0033A770 /* GDASLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D5E2510366CAD0033A770 /* GDASLLog.m */; };
+		078D5E41103675880033A770 /* GDASLLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E3F103675880033A770 /* GDASLLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078D5E42103675880033A770 /* GDASLLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D5E40103675880033A770 /* GDASLLogManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +41,13 @@
 		0720C8231031065C00FB009B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+StatusItemAdditions.h"; sourceTree = "<group>"; };
 		0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+StatusItemAdditions.m"; sourceTree = "<group>"; };
+		0749DE8A1037C575001AA650 /* CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAdditions.h; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEventManager.m; sourceTree = "<group>"; };
+		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLog.h; sourceTree = "<group>"; };
+		078D5E2510366CAD0033A770 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLog.m; sourceTree = "<group>"; };
+		078D5E3F103675880033A770 /* GDASLLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLogManager.h; sourceTree = "<group>"; };
+		078D5E40103675880033A770 /* GDASLLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLogManager.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -72,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				0720BFE5102F4DC100FB009B /* GDKit.h */,
+				0749DE8A1037C575001AA650 /* CocoaAdditions.h */,
+				078D5E2410366CAD0033A770 /* GDASLLog.h */,
+				078D5E3F103675880033A770 /* GDASLLogManager.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
 				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
@@ -117,6 +130,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				078D5E2510366CAD0033A770 /* GDASLLog.m */,
+				078D5E40103675880033A770 /* GDASLLogManager.m */,
 				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
 				078D52B41033A6F10033A770 /* GDCarbonEventManager.m */,
 				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
@@ -161,11 +176,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0720BFE6102F4DC100FB009B /* GDKit.h in Headers */,
+				078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */,
+				078D5E41103675880033A770 /* GDASLLogManager.h in Headers */,
 				0720C008102F4FBB00FB009B /* NSFileManager+GDFileManager.h in Headers */,
 				0720C79A1030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h in Headers */,
 				0720C7A21031017800FB009B /* GDCarbonEvent.h in Headers */,
 				0723F6CC10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h in Headers */,
 				078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */,
+				0749DE8B1037C575001AA650 /* CocoaAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +246,8 @@
 				0720C7A31031017800FB009B /* GDCarbonEvent.m in Sources */,
 				0723F6CD10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m in Sources */,
 				078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */,
+				078D5E2710366CAD0033A770 /* GDASLLog.m in Sources */,
+				078D5E42103675880033A770 /* GDASLLogManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

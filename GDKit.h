@@ -1,15 +1,7 @@
-/*
- *  GDKit.h
- *  gdkit
- *
- *  Created by Aaron Smith on 8/9/09.
- *  Copyright 2009 __MyCompanyName__. All rights reserved.
- *
- */
-
-#import "NSFileManager+GDFileManager.h"
-#import "NSWorkspace+WorkspaceAdditions.h"
-#import "NSStatusItem+StatusItemAdditions.h"
+//copyright 2009 aaronsmith
 
 #import "GDCarbonEvent.h"
 #import "GDCarbonEventManager.h"
+#import "GDASLLog.h"
+#import "GDASLLogManager.h"
+#import "CocoaAdditions.h"

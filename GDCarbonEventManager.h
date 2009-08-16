@@ -1,10 +1,4 @@
-//
-//  GDCarbonEventManager.h
-//  gdkit
-//
-//  Created by Aaron Smith on 8/12/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+//copyright 2009 aaronsmith
 
 #import <Cocoa/Cocoa.h>
 #import "GDCarbonEvent.h"
@@ -21,6 +15,11 @@
  */
 @interface GDCarbonEventManager : NSObject {
 	NSMutableDictionary * eventsLookup;
+	NSMutableDictionary * eventGroups;
+	NSMutableDictionary * eventInstallQueueDict;
+	NSMutableArray * eventInstallQueueArray;
+	NSMutableDictionary * eventInstallQueueForGroupDict;
+	NSMutableDictionary * eventInstallQueueForGroups;
 }
 
 /**
@@ -76,7 +75,76 @@
  */
 - (void) releaseAll;
 
+/**
+ * Uninstalls all GDCarbonEvents, then releases the
+ * internal dictionary used to manage them, the internal dict
+ * is re-initialized as an empty dict.
+ */
 - (void) uninstallAndReleaseAll;
+
+/**
+ * Registers a GDCarbonEvent with the manager, which will belong
+ * to a group or events. The event is installed as the last operation.
+ * Optionally if the same event (by charKey and modifiers) exists
+ * in the group already, it's uninstalled and removed. And the new
+ * one replaces it.
+ */
+- (void) registerAndInstallGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall;
+
+/**
+ * Registers a GDCarbonEvent with the manager, which will belong
+ * to a group or events. Optionally if the same event (by charKey
+ * and modifiers) exists in the group already, it's uninstalled and
+ * removed. And the new one replaces it.
+ */
+- (void) registerGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall;
+
+/**
+ * Releases a group.
+ */
+- (void) releaseGroup:(NSString *) groupName;
+
+/**
+ * Uninstalls all GDCarobEvents inside of a group,
+ * then releases the dictionary used as a handle onto them.
+ * If the manager is the only plae that contains the
+ * reference to the GDCarbonEvent, then it will be released.
+ */
+- (void) uninstallAndReleaseGroup:(NSString *) groupName;
+
+/**
+ * Registers and installs all queued events. (this just calls
+ * [self registerAndInstallGDCarbonEvent] for each event in 
+ * the queue.
+ */
+- (void) registerAndInstallQueuedEvents;
+
+/**
+ * Adds a CGCarbonEvent into the queue to be installed. Optionally
+ * tell the manager that the event has to be unique.
+ */
+- (void) queueForInstall:(GDCarbonEvent *) event unique:(Boolean) unique;
+
+/**
+ * Registers and installs all queued events in a group queue.
+ */
+- (void) registerAndInstallQueuedEventsForGroup:(NSString *) groupName;
+
+/**
+ * Registers queued events to be installed into a group.
+ */
+- (void) queueForInstall:(GDCarbonEvent *) event intoGroup:(NSString *) groupName unique:(Boolean) unique;
+
+/**
+ * Releases the memory used to store events for the queue, you can
+ * flush it after you've installed the events.
+ */
+- (void) flushQueuedInstall;
+
+/**
+ * Flush a queued install for a particular group.
+ */
+- (void) flushQueuedInstallForGroup:(NSString *) groupName;
 
 @end
 
