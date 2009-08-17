@@ -3,6 +3,10 @@
 #import <Cocoa/Cocoa.h>
 #import "GDCarbonEvent.h"
 
+#ifndef hGDCarbonEventManager
+#define hGDCarbonEventManager
+#endif
+
 /**
  * The GDCarbonEventManager manages multiple
  * GDCarbonEvents. Really the only time you

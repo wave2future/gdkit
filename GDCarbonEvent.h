@@ -3,6 +3,10 @@
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 
+#ifndef hGDCarbonEvent
+#define hGDCarbonEvent
+#endif
+
 @class GDCarbonEventManager;
 
 @interface GDCarbonEvent : NSObject <NSCoding> {

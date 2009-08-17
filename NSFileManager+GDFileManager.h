@@ -2,7 +2,11 @@
 
 #import <Foundation/NSFileManager.h>
 
-@interface NSFileManager (GDFileManager)
+#ifndef hGDNSFileManager_FileManagerAdditions
+#define hGDNSFileManager_FileManagerAdditions
+#endif
+
+@interface NSFileManager (FileManagerAdditions)
 
 /**
  * Returns a path to a folder, creating the folder if

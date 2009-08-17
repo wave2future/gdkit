@@ -3,6 +3,10 @@
 #include <asl.h>
 #import <Cocoa/Cocoa.h>
 
+#ifndef hGDASLLog
+#define hGDASLLog
+#endif
+
 /**
  * Forward declaration.
  */

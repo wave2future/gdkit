@@ -2,6 +2,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+#ifndef hGDNSWorkspace_WorkspaceAdditions
+#define	hGDNSWorkspace_WorkspaceAdditions
+#endif
+
 @interface NSWorkspace (WorkspaceAdditions)
 
 /**

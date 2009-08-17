@@ -2,6 +2,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+#ifndef hGDNSStatusItem_StatusItemAdditions
+#define hGDNSStatusItem_StatusItemAdditions
+#endif
+
 @interface NSStatusItem (StatusItemAdditions)
 
 /**

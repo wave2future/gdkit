@@ -3,6 +3,11 @@
 #import <Cocoa/Cocoa.h>
 #import "GDASLLog.h"
 
+#ifndef hGDASLLogManager
+#define hGDASLLogManager
+#endif
+
+
 @interface GDASLLogManager : NSObject {
 	NSMutableDictionary * logs;
 	Boolean enabled;

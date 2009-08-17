@@ -12,7 +12,7 @@ static GDASLLogManager * inst = nil;
 {
     @synchronized(self) {
 		if(!inst) {
-			[[self alloc] init];
+			inst = [[self alloc] init];
 		}
     }
     return inst;
