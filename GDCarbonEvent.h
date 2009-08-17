@@ -167,4 +167,10 @@
  */
 - (void) setKeyCode:(NSUInteger) code andFlags:(NSUInteger) flags areFlagsCocoa:(Boolean) cocoaFlags;
 
+/**
+ * This returns a string that represents the value of the keyCode,
+ * and modifier keys all added together: keyCode+modifiers.
+ */
+- (NSString *) keyString;
+
 @end

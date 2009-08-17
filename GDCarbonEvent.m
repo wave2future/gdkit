@@ -150,6 +150,10 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 	else if(target && action) [target performSelector:action withObject:userInfo];
 }
 
+- (NSString *) keyString {
+	return [NSString stringWithFormat:@"%d",(keyCode+modifierFlags)];
+}
+
 - (void) dealloc { //TODO: There are some ways to dispose of other Event* types. see the Carbon event manager.
 	if(isInstalled) [self uninstall];
 	[sigString release];
