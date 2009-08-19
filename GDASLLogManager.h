@@ -9,8 +9,8 @@
 
 
 @interface GDASLLogManager : NSObject {
-	NSMutableDictionary * logs;
 	Boolean enabled;
+	NSMutableDictionary * logs;
 }
 
 /**

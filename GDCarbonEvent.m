@@ -93,6 +93,8 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 
 - (void) setHotKeySignature:(NSString *) signature {
 	sigString = [signature retain];
+	//TODO: fix this cast.. eeck
+	//ttp://www.omnigroup.com/mailman/archive/macosx-dev/2000-July/015122.html
 	hotKeyId.signature = (OSType)[signature UTF8String];
 }
 

@@ -13,6 +13,7 @@
 	int keyCode;
 	int modifierFlags;
 	id target;
+	Boolean isInstalled;
 	SEL action;
 	NSNotificationCenter * notificationCenter;
 	NSString * notificationName;
@@ -24,7 +25,6 @@
 	EventHotKeyRef hotKeyRef;
 	EventHotKeyID hotKeyId;
 	NSString * keyChar;
-	Boolean isInstalled;
 }
 
 /**
@@ -125,7 +125,7 @@
 /**
  * Set's the event kind for a carbon event.
  */
-- (void) setEventKind:(unsigned int) eventKind;
+- (void) setEventKind:(NSUInteger) eventKind;
 
 /**
  * Returns the modifier keys converted into a cocoa modifier int.

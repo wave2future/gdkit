@@ -6,6 +6,12 @@
 #define	hGDNSWorkspace_WorkspaceAdditions
 #endif
 
+/**
+ * Macro definition of a string you can pass to openSystemPReference,
+ * for universal access.
+ */
+#define kGDSystemPrefUniversalAccess @"UniversalAccessPref.prefPane"
+
 @interface NSWorkspace (WorkspaceAdditions)
 
 /**
@@ -24,5 +30,14 @@
  * path.
  */
 - (void) bringApplicationToFrontFromPath:(NSString *) appPath;
+
+/**
+ * Opens the system preferences panel and opens the specified
+ * preference. Pass in an argument like "UniversalAccessPref"
+ * this function will append the ".prefpane", and also search
+ * in two places for the prefpane: /System/Library/PreferencePanes/,
+ * and ~/Library/PreferencePanes/
+ */
+- (void) openSystemPreference:(NSString *) preferencesFileName;
 
 @end
