@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071F0A87103E462C00D2AFDB /* GDRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F0A85103E462C00D2AFDB /* GDRegistration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720BF3D102F4A5200FB009B /* Cocoa.framework */; };
 		0720BFE6102F4DC100FB009B /* GDKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720BFE5102F4DC100FB009B /* GDKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0720C008102F4FBB00FB009B /* NSFileManager+GDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071F0A85103E462C00D2AFDB /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDRegistration.h; sourceTree = "<group>"; };
 		0720BF38102F4A4700FB009B /* GDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0720BF39102F4A4700FB009B /* GDKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDKit-Info.plist"; sourceTree = "<group>"; };
 		0720BF3D102F4A5200FB009B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -101,6 +103,7 @@
 				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
 				0749E6F510394DCD001AA650 /* GDDisplay.h */,
 				0749E6F110394C72001AA650 /* GDDisplayState.h */,
+				071F0A85103E462C00D2AFDB /* GDRegistration.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
@@ -205,6 +208,7 @@
 				0749E35110390ECD001AA650 /* GDULimit.h in Headers */,
 				0749E6F310394C72001AA650 /* GDDisplayState.h in Headers */,
 				0749E6F710394DCD001AA650 /* GDDisplay.h in Headers */,
+				071F0A87103E462C00D2AFDB /* GDRegistration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

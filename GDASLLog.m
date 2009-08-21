@@ -29,7 +29,7 @@
 
 - (void) alert:(NSString *) message {
 	if(![manager enabled]) return;
-	if(logToStdOut) printf([message UTF8String]);
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
 	asl_log(client,m,ASL_LEVEL_ALERT,[message UTF8String]);
 	asl_free(m);
@@ -37,7 +37,7 @@
 
 - (void) critical:(NSString *) message {
 	if(![manager enabled]) return;
-	if(logToStdOut) printf([message UTF8String]);
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
 	asl_log(client,m,ASL_LEVEL_CRIT,[message UTF8String]);
 	asl_free(m);
