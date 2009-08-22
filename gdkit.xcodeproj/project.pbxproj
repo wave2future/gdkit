@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071F0A87103E462C00D2AFDB /* GDRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F0A85103E462C00D2AFDB /* GDRegistration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F0A85103E462C00D2AFDB /* GDLicensing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0720180E103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */; };
+		07201817103E67D20007B6E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		072018D1103E6AF50007B6E0 /* GDRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 072018CF103E6AF50007B6E0 /* GDRegistration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 072018D0103E6AF50007B6E0 /* GDRegistration.m */; };
 		0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0720BF3D102F4A5200FB009B /* Cocoa.framework */; };
 		0720BFE6102F4DC100FB009B /* GDKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720BFE5102F4DC100FB009B /* GDKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0720C008102F4FBB00FB009B /* NSFileManager+GDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,9 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071F0A85103E462C00D2AFDB /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDRegistration.h; sourceTree = "<group>"; };
+		071F0A85103E462C00D2AFDB /* GDLicensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLicensing.h; sourceTree = "<group>"; };
+		0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSharedUserDefaults+Additions.h"; sourceTree = "<group>"; };
+		0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSharedUserDefaults+Additions.m"; sourceTree = "<group>"; };
+		072018CF103E6AF50007B6E0 /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDRegistration.h; sourceTree = "<group>"; };
+		072018D0103E6AF50007B6E0 /* GDRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDRegistration.m; sourceTree = "<group>"; };
 		0720BF38102F4A4700FB009B /* GDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0720BF39102F4A4700FB009B /* GDKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDKit-Info.plist"; sourceTree = "<group>"; };
 		0720BF3D102F4A5200FB009B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0720BFE5102F4DC100FB009B /* GDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDKit.h; sourceTree = "<group>"; };
 		0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GDFileManager.h"; sourceTree = "<group>"; };
@@ -65,7 +73,6 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* gdkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gdkit_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -76,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07201817103E67D20007B6E0 /* Foundation.framework in Frameworks */,
 				0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */,
 				0720C8241031065C00FB009B /* Carbon.framework in Frameworks */,
 			);
@@ -103,10 +111,12 @@
 				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
 				0749E6F510394DCD001AA650 /* GDDisplay.h */,
 				0749E6F110394C72001AA650 /* GDDisplayState.h */,
-				071F0A85103E462C00D2AFDB /* GDRegistration.h */,
+				071F0A85103E462C00D2AFDB /* GDLicensing.h */,
+				072018CF103E6AF50007B6E0 /* GDRegistration.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
+				0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
 			);
 			name = Headers;
@@ -119,21 +129,19 @@
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libs */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				0720BF39102F4A4700FB009B /* GDKit-Info.plist */,
-				0720BF3D102F4A5200FB009B /* Cocoa.framework */,
 			);
 			name = gdkit;
 			sourceTree = "<group>";
 		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libs */ = {
 			isa = PBXGroup;
 			children = (
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
 				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
 			);
-			name = "External Frameworks and Libraries";
+			name = "External Frameworks and Libs";
 			sourceTree = "<group>";
 		};
 		089C1665FE841158C02AAC07 /* Resources */ = {
@@ -154,9 +162,11 @@
 				078D52B41033A6F10033A770 /* GDCarbonEventManager.m */,
 				0749E6F610394DCD001AA650 /* GDDisplay.m */,
 				0749E6F210394C72001AA650 /* GDDisplayState.m */,
+				072018D0103E6AF50007B6E0 /* GDRegistration.m */,
 				0749E35010390ECD001AA650 /* GDULimit.m */,
 				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
 				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
+				0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
 			);
 			name = Classes;
@@ -165,8 +175,8 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0720BF3D102F4A5200FB009B /* Cocoa.framework */,
 				0720C8231031065C00FB009B /* Carbon.framework */,
-				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -208,7 +218,9 @@
 				0749E35110390ECD001AA650 /* GDULimit.h in Headers */,
 				0749E6F310394C72001AA650 /* GDDisplayState.h in Headers */,
 				0749E6F710394DCD001AA650 /* GDDisplay.h in Headers */,
-				071F0A87103E462C00D2AFDB /* GDRegistration.h in Headers */,
+				071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */,
+				0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */,
+				072018D1103E6AF50007B6E0 /* GDRegistration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0720BF3C102F4A4800FB009B /* Build configuration list for PBXNativeTarget "GDKit" */;
 			buildPhases = (
+				07201A7A103F93A60007B6E0 /* Update CFBundleVersion to Git Hash */,
 				0720BF33102F4A4700FB009B /* Headers */,
 				0720BF34102F4A4700FB009B /* Resources */,
 				0720BF35102F4A4700FB009B /* Sources */,
@@ -261,6 +274,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07201A7A103F93A60007B6E0 /* Update CFBundleVersion to Git Hash */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update CFBundleVersion to Git Hash";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:/Users/aaronsmith/dev/bin\nGITV=`/opt/local/bin/git log -n1 --pretty=oneline --format=%h`\nupdate-plist-node.rb GDKit-Info.plist CFBundleVersion $GITV\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0720BF35102F4A4700FB009B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,6 +306,8 @@
 				0749E35210390ECD001AA650 /* GDULimit.m in Sources */,
 				0749E6F410394C72001AA650 /* GDDisplayState.m in Sources */,
 				0749E6F810394DCD001AA650 /* GDDisplay.m in Sources */,
+				0720180E103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m in Sources */,
+				072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +339,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "GDKit-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -333,7 +365,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "GDKit-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				OTHER_LDFLAGS = (
 					"-framework",

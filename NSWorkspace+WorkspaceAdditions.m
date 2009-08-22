@@ -12,9 +12,7 @@
 }
 
 - (void) bringCurrentApplicationToFront {
-	NSBundle * bndl = [NSBundle mainBundle];
-	if(bndl == nil) return;
-	[self launchApplication:[bndl bundlePath]];
+	[self launchApplication:[[NSBundle mainBundle] bundlePath]];
 }
 
 - (void) bringApplicationToFrontFromPath:(NSString *) appPath {
@@ -23,7 +21,6 @@
 }
 
 - (void) openSystemPreference:(NSString *) preferencesFileName {
-	printf("open system prefs\n");
 	NSFileManager * fm = [NSFileManager defaultManager];
 	if([fm fileExistsAtPath:[@"/System/Library/PreferencePanes/" stringByAppendingString:preferencesFileName]]) {
 		[[NSWorkspace sharedWorkspace] openFile:[@"/System/Library/PreferencePanes/" stringByAppendingString:preferencesFileName]];

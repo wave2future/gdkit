@@ -10,4 +10,5 @@
 #import "GDASLLogManager.h"
 #import "GDULimit.h"
 #import "GDRegistration.h"
+#import "GDLicensing.h"
 #import "CocoaAdditions.h"
