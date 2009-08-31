@@ -28,7 +28,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 - (id) initWithCoder:(NSCoder *) coder {
 	if(self = [super init]) {
 		if(self = [self init]) {
-			//printf("INIT WITH CODER\n");
 			[self setKeyCode:[coder decodeIntForKey:@"keyCode"]];
 			[self setModifierFlags:[coder decodeIntForKey:@"modifierFlags"]];
 			[self setEventKind:[coder decodeIntForKey:@"eventKind"]];
@@ -40,7 +39,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 }
 
 - (void) encodeWithCoder:(NSCoder *) coder {
-	//printf("ENCODE WITH CODER\n");
 	[coder encodeInt:keyCode forKey:@"keyCode"];
 	[coder encodeInt:modifierFlags forKey:@"modifierFlags"];
 	[coder encodeInt:eventSpec.eventClass forKey:@"eventClass"];
@@ -94,7 +92,7 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 - (void) setHotKeySignature:(NSString *) signature {
 	sigString = [signature retain];
 	//TODO: fix this cast.. eeck
-	//ttp://www.omnigroup.com/mailman/archive/macosx-dev/2000-July/015122.html
+	//[h]ttp://www.omnigroup.com/mailman/archive/macosx-dev/2000-July/015122.html
 	hotKeyId.signature = (OSType)[signature UTF8String];
 }
 

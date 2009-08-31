@@ -2,6 +2,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+/**
+ * A protocol to implement license support in an application.
+ */
 @protocol GDLicensing
 
 /**

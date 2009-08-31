@@ -7,7 +7,6 @@
 #define hGDASLLogManager
 #endif
 
-
 @interface GDASLLogManager : NSObject {
 	Boolean enabled;
 	NSMutableDictionary * logs;

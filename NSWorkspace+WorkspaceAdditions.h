@@ -40,4 +40,14 @@
  */
 - (void) openSystemPreference:(NSString *) preferencesFileName;
 
+/**
+ * Installs a launch agent/startup item into ~/Library/LaunchAgents
+ */
+- (void) installStartupLaunchdItem:(NSString *) plistName;
+
+/**
+ * Removes a launchd agent/startup item from ~/Library/LaunchAgents
+ */
+- (void) uninstallStartupLaunchdItem:(NSString *) plistName;
+
 @end

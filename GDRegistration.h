@@ -2,6 +2,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+/**
+ * Some helper methods for application registration.
+ */
 @interface GDRegistration : NSObject {
 }
 

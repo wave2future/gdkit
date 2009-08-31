@@ -6,6 +6,7 @@
 
 + (void) reset {
 	[[self standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];
+	[[self standardUserDefaults] synchronize];
 }
 
 @end

@@ -5,7 +5,7 @@
 @implementation NSStatusItem (StatusItemAdditions)
 
 - (NSPoint) position {
-	NSView *tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[self length],[[self statusBar] thickness])];
+	NSView * tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[self length],[[self statusBar] thickness])];
 	NSMenu * menu = [self menu];
 	[self setView:tmpView];
 	NSRect globalOrigin = [[[self view] window] frame];

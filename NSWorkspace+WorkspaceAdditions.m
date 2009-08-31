@@ -29,4 +29,19 @@
 	}
 }
 
+- (void) uninstallStartupLaunchdItem:(NSString *) plistName {
+	NSFileManager * fm = [NSFileManager defaultManager];
+	NSString * file = [[@"~/Library/LaunchAgents" stringByExpandingTildeInPath] stringByAppendingString:[@"/" stringByAppendingString:plistName]];
+	[fm removeItemAtPath:file error:NULL];
+}
+
+- (void) installStartupLaunchdItem:(NSString *) plistName {
+	NSFileManager * fm = [NSFileManager defaultManager];
+	NSBundle * bndl = [NSBundle mainBundle];
+	NSString * noext = [plistName stringByDeletingPathExtension];
+	NSString * path = [bndl pathForResource:noext ofType:@"plist"];
+	NSString * dest = [[@"~/Library/LaunchAgents" stringByExpandingTildeInPath] stringByAppendingString:[@"/" stringByAppendingString:plistName]];
+	[fm copyItemAtPath:path toPath:dest error:NULL];
+}
+
 @end

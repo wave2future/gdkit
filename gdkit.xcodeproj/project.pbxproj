@@ -29,8 +29,8 @@
 		0749E35210390ECD001AA650 /* GDULimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0749E35010390ECD001AA650 /* GDULimit.m */; };
 		0749E6F310394C72001AA650 /* GDDisplayState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0749E6F110394C72001AA650 /* GDDisplayState.h */; };
 		0749E6F410394C72001AA650 /* GDDisplayState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0749E6F210394C72001AA650 /* GDDisplayState.m */; };
-		0749E6F710394DCD001AA650 /* GDDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0749E6F510394DCD001AA650 /* GDDisplay.h */; };
-		0749E6F810394DCD001AA650 /* GDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0749E6F610394DCD001AA650 /* GDDisplay.m */; };
+		0749E6F710394DCD001AA650 /* GDQuartzDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0749E6F810394DCD001AA650 /* GDQuartzDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */; };
 		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
 		078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E2410366CAD0033A770 /* GDASLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,8 +62,8 @@
 		0749E35010390ECD001AA650 /* GDULimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDULimit.m; sourceTree = "<group>"; };
 		0749E6F110394C72001AA650 /* GDDisplayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDisplayState.h; sourceTree = "<group>"; };
 		0749E6F210394C72001AA650 /* GDDisplayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDisplayState.m; sourceTree = "<group>"; };
-		0749E6F510394DCD001AA650 /* GDDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDisplay.h; sourceTree = "<group>"; };
-		0749E6F610394DCD001AA650 /* GDDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDisplay.m; sourceTree = "<group>"; };
+		0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDQuartzDisplay.h; sourceTree = "<group>"; };
+		0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDQuartzDisplay.m; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEventManager.m; sourceTree = "<group>"; };
 		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLog.h; sourceTree = "<group>"; };
@@ -109,15 +109,15 @@
 				078D5E3F103675880033A770 /* GDASLLogManager.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
 				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
-				0749E6F510394DCD001AA650 /* GDDisplay.h */,
 				0749E6F110394C72001AA650 /* GDDisplayState.h */,
 				071F0A85103E462C00D2AFDB /* GDLicensing.h */,
+				0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */,
 				072018CF103E6AF50007B6E0 /* GDRegistration.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
-				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
 				0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
+				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -160,14 +160,14 @@
 				078D5E40103675880033A770 /* GDASLLogManager.m */,
 				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
 				078D52B41033A6F10033A770 /* GDCarbonEventManager.m */,
-				0749E6F610394DCD001AA650 /* GDDisplay.m */,
 				0749E6F210394C72001AA650 /* GDDisplayState.m */,
+				0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */,
 				072018D0103E6AF50007B6E0 /* GDRegistration.m */,
 				0749E35010390ECD001AA650 /* GDULimit.m */,
 				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
-				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
 				0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
+				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				0749DE8B1037C575001AA650 /* CocoaAdditions.h in Headers */,
 				0749E35110390ECD001AA650 /* GDULimit.h in Headers */,
 				0749E6F310394C72001AA650 /* GDDisplayState.h in Headers */,
-				0749E6F710394DCD001AA650 /* GDDisplay.h in Headers */,
+				0749E6F710394DCD001AA650 /* GDQuartzDisplay.h in Headers */,
 				071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */,
 				0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */,
 				072018D1103E6AF50007B6E0 /* GDRegistration.h in Headers */,
@@ -287,7 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=${PATH}:/Users/aaronsmith/dev/bin\nGITV=`/opt/local/bin/git log -n1 --pretty=oneline --format=%h`\nupdate-plist-node.rb GDKit-Info.plist CFBundleVersion $GITV\n";
+			shellScript = "PATH=${PATH}:/Users/aaronsmith/dev/bin\nGITV=`/opt/local/bin/git log -n1 --pretty=oneline --format=%h`\nupdate-plist-node.rb Info.plist CFBundleVersion $GITV\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -305,7 +305,7 @@
 				078D5E42103675880033A770 /* GDASLLogManager.m in Sources */,
 				0749E35210390ECD001AA650 /* GDULimit.m in Sources */,
 				0749E6F410394C72001AA650 /* GDDisplayState.m in Sources */,
-				0749E6F810394DCD001AA650 /* GDDisplay.m in Sources */,
+				0749E6F810394DCD001AA650 /* GDQuartzDisplay.m in Sources */,
 				0720180E103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m in Sources */,
 				072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */,
 			);

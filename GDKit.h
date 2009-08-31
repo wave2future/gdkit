@@ -11,4 +11,6 @@
 #import "GDULimit.h"
 #import "GDRegistration.h"
 #import "GDLicensing.h"
+#import "GDQuartzDisplay.h"
+
 #import "CocoaAdditions.h"
