@@ -8,7 +8,8 @@ static unsigned int eventIds = 0;
 
 static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void * userData) {
 	EventHotKeyID hkRef;
-	GetEventParameter(anEvent,kEventParamDirectObject,typeEventHotKeyID,NULL,sizeof(hkRef),NULL,&hkRef);
+	OSStatus res = GetEventParameter(anEvent,kEventParamDirectObject,typeEventHotKeyID,NULL,sizeof(hkRef),NULL,&hkRef);
+	if(res) return res;
 	GDCarbonEvent * e = (GDCarbonEvent *)[gdceLookup valueForKey:[NSString stringWithFormat:@"%i",hkRef.id]];
 	[e invoke];
 	return noErr;
@@ -33,6 +34,7 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 			[self setEventKind:[coder decodeIntForKey:@"eventKind"]];
 			[self setEventClass:(FourCharCode)[coder decodeIntForKey:@"eventClass"]];
 			[self setKeyChar:[coder decodeObjectForKey:@"keyChar"]];
+			[self setUserInfo:NULL];
 		}
 	}
 	return self;
@@ -147,7 +149,11 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 
 - (void) invoke {
 	if(notificationName != nil) [notificationCenter postNotificationName:notificationName object:self userInfo:userInfo];
-	else if(target && action) [target performSelector:action withObject:userInfo];
+	else {
+		if(target == nil) return;
+		if(action == nil) return;
+		if(target != nil && action != nil) [target performSelector:action withObject:[self userInfo]];
+	}
 }
 
 - (NSString *) keyString {

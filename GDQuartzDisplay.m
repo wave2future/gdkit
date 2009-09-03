@@ -9,10 +9,7 @@
 	CGDirectDisplayID ids[kGDMaxDisplays];
 	CGDisplayCount count;
 	CGDisplayErr e = CGGetActiveDisplayList(kGDMaxDisplays,ids,&count);
-	if(e > 0) {
-		printf("Error activeDispays\n");
-		return nil;
-	}
+	if(e > 0) return nil;
 	int i = 0;
 	for(i;i < count; i++) {
 		GDQuartzDisplay * dis = [[[GDQuartzDisplay alloc] initWithDirectDisplayID:(CGDirectDisplayID)ids[i]] autorelease];
@@ -26,10 +23,7 @@
 	CGDirectDisplayID ids[kGDMaxDisplays];
 	CGDisplayCount count;
 	CGDisplayErr e = CGGetOnlineDisplayList(kGDMaxDisplays,ids,&count);
-	if(e > 0) {
-		printf("Error activeDispays\n");
-		return nil;
-	}
+	if(e > 0) return nil;
 	int i = 0;
 	for(i;i < count; i++) {
 		GDQuartzDisplay * dis = [[[GDQuartzDisplay alloc] initWithDirectDisplayID:(CGDirectDisplayID)ids[i]] autorelease];
@@ -50,17 +44,13 @@
 		CGDirectDisplayID ids[kGDMaxDisplays];
 		CGDisplayCount count;
 		CGDisplayErr e = CGGetDisplaysWithPoint(tp,kGDMaxDisplays,ids,&count);
-		if(e > 0) {
-			printf("ERROR initWithPoint\n");
-			return nil;
-		}
+		if(e > 0) return nil;
+		if(count < 1) return nil;
 		if(count == 1) {
 			displayId = (CGDirectDisplayID) ids[0];
-		} else { //find the display that's a primary in mirror set.
-			printf("Have to handle multiple display ids\n");
-			/**int i = 0;
-			for(i; i < count;i++) {
-			}*/
+		} else {
+			CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
+			displayId = CGDisplayPrimaryDisplay(tmp);
 		}
 	}
 	return self;
@@ -76,17 +66,13 @@
 		CGDirectDisplayID ids[kGDMaxDisplays];
 		CGDisplayCount count;
 		CGDisplayErr e = CGGetDisplaysWithRect(tr,kGDMaxDisplays,ids,&count);
-		if(e > 0) {
-			printf("ERROR initWithPoint\n");
-			return nil;
-		}
+		if(e > 0) return nil;
+		if(count < 1) return nil;
 		if(count == 1) {
 			displayId = (CGDirectDisplayID) ids[0];
-		} else { //find the display that's a primary in mirror set.
-			printf("Have to handle multiple display ids\n");
-			/**int i = 0;
-			 for(i; i < count;i++) {
-			 }*/
+		} else {
+			CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
+			displayId = CGDisplayPrimaryDisplay(tmp);
 		}
 	}
 	return self;
@@ -156,6 +142,23 @@
 	CGFloat w = (CGFloat)CGDisplayPixelsWide(displayId);
 	CGFloat h = (CGFloat)CGDisplayPixelsHigh(displayId);
 	return NSMakeSize(w,h);
+}
+
+- (NSRect) bounds {
+	CGRect bnds = CGDisplayBounds(displayId);
+	return NSMakeRect(bnds.origin.x,bnds.origin.y,bnds.size.width,bnds.size.height);
+}
+
+- (NSScreen *) screen {
+	NSArray * screens = [NSScreen screens];
+	NSScreen * sc = nil;
+	for(sc in [screens objectEnumerator]) {
+		NSDictionary * dvd = [sc deviceDescription];
+		NSNumber * scrID = [dvd valueForKey:@"NSScreenNumber"];
+		CGDirectDisplayID did = (CGDirectDisplayID)[scrID unsignedIntValue];
+		if(did == displayId) return sc;
+	}
+	return sc;
 }
 
 - (Boolean) usesOpenGLAcceleration {

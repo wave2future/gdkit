@@ -122,6 +122,17 @@
 - (NSSize) pixelSize;
 
 /**
+ * The displays' bounds.
+ */
+- (NSRect) bounds;
+
+/**
+ * Returns an NSScreen instance for the
+ * screen that this GDQuartzDisplay represents.
+ */
+- (NSScreen *) screen;
+
+/**
  * Whether or not this display uses OpenGL acceleration.
  */
 - (Boolean) usesOpenGLAcceleration;
