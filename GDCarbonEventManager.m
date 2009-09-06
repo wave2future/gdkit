@@ -9,6 +9,7 @@ static GDCarbonEventManager * inst = nil;
 {
 	NSUInteger keyInArray;
 }
+- (NSUInteger) key;
 - (id) initWithKey:(NSUInteger) key;
 @end
 
@@ -228,7 +229,7 @@ static GDCarbonEventManager * inst = nil;
 	return self;
 }
 
-- (unsigned) retainCount {
+- (NSUInteger) retainCount {
 	return UINT_MAX;
 }
 

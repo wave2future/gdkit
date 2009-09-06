@@ -40,7 +40,8 @@
 	NSMutableDictionary * attrs = [NSMutableDictionary dictionary];
 	NSNumber * perms = [NSNumber numberWithUnsignedLong:448]; //700 octal = 448 decimal
 	[attrs setObject:perms forKey:NSFilePosixPermissions];
-	[fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] attributes:attrs];
+	[fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] withIntermediateDirectories:TRUE attributes:attrs error:nil];
+	//<= 10.4 [fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] attributes:attrs];
 	NSBundle * bndl = [NSBundle mainBundle];
 	NSString * noext = [plistName stringByDeletingPathExtension];
 	NSString * path = [bndl pathForResource:noext ofType:@"plist"];

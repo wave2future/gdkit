@@ -37,6 +37,11 @@
 		078D5E2710366CAD0033A770 /* GDASLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D5E2510366CAD0033A770 /* GDASLLog.m */; };
 		078D5E41103675880033A770 /* GDASLLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E3F103675880033A770 /* GDASLLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D5E42103675880033A770 /* GDASLLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D5E40103675880033A770 /* GDASLLogManager.m */; };
+		07A5963D10534DD700F95BEA /* GDActiveApplicationStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A5963E10534DD700F95BEA /* GDActiveApplicationStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */; };
+		07C034371052653300510FE9 /* GDUnsanitySCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C034351052653300510FE9 /* GDUnsanitySCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C034381052653300510FE9 /* GDUnsanitySCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C034361052653300510FE9 /* GDUnsanitySCR.m */; };
+		07D4F7FE1050F36A00907918 /* CarbonEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D4F7FD1050F36A00907918 /* CarbonEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		078D5E2510366CAD0033A770 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLog.m; sourceTree = "<group>"; };
 		078D5E3F103675880033A770 /* GDASLLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLogManager.h; sourceTree = "<group>"; };
 		078D5E40103675880033A770 /* GDASLLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLogManager.m; sourceTree = "<group>"; };
+		07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDActiveApplicationStack.h; sourceTree = "<group>"; };
+		07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDActiveApplicationStack.m; sourceTree = "<group>"; };
+		07C034351052653300510FE9 /* GDUnsanitySCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUnsanitySCR.h; sourceTree = "<group>"; };
+		07C034361052653300510FE9 /* GDUnsanitySCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUnsanitySCR.m; sourceTree = "<group>"; };
+		07D4F7FD1050F36A00907918 /* CarbonEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonEvents.h; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,7 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				0720BFE5102F4DC100FB009B /* GDKit.h */,
+				07D4F7FD1050F36A00907918 /* CarbonEvents.h */,
 				0749DE8A1037C575001AA650 /* CocoaAdditions.h */,
+				07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */,
 				078D5E2410366CAD0033A770 /* GDASLLog.h */,
 				078D5E3F103675880033A770 /* GDASLLogManager.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
@@ -114,6 +126,7 @@
 				0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */,
 				072018CF103E6AF50007B6E0 /* GDRegistration.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
+				07C034351052653300510FE9 /* GDUnsanitySCR.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */,
 				0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
@@ -156,6 +169,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */,
 				078D5E2510366CAD0033A770 /* GDASLLog.m */,
 				078D5E40103675880033A770 /* GDASLLogManager.m */,
 				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
@@ -164,6 +178,7 @@
 				0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */,
 				072018D0103E6AF50007B6E0 /* GDRegistration.m */,
 				0749E35010390ECD001AA650 /* GDULimit.m */,
+				07C034361052653300510FE9 /* GDUnsanitySCR.m */,
 				0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */,
 				0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
@@ -221,6 +236,9 @@
 				071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */,
 				0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */,
 				072018D1103E6AF50007B6E0 /* GDRegistration.h in Headers */,
+				07D4F7FE1050F36A00907918 /* CarbonEvents.h in Headers */,
+				07C034371052653300510FE9 /* GDUnsanitySCR.h in Headers */,
+				07A5963D10534DD700F95BEA /* GDActiveApplicationStack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +326,8 @@
 				0749E6F810394DCD001AA650 /* GDQuartzDisplay.m in Sources */,
 				0720180E103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m in Sources */,
 				072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */,
+				07C034381052653300510FE9 /* GDUnsanitySCR.m in Sources */,
+				07A5963E10534DD700F95BEA /* GDActiveApplicationStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +369,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GDKit;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
 		};
@@ -356,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -375,6 +397,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GDKit;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};

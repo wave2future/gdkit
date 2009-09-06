@@ -7,7 +7,7 @@
 #endif
 
 /**
- * Macro definition of a string you can pass to openSystemPReference,
+ * Macro definition of a string you can pass to openSystemPreference,
  * for universal access.
  */
 #define kGDSystemPrefUniversalAccess @"UniversalAccessPref.prefPane"
@@ -41,12 +41,14 @@
 - (void) openSystemPreference:(NSString *) preferencesFileName;
 
 /**
- * Installs a launch agent/startup item into ~/Library/LaunchAgents
+ * Installs a launch agent/startup item into ~/Library/LaunchAgents, you
+ * need to pass it a "plist" file. ex: "MyAppStartup.Agent.plist"
  */
 - (void) installStartupLaunchdItem:(NSString *) plistName;
 
 /**
- * Removes a launchd agent/startup item from ~/Library/LaunchAgents
+ * Removes a launchd agent/startup item from ~/Library/LaunchAgents, you
+ * need to pass it a "plist" file. ex: "MyAppStartup.Agent.plist"
  */
 - (void) uninstallStartupLaunchdItem:(NSString *) plistName;
 

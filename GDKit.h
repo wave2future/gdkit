@@ -4,8 +4,6 @@
 #define hGDKit
 #endif
 
-#import "GDCarbonEvent.h"
-#import "GDCarbonEventManager.h"
 #import "GDASLLog.h"
 #import "GDASLLogManager.h"
 #import "GDULimit.h"
@@ -13,4 +11,5 @@
 #import "GDLicensing.h"
 #import "GDQuartzDisplay.h"
 
+#import "CarbonEvents.h"
 #import "CocoaAdditions.h"
