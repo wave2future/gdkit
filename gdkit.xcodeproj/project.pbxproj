@@ -158,22 +158,14 @@
 				0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */,
-			);
-			name = Headers;
-			sourceTree = "<group>";
-		};
-		07A59719105376CF00F95BEA /* c */ = {
-			isa = PBXGroup;
-			children = (
 				07A59724105377D200F95BEA /* OSTypeFunctions.h */,
 			);
-			name = c;
+			name = Headers;
 			sourceTree = "<group>";
 		};
 		0867D691FE84028FC02AAC07 /* gdkit */ = {
 			isa = PBXGroup;
 			children = (
-				07A59719105376CF00F95BEA /* c */,
 				0720BF46102F4A8500FB009B /* Headers */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
