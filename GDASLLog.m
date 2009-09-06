@@ -31,7 +31,7 @@
 	if(![manager enabled]) return;
 	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_ALERT,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_ALERT,[message UTF8String],NULL);
 	asl_free(m);
 }
 
@@ -39,49 +39,55 @@
 	if(![manager enabled]) return;
 	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_CRIT,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_CRIT,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) debug:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_DEBUG,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_DEBUG,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) emergency:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_EMERG,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_EMERG,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) error:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_ERR,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_ERR,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) info:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_INFO,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_INFO,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) notice:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_NOTICE,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_NOTICE,[message UTF8String],NULL);
 	asl_free(m);
 }
 
 - (void) warning:(NSString *) message {
 	if(![manager enabled]) return;
+	if(logToStdOut) printf("%s",[message UTF8String]);
 	aslmsg m = asl_new(ASL_TYPE_MSG);
-	asl_log(client,m,ASL_LEVEL_WARNING,[message UTF8String]);
+	asl_log(client,m,ASL_LEVEL_WARNING,[message UTF8String],NULL);
 	asl_free(m);
 }
 

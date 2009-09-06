@@ -39,6 +39,17 @@
 		078D5E42103675880033A770 /* GDASLLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D5E40103675880033A770 /* GDASLLogManager.m */; };
 		07A5963D10534DD700F95BEA /* GDActiveApplicationStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A5963E10534DD700F95BEA /* GDActiveApplicationStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */; };
+		07A5966B10536A6700F95BEA /* Accessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5966A10536A6700F95BEA /* Accessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A5969010536C9000F95BEA /* GDAccessibilityNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5968E10536C9000F95BEA /* GDAccessibilityNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A5969110536C9000F95BEA /* GDAccessibilityNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5968F10536C9000F95BEA /* GDAccessibilityNotification.m */; };
+		07A5969A10536D1900F95BEA /* GDAccessibilityOperationResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A5969B10536D1900F95BEA /* GDAccessibilityOperationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */; };
+		07A596A010536D8500F95BEA /* GDAccessibilityObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A596A110536D8500F95BEA /* GDAccessibilityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */; };
+		07A596A810536E0C00F95BEA /* GDAccessibilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A596A610536E0C00F95BEA /* GDAccessibilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A596A910536E0C00F95BEA /* GDAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */; };
+		07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A59724105377D200F95BEA /* OSTypeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A59727105377D200F95BEA /* OSTypeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A59725105377D200F95BEA /* OSTypeFunctions.m */; };
 		07C034371052653300510FE9 /* GDUnsanitySCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C034351052653300510FE9 /* GDUnsanitySCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07C034381052653300510FE9 /* GDUnsanitySCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C034361052653300510FE9 /* GDUnsanitySCR.m */; };
 		07D4F7FE1050F36A00907918 /* CarbonEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D4F7FD1050F36A00907918 /* CarbonEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,6 +88,17 @@
 		078D5E40103675880033A770 /* GDASLLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLogManager.m; sourceTree = "<group>"; };
 		07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDActiveApplicationStack.h; sourceTree = "<group>"; };
 		07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDActiveApplicationStack.m; sourceTree = "<group>"; };
+		07A5966A10536A6700F95BEA /* Accessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessibility.h; sourceTree = "<group>"; };
+		07A5968E10536C9000F95BEA /* GDAccessibilityNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityNotification.h; sourceTree = "<group>"; };
+		07A5968F10536C9000F95BEA /* GDAccessibilityNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityNotification.m; sourceTree = "<group>"; };
+		07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityOperationResult.h; sourceTree = "<group>"; };
+		07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityOperationResult.m; sourceTree = "<group>"; };
+		07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityObserver.h; sourceTree = "<group>"; };
+		07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityObserver.m; sourceTree = "<group>"; };
+		07A596A610536E0C00F95BEA /* GDAccessibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityManager.h; sourceTree = "<group>"; };
+		07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityManager.m; sourceTree = "<group>"; };
+		07A59724105377D200F95BEA /* OSTypeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTypeFunctions.h; sourceTree = "<group>"; };
+		07A59725105377D200F95BEA /* OSTypeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTypeFunctions.m; sourceTree = "<group>"; };
 		07C034351052653300510FE9 /* GDUnsanitySCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUnsanitySCR.h; sourceTree = "<group>"; };
 		07C034361052653300510FE9 /* GDUnsanitySCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUnsanitySCR.m; sourceTree = "<group>"; };
 		07D4F7FD1050F36A00907918 /* CarbonEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonEvents.h; sourceTree = "<group>"; };
@@ -114,6 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				0720BFE5102F4DC100FB009B /* GDKit.h */,
+				07A5966A10536A6700F95BEA /* Accessibility.h */,
+				07A596A610536E0C00F95BEA /* GDAccessibilityManager.h */,
+				07A5968E10536C9000F95BEA /* GDAccessibilityNotification.h */,
+				07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */,
+				07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */,
 				07D4F7FD1050F36A00907918 /* CarbonEvents.h */,
 				0749DE8A1037C575001AA650 /* CocoaAdditions.h */,
 				07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */,
@@ -135,9 +162,18 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		07A59719105376CF00F95BEA /* c */ = {
+			isa = PBXGroup;
+			children = (
+				07A59724105377D200F95BEA /* OSTypeFunctions.h */,
+			);
+			name = c;
+			sourceTree = "<group>";
+		};
 		0867D691FE84028FC02AAC07 /* gdkit */ = {
 			isa = PBXGroup;
 			children = (
+				07A59719105376CF00F95BEA /* c */,
 				0720BF46102F4A8500FB009B /* Headers */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -169,6 +205,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */,
+				07A5968F10536C9000F95BEA /* GDAccessibilityNotification.m */,
+				07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */,
+				07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */,
 				07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */,
 				078D5E2510366CAD0033A770 /* GDASLLog.m */,
 				078D5E40103675880033A770 /* GDASLLogManager.m */,
@@ -183,6 +223,7 @@
 				0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */,
 				0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */,
+				07A59725105377D200F95BEA /* OSTypeFunctions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -239,6 +280,12 @@
 				07D4F7FE1050F36A00907918 /* CarbonEvents.h in Headers */,
 				07C034371052653300510FE9 /* GDUnsanitySCR.h in Headers */,
 				07A5963D10534DD700F95BEA /* GDActiveApplicationStack.h in Headers */,
+				07A5966B10536A6700F95BEA /* Accessibility.h in Headers */,
+				07A5969010536C9000F95BEA /* GDAccessibilityNotification.h in Headers */,
+				07A5969A10536D1900F95BEA /* GDAccessibilityOperationResult.h in Headers */,
+				07A596A010536D8500F95BEA /* GDAccessibilityObserver.h in Headers */,
+				07A596A810536E0C00F95BEA /* GDAccessibilityManager.h in Headers */,
+				07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +375,11 @@
 				072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */,
 				07C034381052653300510FE9 /* GDUnsanitySCR.m in Sources */,
 				07A5963E10534DD700F95BEA /* GDActiveApplicationStack.m in Sources */,
+				07A5969110536C9000F95BEA /* GDAccessibilityNotification.m in Sources */,
+				07A5969B10536D1900F95BEA /* GDAccessibilityOperationResult.m in Sources */,
+				07A596A110536D8500F95BEA /* GDAccessibilityObserver.m in Sources */,
+				07A596A910536E0C00F95BEA /* GDAccessibilityManager.m in Sources */,
+				07A59727105377D200F95BEA /* OSTypeFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

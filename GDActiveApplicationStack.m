@@ -4,6 +4,7 @@
 
 @implementation GDActiveApplicationStack
 @synthesize limit;
+@synthesize onlyBringActiveApplicationsForward;
 
 - (id) init {
 	if(self = [super init]) {

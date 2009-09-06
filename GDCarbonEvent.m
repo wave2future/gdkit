@@ -2,6 +2,7 @@
 
 #import "GDCarbonEvent.h"
 #import "GDCarbonEventManager.h"
+#import "OSTypeFunctions.h"
 
 static NSMutableDictionary * gdceLookup = nil;
 static unsigned int eventIds = 0;
@@ -95,7 +96,8 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 	sigString = [signature retain];
 	//TODO: fix this cast.. eeck
 	//[h]ttp://www.omnigroup.com/mailman/archive/macosx-dev/2000-July/015122.html
-	hotKeyId.signature = (OSType)[signature UTF8String];
+	//hotKeyId.signature = (FourCharCode)[signature UTF8String];
+	hotKeyId.signature = fourCharCodeToOSType(sigString);
 }
 
 - (int) hotKeyId {
@@ -125,7 +127,7 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 		if([self hotKeyId] < 1) {
 			eventIds+=1;
 			[self setHotKeyId:eventIds];
-			[self setHotKeySignature:[NSString stringWithFormat:@"htk%i",eventIds]];
+			[self setHotKeySignature:[NSString stringWithFormat:@"hk%i",eventIds]];
 		}
 	}
 	if(eventSpec.eventClass==kEventClassKeyboard && eventSpec.eventKind == kEventHotKeyPressed) {

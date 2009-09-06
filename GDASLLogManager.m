@@ -59,7 +59,7 @@ static GDASLLogManager * inst = nil;
 	return self;
 }
 
-- (unsigned) retainCount {
+- (NSUInteger) retainCount {
 	return UINT_MAX;
 }
 
