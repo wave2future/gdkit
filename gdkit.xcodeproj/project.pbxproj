@@ -50,62 +50,63 @@
 		07A596A910536E0C00F95BEA /* GDAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */; };
 		07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A59724105377D200F95BEA /* OSTypeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A59727105377D200F95BEA /* OSTypeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A59725105377D200F95BEA /* OSTypeFunctions.m */; };
+		07A5994D1054586400F95BEA /* gdkit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 07A5994C1054586400F95BEA /* gdkit_Prefix.pch */; };
 		07C034371052653300510FE9 /* GDUnsanitySCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C034351052653300510FE9 /* GDUnsanitySCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07C034381052653300510FE9 /* GDUnsanitySCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C034361052653300510FE9 /* GDUnsanitySCR.m */; };
 		07D4F7FE1050F36A00907918 /* CarbonEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D4F7FD1050F36A00907918 /* CarbonEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071F0A85103E462C00D2AFDB /* GDLicensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLicensing.h; sourceTree = "<group>"; };
-		0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSharedUserDefaults+Additions.h"; sourceTree = "<group>"; };
-		0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSharedUserDefaults+Additions.m"; sourceTree = "<group>"; };
-		072018CF103E6AF50007B6E0 /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDRegistration.h; sourceTree = "<group>"; };
-		072018D0103E6AF50007B6E0 /* GDRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDRegistration.m; sourceTree = "<group>"; };
+		071F0A85103E462C00D2AFDB /* GDLicensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDLicensing.h; path = src/GDLicensing.h; sourceTree = "<group>"; };
+		0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSharedUserDefaults+Additions.h"; path = "src/NSSharedUserDefaults+Additions.h"; sourceTree = "<group>"; };
+		0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSharedUserDefaults+Additions.m"; path = "src/NSSharedUserDefaults+Additions.m"; sourceTree = "<group>"; };
+		072018CF103E6AF50007B6E0 /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDRegistration.h; path = src/GDRegistration.h; sourceTree = "<group>"; };
+		072018D0103E6AF50007B6E0 /* GDRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDRegistration.m; path = src/GDRegistration.m; sourceTree = "<group>"; };
 		0720BF38102F4A4700FB009B /* GDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0720BF3D102F4A5200FB009B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		0720BFE5102F4DC100FB009B /* GDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDKit.h; sourceTree = "<group>"; };
-		0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GDFileManager.h"; sourceTree = "<group>"; };
-		0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GDFileManager.m"; sourceTree = "<group>"; };
-		0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+WorkspaceAdditions.h"; sourceTree = "<group>"; };
-		0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+WorkspaceAdditions.m"; sourceTree = "<group>"; };
-		0720C7A01031017800FB009B /* GDCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEvent.h; sourceTree = "<group>"; };
-		0720C7A11031017800FB009B /* GDCarbonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEvent.m; sourceTree = "<group>"; };
+		0720BFE5102F4DC100FB009B /* GDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDKit.h; path = src/GDKit.h; sourceTree = "<group>"; };
+		0720C007102F4FBB00FB009B /* NSFileManager+GDFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+GDFileManager.h"; path = "src/NSFileManager+GDFileManager.h"; sourceTree = "<group>"; };
+		0720C009102F503500FB009B /* NSFileManager+GDFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+GDFileManager.m"; path = "src/NSFileManager+GDFileManager.m"; sourceTree = "<group>"; };
+		0720C7981030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWorkspace+WorkspaceAdditions.h"; path = "src/NSWorkspace+WorkspaceAdditions.h"; sourceTree = "<group>"; };
+		0720C7991030FB8400FB009B /* NSWorkspace+WorkspaceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWorkspace+WorkspaceAdditions.m"; path = "src/NSWorkspace+WorkspaceAdditions.m"; sourceTree = "<group>"; };
+		0720C7A01031017800FB009B /* GDCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEvent.h; path = src/GDCarbonEvent.h; sourceTree = "<group>"; };
+		0720C7A11031017800FB009B /* GDCarbonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEvent.m; path = src/GDCarbonEvent.m; sourceTree = "<group>"; };
 		0720C8231031065C00FB009B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+StatusItemAdditions.h"; sourceTree = "<group>"; };
-		0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStatusItem+StatusItemAdditions.m"; sourceTree = "<group>"; };
-		0749DE8A1037C575001AA650 /* CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAdditions.h; sourceTree = "<group>"; };
-		0749E34F10390ECD001AA650 /* GDULimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDULimit.h; sourceTree = "<group>"; };
-		0749E35010390ECD001AA650 /* GDULimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDULimit.m; sourceTree = "<group>"; };
-		0749E6F110394C72001AA650 /* GDDisplayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDisplayState.h; sourceTree = "<group>"; };
-		0749E6F210394C72001AA650 /* GDDisplayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDisplayState.m; sourceTree = "<group>"; };
-		0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDQuartzDisplay.h; sourceTree = "<group>"; };
-		0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDQuartzDisplay.m; sourceTree = "<group>"; };
-		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDCarbonEventManager.h; sourceTree = "<group>"; };
-		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDCarbonEventManager.m; sourceTree = "<group>"; };
-		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLog.h; sourceTree = "<group>"; };
-		078D5E2510366CAD0033A770 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLog.m; sourceTree = "<group>"; };
-		078D5E3F103675880033A770 /* GDASLLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDASLLogManager.h; sourceTree = "<group>"; };
-		078D5E40103675880033A770 /* GDASLLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDASLLogManager.m; sourceTree = "<group>"; };
-		07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDActiveApplicationStack.h; sourceTree = "<group>"; };
-		07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDActiveApplicationStack.m; sourceTree = "<group>"; };
-		07A5966A10536A6700F95BEA /* Accessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessibility.h; sourceTree = "<group>"; };
-		07A5968E10536C9000F95BEA /* GDAccessibilityNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityNotification.h; sourceTree = "<group>"; };
-		07A5968F10536C9000F95BEA /* GDAccessibilityNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityNotification.m; sourceTree = "<group>"; };
-		07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityOperationResult.h; sourceTree = "<group>"; };
-		07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityOperationResult.m; sourceTree = "<group>"; };
-		07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityObserver.h; sourceTree = "<group>"; };
-		07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityObserver.m; sourceTree = "<group>"; };
-		07A596A610536E0C00F95BEA /* GDAccessibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityManager.h; sourceTree = "<group>"; };
-		07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityManager.m; sourceTree = "<group>"; };
-		07A59724105377D200F95BEA /* OSTypeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTypeFunctions.h; sourceTree = "<group>"; };
-		07A59725105377D200F95BEA /* OSTypeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTypeFunctions.m; sourceTree = "<group>"; };
-		07C034351052653300510FE9 /* GDUnsanitySCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUnsanitySCR.h; sourceTree = "<group>"; };
-		07C034361052653300510FE9 /* GDUnsanitySCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUnsanitySCR.m; sourceTree = "<group>"; };
-		07D4F7FD1050F36A00907918 /* CarbonEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonEvents.h; sourceTree = "<group>"; };
+		0723F6CA10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStatusItem+StatusItemAdditions.h"; path = "src/NSStatusItem+StatusItemAdditions.h"; sourceTree = "<group>"; };
+		0723F6CB10314ECE00EF92B4 /* NSStatusItem+StatusItemAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStatusItem+StatusItemAdditions.m"; path = "src/NSStatusItem+StatusItemAdditions.m"; sourceTree = "<group>"; };
+		0749DE8A1037C575001AA650 /* CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaAdditions.h; path = src/CocoaAdditions.h; sourceTree = "<group>"; };
+		0749E34F10390ECD001AA650 /* GDULimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDULimit.h; path = src/GDULimit.h; sourceTree = "<group>"; };
+		0749E35010390ECD001AA650 /* GDULimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDULimit.m; path = src/GDULimit.m; sourceTree = "<group>"; };
+		0749E6F110394C72001AA650 /* GDDisplayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDisplayState.h; path = src/GDDisplayState.h; sourceTree = "<group>"; };
+		0749E6F210394C72001AA650 /* GDDisplayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDisplayState.m; path = src/GDDisplayState.m; sourceTree = "<group>"; };
+		0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDQuartzDisplay.h; path = src/GDQuartzDisplay.h; sourceTree = "<group>"; };
+		0749E6F610394DCD001AA650 /* GDQuartzDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDQuartzDisplay.m; path = src/GDQuartzDisplay.m; sourceTree = "<group>"; };
+		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEventManager.h; path = src/GDCarbonEventManager.h; sourceTree = "<group>"; };
+		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEventManager.m; path = src/GDCarbonEventManager.m; sourceTree = "<group>"; };
+		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = src/GDASLLog.h; sourceTree = "<group>"; };
+		078D5E2510366CAD0033A770 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDASLLog.m; path = src/GDASLLog.m; sourceTree = "<group>"; };
+		078D5E3F103675880033A770 /* GDASLLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLogManager.h; path = src/GDASLLogManager.h; sourceTree = "<group>"; };
+		078D5E40103675880033A770 /* GDASLLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDASLLogManager.m; path = src/GDASLLogManager.m; sourceTree = "<group>"; };
+		07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDActiveApplicationStack.h; path = src/GDActiveApplicationStack.h; sourceTree = "<group>"; };
+		07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDActiveApplicationStack.m; path = src/GDActiveApplicationStack.m; sourceTree = "<group>"; };
+		07A5966A10536A6700F95BEA /* Accessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Accessibility.h; path = src/Accessibility.h; sourceTree = "<group>"; };
+		07A5968E10536C9000F95BEA /* GDAccessibilityNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityNotification.h; path = src/GDAccessibilityNotification.h; sourceTree = "<group>"; };
+		07A5968F10536C9000F95BEA /* GDAccessibilityNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccessibilityNotification.m; path = src/GDAccessibilityNotification.m; sourceTree = "<group>"; };
+		07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityOperationResult.h; path = src/GDAccessibilityOperationResult.h; sourceTree = "<group>"; };
+		07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccessibilityOperationResult.m; path = src/GDAccessibilityOperationResult.m; sourceTree = "<group>"; };
+		07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityObserver.h; path = src/GDAccessibilityObserver.h; sourceTree = "<group>"; };
+		07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccessibilityObserver.m; path = src/GDAccessibilityObserver.m; sourceTree = "<group>"; };
+		07A596A610536E0C00F95BEA /* GDAccessibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityManager.h; path = src/GDAccessibilityManager.h; sourceTree = "<group>"; };
+		07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccessibilityManager.m; path = src/GDAccessibilityManager.m; sourceTree = "<group>"; };
+		07A59724105377D200F95BEA /* OSTypeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSTypeFunctions.h; path = src/OSTypeFunctions.h; sourceTree = "<group>"; };
+		07A59725105377D200F95BEA /* OSTypeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSTypeFunctions.m; path = src/OSTypeFunctions.m; sourceTree = "<group>"; };
+		07A5994C1054586400F95BEA /* gdkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_Prefix.pch; path = src/gdkit_Prefix.pch; sourceTree = "<group>"; };
+		07C034351052653300510FE9 /* GDUnsanitySCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDUnsanitySCR.h; path = src/GDUnsanitySCR.h; sourceTree = "<group>"; };
+		07C034361052653300510FE9 /* GDUnsanitySCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDUnsanitySCR.m; path = src/GDUnsanitySCR.m; sourceTree = "<group>"; };
+		07D4F7FD1050F36A00907918 /* CarbonEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarbonEvents.h; path = src/CarbonEvents.h; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		32DBCF5E0370ADEE00C91783 /* gdkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gdkit_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -242,7 +243,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF5E0370ADEE00C91783 /* gdkit_Prefix.pch */,
+				07A5994C1054586400F95BEA /* gdkit_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -278,6 +279,7 @@
 				07A596A010536D8500F95BEA /* GDAccessibilityObserver.h in Headers */,
 				07A596A810536E0C00F95BEA /* GDAccessibilityManager.h in Headers */,
 				07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */,
+				07A5994D1054586400F95BEA /* gdkit_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

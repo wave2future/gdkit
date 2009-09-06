@@ -1,0 +1,32 @@
+//copyright 2009 aaronsmith
+
+#import <Cocoa/Cocoa.h>
+
+/**
+ * A protocol to implement license support in an application.
+ */
+@protocol GDLicensing
+
+/**
+ * This should return whether or not the application
+ * is correctly registered.
+ */
+- (Boolean) isRegistered;
+
+/**
+ * This should check if the app is registered, and can
+ * keep running.
+ */
+- (Boolean) canKeepRunningApp;
+
+/**
+ * Check if a license is valid.
+ */
+- (Boolean) isValid:(NSString *) name regCode:(NSString *) regCode;
+
+/**
+ * Save the license and name.
+ */
+- (void) saveRegistration:(NSString *) name regCode:(NSString *) regCode;
+
+@end
