@@ -4,8 +4,13 @@
 #import "GDASLLog.h"
 
 /**
- * A helper for environment resources, generally making
- * updates to ulimit.
+ * @file GDULimit.h
+ *
+ * Header file for GDULimit.
+ */
+
+/**
+ * The GDULimit contains helpers for environment resources.
  */
 @interface GDULimit : NSObject {
 }

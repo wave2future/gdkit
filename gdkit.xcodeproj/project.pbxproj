@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */ = {isa = PBXBuildFile; fileRef = 071F0A85103E462C00D2AFDB /* GDLicensing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0720180E103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */; };
 		07201817103E67D20007B6E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
@@ -52,7 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		071F0A85103E462C00D2AFDB /* GDLicensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDLicensing.h; path = src/GDLicensing.h; sourceTree = "<group>"; };
 		0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSharedUserDefaults+Additions.h"; path = "src/NSSharedUserDefaults+Additions.h"; sourceTree = "<group>"; };
 		0720180C103E66B50007B6E0 /* NSSharedUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSharedUserDefaults+Additions.m"; path = "src/NSSharedUserDefaults+Additions.m"; sourceTree = "<group>"; };
 		072018CF103E6AF50007B6E0 /* GDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDRegistration.h; path = src/GDRegistration.h; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				078D5E3F103675880033A770 /* GDASLLogManager.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
 				078D52B31033A6F10033A770 /* GDCarbonEventManager.h */,
-				071F0A85103E462C00D2AFDB /* GDLicensing.h */,
 				0749E6F510394DCD001AA650 /* GDQuartzDisplay.h */,
 				072018CF103E6AF50007B6E0 /* GDRegistration.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
@@ -250,7 +247,6 @@
 				078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */,
 				0749E35110390ECD001AA650 /* GDULimit.h in Headers */,
 				0749E6F710394DCD001AA650 /* GDQuartzDisplay.h in Headers */,
-				071F0A87103E462C00D2AFDB /* GDLicensing.h in Headers */,
 				0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */,
 				072018D1103E6AF50007B6E0 /* GDRegistration.h in Headers */,
 				07A5963D10534DD700F95BEA /* GDActiveApplicationStack.h in Headers */,

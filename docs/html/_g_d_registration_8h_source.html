@@ -51,36 +51,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 
 <a name="l00024"></a><a class="code" href="_g_d_registration_8h.html#ad9e28ad15c405015c4bfdbcf9f61e95d">00024</a> <span class="preprocessor">#define kGDRegistrationHasSentHome </span><span class="stringliteral">@&quot;GDRegistrationHasSentHome&quot;</span>
 <a name="l00025"></a>00025 
-<a name="l00029"></a><a class="code" href="interface_g_d_registration.html">00029</a> <span class="keyword">@interface </span><a class="code" href="interface_g_d_registration.html" title="The GDRegistration helps with application registration.">GDRegistration</a> : NSObject {
-<a name="l00030"></a>00030         
-<a name="l00034"></a><a class="code" href="interface_g_d_registration.html#a951a74df6032c61bdc6215df98dfc10f">00034</a>         <a class="code" href="class_n_s_user_defaults.html">NSUserDefaults</a> * <a class="code" href="interface_g_d_registration.html#a951a74df6032c61bdc6215df98dfc10f" title="User defaults instance.">defaults</a>;
+<a name="l00029"></a><a class="code" href="_g_d_registration_8h.html#a2918892ac5f171e593ddc377905cb06a">00029</a> <span class="preprocessor">#define kGDRegistrationHomeURLKey </span><span class="stringliteral">@&quot;GDLicenseHomeURL&quot;</span>
+<a name="l00030"></a>00030 
+<a name="l00034"></a><a class="code" href="interface_g_d_registration.html">00034</a> <span class="keyword">@interface </span><a class="code" href="interface_g_d_registration.html" title="The GDRegistration helps with application registration.">GDRegistration</a> : NSObject {
 <a name="l00035"></a>00035         
-<a name="l00039"></a><a class="code" href="interface_g_d_registration.html#a2cec9ccef516bf4ecbf55de00bf0dbda">00039</a>         NSMutableArray * <a class="code" href="interface_g_d_registration.html#a2cec9ccef516bf4ecbf55de00bf0dbda" title="Blacklisted licenses.">blacklist</a>;
-<a name="l00040"></a>00040 }
-<a name="l00041"></a>00041 
-<a name="l00048"></a>00048 - (void) sendLicenseHome;
-<a name="l00049"></a>00049 
-<a name="l00058"></a>00058 - (void) saveRegistrationIntoUserDefaults:(NSString *) nameStorageKey licenseStorageKey:(NSString *) licenseStorageKey name:(NSString *) name license:(NSString *) license;
-<a name="l00059"></a>00059 
-<a name="l00066"></a>00066 - (void) saveRegistrationLicense:(NSString *) license forName:(NSString *) name;
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073 - (NSString *) getLicense;
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080 - (NSString *) getName;
-<a name="l00081"></a>00081 
-<a name="l00088"></a>00088 - (Boolean) isValidForName:(NSString *) name andLicense:(NSString *) license;
-<a name="l00089"></a>00089 
-<a name="l00095"></a>00095 - (Boolean) isValid;
-<a name="l00096"></a>00096 
-<a name="l00100"></a>00100 - (Boolean) hasSavedRegistration;
+<a name="l00039"></a><a class="code" href="interface_g_d_registration.html#a951a74df6032c61bdc6215df98dfc10f">00039</a>         <a class="code" href="class_n_s_user_defaults.html">NSUserDefaults</a> * <a class="code" href="interface_g_d_registration.html#a951a74df6032c61bdc6215df98dfc10f" title="User defaults instance.">defaults</a>;
+<a name="l00040"></a>00040         
+<a name="l00044"></a><a class="code" href="interface_g_d_registration.html#a2cec9ccef516bf4ecbf55de00bf0dbda">00044</a>         NSMutableArray * <a class="code" href="interface_g_d_registration.html#a2cec9ccef516bf4ecbf55de00bf0dbda" title="Blacklisted licenses.">blacklist</a>;
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+<a name="l00053"></a>00053 - (void) sendLicenseHome;
+<a name="l00054"></a>00054 
+<a name="l00063"></a>00063 - (void) saveRegistrationIntoUserDefaults:(NSString *) nameStorageKey licenseStorageKey:(NSString *) licenseStorageKey name:(NSString *) name license:(NSString *) license;
+<a name="l00064"></a>00064 
+<a name="l00071"></a>00071 - (void) saveRegistrationLicense:(NSString *) license forName:(NSString *) name;
+<a name="l00072"></a>00072 
+<a name="l00078"></a>00078 - (NSString *) getLicense;
+<a name="l00079"></a>00079 
+<a name="l00085"></a>00085 - (NSString *) getName;
+<a name="l00086"></a>00086 
+<a name="l00093"></a>00093 - (Boolean) isValidForName:(NSString *) name andLicense:(NSString *) license;
+<a name="l00094"></a>00094 
+<a name="l00100"></a>00100 - (Boolean) isValid;
 <a name="l00101"></a>00101 
-<a name="l00107"></a>00107 - (Boolean) isLicenseBlacklisted:(NSString *) license;
-<a name="l00108"></a>00108 
-<a name="l00113"></a>00113 - (Boolean) isRegisteredLicenseBlacklisted;
-<a name="l00114"></a>00114 
-<a name="l00120"></a>00120 - (void) addLicenseToBlacklist:(NSString *) license;
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="keyword">@end</span>
+<a name="l00105"></a>00105 - (Boolean) hasSavedRegistration;
+<a name="l00106"></a>00106 
+<a name="l00112"></a>00112 - (Boolean) isLicenseBlacklisted:(NSString *) license;
+<a name="l00113"></a>00113 
+<a name="l00118"></a>00118 - (Boolean) isRegisteredLicenseBlacklisted;
+<a name="l00119"></a>00119 
+<a name="l00125"></a>00125 - (void) addLicenseToBlacklist:(NSString *) license;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="keyword">@end</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -96,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 7 17:50:55 2009 for GDKit by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 7 18:53:15 2009 for GDKit by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

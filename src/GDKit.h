@@ -15,7 +15,6 @@
 #import "GDASLLogManager.h"
 #import "GDCarbonEvent.h"
 #import "GDCarbonEventManager.h"
-#import "GDLicensing.h"
 #import "GDQuartzDisplay.h"
 #import "GDRegistration.h"
 #import "GDULimit.h"

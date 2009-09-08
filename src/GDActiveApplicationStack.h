@@ -1,12 +1,13 @@
 //copyright aaronsmith 2009
 
 #import <Cocoa/Cocoa.h>
-#import "NSWorkspace+WorkspaceAdditions.h"
+#import "NSWorkspace+Additions.h"
 
 /**
  * The GDActiveApplicationStack keeps a stack
- * of application info dictionaries. When application
- * focus changes, an entry is added into the stack.
+ * of application info dictionaries.
+ *
+ * When application focus changes, an entry is added into the stack.
  */
 @interface GDActiveApplicationStack : NSObject {
 	short limit;
@@ -21,6 +22,11 @@
 	 * NSWorkspace reference.
 	 */
 	NSWorkspace * workspace;
+	
+	/**
+	 * The notification center from the workspace.
+	 */
+	NSNotificationCenter * center;
 }
 
 /**

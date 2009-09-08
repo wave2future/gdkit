@@ -2,6 +2,12 @@
 
 #import "GDActiveApplicationStack.h"
 
+//if 10_5 isn't defined, it means that the sdk
+//currently being compiled against is 10.5. awkward.
+#ifndef NSAppKitVersionNumber10_5
+#warning GDActiveApplicationStack requires 10.6
+#endif
+
 @implementation GDActiveApplicationStack
 @synthesize limit;
 @synthesize onlyBringActiveApplicationsForward;
@@ -45,10 +51,10 @@
 
 - (void) initWorkspaceAndListeners {
 	workspace = [NSWorkspace sharedWorkspace];
-	
+	center = [workspace notificationCenter];
 }
 
-- (void) onApplicationActivate {
+- (void) onApplicationActivate:(NSNotification *) notification {
 	NSDictionary * app = [workspace activeApplication];
 	if([stack count] == [self limit]) [stack removeObjectAtIndex:0];
 	[stack addObject:app];

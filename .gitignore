@@ -11,3 +11,4 @@ build/
 gdkit.xcodeproj/*.perspective
 gdkit.xcodeproj/*.perspectivev3
 gdkit.xcodeproj/*.pbxuser
+docs/*
