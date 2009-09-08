@@ -5,8 +5,7 @@
 static GDCarbonEventManager * inst = nil;
 
 @class EventKeyWrapper;
-@interface EventKeyWrapper : NSObject
-{
+@interface EventKeyWrapper : NSObject {
 	NSUInteger keyInArray;
 }
 - (NSUInteger) key;
@@ -56,13 +55,6 @@ static GDCarbonEventManager * inst = nil;
 	return self;
 }
 
-- (void) registerAndInstallQueuedEvents {
-	GDCarbonEvent * e;
-	for(e in [eventInstallQueueArray objectEnumerator]) {
-		[self registerAndInstallGDCarbonEvent:e uninstallIfExists:TRUE];
-	}
-}
-
 - (void) queueForInstall:(GDCarbonEvent *) event unique:(Boolean) unique {
 	NSString * key = [event keyString];
 	if(!unique) {
@@ -81,16 +73,10 @@ static GDCarbonEventManager * inst = nil;
 	}
 }
 
-- (void) registerAndInstallQueuedEventsForGroup:(NSString *) groupName {
-	NSMutableArray * group = [eventInstallQueueForGroups valueForKey:groupName];
-	GDCarbonEvent * e;
-	for(e in [group objectEnumerator]) [self registerAndInstallGDCarbonEvent:e inGroup:groupName uninstallIfExists:TRUE];
-}
-
 - (void) queueForInstall:(GDCarbonEvent *) event intoGroup:(NSString *) groupName unique:(Boolean) unique {
 	NSString * key = [event keyString];
 	NSMutableDictionary * group = [eventInstallQueueForGroupDict valueForKey:groupName];
-	if(!group) {
+	if(group == nil) {
 		group = [[[NSMutableDictionary alloc] init] autorelease];
 		[eventInstallQueueForGroupDict setObject:group forKey:groupName];
 		NSMutableDictionary * arrayLookups = [[[NSMutableDictionary alloc] init] autorelease];
@@ -114,6 +100,77 @@ static GDCarbonEventManager * inst = nil;
 	
 }
 
+- (void) registerGDCarbonEvent:(GDCarbonEvent *) event uninstallIfExists:(Boolean) uninstall {
+	NSString * key = [event keyString];
+	GDCarbonEvent * ev = [eventsLookup valueForKey:key];
+	if(uninstall) [ev uninstall];
+	[eventsLookup setObject:event forKey:key];
+	[event retain];
+}
+
+- (void) registerAndInstallGDCarbonEvent:(GDCarbonEvent *) event uninstallIfExists:(Boolean) uninstall {
+	[self registerGDCarbonEvent:event uninstallIfExists:uninstall];
+	[event install];
+}
+
+- (void) registerGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall {
+	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
+	if(!group) {
+		group = [[[NSMutableDictionary alloc] init] autorelease];
+		[eventGroups setObject:group forKey:groupName];
+	}
+	NSString * key = [event keyString];
+	[group setObject:event forKey:key];
+}
+
+- (void) registerAndInstallGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall {
+	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
+	NSString * key = [event keyString];
+	if(!group) {
+		group = [[[NSMutableDictionary alloc] init] autorelease];
+		[eventGroups setObject:group forKey:groupName];
+	} else {
+		GDCarbonEvent * e = [group valueForKey:key];
+		[e uninstall];
+		[group removeObjectForKey:key];
+	}
+	[group setObject:event forKey:key];
+	[event install];
+}
+
+- (void) unregisterGDCarbonEvent:(GDCarbonEvent *) event shouldUninstall:(Boolean) uninstall {
+	NSString * key = [event keyString];
+	if(uninstall) {
+		GDCarbonEvent * e = [eventsLookup objectForKey:key];
+		[e uninstall];
+	}
+	[eventsLookup removeObjectForKey:key];
+}
+
+- (void) releaseGroup:(NSString *) groupName {
+	[eventGroups removeObjectForKey:groupName];
+}
+
+- (void) uninstallAndReleaseGroup:(NSString *) groupName {
+	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
+	GDCarbonEvent * e;
+	for(e in [group objectEnumerator]) [e uninstall];
+	[eventGroups removeObjectForKey:groupName];
+}
+
+- (void) registerAndInstallQueuedEvents {
+	GDCarbonEvent * e;
+	for(e in [eventInstallQueueArray objectEnumerator]) {
+		[self registerAndInstallGDCarbonEvent:e uninstallIfExists:TRUE];
+	}
+}
+
+- (void) registerAndInstallQueuedEventsForGroup:(NSString *) groupName {
+	NSMutableArray * group = [eventInstallQueueForGroups valueForKey:groupName];
+	GDCarbonEvent * e;
+	for(e in [group objectEnumerator]) [self registerAndInstallGDCarbonEvent:e inGroup:groupName uninstallIfExists:TRUE];
+}
+
 - (void) flushQueuedInstall {
 	[eventInstallQueueDict release];
 	[eventInstallQueueArray release];
@@ -133,62 +190,14 @@ static GDCarbonEventManager * inst = nil;
 	eventInstallQueueForGroups = [[NSMutableDictionary alloc] init];
 }
 
-- (void) releaseGroup:(NSString *) groupName {
-	[eventGroups removeObjectForKey:groupName];
+- (void) releaseAll {
+	[eventsLookup release];
+	eventsLookup = [[NSMutableDictionary alloc] init];
 }
 
-- (void) uninstallAndReleaseGroup:(NSString *) groupName {
-	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
-	GDCarbonEvent * e;
-	for(e in [group objectEnumerator]) [e uninstall];
-	[eventGroups removeObjectForKey:groupName];
-}
-
-- (void) registerAndInstallGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall {
-	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
-	NSString * key = [event keyString];
-	if(!group) {
-		group = [[[NSMutableDictionary alloc] init] autorelease];
-		[eventGroups setObject:group forKey:groupName];
-	} else {
-		GDCarbonEvent * e = [group valueForKey:key];
-		[e uninstall];
-		[group removeObjectForKey:key];
-	}
-	[group setObject:event forKey:key];
-	[event install];
-}
-
-- (void) registerGDCarbonEvent:(GDCarbonEvent *) event inGroup:(NSString *) groupName uninstallIfExists:(Boolean) uninstall {
-	NSMutableDictionary * group = [eventGroups valueForKey:groupName];
-	if(!group) {
-		group = [[[NSMutableDictionary alloc] init] autorelease];
-		[eventGroups setObject:group forKey:groupName];
-	}
-	NSString * key = [event keyString];
-	[group setObject:event forKey:key];
-}
-
-- (void) registerAndInstallGDCarbonEvent:(GDCarbonEvent *) event uninstallIfExists:(Boolean) uninstall {
-	[self registerGDCarbonEvent:event uninstallIfExists:uninstall];
-	[event install];
-}
-
-- (void) registerGDCarbonEvent:(GDCarbonEvent *) event uninstallIfExists:(Boolean) uninstall {
-	NSString * key = [event keyString];
-	GDCarbonEvent * ev = [eventsLookup valueForKey:key];
-	if(uninstall) [ev uninstall];
-	[eventsLookup setObject:event forKey:key];
-	[event retain];
-}
-
-- (void) unregisterGDCarbonEvent:(GDCarbonEvent *) event shouldUninstall:(Boolean) uninstall {
-	NSString * key = [event keyString];
-	if(uninstall) {
-		GDCarbonEvent * e = [eventsLookup objectForKey:key];
-		[e uninstall];
-	}
-	[eventsLookup removeObjectForKey:key];
+- (void) uninstallAndReleaseAll {
+	[self uninstallAll];
+	[self releaseAll];
 }
 
 - (void) uninstallAll {
@@ -201,19 +210,9 @@ static GDCarbonEventManager * inst = nil;
 	for(e in [eventsLookup objectEnumerator]) [e install];
 }
 
-- (void) releaseAll {
-	[eventsLookup release];
-	eventsLookup = [[NSMutableDictionary alloc] init];
-}
-
-- (void) uninstallAndReleaseAll {
-	[self uninstallAll];
-	[self releaseAll];
-}
-
 + (id)allocWithZone:(NSZone *) zone {
     @synchronized(self) {
-		if (inst == nil) {
+		if(inst == nil) {
 			inst = [super allocWithZone:zone];
 			return inst;
 		}
@@ -242,7 +241,6 @@ static GDCarbonEventManager * inst = nil;
 
 @end
 
-//wrapper used to store key information
 @implementation EventKeyWrapper
 - (id) initWithKey:(NSUInteger) key {
 	if(self = [super init]) {

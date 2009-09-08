@@ -3,8 +3,14 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface NSUserDefaults (NSSharedUserDefaultAdditions)
+/**
+ * Category additions to NSUserDefaults.
+ */
+@interface NSUserDefaults (Additions)
 
+/**
+ * Deletes any entries identified the application's bundle id.
+ */
 + (void) reset;
 
 @end

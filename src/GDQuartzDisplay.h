@@ -1,25 +1,46 @@
+//copyright aaronsmith 2009
+
 #import <Cocoa/Cocoa.h>
 
-#define kGDMaxDisplays 32
+/**
+ * @file GDQuartzDisplay.h
+ *
+ * Header file for GDQuartzDisplay.
+ */
 
 /**
- * GDDisplay represents a single display attached
- * to the computer.
+ * Maximum online or active displays.
+ * 
+ * GDQuartzDisplay uses the core graphics API to get online/active
+ * displays by calling CGGetActiveDisplayList() and CGGetOnlineDisplayList(),
+ * this definition is the count that will be used when calling those functions.
+ */
+#define kGDMaxDisplays 12
+
+/**
+ * The GDQuartzDisplay represents a display and wraps Core Graphics quartz display functions.
  */
 @interface GDQuartzDisplay : NSObject {
+	
+	/**
+	 * The hardware display id.
+	 */
 	CGDirectDisplayID displayId;
 }
 
 /**
  * Returns an array of CGQuartzDisplay instances which
  * are all of the active displays attached.
- * This is displays that can be drawn to.
+ * 
+ * These are displays that can be drawn to.
  */
 + (NSMutableArray *) activeDisplays;
 
 /**
  * Returns an array of CGQuartzDisplay instances which
- * are all of the online displays (active, mirrored, or sleeping).
+ * are all of the online displays.
+ * 
+ * These are active, mirrored, or sleeping displays.
  */
 + (NSMutableArray *) onlineDisplays;
 
@@ -30,19 +51,21 @@
 + (GDQuartzDisplay *) mainDisplay;
 
 /**
- * Initializes a GDQuartzDisplay from a point - it
- * uses this point to find the display that contains that point.
+ * Initializes a GDQuartzDisplay from a point.
+ * It uses this point to find the display that contains that point.
  */
 - (id) initWithPoint:(NSPoint) point;
 
 /**
- * Initializes a GDQuartzDisplay from a rect - it
- * uses this rect to find the display that contains that rect.
+ * Initializes a GDQuartzDisplay from a rect. 
+ * It uses this rect to find the display that contains that rect.
  */
 - (id) initWithRect:(NSRect) rect;
 
 /**
  * Initialize a GDQuartzDisplay from a CGDirectDisplayID.
+ *
+ * @param ddid A CGDirectDisplayID.
  */
 - (id) initWithDirectDisplayID:(CGDirectDisplayID) ddid;
 
@@ -78,8 +101,7 @@
 - (Boolean) isInMirrorSet;
 
 /**
- * Whether or not this display is online.
- * (active, mirrored, or sleeping).
+ * Whether or not this display is online (active, mirrored, or sleeping).
  */
 - (Boolean) isOnline;
 

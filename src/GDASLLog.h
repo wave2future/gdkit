@@ -3,16 +3,21 @@
 #include <asl.h>
 #import <Cocoa/Cocoa.h>
 
-#ifndef hGDASLLog
-#define hGDASLLog
-#endif
-
 /**
- * Forward declaration.
+ * @file GDASLLog.h
+ *
+ * Header file for GDASLLog.
  */
+
+//Forward declaration.
 @class GDASLLogManager;
 
+/**
+ * The GDASLLog is a wrapper around Apple's system log facility (man asl).
+ */
 @interface GDASLLog : NSObject {
+	
+	Boolean logToStdOut;
 	
 	/**
 	 * File descriptor for log file.
@@ -28,31 +33,30 @@
 	 * The log manager.
 	 */
 	GDASLLogManager * manager;
-	
-	/**
-	 * property for logToStdOut.
-	 */
-	Boolean logToStdOut;
 }
 
 /**
- * Whether or not to throw all messages to
+ * Whether or not to log all messages to
  * stdout as well.
  */
 @property (assign) Boolean logToStdOut;
 
 /**
- * Initialize with the sender, facility, and whether
- * or not to connect immediately. The sender and facility
- * correlate to log output. Usually the sender is name of
- * your app, and the facility is the bundle identifier.
+ * Designated initializer - inits with required parameters.
+ *
+ * Here's an extracted example:
+ * @code
+ * GDASLLog * log = [[GDASLLog alloc] initWithSender:@"MyAppName" facility:@"my.company.AppName" connectImmediately:TRUE];
+ * [log setLogFile:@"/var/log/MyApp"];
+ * [log info:@"TEST"];
+ * @endcode
  */
 - (id) initWithSender:(NSString *) sender facility:(NSString *) facility connectImmediately:(Boolean) connectImmediately;
 
 /**
- * Set's a log file to write all logs to. If this log
- * file isn't set, the logs aren't stored, however they
- * are visible in the console.
+ * Set's a log file to write all logs to. If a log
+ * file isn't set the logs aren't stored, they're still
+ * visible in the console.
  */
 - (int) setLogFile:(NSString *) filePath;
 
@@ -97,8 +101,8 @@
 - (void) warning:(NSString *) message;
 
 /**
- * Close this log. If you call close directlyk
- * this log won't work anymore. Close will be
+ * Close this log. If you call close directly
+ * this log won't work anymore - it's
  * called when this object is deallocated.
  */
 - (void) close;

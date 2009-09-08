@@ -1,8 +1,16 @@
 #import <Cocoa/Cocoa.h>
 
 /**
+ * @file OSTypeFunctions.h
+ *
+ * Some helper functions for OSType conversions.
+ */
+
+//#ifdef AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER
+
+/**
  * Convert an NSString of four characters into
- * an ostype.
+ * an OSType.
  */
 OSType fourCharCodeToOSType(NSString * inCode);
 

@@ -3,18 +3,16 @@
 #import <Cocoa/Cocoa.h>
 #import "GDASLLog.h"
 
-#ifndef hGDULimit
-#define hGDULimit
-#endif
-
+/**
+ * A helper for environment resources, generally making
+ * updates to ulimit.
+ */
 @interface GDULimit : NSObject {
 }
 
 /**
- * Enables core dumps. Use this when need to
- * enable  core dumps through code.
- * 
- * This is the equivalent of running 'ulimit -c unlimited'
+ * Enables core dumps. This is the equivalent of running
+ * 'ulimit -c unlimited'
  */
 + (void) enableCoreDumps;
 

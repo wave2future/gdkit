@@ -4,14 +4,22 @@
 #import "NSWorkspace+WorkspaceAdditions.h"
 
 /**
- * The GDActiveApplicationsStack keeps a stack
- * of application info dictionaries when applications
- * switch focus.
+ * The GDActiveApplicationStack keeps a stack
+ * of application info dictionaries. When application
+ * focus changes, an entry is added into the stack.
  */
 @interface GDActiveApplicationStack : NSObject {
 	short limit;
 	BOOL onlyBringActiveApplicationsForward;
+	
+	/**
+	 * The stack used to keep track of active applications.
+	 */
 	NSMutableArray * stack;
+	
+	/**
+	 * NSWorkspace reference.
+	 */
 	NSWorkspace * workspace;
 }
 
@@ -23,7 +31,7 @@
 /**
  * Only bring applications that are active forward. If a call
  * is made to bringTopForward, but the application that was saved
- * in the stack isn't active, it will pop, and try again.
+ * in the stack isn't active, it will pop(), and try again.
  *
  * If this isn't on, a call to bringTopForward will cause the
  * application to launch if it's not open.

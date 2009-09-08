@@ -86,12 +86,6 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 	[gdceLookup release];
 }
 
-- (void) incrementEventId {
-	@synchronized(self) {
-		eventIds+=1;
-	}
-}
-
 - (void) setHotKeySignature:(NSString *) signature {
 	sigString = [signature retain];
 	//TODO: fix this cast.. eeck
@@ -114,6 +108,11 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 
 - (void) setEventKind:(NSUInteger) eventKind {
 	eventSpec.eventKind = eventKind;
+}
+
+- (void) setEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind {
+	[self setEventClass:eventClass];
+	[self setEventKind:eventKind];
 }
 
 - (NSUInteger) cocoaModifierKeys {
@@ -150,12 +149,8 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 }
 
 - (void) invoke {
-	if(notificationName != nil) [notificationCenter postNotificationName:notificationName object:self userInfo:userInfo];
-	else {
-		if(target == nil) return;
-		if(action == nil) return;
-		if(target != nil && action != nil) [target performSelector:action withObject:[self userInfo]];
-	}
+	if(target != nil && action != nil) [target performSelector:action withObject:[self userInfo]];
+	else if(notificationName != nil) [notificationCenter postNotificationName:notificationName object:self userInfo:userInfo];
 }
 
 - (NSString *) keyString {

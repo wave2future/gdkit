@@ -10,8 +10,7 @@ static void fHandleObserverCallback(AXObserverRef observer, AXUIElementRef eleme
 @implementation GDAccessibilityObserver
 
 - (id) initWithNotification:(NSString *) notificatin forAXUIElementRef:(AXUIElementRef) elemnt callsAction:(SEL) action onTarget:(id) target withUserInfo:(NSDictionary *) userInpho {
-	self = [super init];
-	if(self) {
+	if(self = [super init]) {
 		if(!target || !action || !userInpho || !elemnt || !notificatin) return nil;
 		//int callres = 0;
 		accessManager = [GDAccessibilityManager sharedInstance];
@@ -48,7 +47,7 @@ static void fHandleObserverCallback(AXObserverRef observer, AXUIElementRef eleme
 	AXObserverRemoveNotification(observer,element,(CFStringRef)notification);
 	[notification release];
 	[invoker release];
-	[notify release];	
+	[notify release];
 	[actionTarget release];
 	CFRelease(element);
 	CFRelease(observer);
