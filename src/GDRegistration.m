@@ -3,21 +3,21 @@
 #import "GDRegistration.h"
 
 @implementation GDRegistration
+@synthesize homeURL;
 
 - (id) init {
 	if(self = [super init]) {
 		defaults = [NSUserDefaults standardUserDefaults];
 		blacklist = [[NSMutableArray alloc] init];
-		[self sendLicenseHome];
 	}
 	return self;
 }
 
 - (void) sendLicenseHome {
+	if(![self homeURL]) return;
 	if(![self hasSavedRegistration]) return;
 	if([defaults boolForKey:kGDRegistrationHasSentHome]) return;
-	NSBundle * bndl = [NSBundle mainBundle];
-	NSString * url = [bndl objectForInfoDictionaryKey:kGDRegistrationHomeURLKey];
+	NSString * url = [self homeURL];
 	NSString * s = [url stringByAppendingString:[self getLicense]];
 	NSURL * u = [NSURL URLWithString:s];
 	NSURLRequest * home = [NSURLRequest requestWithURL:u];

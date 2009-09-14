@@ -1,24 +1,34 @@
 //copyright aaronsmith 2009
 
+#import <AvailabilityMacros.h>
 #import "GDActiveApplicationStack.h"
 
-//if 10_5 isn't defined, it means that the sdk
-//currently being compiled against is 10.5. awkward.
-#ifndef NSAppKitVersionNumber10_5
-#warning GDActiveApplicationStack requires 10.6
-#endif
+#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_5
 
 @implementation GDActiveApplicationStack
 @synthesize limit;
 @synthesize onlyBringActiveApplicationsForward;
 
 - (id) init {
+	SInt32 res;
+	Gestalt(gestaltSystemVersionMajor,&res);
+	if(res < 0x1060) {
+		[NSException raise:@"GDActiveApplicationStack requires 10.6" format:@""];
+		return nil;
+	}
 	if(self = [super init]) {
 		stack = [[NSMutableArray alloc] init];
 		[self setLimit:10];
 		[self initWorkspaceAndListeners];
 	}
 	return self;
+}
+
++ (Boolean) isAvailable {
+	SInt32 res;
+	Gestalt(gestaltSystemVersionMajor,&res);
+	if(res < 0x1060) return FALSE;
+	return TRUE;
 }
 
 - (NSDictionary *) top {
@@ -61,3 +71,5 @@
 }
 
 @end
+
+#endif

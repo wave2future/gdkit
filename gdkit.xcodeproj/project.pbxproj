@@ -45,9 +45,10 @@
 		07A596A910536E0C00F95BEA /* GDAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A596A710536E0C00F95BEA /* GDAccessibilityManager.m */; };
 		07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A59724105377D200F95BEA /* OSTypeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A59727105377D200F95BEA /* OSTypeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A59725105377D200F95BEA /* OSTypeFunctions.m */; };
-		07A5994D1054586400F95BEA /* gdkit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 07A5994C1054586400F95BEA /* gdkit_Prefix.pch */; };
-		07A59BA810550B7900F95BEA /* GDAccessibilityObserverHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A59BA610550B7900F95BEA /* GDAccessibilityObserverHelpers.h */; };
-		07A59BA910550B7900F95BEA /* GDAccessibilityObserverHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A59BA710550B7900F95BEA /* GDAccessibilityObserverHelpers.m */; };
+		07C3C240105B87E900A6906E /* GDAppExpiration.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C3C23E105B87E900A6906E /* GDAppExpiration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C3C241105B87E900A6906E /* GDAppExpiration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C3C23F105B87E900A6906E /* GDAppExpiration.m */; };
+		07E0E4E11057734500A5130F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0E4E01057734500A5130F /* CoreServices.framework */; };
+		07E0E5831057885300A5130F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 07E0E5821057885300A5130F /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,8 +91,10 @@
 		07A59724105377D200F95BEA /* OSTypeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSTypeFunctions.h; path = src/OSTypeFunctions.h; sourceTree = "<group>"; };
 		07A59725105377D200F95BEA /* OSTypeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSTypeFunctions.m; path = src/OSTypeFunctions.m; sourceTree = "<group>"; };
 		07A5994C1054586400F95BEA /* gdkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_Prefix.pch; path = src/gdkit_Prefix.pch; sourceTree = "<group>"; };
-		07A59BA610550B7900F95BEA /* GDAccessibilityObserverHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDAccessibilityObserverHelpers.h; sourceTree = "<group>"; };
-		07A59BA710550B7900F95BEA /* GDAccessibilityObserverHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDAccessibilityObserverHelpers.m; sourceTree = "<group>"; };
+		07C3C23E105B87E900A6906E /* GDAppExpiration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAppExpiration.h; path = src/GDAppExpiration.h; sourceTree = "<group>"; };
+		07C3C23F105B87E900A6906E /* GDAppExpiration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAppExpiration.m; path = src/GDAppExpiration.m; sourceTree = "<group>"; };
+		07E0E4E01057734500A5130F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		07E0E5821057885300A5130F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 				07201817103E67D20007B6E0 /* Foundation.framework in Frameworks */,
 				0720BF3E102F4A5200FB009B /* Cocoa.framework in Frameworks */,
 				0720C8241031065C00FB009B /* Carbon.framework in Frameworks */,
+				07E0E4E11057734500A5130F /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,7 @@
 				07A5969E10536D8500F95BEA /* GDAccessibilityObserver.h */,
 				07A5969810536D1900F95BEA /* GDAccessibilityOperationResult.h */,
 				07A5963B10534DD700F95BEA /* GDActiveApplicationStack.h */,
+				07C3C23E105B87E900A6906E /* GDAppExpiration.h */,
 				078D5E2410366CAD0033A770 /* GDASLLog.h */,
 				078D5E3F103675880033A770 /* GDASLLogManager.h */,
 				0720C7A01031017800FB009B /* GDCarbonEvent.h */,
@@ -142,8 +147,6 @@
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+Additions.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+Additions.h */,
 				07A59724105377D200F95BEA /* OSTypeFunctions.h */,
-				07A59BA610550B7900F95BEA /* GDAccessibilityObserverHelpers.h */,
-				07A59BA710550B7900F95BEA /* GDAccessibilityObserverHelpers.m */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 		0867D691FE84028FC02AAC07 /* gdkit */ = {
 			isa = PBXGroup;
 			children = (
+				07E0E5821057885300A5130F /* README */,
 				0720BF46102F4A8500FB009B /* Headers */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -187,6 +191,7 @@
 				07A5969F10536D8500F95BEA /* GDAccessibilityObserver.m */,
 				07A5969910536D1900F95BEA /* GDAccessibilityOperationResult.m */,
 				07A5963C10534DD700F95BEA /* GDActiveApplicationStack.m */,
+				07C3C23F105B87E900A6906E /* GDAppExpiration.m */,
 				078D5E2510366CAD0033A770 /* GDASLLog.m */,
 				078D5E40103675880033A770 /* GDASLLogManager.m */,
 				0720C7A11031017800FB009B /* GDCarbonEvent.m */,
@@ -208,6 +213,7 @@
 			children = (
 				0720BF3D102F4A5200FB009B /* Cocoa.framework */,
 				0720C8231031065C00FB009B /* Carbon.framework */,
+				07E0E4E01057734500A5130F /* CoreServices.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -255,8 +261,7 @@
 				07A596A010536D8500F95BEA /* GDAccessibilityObserver.h in Headers */,
 				07A596A810536E0C00F95BEA /* GDAccessibilityManager.h in Headers */,
 				07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */,
-				07A5994D1054586400F95BEA /* gdkit_Prefix.pch in Headers */,
-				07A59BA810550B7900F95BEA /* GDAccessibilityObserverHelpers.h in Headers */,
+				07C3C240105B87E900A6906E /* GDAppExpiration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +277,7 @@
 				0720BF34102F4A4700FB009B /* Resources */,
 				0720BF35102F4A4700FB009B /* Sources */,
 				0720BF36102F4A4700FB009B /* Frameworks */,
+				07D5296F10575AF700E6EFD1 /* Archive Framework */,
 			);
 			buildRules = (
 			);
@@ -305,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E0E5831057885300A5130F /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +330,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=${PATH}:/Users/aaronsmith/dev/bin\nGITV=`/opt/local/bin/git log -n1 --pretty=oneline --format=%h`\nupdate-plist-node.rb Info.plist CFBundleVersion $GITV\n";
+			shellScript = "#PATH=${PATH}:/Users/aaronsmith/dev/bin\n#GITV=`/opt/local/bin/git log -n1 --pretty=oneline --format=%h`\n#update-plist-node.rb Info.plist CFBundleVersion $GITV\n";
+		};
+		07D5296F10575AF700E6EFD1 /* Archive Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Archive Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nOUTPUT=archive/${FULL_PRODUCT_NAME}\nFV=$FRAMEWORK_VERSION\nVERSIONED_OUTPUT=${OUTPUT}/Versions/${FRAMEWORK_VERSION}\nmkdir -p $VERSIONED_OUTPUT\ncp -Rf ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Versions/${FRAMEWORK_VERSION}/* ${VERSIONED_OUTPUT}\n\ncd ${OUTPUT}\nrm -f $EXECUTABLE_NAME\nln -sf Versions/${FV}/${EXECUTABLE_NAME} $EXECUTABLE_NAME\nrm -f Headers\nln -sf Versions/${FV}/Headers Headers\nrm -f Resources\nln -sf Versions/${FV}/Resources Resources\ncd Versions\nrm -f Current\nln -sf ${FV} Current";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -349,7 +370,7 @@
 				07A596A110536D8500F95BEA /* GDAccessibilityObserver.m in Sources */,
 				07A596A910536E0C00F95BEA /* GDAccessibilityManager.m in Sources */,
 				07A59727105377D200F95BEA /* OSTypeFunctions.m in Sources */,
-				07A59BA910550B7900F95BEA /* GDAccessibilityObserverHelpers.m in Sources */,
+				07C3C241105B87E900A6906E /* GDAppExpiration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,17 +394,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
+				FRAMEWORK_VERSION = 1;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -402,16 +426,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
+				FRAMEWORK_VERSION = 1;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
