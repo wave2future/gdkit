@@ -1,0 +1,8 @@
+
+-GDModalNib
+ -show
+ -hide
+ -setNibName:
+
+-GDModalNibController
+ -singleton
