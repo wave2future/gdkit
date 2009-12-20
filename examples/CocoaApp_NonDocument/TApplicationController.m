@@ -11,6 +11,10 @@
 	TOperationsController * ops = [[[TOperationsController alloc] init] autorelease];
 	TSoundController * snds = [[[TSoundController alloc] init] autorelease];
 	TContextMenuController * cx = [[[TContextMenuController alloc] init] autorelease];
+	/**
+	 * the "wins" and "views" properties are already available
+	 * from the MainMenu nib.
+	 */
 	[self lazyInitWithModel:mdl mainMenu:mm modals:mdls operations:ops windows:wins drawers:nil views:views sounds:snds contexts:cx];
 	[super initApplication];
 }

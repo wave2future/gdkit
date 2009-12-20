@@ -70,4 +70,9 @@
  */
 - (void) setDistantProtocol:(id) _protocol;
 
+/**
+ * [internal].
+ */
+- (NSDistantObject *) connectWithName:(NSString *) _connectionName;
+
 @end
