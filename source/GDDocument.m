@@ -10,16 +10,12 @@
 @synthesize views;
 @synthesize wins;
 @synthesize drawers;
+@synthesize contexts;
 
 - (void) awakeFromNib {
 	if(awokeFromNib)return;
 	awokeFromNib=true;
 	documentHasBeenActive=false;
-}
-
-- (id) init {
-	self=[super init];
-	return self;
 }
 
 - (void) initModel {}
@@ -28,7 +24,7 @@
 - (void) initControllers {}
 - (void) startDocument {}
 
-- (void) lazyInitWithModel:(id) _model mainMenu:(id) _mainMenu modals:(id) _modals operations:(id) _operations windows:(id) _windows drawers:(id) _drawers views:(id) _views sounds:(id) _sounds {
+- (void) lazyInitWithModel:(id) _model mainMenu:(id) _mainMenu modals:(id) _modals operations:(id) _operations windows:(id) _windows drawers:(id) _drawers views:(id) _views sounds:(id) _sounds contexts:(id) _contexts {
 	if(drawers and drawers not _drawers)GDRelease(drawers);
 	if(drawers is nil and _drawers not nil)drawers=[_drawers retain];
 	if(views and views not _views)GDRelease(views);
@@ -45,11 +41,21 @@
 	if(mainMenu is nil and _mainMenu not nil)mainMenu=[_mainMenu retain];
 	if(wins and wins not _windows)GDRelease(wins);
 	if(wins is nil and _windows not nil)wins=[_windows retain];
+	if(contexts and contexts not _contexts)GDRelease(contexts);
+	if(contexts is nil and _contexts not nil)contexts=[_contexts retain];
+	if(drawers not nil)[drawers performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(views not nil)[views performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(model not nil)[model performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(modals not nil)[modals performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(operations not nil)[operations performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(mainMenu not nil)[mainMenu performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(wins not nil)[wins performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
+	if(contexts not nil)[contexts performSelector:@selector(lazyInitWithGDDocument:) withObject:self];
 }
 
 - (void) windowControllerDidLoadNib:(NSWindowController *) aController {
 	[super windowControllerDidLoadNib:aController];
-    [self initDocument];
+	[self initDocument];
 }
 
 - (void) windowDidBecomeMain:(NSNotification *) notification {
@@ -67,16 +73,17 @@
 
 - (void) dealloc {
 	#ifdef GDKIT_PRINT_DEALLOCS
-	printf("dealloc GDApplicationController\n");
+	printf("dealloc GDDocument\n");
 	#endif
-	GDRelease(model);
-	GDRelease(mainMenu);
-	GDRelease(modals);
-	GDRelease(operations);
-	GDRelease(sounds);
-	GDRelease(views);
-	GDRelease(wins);
 	GDRelease(drawers);
+	GDRelease(views);
+	GDRelease(model);
+	GDRelease(modals);
+	GDRelease(sounds);
+	GDRelease(operations);
+	GDRelease(mainMenu);
+	GDRelease(wins);
+	GDRelease(contexts);
 	awokeFromNib=false;
 	documentHasBeenActive=false;
 	[super dealloc];

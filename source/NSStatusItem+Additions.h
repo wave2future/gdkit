@@ -3,6 +3,14 @@
 #import <Cocoa/Cocoa.h>
 
 /**
+ * @file NSStatusItem+Additions.h
+ *
+ * Header file for NSStatusItem cocoa additions.
+ */
+
+/**
+ * @class NSStatusItem
+ *
  * Category additions to NSStatusItem.
  */
 @interface NSStatusItem (Additions)

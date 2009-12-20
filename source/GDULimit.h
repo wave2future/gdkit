@@ -10,7 +10,7 @@
  */
 
 /**
- * The GDULimit contains helpers for environment resources.
+ * The GDULimit contains helpers for environment resources through ulimit.
  */
 @interface GDULimit : NSObject {
 }

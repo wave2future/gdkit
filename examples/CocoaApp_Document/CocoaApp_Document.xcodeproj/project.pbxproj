@@ -18,6 +18,7 @@
 		07560CE610DDB56F003E07DA /* TViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07560CE510DDB56F003E07DA /* TViewController.m */; };
 		07560CE910DDB5A7003E07DA /* TSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07560CE810DDB5A7003E07DA /* TSoundController.m */; };
 		0756100A10DDCA2C003E07DA /* TCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756100910DDCA2C003E07DA /* TCustomView.m */; };
+		075614A310DE26A8003E07DA /* TContextMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075614A210DE26A8003E07DA /* TContextMenuController.m */; };
 		1DDD582C0DA1D0D100B32029 /* TDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* TDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -78,6 +79,8 @@
 		07560CE810DDB5A7003E07DA /* TSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSoundController.m; sourceTree = "<group>"; };
 		0756100810DDCA2C003E07DA /* TCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCustomView.h; sourceTree = "<group>"; };
 		0756100910DDCA2C003E07DA /* TCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCustomView.m; sourceTree = "<group>"; };
+		075614A110DE26A8003E07DA /* TContextMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TContextMenuController.h; sourceTree = "<group>"; };
+		075614A210DE26A8003E07DA /* TContextMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TContextMenuController.m; sourceTree = "<group>"; };
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -110,6 +113,7 @@
 		07560BFA10DDAF13003E07DA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				075614A110DE26A8003E07DA /* TContextMenuController.h */,
 				0756100810DDCA2C003E07DA /* TCustomView.h */,
 				2A37F4AEFDCFA73011CA2CEA /* TDocument.h */,
 				07560C9910DDB1F2003E07DA /* TDocumentController.h */,
@@ -183,6 +187,8 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				075614A210DE26A8003E07DA /* TContextMenuController.m */,
+				0756100910DDCA2C003E07DA /* TCustomView.m */,
 				2A37F4ACFDCFA73011CA2CEA /* TDocument.m */,
 				07560C9A10DDB1F2003E07DA /* TDocumentController.m */,
 				07560CC710DDB3EF003E07DA /* TMainMenuController.m */,
@@ -192,7 +198,6 @@
 				07560CE810DDB5A7003E07DA /* TSoundController.m */,
 				07560CE510DDB56F003E07DA /* TViewController.m */,
 				07560CE010DDB520003E07DA /* TWindowController.m */,
-				0756100910DDCA2C003E07DA /* TCustomView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				07560CE610DDB56F003E07DA /* TViewController.m in Sources */,
 				07560CE910DDB5A7003E07DA /* TSoundController.m in Sources */,
 				0756100A10DDCA2C003E07DA /* TCustomView.m in Sources */,
+				075614A310DE26A8003E07DA /* TContextMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

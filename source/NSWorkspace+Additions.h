@@ -3,12 +3,20 @@
 #import <Cocoa/Cocoa.h>
 
 /**
+ * @file NSWorkspace+Additions.h
+ *
+ * Header file for NSWorkspace cocoa additions.
+ */
+
+/**
  * Macro definition of a string you can pass to openSystemPreference,
  * for universal access.
  */
 #define kGDSystemPrefUniversalAccess @"UniversalAccessPref.prefPane"
 
 /**
+ * @class NSWorkspace
+ *
  * Category additions to NSWorkspace.
  */
 @interface NSWorkspace (Additions)

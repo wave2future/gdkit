@@ -5,7 +5,7 @@
 
 - (void) dealloc {
 	#ifdef GDKIT_PRINT_DEALLOCS
-	printf("deallog GDModalController\n");
+	printf("dealloc GDModalController\n");
 	#endif
 	[super dealloc];
 }

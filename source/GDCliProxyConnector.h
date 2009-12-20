@@ -1,8 +1,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GDCliProxyConnector : NSObject {
+/**
+ * @file GDCliProxyConnector.h
+ * 
+ * Header file for GDCliProxyConnector.
+ */
 
+/**
+ * The GDCliProxyConnector connects to a GDCliProxy.
+ */
+@interface GDCliProxyConnector : NSObject {
+	
 }
 
 @end

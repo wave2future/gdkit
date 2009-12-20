@@ -50,7 +50,8 @@
 }
 
 - (void) execute {
-	[invoker invoke];
+	if(executesOnMainThread) [self executeOnMainThread];
+	else [invoker invoke];
 }
 
 - (void) executeOnMainThread {

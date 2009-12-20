@@ -8,6 +8,7 @@
 - (void) awakeFromNib{}
 - (void) setGDRefs{}
 - (void) lazyInit{}
+- (void) onEscapeKey:(id)sender{}
 
 - (id) init {
 	self=[super init];

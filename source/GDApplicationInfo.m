@@ -1,8 +1,6 @@
 
 #import "GDApplicationInfo.h"
 
-static GDApplicationInfo * defaultInstance;
-
 @implementation GDApplicationInfo
 
 + (GDApplicationInfo *) instanceFromDefaultPlist {
@@ -15,11 +13,6 @@ static GDApplicationInfo * defaultInstance;
 	GDApplicationInfo * info = [[GDApplicationInfo alloc] init];
 	[info loadPlist:_plist];
 	return [info autorelease];
-}
-
-+ (void) setDefaultInstance:(GDApplicationInfo *) instance {
-	GDRelease(defaultInstance);
-	defaultInstance=instance;
 }
 
 - (NSString *) description {

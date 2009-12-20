@@ -5,10 +5,12 @@
 /**
  * @file NSFileManager+Additions.h
  *
- * Header file.
+ * Header file for NSFileManager cocoa additions.
  */
 
 /**
+ * @class NSFileManager
+ * 
  * Category additions to NSFileManager.
  */
 @interface NSFileManager (Additions)

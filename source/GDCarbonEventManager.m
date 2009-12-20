@@ -5,6 +5,10 @@
 static GDCarbonEventManager * inst = nil;
 
 @class EventKeyWrapper;
+/**
+ * The EventKeyWrapper is an object used internally to the
+ * GDCarbonEventManager.
+ */
 @interface EventKeyWrapper : NSObject {
 	NSUInteger keyInArray;
 }

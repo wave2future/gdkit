@@ -12,7 +12,7 @@
  */
 
 /**
- * A GDAccessibilityObserver is an object oriented wrapper around
+ * The GDAccessibilityObserver is an object oriented wrapper around
  * accessibility notifications.
  *
  * It wraps a few function calls that create an accessibility observer:

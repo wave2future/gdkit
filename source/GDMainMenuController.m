@@ -12,7 +12,9 @@
 }
 
 - (void) invalidate {
+	#ifdef GDKIT_METHOD_CALLS
 	NSLog(@"invalidate");
+	#endif
 }
 
 - (void) dealloc {

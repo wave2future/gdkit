@@ -4,7 +4,7 @@
  * @file GDKit.h
  *
  * Framework header. Link against <b>GDKit.framework</b>
- * and <b>import <GDKit/GDKit.h></b>.
+ * and <b>#import <GDKit/GDKit.h></b>.
  */
 
 #import <CoreServices/CoreServices.h>
@@ -32,7 +32,7 @@
 
 //additions
 #import "NSFileManager+Additions.h"
-#import "NSSharedUserDefaults+Additions.h"
+#import "NSUserDefaults+Additions.h"
 #import "NSStatusItem+Additions.h"
 #import "NSWorkspace+Additions.h"
 
@@ -65,6 +65,7 @@
 #import "GDWindowController.h"
 #import "GDModel.h"
 #import "GDDrawerController.h"
+#import "GDContextMenuController.h"
 
 //helpers
 #import "GDResponderHelper.h"

@@ -8,6 +8,7 @@
 #import "TMainMenuController.h"
 #import "TExternalNibTest.h"
 #import "TModel.h"
+#import "TContextMenuController.h"
 
 @interface TApplicationController : GDApplicationController <NSApplicationDelegate> {
 	TExternalNibTest * externalNibTest;

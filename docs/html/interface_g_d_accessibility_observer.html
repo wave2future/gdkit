@@ -45,7 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>GDAccessibilityObserver Class Reference</h1><!-- doxytag: class="GDAccessibilityObserver" -->
-<p>A <a class="el" href="interface_g_d_accessibility_observer.html" title="A GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> is an object oriented wrapper around accessibility notifications.  
+<p>The <a class="el" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> is an object oriented wrapper around accessibility notifications.  
 <a href="#_details">More...</a></p>
 
 <p><code>#import &lt;<a class="el" href="_g_d_accessibility_observer_8h_source.html">GDAccessibilityObserver.h</a>&gt;</code></p>
@@ -88,16 +88,16 @@ NSString *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Singleton instance of the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a>. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10d3d1ce12d457cf53ac6bb3d86c380"></a><!-- doxytag: member="GDAccessibilityObserver::notify" ref="ac10d3d1ce12d457cf53ac6bb3d86c380" args="" -->
 <a class="el" href="interface_g_d_accessibility_notification.html">GDAccessibilityNotification</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_g_d_accessibility_observer.html#ac10d3d1ce12d457cf53ac6bb3d86c380">notify</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An instance of an <a class="el" href="interface_g_d_accessibility_notification.html" title="A GDAccessibilityNotification is the object passed to your selecter or notification...">GDAccessibilityNotification</a>. <br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An instance of an <a class="el" href="interface_g_d_accessibility_notification.html" title="The GDAccessibilityNotification is the object passed to your selecter or notification...">GDAccessibilityNotification</a>. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>A <a class="el" href="interface_g_d_accessibility_observer.html" title="A GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> is an object oriented wrapper around accessibility notifications. </p>
+<p>The <a class="el" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> is an object oriented wrapper around accessibility notifications. </p>
 <p>It wraps a few function calls that create an accessibility observer: AXObserverCreate(), CFRunLoopAddSource(), AXObserverAddNotification() and AXObserverGetRunLoopSource().</p>
 <p>Use this for notifications that post from accessibility objects. Accessibility notifications don't post from NSNotificationCenters, they post from the NSAccessibilityPostNotification() function.</p>
 <p>Here's an extracted example of how you use it: </p>
 <div class="fragment"><pre class="fragment"> <span class="keyword">@implementation </span>MyObject : NSObject
  - (id) initWithAppInfo:(NSDictionary *) appinfo {
-        <a class="code" href="interface_g_d_accessibility_observer.html" title="A GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> * activated; <span class="comment">//should be an instance variable if it needs to hang around in memory.</span>
+        <a class="code" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> * activated; <span class="comment">//should be an instance variable if it needs to hang around in memory.</span>
         <a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> * <a class="code" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa" title="Singleton instance of the GDAccessibilityManager.">accessManager</a>; <span class="comment">//should be instance variable</span>
         <span class="keywordflow">if</span>(<span class="keyword">self</span> = [<span class="keyword">self</span> init]) {
                 appInfo = [appinfo retain];
@@ -106,7 +106,7 @@ NSString *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href
                 <span class="keywordflow">if</span>([appres wasSuccess]) {
                         appRef = (AXUIElementRef)[appres result];
                         CFRetain((CFTypeRef)appRef);
-                        activated = [[<a class="code" href="interface_g_d_accessibility_observer.html" title="A GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> alloc] initWithNotification:NSAccessibilityApplicationActivatedNotification forAXUIElementRef:appRef \
+                        activated = [[<a class="code" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> alloc] initWithNotification:NSAccessibilityApplicationActivatedNotification forAXUIElementRef:appRef \
                                                 callsAction:@selector(applicationDidActivate:) onTarget:self withUserInfo:appInfo];
                 } <span class="keywordflow">else</span> {
                         <span class="keywordflow">return</span> nil;
@@ -202,7 +202,7 @@ Also see carbon run loops and CFRunLoopAddSource(). </dd></dl>
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Sat Dec 19 20:06:38 2009 for GDKit by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 20 02:18:05 2009 for GDKit by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

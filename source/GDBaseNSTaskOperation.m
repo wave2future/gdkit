@@ -19,6 +19,7 @@
 	if(readsSTERR)[self readSTDERR];
 	[task waitUntilExit];
 	if(done)return;
+	taskTerminationStatus=[task terminationStatus];
 	[self validateTerminationStatus];
 	[self taskComplete];
 	done=true;

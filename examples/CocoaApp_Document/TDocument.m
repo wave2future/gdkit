@@ -9,12 +9,15 @@
 	TModalController * mdls = [[[TModalController alloc] init] autorelease];
 	TOperationsController * ops = [[[TOperationsController alloc] init] autorelease];
 	TSoundController * snds = [[[TSoundController alloc] init] autorelease];
-	[self lazyInitWithModel:mdl mainMenu:mmc modals:mdls operations:ops windows:wins drawers:nil views:views sounds:snds];
+	TContextMenuController * cx = [[[TContextMenuController alloc] init] autorelease];
+	[self lazyInitWithModel:mdl mainMenu:mmc modals:mdls operations:ops windows:wins drawers:nil views:views sounds:snds contexts:cx];
 	[super initDocument];
 }
 
 - (void) initModel {
 	//NSLog(@"initModel");
+	GDApplicationInfo * app = [[GDApplicationInfo alloc] init];
+	[model setAppInfo:app];
 }
 
 - (void) initViews {
@@ -31,7 +34,7 @@
 
 - (void) startDocument {
 	//NSLog(@"startDocument");
-	//kick start anything form here, these are just examples.
+	//kick start anything from here, these are just examples.
 	[views showCustomView];
 	[sounds pop];
 }

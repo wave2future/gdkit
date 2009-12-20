@@ -10,7 +10,8 @@
 	TModalController * mdls = [[[TModalController alloc] init] autorelease];
 	TOperationsController * ops = [[[TOperationsController alloc] init] autorelease];
 	TSoundController * snds = [[[TSoundController alloc] init] autorelease];
-	[self lazyInitWithModel:mdl mainMenu:mm modals:mdls operations:ops windows:wins drawers:nil views:views sounds:snds];
+	TContextMenuController * cx = [[[TContextMenuController alloc] init] autorelease];
+	[self lazyInitWithModel:mdl mainMenu:mm modals:mdls operations:ops windows:wins drawers:nil views:views sounds:snds contexts:cx];
 	[super initApplication];
 }
 

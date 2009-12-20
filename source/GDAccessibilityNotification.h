@@ -9,7 +9,7 @@
  */
 
 /**
- * A GDAccessibilityNotification is the object passed to your selecter or
+ * The GDAccessibilityNotification is the object passed to your selecter or
  * notification handler from a GDAccessibilityObserver.
  *
  * You shouldn't use this directly.

@@ -8,6 +8,7 @@
 #import "TModalController.h"
 #import "TSoundController.h"
 #import "TViewController.h"
+#import "TContextMenuController.h"
 
 @interface TDocument : GDDocument {
 	

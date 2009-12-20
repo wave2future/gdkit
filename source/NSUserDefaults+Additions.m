@@ -1,6 +1,6 @@
 //copyright 2009 aaronsmith
 
-#import "NSSharedUserDefaults+Additions.h"
+#import "NSUserDefaults+Additions.h"
 
 @implementation NSUserDefaults (Additions)
 
