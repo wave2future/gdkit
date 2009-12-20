@@ -10,7 +10,7 @@
  */
 
 /**
- * The GDCallback wraps an NSInvocation, and NSMethodSignature to
+ * The GDCallback wraps an NSInvocation and NSMethodSignature to
  * simplify creating callbacks using those two classes.
  */
 @interface GDCallback : NSObject {
@@ -55,6 +55,11 @@
  * The callback target.
  */
 @property (retain,nonatomic) id target;
+
+/**
+ * Whether or not this callback executes on the main thread.
+ */
+@property (assign,nonatomic) BOOL executesOnMainThread;
 
 /**
  * The selector.

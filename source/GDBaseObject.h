@@ -51,23 +51,17 @@
 - (void) lazyInit;
 
 /**
- * Lazy init this object with a GDDocument. This just sets the "gd" property.
+ * Lazy init this object with a GDDocument or GDApplicationController. This just sets the "gd" property.
+ *
+ * @param _gd A GDDocument or GDApplicationController.
  */
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd;
+- (void) lazyInitWithGD:(id) _gd;
 
 /**
- * Lazy init this object with a GDApplicationController. This just sets the "gd" property.
+ * Init this object with a GDDocument or GDApplicationController. This can be used for true alloc/init combinations.
+ *
+ * @param _gd A GDDocument or GDApplicationController.
  */
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController;
-
-/**
- * Init this object with a GDDocument. This can be used for true alloc/init combinations.
- */
-- (id) initWithGDDocument:(GDDocument *) _gd;
-
-/**
- * Init this object with a GDApplicationController. This can be used for true alloc/init combinations.
- */
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController;
+- (id) initWithGD:(id) _gd;
 
 @end

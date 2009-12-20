@@ -1,5 +1,7 @@
 
 #import "GDBaseObject.h"
+#import "GDDocument.h"
+#import "GDApplicationController.h"
 
 @implementation GDBaseObject
 @synthesize gd;
@@ -17,8 +19,12 @@
 	return self;
 }
 
-- (id) initWithGDDocument:(GDDocument *) _gd {
+- (id) initWithGD:(id) _gd {
 	self=[self init];
+	if(![_gd isKindOfClass:[GDDocument class]] and ![_gd isKindOfClass:[GDApplicationController class]]) {
+		NSLog(@"GDKit Error ([GDBaseObject initWithGD:]): The {_gd} property was not a GDDocument or a GDApplicationController");
+		return nil;
+	}
 	#ifdef GDKIT_METHOD_CALLS
 	printf("[GDBaseObject initWithGDDocument:]\n");
 	#endif
@@ -28,33 +34,15 @@
 	return self;
 }
 
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController {
-	self=[self init];
-	#ifdef GDKIT_METHOD_CALLS
-	printf("[GDBaseObject initWithGDApplicationController:]\n");
-	#endif
-	gd=[_appController retain];
-	gd=_appController;
-	[self setGDRefs];
-	[self lazyInit];
-	return self;
-}
-
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd {
+- (void) lazyInitWithGD:(id) _gd {
+	if(![_gd isKindOfClass:[GDDocument class]] and ![_gd isKindOfClass:[GDApplicationController class]]) {
+		NSLog(@"GDKit Error ([GDBaseObject lazyInitWithGD:]): The {_gd} property was not a GDDocument or a GDApplicationController");
+		return;
+	}
 	#ifdef GDKIT_METHOD_CALLS
 	printf("[GDBaseObject lazyInitWithGDDocument:]\n");
 	#endif
 	gd=_gd;
-	[self setGDRefs];
-	[self lazyInit];
-}
-
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController {
-	#ifdef GDKIT_METHOD_CALLS
-	printf("[GDBaseObject lazyInitWithGDApplicationController:]\n");
-	#endif
-	gd=[_appController retain];
-	gd=_appController;
 	[self setGDRefs];
 	[self lazyInit];
 }

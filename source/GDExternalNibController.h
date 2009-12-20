@@ -116,24 +116,21 @@
 - (void) disposeNibs;
 
 /**
- * Lazy init this object with a GDDocument and the nib name to manage.
+ * Lazy init this object with a GDDocument, or a GDApplicationController and the nib name to manage.
+ *
+ * @param _gd A GDDocument or GDApplicationController.
+ * @param _nibName The nib name to manage.
  */
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName;
+- (void) lazyInitWithGD:(id) _gd andNibName:(NSString *) _nibName;
 
 /**
- * Lazy init this object with a GDDocument, the nib name to manage and a callback.
+ * Lazy init this object with a GDDocument, or a GDApplicationController the nib name to manage and a callback.
+ *
+ * @param _gd A GDDocument or GDApplicationController.
+ * @param _nibName The nib name to manage.
+ * @param _callback A GDCallback.
  */
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
-
-/**
- * Lazy init this object with a GDApplicationController and the nib name to manage.
- */
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName;
-
-/**
- * Lazy init this object with a GDApplicationController, the nib name to manage and a callback.
- */
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
+- (void) lazyInitWithGD:(id) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
 
 /**
  * Loads the nib this controller is managing.
@@ -178,37 +175,21 @@
 - (void) sheetEnded;
 
 /**
- * Init this object with a GDDocument and nib name. This is for a true alloc/init combination.
+ * Init this object with a GDDocument, or a GDApplicationController and a nib name. This is for a true alloc/init combination.
  *
- * @param _gd A GDDocument.
+ * @param _gd A GDDocument or GDApplicationController.
  * @param _nibName The managed nib name.
  */
-- (id) initWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName;
+- (id) initWithGD:(id) _gd andNibName:(NSString *) _nibName;
 
 /**
  * Init this object with a GDDocument, nib name, and callback. This is for a true alloc/init combination.
  *
- * @param _gd A GDDocument.
+ * @param _gd A GDDocument or GDApplicationController.
  * @param _nibName The managed nib name.
  * @param _callback A GDCallback.
  */
-- (id) initWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
+- (id) initWithGD:(id) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
 
-/**
- * Init this object with a GDApplicationController and nib name. This is for a true alloc/init combination.
- *
- * @param _gd A GDApplicationController.
- * @param _nibName The managed nib name.
- */
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName;
 
-/**
- * Init this object with a GDApplicationController, nib name, and callback. This is for a true alloc/init combination.
- *
- * @param _gd A GDApplicationController.
- * @param _nibName The managed nib name.
- * @param _callback A GDCallback.
- */
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
-	
 @end

@@ -16,7 +16,7 @@
 
 - (void) initModel {
 	//NSLog(@"initModel");
-	GDApplicationInfo * app = [[GDApplicationInfo alloc] init];
+	GDApplicationInfo * app = [GDApplicationInfo instanceFromDefaultPlist];
 	[model setAppInfo:app];
 }
 

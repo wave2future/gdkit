@@ -9,9 +9,11 @@
  */
 
 /**
- * The GDCliProxy is a base commandline proxy object. You use distributed
- * objects to connect to this proxy, and have it execute something "in" your
- * application, from the outside (outside being a different commandline binary).
+ * The GDCliProxy is the host proxy you use inside of your application that needs
+ * to expose some usage from the commandline.
+ *
+ * You use this class inside of your app, then use GDCliProxyConnector inside of
+ * your commandline tool to connect to this proxy.
  */
 @interface GDCliProxy : GDBaseObject {
 	

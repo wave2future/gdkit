@@ -15,6 +15,7 @@
  *
  * <b>This class is also the NSWindowDelegate and NSApplicationDelegate</b>
  *
+ * @see GDDocument For the document based cocoa application controller.
  * @see You should look at the example in gdkit/examples/CocoaApp_NonDocument/
  */
 #if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_5

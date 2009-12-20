@@ -37,14 +37,11 @@
 - (void) lazyInit;
 
 /**
- * Lazy init this object with a GDDocument. This just sets the "gd" property.
+ * Lazy init this object with a GDDocument or GDApplicationController. This just sets the "gd" property.
+ *
+ * @param _gd A GDDocument or GDApplicationController.
  */
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd;
-
-/**
- * Lazy init this object with a GDApplicationController. This just sets the "gd" property.
- */
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController;
+- (void) lazyInitWithGD:(id) _gd;
 
 /**
  * Used to catch some very common key down sequences and call methods

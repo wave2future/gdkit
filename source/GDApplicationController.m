@@ -15,6 +15,26 @@
 - (void) awakeFromNib {
 	if(awokeFromNib)return;
 	awokeFromNib=true;
+	if(model) {
+		NSLog(@"GDKit Error (GDDocument): The {model} property cannot be set from a nib");
+		model=nil;
+	}
+	if(operations) {
+		NSLog(@"GDKit Error (GDDocument): The {operations} property cannot be set from a nib");
+		operations=nil;
+	}
+	if(mainMenu) {
+		NSLog(@"GDKit Error (GDDocument): The {operations} property cannot be set from a nib");
+		mainMenu=nil;
+	}
+	if(modals) {
+		NSLog(@"GDKit Error (GDDocument): The {operations} property cannot be set from a nib");
+		modals=nil;
+	}
+	if(sounds) {
+		NSLog(@"GDKit Error (GDDocument): The {operations} property cannot be set from a nib");
+		sounds=nil;
+	}
 }
 
 - (void) initModel {}
@@ -42,14 +62,14 @@
 	if(wins is nil and _windows not nil)wins=[_windows retain];
 	if(contexts and contexts not _contexts)GDRelease(contexts);
 	if(contexts is nil and _contexts not nil)contexts=[_contexts retain];
-	if(drawers not nil)[drawers performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(mainMenu not nil)[mainMenu performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(operations not nil)[operations performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(modals not nil)[modals performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(model not nil)[model performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(views not nil)[views performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(wins not nil)[wins performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
-	if(contexts not nil)[contexts performSelector:@selector(lazyInitWithGDApplicationController:) withObject:self];
+	if(drawers not nil)[drawers performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(mainMenu not nil)[mainMenu performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(operations not nil)[operations performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(modals not nil)[modals performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(model not nil)[model performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(views not nil)[views performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(wins not nil)[wins performSelector:@selector(lazyInitWithGD:) withObject:self];
+	if(contexts not nil)[contexts performSelector:@selector(lazyInitWithGD:) withObject:self];
 }
 
 - (void) initApplication {

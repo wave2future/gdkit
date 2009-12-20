@@ -17,13 +17,13 @@
 
 - (void) initModel {
 	//NSLog(@"initModel");
-	GDApplicationInfo * app = [[GDApplicationInfo alloc] init];
+	GDApplicationInfo * app = [GDApplicationInfo instanceFromDefaultPlist];
 	[model setAppInfo:app];
 }
 
 - (void) initControllers {
 	//NSLog(@"initControllers");
-	externalNibTest=[[TExternalNibTest alloc] initWithGDApplicationController:self andNibName:@"TestNib"];
+	externalNibTest=[[TExternalNibTest alloc] initWithGD:self andNibName:@"TestNib"];
 }
 
 - (void) initWindows {

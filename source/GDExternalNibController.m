@@ -18,50 +18,26 @@
 	if(disposesNibsOnWindowClose) [self disposeNibs];
 }
 
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName {
+- (id) initWithGD:(id) _gd andNibName:(NSString *) _nibName {
 	self = [super init];
-	[super lazyInitWithGDApplicationController:_appController];
+	[super lazyInitWithGD:_gd];
 	[self setNibName:_nibName];
 	return self;
 }
 
-- (id) initWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
-	self=[super init];
-	[super lazyInitWithGDApplicationController:_appController];
-	[self setNibName:_nibName andCallback:_callback];
-	return self;
-}
-
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName {
-	[super lazyInitWithGDApplicationController:_appController];
+- (void) lazyInitWithGD:(id) _gd andNibName:(NSString *) _nibName {
+	[super lazyInitWithGD:_gd];
 	[self setNibName:_nibName];
 }
 
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
-	[super lazyInitWithGDApplicationController:_appController];
+- (void) lazyInitWithGD:(id) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
+	[super lazyInitWithGD:_gd];
 	[self setNibName:_nibName andCallback:_callback];
 }
 
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName {
-	[super lazyInitWithGDDocument:_gd];
-	[self setNibName:_nibName];
-}
-
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
-	[super lazyInitWithGDDocument:_gd];
-	[self setNibName:_nibName andCallback:_callback];
-}
-
-- (id) initWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName {
+- (id) initWithGD:(id) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
 	self=[super init];
-	[super lazyInitWithGDDocument:_gd];
-	[self setNibName:_nibName];
-	return self;
-}
-
-- (id) initWithGDDocument:(GDDocument *) _gd andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback {
-	self=[super init];
-	[super lazyInitWithGDDocument:_gd];
+	[super lazyInitWithGD:_gd];
 	[self setNibName:_nibName andCallback:_callback];
 	return self;
 }

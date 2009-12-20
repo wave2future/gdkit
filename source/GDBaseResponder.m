@@ -20,14 +20,12 @@
 	[super keyDown:theEvent];
 }
 
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd {
+- (void) lazyInitWithGD:(id) _gd {
+	if(![_gd isKindOfClass:[GDDocument class]] and ![_gd isKindOfClass:[GDApplicationController class]]) {
+		NSLog(@"GDKit Error ([GDBaseResponder lazyInitWithGD:]): The {_gd} property was not a GDDocument or a GDApplicationController");
+		return;
+	}
 	gd=_gd;
-	[self setGDRefs];
-	[self lazyInit];
-}
-
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController {
-	gd=_appController;
 	[self setGDRefs];
 	[self lazyInit];
 }

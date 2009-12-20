@@ -1,7 +1,8 @@
 
 #import <Cocoa/Cocoa.h>
-#import "GDBaseOperation.h"
 #import "macros.h"
+#import "GDBaseOperation.h"
+#import "NSFileHandle+Additions.h"
 
 /**
  * @file GDBaseNSTaskOperation.h
@@ -17,6 +18,12 @@
 @interface GDBaseNSTaskOperation : GDBaseOperation {
 	
 	/**
+	 * Whether or not a file should be written before the
+	 * task (not operation) executes.
+	 */
+	BOOL writesFileForTaskInput;
+	
+	/**
 	 * Whether or not this task should read standard out.
 	 */
 	BOOL readsSTOUT;
@@ -30,6 +37,23 @@
 	 * The task's termination status.
 	 */
 	int taskTerminationStatus;
+	
+	/**
+	 * The file contents to write if writesFileForTaskInput
+	 * is needed.
+	 */
+	NSString * writeFileContents;
+	
+	/**
+	 * The filepath to write to if writesFileForTaskInput
+	 * is needed.
+	 */
+	NSString * filePathToWriteTo;
+	
+	/**
+	 * The file content encoding.
+	 */
+	NSStringEncoding stringEncoding;
 	
 	/**
 	 * UTF8 String container for the standard out contents.
@@ -71,6 +95,11 @@
  * Reads the standard out from the NSTask.
  */
 - (void) readSTDOUT;
+
+/**
+ * Writes the file contents to the desired file.
+ */
+- (void) writeFileForInput;
 
 /**
  * A hook you should override to prepate the task instance

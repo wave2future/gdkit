@@ -3,6 +3,12 @@
 #import <Cocoa/Cocoa.h>
 #import "NSWorkspace+Additions.h"
 
+/**
+ * @file GDActiveApplicationStack.h
+ * 
+ * Header file for GDActiveApplicationStack.
+ */
+
 #ifdef GDKIT_WARN_1060_ONLY
 #	ifndef MAC_OS_X_VERSION_10_6
 #		warning GDActiveApplicationStack requires 10.6

@@ -9,8 +9,10 @@
  */
 
 /**
- * The GDApplicationInfo is a dictionary which can load the main bundle's
- * info plist, or any plist you specify.
+ * The GDApplicationInfo is a an object used to store application information
+ * in a dictionary like manner.
+ *
+ * It uses an NSMutableDictionary internally through composition.
  *
  * You can use this to extend, or write extensions to GDKit, and if any of
  * those extensions require some type of configiration, it can
@@ -19,9 +21,15 @@
  *
  * @see GDModel
  */
-@interface GDApplicationInfo : NSMutableDictionary {
+@interface GDApplicationInfo : NSObject	{
 	
+	/**
+	 * The dictionary exposed through composition.
+	 */
+	NSMutableDictionary * dictionary;
 }
+
+@property (retain,nonatomic) NSMutableDictionary * dictionary;
 
 /**
  * Returns an autoreleased instance, and has alread loaded the

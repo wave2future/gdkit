@@ -35,6 +35,8 @@
 #import "NSUserDefaults+Additions.h"
 #import "NSStatusItem+Additions.h"
 #import "NSWorkspace+Additions.h"
+#import "NSView+Additions.h"
+#import "NSFileHandle+Additions.h"
 
 //licensing
 #import "GDAppExpiration.h"
@@ -52,7 +54,6 @@
 #import "GDBaseSheetWindow.h"
 #import "GDBaseView.h"
 #import "GDCallback.h"
-#import "GDCliProxy.h"
 #import "GDDocument.h"
 #import "GDDocumentController.h"
 #import "GDGestalt.h"
@@ -61,11 +62,14 @@
 #import "GDOperationsController.h"
 #import "GDSoundController.h"
 #import "GDViewController.h"
-#import "GDViewLayoutManager.h"
 #import "GDWindowController.h"
 #import "GDModel.h"
 #import "GDDrawerController.h"
 #import "GDContextMenuController.h"
+
+//cli
+#import "GDCliProxy.h"
+#import "GDCliProxyConnector.h"
 
 //helpers
 #import "GDResponderHelper.h"

@@ -1,5 +1,7 @@
 
 #import "GDBaseView.h"
+#import "GDDocument.h"
+#import "GDApplicationController.h"
 
 @implementation GDBaseView
 @synthesize gd;
@@ -9,14 +11,12 @@
 - (void) setGDRefs{}
 - (void) lazyInit{}
 
-- (void) lazyInitWithGDDocument:(GDDocument *) _gd {
+- (void) lazyInitWithGD:(id) _gd {
+	if(![_gd isKindOfClass:[GDDocument class]] and ![_gd isKindOfClass:[GDApplicationController class]]) {
+		NSLog(@"GDKit Error ([GDBaseView lazyInitWithGD:]): The {_gd} property was not a GDDocument or a GDApplicationController");
+		return;
+	}
 	gd=_gd;
-	[self setGDRefs];
-	[self lazyInit];
-}
-
-- (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController {
-	gd=_appController;
 	[self setGDRefs];
 	[self lazyInit];
 }

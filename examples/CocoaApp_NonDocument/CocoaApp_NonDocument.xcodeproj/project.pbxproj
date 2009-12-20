@@ -11,6 +11,7 @@
 		075601FD10DCC9AE003E07DA /* TestNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075601FC10DCC9AE003E07DA /* TestNib.xib */; };
 		0756057C10DD790F003E07DA /* TModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756057B10DD790F003E07DA /* TModel.m */; };
 		0756148410DE25ED003E07DA /* TContextMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756148310DE25ED003E07DA /* TContextMenuController.m */; };
+		0756186510DECE73003E07DA /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0756186410DECE73003E07DA /* README */; };
 		07CFD5B310DB74AA002D2A34 /* GDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFD5AC10DB746A002D2A34 /* GDKit.framework */; };
 		07CFD5B410DB74B0002D2A34 /* GDKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFD5AC10DB746A002D2A34 /* GDKit.framework */; };
 		07CFD65910DB7C73002D2A34 /* TViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD65810DB7C73002D2A34 /* TViewController.m */; };
@@ -64,9 +65,9 @@
 		075601FA10DCC9A8003E07DA /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TestNib.xib; sourceTree = "<group>"; };
 		0756057A10DD790F003E07DA /* TModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TModel.h; sourceTree = "<group>"; };
 		0756057B10DD790F003E07DA /* TModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TModel.m; sourceTree = "<group>"; };
-		075609FE10DD9894003E07DA /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		0756148210DE25ED003E07DA /* TContextMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TContextMenuController.h; sourceTree = "<group>"; };
 		0756148310DE25ED003E07DA /* TContextMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TContextMenuController.m; sourceTree = "<group>"; };
+		0756186410DECE73003E07DA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		07CFD5A710DB746A002D2A34 /* gdkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gdkit.xcodeproj; path = ../../gdkit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		07CFD65710DB7C73002D2A34 /* TViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TViewController.h; sourceTree = "<group>"; };
 		07CFD65810DB7C73002D2A34 /* TViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TViewController.m; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		07CFD5A210DB741A002D2A34 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				075609FE10DD9894003E07DA /* macros.h */,
 				256AC3D80F4B6AC300CF3369 /* TApplicationController.h */,
 				0756148210DE25ED003E07DA /* TContextMenuController.h */,
 				07CFD65A10DB7C8B002D2A34 /* TCustomView.h */,
@@ -191,6 +191,7 @@
 		29B97314FDCFA39411CA2CEA /* CocoaApp_NonDocument */ = {
 			isa = PBXGroup;
 			children = (
+				0756186410DECE73003E07DA /* README */,
 				07CFD5A610DB7460002D2A34 /* Projects */,
 				07CFD5A210DB741A002D2A34 /* Headers */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -198,7 +199,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				075601FC10DCC9AE003E07DA /* TestNib.xib */,
 			);
 			name = CocoaApp_NonDocument;
 			sourceTree = "<group>";
@@ -218,6 +218,7 @@
 				8D1107310486CEB800E47090 /* CocoaApp_NonDocument-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				075601FC10DCC9AE003E07DA /* TestNib.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -295,6 +296,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				075601FD10DCC9AE003E07DA /* TestNib.xib in Resources */,
+				0756186510DECE73003E07DA /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

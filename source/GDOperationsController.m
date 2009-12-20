@@ -16,11 +16,12 @@
 		id obj;
 		for(obj in cancelables) {
 			if([obj isKindOfClass:[NSOperation class]])[obj cancel];
-			else if([obj isKindOfClass:[NSOperationQueue class]])[obj cancelAll];
+			else if([obj isKindOfClass:[NSOperationQueue class]])[obj cancelAllOperations];
 		}
 	}
 	GDRelease(cancelables);
 	cancelables=[[NSMutableArray alloc] init];
+	cancelingAll=false;
 }
 
 - (void) addToCancelables:(id) obj {

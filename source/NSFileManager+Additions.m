@@ -7,8 +7,7 @@
 - (NSString *) pathToFolderOfType:(const OSType) folderType shouldCreateFolder:(BOOL) create {
 	FSRef ref;
 	NSString * path = nil;
-	if(FSFindFolder(kUserDomain,folderType,create,&ref) == noErr)
-	{
+	if(FSFindFolder(kUserDomain,folderType,create,&ref) == noErr) {
 		CFURLRef url = CFURLCreateFromFSRef(kCFAllocatorSystemDefault,&ref);
 		path = (NSString *) CFURLCopyFileSystemPath(url, kCFURLPOSIXPathStyle);
 		CFRelease(url);
@@ -37,7 +36,6 @@
 		if(![self createDirectoryAtPath:path withIntermediateDirectories:TRUE attributes:nil error:nil]) path=nil;
 		//<= 10.4 if(![self createDirectoryAtPath:path attributes:nil]) path = nil;
 	}
-	
 	return path;
 }
 

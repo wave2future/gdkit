@@ -19,6 +19,7 @@
 		07560CE910DDB5A7003E07DA /* TSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07560CE810DDB5A7003E07DA /* TSoundController.m */; };
 		0756100A10DDCA2C003E07DA /* TCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756100910DDCA2C003E07DA /* TCustomView.m */; };
 		075614A310DE26A8003E07DA /* TContextMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075614A210DE26A8003E07DA /* TContextMenuController.m */; };
+		0756186310DECE30003E07DA /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0756186210DECE30003E07DA /* README */; };
 		1DDD582C0DA1D0D100B32029 /* TDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* TDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -81,6 +82,7 @@
 		0756100910DDCA2C003E07DA /* TCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCustomView.m; sourceTree = "<group>"; };
 		075614A110DE26A8003E07DA /* TContextMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TContextMenuController.h; sourceTree = "<group>"; };
 		075614A210DE26A8003E07DA /* TContextMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TContextMenuController.m; sourceTree = "<group>"; };
+		0756186210DECE30003E07DA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -173,6 +175,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* CocoaApp_Document */ = {
 			isa = PBXGroup;
 			children = (
+				0756186210DECE30003E07DA /* README */,
 				07560BFD10DDAF17003E07DA /* Projects */,
 				07560BFA10DDAF13003E07DA /* Headers */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
@@ -297,6 +300,7 @@
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* TDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
+				0756186310DECE30003E07DA /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

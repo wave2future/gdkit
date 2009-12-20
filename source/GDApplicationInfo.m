@@ -2,6 +2,7 @@
 #import "GDApplicationInfo.h"
 
 @implementation GDApplicationInfo
+@synthesize dictionary;
 
 + (GDApplicationInfo *) instanceFromDefaultPlist {
 	GDApplicationInfo * info = [[GDApplicationInfo alloc] init];
@@ -15,17 +16,24 @@
 	return [info autorelease];
 }
 
-- (NSString *) description {
-	return @"GDApplicationInfo";
+- (id) init {
+	self=[super init];
+	dictionary=[[NSMutableDictionary alloc] init];
+	return self;
 }
 
 - (void) loadDefaultInfoPlist {
-	//[self addEntriesFromDictionary:[[NSBundle mainBundle] infoDictionary]];
+	[dictionary addEntriesFromDictionary:[[NSBundle mainBundle] infoDictionary]];
 }
 
 - (void) loadPlist:(NSString *) _plist {
-	//NSDictionary * dict=[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_plist ofType:@"plist"]];
-	//[self addEntriesFromDictionary:dict];
+	NSDictionary * dict=[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_plist ofType:@"plist"]];
+	[dictionary addEntriesFromDictionary:dict];
+}
+
+- (void) dealloc {
+	GDRelease(dictionary);
+	[super dealloc];
 }
 
 @end

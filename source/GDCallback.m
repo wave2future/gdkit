@@ -5,6 +5,7 @@
 @synthesize target;
 @synthesize action;
 @synthesize args;
+@synthesize executesOnMainThread;
 
 - (id) initWithTarget:(id) _target andAction:(SEL) _action {
 	self=[super init];
@@ -65,7 +66,8 @@
 - (void) dealloc {
 	GDRelease(invoker);
 	GDRelease(signature);
-	[self setArgs:nil];
+	GDRelease(target);
+	GDRelease(args);
 	[super dealloc];
 }
 

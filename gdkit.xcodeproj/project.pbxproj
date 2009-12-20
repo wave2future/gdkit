@@ -47,6 +47,10 @@
 		0756064710DD7F80003E07DA /* GDDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756064510DD7F80003E07DA /* GDDrawerController.m */; };
 		0756146710DE2306003E07DA /* GDContextMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0756146510DE2306003E07DA /* GDContextMenuController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0756146810DE2306003E07DA /* GDContextMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756146610DE2306003E07DA /* GDContextMenuController.m */; };
+		075617A310DEBFB3003E07DA /* NSView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 075617A110DEBFB3003E07DA /* NSView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075617A410DEBFB3003E07DA /* NSView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617A210DEBFB3003E07DA /* NSView+Additions.m */; };
+		075617CA10DEC46E003E07DA /* NSFileHandle+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075617CB10DEC46E003E07DA /* NSFileHandle+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */; };
 		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
 		078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E2410366CAD0033A770 /* GDASLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,8 +98,6 @@
 		07F4732310D3B26200BADB21 /* GDCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4732110D3B26200BADB21 /* GDCallback.m */; };
 		07F4732610D3B27F00BADB21 /* GDGestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F4732410D3B27F00BADB21 /* GDGestalt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07F4732710D3B27F00BADB21 /* GDGestalt.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4732510D3B27F00BADB21 /* GDGestalt.m */; };
-		07F4732B10D3B29700BADB21 /* GDViewLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F4732910D3B29700BADB21 /* GDViewLayoutManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07F4732C10D3B29700BADB21 /* GDViewLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4732A10D3B29700BADB21 /* GDViewLayoutManager.m */; };
 		07F4733010D3B2BB00BADB21 /* GDAlertAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F4732E10D3B2BB00BADB21 /* GDAlertAccessoryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07F4733110D3B2BB00BADB21 /* GDAlertAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4732F10D3B2BB00BADB21 /* GDAlertAccessoryView.m */; };
 		07F4734810D3B3DC00BADB21 /* GDBaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F4734610D3B3DC00BADB21 /* GDBaseOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -151,6 +153,10 @@
 		0756064510DD7F80003E07DA /* GDDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDrawerController.m; path = source/GDDrawerController.m; sourceTree = "<group>"; };
 		0756146510DE2306003E07DA /* GDContextMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDContextMenuController.h; path = source/GDContextMenuController.h; sourceTree = "<group>"; };
 		0756146610DE2306003E07DA /* GDContextMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDContextMenuController.m; path = source/GDContextMenuController.m; sourceTree = "<group>"; };
+		075617A110DEBFB3003E07DA /* NSView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Additions.h"; path = "source/NSView+Additions.h"; sourceTree = "<group>"; };
+		075617A210DEBFB3003E07DA /* NSView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Additions.m"; path = "source/NSView+Additions.m"; sourceTree = "<group>"; };
+		075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+Additions.h"; path = "source/NSFileHandle+Additions.h"; sourceTree = "<group>"; };
+		075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileHandle+Additions.m"; path = "source/NSFileHandle+Additions.m"; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEventManager.h; path = source/GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEventManager.m; path = source/GDCarbonEventManager.m; sourceTree = "<group>"; };
 		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/GDASLLog.h; sourceTree = "<group>"; };
@@ -200,8 +206,6 @@
 		07F4732110D3B26200BADB21 /* GDCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCallback.m; path = source/GDCallback.m; sourceTree = "<group>"; };
 		07F4732410D3B27F00BADB21 /* GDGestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGestalt.h; path = source/GDGestalt.h; sourceTree = "<group>"; };
 		07F4732510D3B27F00BADB21 /* GDGestalt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGestalt.m; path = source/GDGestalt.m; sourceTree = "<group>"; };
-		07F4732910D3B29700BADB21 /* GDViewLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDViewLayoutManager.h; path = source/GDViewLayoutManager.h; sourceTree = "<group>"; };
-		07F4732A10D3B29700BADB21 /* GDViewLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDViewLayoutManager.m; path = source/GDViewLayoutManager.m; sourceTree = "<group>"; };
 		07F4732E10D3B2BB00BADB21 /* GDAlertAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAlertAccessoryView.h; path = source/GDAlertAccessoryView.h; sourceTree = "<group>"; };
 		07F4732F10D3B2BB00BADB21 /* GDAlertAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAlertAccessoryView.m; path = source/GDAlertAccessoryView.m; sourceTree = "<group>"; };
 		07F4734610D3B3DC00BADB21 /* GDBaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBaseOperation.h; path = source/GDBaseOperation.h; sourceTree = "<group>"; };
@@ -284,12 +288,13 @@
 				074F73B310D8E99B00CBC121 /* GDSoundController.h */,
 				0749E34F10390ECD001AA650 /* GDULimit.h */,
 				074F720810D789E100CBC121 /* GDViewController.h */,
-				07F4732910D3B29700BADB21 /* GDViewLayoutManager.h */,
 				07CFDBDD10DC9B8A002D2A34 /* GDWindowController.h */,
 				07F4735210D3B50800BADB21 /* macros.h */,
+				075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+Additions.h */,
 				0720180B103E66B50007B6E0 /* NSUserDefaults+Additions.h */,
+				075617A110DEBFB3003E07DA /* NSView+Additions.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+Additions.h */,
 				07A59724105377D200F95BEA /* OSTypeFunctions.h */,
 			);
@@ -338,21 +343,21 @@
 			name = helpers;
 			sourceTree = "<group>";
 		};
-		07CFD4B310DB2A60002D2A34 /* non document based */ = {
+		07CFD4B310DB2A60002D2A34 /* _non document based */ = {
 			isa = PBXGroup;
 			children = (
 				07CFD4A410DB2802002D2A34 /* GDApplicationController.m */,
 			);
-			name = "non document based";
+			name = "_non document based";
 			sourceTree = "<group>";
 		};
-		07CFD4B410DB2A65002D2A34 /* document based */ = {
+		07CFD4B410DB2A65002D2A34 /* _document based */ = {
 			isa = PBXGroup;
 			children = (
 				07F4730A10D3B19C00BADB21 /* GDDocument.m */,
 				07F4730E10D3B1A200BADB21 /* GDDocumentController.m */,
 			);
-			name = "document based";
+			name = "_document based";
 			sourceTree = "<group>";
 		};
 		07F472EF10D3B09900BADB21 /* accessibility */ = {
@@ -384,15 +389,17 @@
 			name = asl;
 			sourceTree = "<group>";
 		};
-		07F472F210D3B0C900BADB21 /* cocoa_additions */ = {
+		07F472F210D3B0C900BADB21 /* additions */ = {
 			isa = PBXGroup;
 			children = (
+				075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */,
 				0720C009102F503500FB009B /* NSFileManager+Additions.m */,
-				0720180C103E66B50007B6E0 /* NSUserDefaults+Additions.m */,
 				0723F6CB10314ECE00EF92B4 /* NSStatusItem+Additions.m */,
+				0720180C103E66B50007B6E0 /* NSUserDefaults+Additions.m */,
+				075617A210DEBFB3003E07DA /* NSView+Additions.m */,
 				0720C7991030FB8400FB009B /* NSWorkspace+Additions.m */,
 			);
-			name = cocoa_additions;
+			name = additions;
 			sourceTree = "<group>";
 		};
 		07F472F310D3B0DF00BADB21 /* quartz */ = {
@@ -428,10 +435,9 @@
 		07F472F710D3B15700BADB21 /* application */ = {
 			isa = PBXGroup;
 			children = (
+				07F4733310D3B31400BADB21 /* bases */,
 				07F4731510D3B21400BADB21 /* controllers */,
-				07CFD4B410DB2A65002D2A34 /* document based */,
 				074F71FD10D7865D00CBC121 /* model */,
-				07CFD4B310DB2A60002D2A34 /* non document based */,
 				07F4732810D3B28B00BADB21 /* view */,
 			);
 			name = application;
@@ -440,6 +446,8 @@
 		07F4731510D3B21400BADB21 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07CFD4B410DB2A65002D2A34 /* _document based */,
+				07CFD4B310DB2A60002D2A34 /* _non document based */,
 				0756146610DE2306003E07DA /* GDContextMenuController.m */,
 				0756064510DD7F80003E07DA /* GDDrawerController.m */,
 				07F4731210D3B20600BADB21 /* GDExternalNibController.m */,
@@ -457,7 +465,6 @@
 			isa = PBXGroup;
 			children = (
 				07F4732F10D3B2BB00BADB21 /* GDAlertAccessoryView.m */,
-				07F4732A10D3B29700BADB21 /* GDViewLayoutManager.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -528,12 +535,11 @@
 			isa = PBXGroup;
 			children = (
 				07F472EF10D3B09900BADB21 /* accessibility */,
+				07F472F210D3B0C900BADB21 /* additions */,
 				07F472F710D3B15700BADB21 /* application */,
-				07F4733310D3B31400BADB21 /* bases */,
 				07F472F410D3B10200BADB21 /* carbon */,
 				074F71FC10D7864C00CBC121 /* cells */,
 				07F4733610D3B36E00BADB21 /* cli */,
-				07F472F210D3B0C900BADB21 /* cocoa_additions */,
 				074E0ED210D480DA00DCE009 /* controls */,
 				0756049E10DCE26B003E07DA /* helpers */,
 				07F4734510D3B3D100BADB21 /* operations */,
@@ -619,12 +625,13 @@
 				074F73B510D8E99B00CBC121 /* GDSoundController.h in Headers */,
 				0749E35110390ECD001AA650 /* GDULimit.h in Headers */,
 				074F720A10D789E100CBC121 /* GDViewController.h in Headers */,
-				07F4732B10D3B29700BADB21 /* GDViewLayoutManager.h in Headers */,
 				07CFDBDF10DC9B8A002D2A34 /* GDWindowController.h in Headers */,
 				07F4735310D3B50800BADB21 /* macros.h in Headers */,
+				075617CA10DEC46E003E07DA /* NSFileHandle+Additions.h in Headers */,
 				0720C008102F4FBB00FB009B /* NSFileManager+Additions.h in Headers */,
 				0723F6CC10314ECE00EF92B4 /* NSStatusItem+Additions.h in Headers */,
 				0720180D103E66B50007B6E0 /* NSUserDefaults+Additions.h in Headers */,
+				075617A310DEBFB3003E07DA /* NSView+Additions.h in Headers */,
 				0720C79A1030FB8400FB009B /* NSWorkspace+Additions.h in Headers */,
 				07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */,
 			);
@@ -760,7 +767,6 @@
 				0749E6F810394DCD001AA650 /* GDQuartzDisplay.m in Sources */,
 				072018D2103E6AF50007B6E0 /* GDRegistration.m in Sources */,
 				0749E35210390ECD001AA650 /* GDULimit.m in Sources */,
-				07F4732C10D3B29700BADB21 /* GDViewLayoutManager.m in Sources */,
 				0720C00A102F503500FB009B /* NSFileManager+Additions.m in Sources */,
 				0720180E103E66B50007B6E0 /* NSUserDefaults+Additions.m in Sources */,
 				0723F6CD10314ECE00EF92B4 /* NSStatusItem+Additions.m in Sources */,
@@ -778,6 +784,8 @@
 				075604A210DCE27A003E07DA /* GDResponderHelper.m in Sources */,
 				0756064710DD7F80003E07DA /* GDDrawerController.m in Sources */,
 				0756146810DE2306003E07DA /* GDContextMenuController.m in Sources */,
+				075617A410DEBFB3003E07DA /* NSView+Additions.m in Sources */,
+				075617CB10DEC46E003E07DA /* NSFileHandle+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
