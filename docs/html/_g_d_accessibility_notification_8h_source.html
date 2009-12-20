@@ -47,16 +47,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00004"></a>00004 
 <a name="l00019"></a><a class="code" href="interface_g_d_accessibility_notification.html">00019</a> <span class="keyword">@interface </span><a class="code" href="interface_g_d_accessibility_notification.html" title="The GDAccessibilityNotification is the object passed to your selecter or notification...">GDAccessibilityNotification</a> : NSObject {
 <a name="l00020"></a>00020         
-<a name="l00021"></a><a class="code" href="interface_g_d_accessibility_notification.html#a3a35ac62a068bf9ea55170e1abc55bc9">00021</a>         NSString * <a class="code" href="interface_g_d_accessibility_notification.html#a3a35ac62a068bf9ea55170e1abc55bc9" title="The notification name that was triggered.">notification</a>;
+<a name="l00021"></a><a class="code" href="interface_g_d_accessibility_notification.html#a3a35ac62a068bf9ea55170e1abc55bc9">00021</a>         <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * <a class="code" href="interface_g_d_accessibility_notification.html#a3a35ac62a068bf9ea55170e1abc55bc9" title="The notification name that was triggered.">notification</a>;
 <a name="l00022"></a>00022         
 <a name="l00026"></a><a class="code" href="interface_g_d_accessibility_notification.html#a8b20d367e858a860e134618752493f0c">00026</a>         AXUIElementRef <a class="code" href="interface_g_d_accessibility_notification.html#a42032ceba7149feb17257ecf48d909b6" title="Get the element.">element</a>;
 <a name="l00027"></a>00027         
 <a name="l00031"></a><a class="code" href="interface_g_d_accessibility_notification.html#a0fd79497e2441128299e3f1f98324451">00031</a>         NSDictionary * <a class="code" href="interface_g_d_accessibility_notification.html#a9059901212d03aa11d436831be560777" title="Get the user info dict.">userInfo</a>;
 <a name="l00032"></a>00032 }
 <a name="l00033"></a>00033 
-<a name="l00037"></a>00037 @property (copy) NSString * notification;
+<a name="l00037"></a>00037 @property (copy) <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * notification;
 <a name="l00038"></a>00038 
-<a name="l00046"></a>00046 - (<span class="keywordtype">id</span>) initWithElement:(AXUIElementRef) element forNotification:(NSString *) notification withUserInfo:(NSDictionary *) userInfo;
+<a name="l00046"></a>00046 - (<span class="keywordtype">id</span>) initWithElement:(AXUIElementRef) element forNotification:(<a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> *) notification withUserInfo:(NSDictionary *) userInfo;
 <a name="l00047"></a>00047 
 <a name="l00053"></a>00053 - (<span class="keywordtype">void</span>) setElement:(AXUIElementRef) element;
 <a name="l00054"></a>00054 

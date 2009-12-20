@@ -2,7 +2,7 @@
 
 #import "NSFileManager+Additions.h"
 
-@implementation NSFileManager (Additions)
+@implementation NSFileManager (GDAdditions)
 
 - (NSString *) pathToFolderOfType:(const OSType) folderType shouldCreateFolder:(BOOL) create {
 	FSRef ref;

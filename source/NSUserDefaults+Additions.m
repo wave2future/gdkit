@@ -2,7 +2,7 @@
 
 #import "NSUserDefaults+Additions.h"
 
-@implementation NSUserDefaults (Additions)
+@implementation NSUserDefaults (GDAdditions)
 
 + (void) reset {
 	[[self standardUserDefaults] removePersistentDomainForName:[[NSBundle mainBundle] bundleIdentifier]];

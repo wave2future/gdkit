@@ -19,7 +19,7 @@
  *
  * Category additions to NSWorkspace.
  */
-@interface NSWorkspace (Additions)
+@interface NSWorkspace (GDAdditions)
 
 /**
  * Brings an application to the front. Requires an application

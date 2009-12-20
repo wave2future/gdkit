@@ -2,7 +2,7 @@
 
 #import "NSStatusItem+Additions.h"
 
-@implementation NSStatusItem (Additions)
+@implementation NSStatusItem (GDAdditions)
 
 - (NSPoint) position {
 	NSView * tmpView = [[NSView alloc] initWithFrame:NSMakeRect(0.0,0.0,[self length],[[self statusBar] thickness])];

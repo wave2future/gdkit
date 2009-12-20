@@ -13,7 +13,7 @@
  *
  * Category additions to NSStatusItem.
  */
-@interface NSStatusItem (Additions)
+@interface NSStatusItem (GDAdditions)
 
 /**
  * Get the position (in screen coordinates) where the

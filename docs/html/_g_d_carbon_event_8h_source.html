@@ -55,14 +55,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00027"></a><a class="code" href="interface_g_d_carbon_event.html#a8556b9bb2d4bcfdcb3c684321c0abd45">00027</a>         <span class="keywordtype">int</span> <a class="code" href="interface_g_d_carbon_event.html#a8556b9bb2d4bcfdcb3c684321c0abd45" title="Modifier keys for a carbon hot key event (cmdKey, optionKey, shiftKey, optionKey...">modifierFlags</a>;
 <a name="l00028"></a><a class="code" href="interface_g_d_carbon_event.html#aedcfcd101bf6650ae61b6aa4ef8312a2">00028</a>         <span class="keywordtype">id</span> <a class="code" href="interface_g_d_carbon_event.html#aedcfcd101bf6650ae61b6aa4ef8312a2" title="The target for the selector.">target</a>;
 <a name="l00029"></a><a class="code" href="interface_g_d_carbon_event.html#a1ab5a6cf85131499d75d62cee6b5be57">00029</a>         <span class="keywordtype">SEL</span> <a class="code" href="interface_g_d_carbon_event.html#a1ab5a6cf85131499d75d62cee6b5be57" title="Selector to callback, if this event is NOT posting to a notification center.">action</a>;
-<a name="l00030"></a><a class="code" href="interface_g_d_carbon_event.html#a5820e6b5f9552f7202f7d6608b93cda0">00030</a>         NSString * <a class="code" href="interface_g_d_carbon_event.html#a5820e6b5f9552f7202f7d6608b93cda0" title="The notification name, if this carbon event is posting to a notification center.">notificationName</a>;
-<a name="l00031"></a><a class="code" href="interface_g_d_carbon_event.html#a6a1d5951550d087504bd446380ec90eb">00031</a>         NSString * <a class="code" href="interface_g_d_carbon_event.html#a6a1d5951550d087504bd446380ec90eb" title="An NSString for the key char - like &amp;#39;W&amp;#39;, &amp;#39;F&amp;#39;, etc.">keyChar</a>;
+<a name="l00030"></a><a class="code" href="interface_g_d_carbon_event.html#a5820e6b5f9552f7202f7d6608b93cda0">00030</a>         <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * <a class="code" href="interface_g_d_carbon_event.html#a5820e6b5f9552f7202f7d6608b93cda0" title="The notification name, if this carbon event is posting to a notification center.">notificationName</a>;
+<a name="l00031"></a><a class="code" href="interface_g_d_carbon_event.html#a6a1d5951550d087504bd446380ec90eb">00031</a>         <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * <a class="code" href="interface_g_d_carbon_event.html#a6a1d5951550d087504bd446380ec90eb" title="An NSString for the key char - like &amp;#39;W&amp;#39;, &amp;#39;F&amp;#39;, etc.">keyChar</a>;
 <a name="l00032"></a><a class="code" href="interface_g_d_carbon_event.html#a545cce7eee552212ce52a920bb3b0de1">00032</a>         NSDictionary * <a class="code" href="interface_g_d_carbon_event.html#a545cce7eee552212ce52a920bb3b0de1" title="User info dict that get&amp;#39;s passed back to the callback, or passed as userInfo...">userInfo</a>;
 <a name="l00033"></a><a class="code" href="interface_g_d_carbon_event.html#aab9901af8082c9a5b68340bf6df42dc5">00033</a>         NSNotificationCenter * <a class="code" href="interface_g_d_carbon_event.html#aab9901af8082c9a5b68340bf6df42dc5" title="The nofication center to post to.">notificationCenter</a>;
 <a name="l00034"></a>00034         
 <a name="l00038"></a><a class="code" href="interface_g_d_carbon_event.html#a6e9b1a253f2df29a0b15fa278033b7fc">00038</a>         Boolean <a class="code" href="interface_g_d_carbon_event.html#a6e9b1a253f2df29a0b15fa278033b7fc" title="Whether or not the event is installed with the carbon event manager.">isInstalled</a>;
 <a name="l00039"></a>00039         
-<a name="l00043"></a><a class="code" href="interface_g_d_carbon_event.html#aaecdb5a2e5158162b9034486f9d81fc5">00043</a>         NSString * <a class="code" href="interface_g_d_carbon_event.html#aaecdb5a2e5158162b9034486f9d81fc5" title="The event signature string.">sigString</a>;
+<a name="l00043"></a><a class="code" href="interface_g_d_carbon_event.html#aaecdb5a2e5158162b9034486f9d81fc5">00043</a>         <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * <a class="code" href="interface_g_d_carbon_event.html#aaecdb5a2e5158162b9034486f9d81fc5" title="The event signature string.">sigString</a>;
 <a name="l00044"></a>00044         
 <a name="l00048"></a><a class="code" href="interface_g_d_carbon_event.html#af21ea340387a4216427700e68575c897">00048</a>         EventHandlerRef <a class="code" href="interface_g_d_carbon_event.html#af21ea340387a4216427700e68575c897" title="An event handler reference.">eventRef</a>;
 <a name="l00049"></a>00049         
@@ -76,9 +76,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00069"></a>00069         
 <a name="l00070"></a>00070 }
 <a name="l00071"></a>00071 
-<a name="l00075"></a>00075 @property (copy) NSString * keyChar;
+<a name="l00075"></a>00075 @property (copy) <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * keyChar;
 <a name="l00076"></a>00076 
-<a name="l00081"></a>00081 @property (copy) NSString * notificationName;
+<a name="l00081"></a>00081 @property (copy) <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * notificationName;
 <a name="l00082"></a>00082 
 <a name="l00086"></a>00086 @property (assign) NSNotificationCenter * notificationCenter;
 <a name="l00087"></a>00087 
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00134"></a>00134 
 <a name="l00143"></a>00143 + (<span class="keywordtype">void</span>) disposeOfLookupManager;
 <a name="l00144"></a>00144 
-<a name="l00151"></a>00151 - (<span class="keywordtype">void</span>) setHotKeySignature:(NSString *) signature;
+<a name="l00151"></a>00151 - (<span class="keywordtype">void</span>) setHotKeySignature:(<a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> *) signature;
 <a name="l00152"></a>00152 
 <a name="l00158"></a>00158 - (<span class="keywordtype">void</span>) setHotKeyId:(<span class="keywordtype">int</span>) kid;
 <a name="l00159"></a>00159 
@@ -120,13 +120,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00208"></a>00208 
 <a name="l00215"></a>00215 - (<span class="keywordtype">id</span>) initWithEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind;
 <a name="l00216"></a>00216 
-<a name="l00224"></a>00224 - (<span class="keywordtype">void</span>) setNotificationName:(NSString *) name andNotificationCenter:(NSNotificationCenter *) center;
+<a name="l00224"></a>00224 - (<span class="keywordtype">void</span>) setNotificationName:(<a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> *) name andNotificationCenter:(NSNotificationCenter *) center;
 <a name="l00225"></a>00225 
 <a name="l00233"></a>00233 - (<span class="keywordtype">void</span>) setAction:(<span class="keywordtype">SEL</span>) action andTarget:(<span class="keywordtype">id</span>) target;
 <a name="l00234"></a>00234 
 <a name="l00244"></a>00244 - (<span class="keywordtype">void</span>) setKeyCode:(NSUInteger) code andFlags:(NSUInteger) flags areFlagsCocoa:(Boolean) cocoaFlags;
 <a name="l00245"></a>00245 
-<a name="l00250"></a>00250 - (NSString *) keyString;
+<a name="l00250"></a>00250 - (<a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> *) keyString;
 <a name="l00251"></a>00251 
 <a name="l00252"></a>00252 @end
 </pre></div></div>

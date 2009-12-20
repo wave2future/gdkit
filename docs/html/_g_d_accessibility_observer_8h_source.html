@@ -66,14 +66,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00097"></a>00097         
 <a name="l00101"></a><a class="code" href="interface_g_d_accessibility_observer.html#a312f2dcd2e9adc830363f237d56b45e8">00101</a>         NSDictionary * <a class="code" href="interface_g_d_accessibility_observer.html#a312f2dcd2e9adc830363f237d56b45e8" title="User info dictionary passed on notification.">userInfo</a>;
 <a name="l00102"></a>00102         
-<a name="l00106"></a><a class="code" href="interface_g_d_accessibility_observer.html#a273d26e83f52937320762c53857c6db1">00106</a>         NSString * <a class="code" href="interface_g_d_accessibility_observer.html#a273d26e83f52937320762c53857c6db1" title="The notification name.">notification</a>;
+<a name="l00106"></a><a class="code" href="interface_g_d_accessibility_observer.html#a273d26e83f52937320762c53857c6db1">00106</a>         <a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> * <a class="code" href="interface_g_d_accessibility_observer.html#a273d26e83f52937320762c53857c6db1" title="The notification name.">notification</a>;
 <a name="l00107"></a>00107         
 <a name="l00111"></a><a class="code" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa">00111</a>         <a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> * <a class="code" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa" title="Singleton instance of the GDAccessibilityManager.">accessManager</a>;
 <a name="l00112"></a>00112         
 <a name="l00116"></a><a class="code" href="interface_g_d_accessibility_observer.html#ac10d3d1ce12d457cf53ac6bb3d86c380">00116</a>         <a class="code" href="interface_g_d_accessibility_notification.html" title="The GDAccessibilityNotification is the object passed to your selecter or notification...">GDAccessibilityNotification</a> * <a class="code" href="interface_g_d_accessibility_observer.html#ac10d3d1ce12d457cf53ac6bb3d86c380" title="An instance of an GDAccessibilityNotification.">notify</a>;
 <a name="l00117"></a>00117 }
 <a name="l00118"></a>00118 
-<a name="l00128"></a>00128 - (id) initWithNotification:(NSString *) notification forAXUIElementRef:(AXUIElementRef) element callsAction:(<span class="keywordtype">SEL</span>) action onTarget:(<span class="keywordtype">id</span>) target withUserInfo:(NSDictionary *) userInpho;
+<a name="l00128"></a>00128 - (id) initWithNotification:(<a class="code" href="class_n_s_string.html" title="Category additions to NSString.">NSString</a> *) notification forAXUIElementRef:(AXUIElementRef) element callsAction:(<span class="keywordtype">SEL</span>) action onTarget:(<span class="keywordtype">id</span>) target withUserInfo:(NSDictionary *) userInpho;
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 <span class="keyword">@end</span>
 <a name="l00131"></a>00131 

@@ -2,7 +2,7 @@
 
 #import "NSFileHandle+Additions.h"
 
-@implementation NSFileHandle (Additions)
+@implementation NSFileHandle (GDAdditions)
 
 - (id) initWithFile:(NSString *) file {
 	NSFileManager * fileManager = [NSFileManager defaultManager];

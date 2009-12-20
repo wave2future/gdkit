@@ -2,7 +2,7 @@
 
 #import "NSView+Additions.h"
 
-@implementation NSView (Additions)
+@implementation NSView (GDAdditions)
 
 - (void) setAutoresizingBit:(unsigned int) bitMask toValue:(BOOL) set {
 	if(set) [self setAutoresizingMask:([self autoresizingMask]|bitMask)];

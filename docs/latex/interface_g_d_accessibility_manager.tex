@@ -30,7 +30,7 @@ The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} hand
 (Boolean) -\/ \hyperlink{interface_g_d_accessibility_manager_ac7682be7c9d421b3b6aff5bd0427c484}{isCFRange:}
 \begin{DoxyCompactList}\small\item\em Check if a CFTypeRef is a CFRange. \item\end{DoxyCompactList}\item 
 (Boolean) -\/ \hyperlink{interface_g_d_accessibility_manager_a7383e6153121e98d5c0a7b1a01705f50}{isNSString:}
-\begin{DoxyCompactList}\small\item\em Check if a CFTypeRef is an NSString. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if a CFTypeRef is an \hyperlink{class_n_s_string}{NSString}. \item\end{DoxyCompactList}\item 
 (Boolean) -\/ \hyperlink{interface_g_d_accessibility_manager_acdce820e06d533b51a1eaec8618019c1}{isNSValue:}
 \begin{DoxyCompactList}\small\item\em Check if a CFTypeRef is an NSValue. \item\end{DoxyCompactList}\item 
 (pid\_\-t) -\/ \hyperlink{interface_g_d_accessibility_manager_a77c4e5a6c3c879ba3a1a4d305c2ebd31}{forAXUIElementRefGetPID:}
@@ -75,7 +75,7 @@ The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} hand
 (\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_a9ebf98303317b2e55a27ca31bef44942}{forAXUIElementRef:setAttribute:toNSSize:}
 \begin{DoxyCompactList}\small\item\em Set an attribute's value to an NSSize. \item\end{DoxyCompactList}\item 
 (\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_a47b117c336fb6627353a74ab78cdd6a1}{forAXUIElementRef:setAttribute:toNSString:}
-\begin{DoxyCompactList}\small\item\em Set an attribute's value to an NSString. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set an attribute's value to an \hyperlink{class_n_s_string}{NSString}. \item\end{DoxyCompactList}\item 
 (\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_a25f20499558c7b5bbd4fccca578fbefe}{forAXUIElementRefGetAttributeNames:}
 \begin{DoxyCompactList}\small\item\em Gets attribute names for an AXUIElementRef. \item\end{DoxyCompactList}\item 
 (\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_af7ed61beb0c1683b0e8a766ecd977547}{forAXUIElementRefGetActionNames:}
@@ -138,7 +138,7 @@ Get an application AXUIElementRef from a process id.
 \hypertarget{interface_g_d_accessibility_manager_ab01d89443568416b034e6a8750106ddb}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!doesElementRef:actAsRole:@{doesElementRef:actAsRole:}}
 \index{doesElementRef:actAsRole:@{doesElementRef:actAsRole:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{doesElementRef:actAsRole:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) doesElementRef: (AXUIElementRef) {\em element}\/ actAsRole: (NSString $\ast$) {\em role}}}
+\subsubsection[{doesElementRef:actAsRole:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) doesElementRef: (AXUIElementRef) {\em element}\/ actAsRole: ({\bf NSString} $\ast$) {\em role}}}
 \label{interface_g_d_accessibility_manager_ab01d89443568416b034e6a8750106ddb}
 
 
@@ -148,7 +148,7 @@ Whether or not an AXUIElementRef acts as a particular role.
 \hypertarget{interface_g_d_accessibility_manager_ad3fc09b2e6330989ea5bc28ba1ecdc9d}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!doesElementRef:exposeAttribute:@{doesElementRef:exposeAttribute:}}
 \index{doesElementRef:exposeAttribute:@{doesElementRef:exposeAttribute:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{doesElementRef:exposeAttribute:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) doesElementRef: (AXUIElementRef) {\em elementRef}\/ exposeAttribute: (NSString $\ast$) {\em attribute}}}
+\subsubsection[{doesElementRef:exposeAttribute:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) doesElementRef: (AXUIElementRef) {\em elementRef}\/ exposeAttribute: ({\bf NSString} $\ast$) {\em attribute}}}
 \label{interface_g_d_accessibility_manager_ad3fc09b2e6330989ea5bc28ba1ecdc9d}
 
 
@@ -168,7 +168,7 @@ Get the focused window for an application.
 \hypertarget{interface_g_d_accessibility_manager_aec013555193c1fade98e5ae3e36f953b}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:getActionDescription:@{forAXUIElementRef:getActionDescription:}}
 \index{forAXUIElementRef:getActionDescription:@{forAXUIElementRef:getActionDescription:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:getActionDescription:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getActionDescription: (NSString $\ast$) {\em action}}}
+\subsubsection[{forAXUIElementRef:getActionDescription:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getActionDescription: ({\bf NSString} $\ast$) {\em action}}}
 \label{interface_g_d_accessibility_manager_aec013555193c1fade98e5ae3e36f953b}
 
 
@@ -178,7 +178,7 @@ Gets an action description on an AXUIElementRef.
 \hypertarget{interface_g_d_accessibility_manager_a07aa52aa7ad4f2a130e8448bc8bedf47}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:getAttributeValue:@{forAXUIElementRef:getAttributeValue:}}
 \index{forAXUIElementRef:getAttributeValue:@{forAXUIElementRef:getAttributeValue:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:getAttributeValue:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getAttributeValue: (NSString $\ast$) {\em attribute}}}
+\subsubsection[{forAXUIElementRef:getAttributeValue:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getAttributeValue: ({\bf NSString} $\ast$) {\em attribute}}}
 \label{interface_g_d_accessibility_manager_a07aa52aa7ad4f2a130e8448bc8bedf47}
 
 
@@ -188,7 +188,7 @@ Gets the value of an attribute for an element ref.
 \hypertarget{interface_g_d_accessibility_manager_a043c9bc6dd9c456ccf038eef0c765dcd}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:getAttributeValueCount:@{forAXUIElementRef:getAttributeValueCount:}}
 \index{forAXUIElementRef:getAttributeValueCount:@{forAXUIElementRef:getAttributeValueCount:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:getAttributeValueCount:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getAttributeValueCount: (NSString $\ast$) {\em attribute}}}
+\subsubsection[{forAXUIElementRef:getAttributeValueCount:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ getAttributeValueCount: ({\bf NSString} $\ast$) {\em attribute}}}
 \label{interface_g_d_accessibility_manager_a043c9bc6dd9c456ccf038eef0c765dcd}
 
 
@@ -198,7 +198,7 @@ Gets the attribute value count of an attribute's value for an element ref.
 \hypertarget{interface_g_d_accessibility_manager_a365dbd94f222b04c86141c83c1542e68}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:performAction:@{forAXUIElementRef:performAction:}}
 \index{forAXUIElementRef:performAction:@{forAXUIElementRef:performAction:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:performAction:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ performAction: (NSString $\ast$) {\em action}}}
+\subsubsection[{forAXUIElementRef:performAction:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ performAction: ({\bf NSString} $\ast$) {\em action}}}
 \label{interface_g_d_accessibility_manager_a365dbd94f222b04c86141c83c1542e68}
 
 
@@ -208,7 +208,7 @@ Performs an action on an AXUIElementRef.
 \hypertarget{interface_g_d_accessibility_manager_aebd9e4bd904df0513641112d83df41d8}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSPoint:@{forAXUIElementRef:setAttribute:toNSPoint:}}
 \index{forAXUIElementRef:setAttribute:toNSPoint:@{forAXUIElementRef:setAttribute:toNSPoint:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSPoint:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSPoint: (NSPoint) {\em point}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSPoint:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSPoint: (NSPoint) {\em point}}}
 \label{interface_g_d_accessibility_manager_aebd9e4bd904df0513641112d83df41d8}
 
 
@@ -218,7 +218,7 @@ Set an attribute's value to an NSPoint.
 \hypertarget{interface_g_d_accessibility_manager_acabbfd253bc37b73d799978bcabb37b4}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSRange:@{forAXUIElementRef:setAttribute:toNSRange:}}
 \index{forAXUIElementRef:setAttribute:toNSRange:@{forAXUIElementRef:setAttribute:toNSRange:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSRange:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSRange: (NSRange) {\em range}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSRange:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSRange: (NSRange) {\em range}}}
 \label{interface_g_d_accessibility_manager_acabbfd253bc37b73d799978bcabb37b4}
 
 
@@ -228,7 +228,7 @@ Set an attribute's value to an NSRange.
 \hypertarget{interface_g_d_accessibility_manager_acb7c3a3be1de6bdf614a08cc461f5c75}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSRect:@{forAXUIElementRef:setAttribute:toNSRect:}}
 \index{forAXUIElementRef:setAttribute:toNSRect:@{forAXUIElementRef:setAttribute:toNSRect:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSRect:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSRect: (NSRect) {\em rect}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSRect:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSRect: (NSRect) {\em rect}}}
 \label{interface_g_d_accessibility_manager_acb7c3a3be1de6bdf614a08cc461f5c75}
 
 
@@ -238,7 +238,7 @@ Set an attribute's value to an NSRect.
 \hypertarget{interface_g_d_accessibility_manager_a9ebf98303317b2e55a27ca31bef44942}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSSize:@{forAXUIElementRef:setAttribute:toNSSize:}}
 \index{forAXUIElementRef:setAttribute:toNSSize:@{forAXUIElementRef:setAttribute:toNSSize:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSSize:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSSize: (NSSize) {\em size}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSSize:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSSize: (NSSize) {\em size}}}
 \label{interface_g_d_accessibility_manager_a9ebf98303317b2e55a27ca31bef44942}
 
 
@@ -248,17 +248,17 @@ Set an attribute's value to an NSSize.
 \hypertarget{interface_g_d_accessibility_manager_a47b117c336fb6627353a74ab78cdd6a1}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSString:@{forAXUIElementRef:setAttribute:toNSString:}}
 \index{forAXUIElementRef:setAttribute:toNSString:@{forAXUIElementRef:setAttribute:toNSString:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSString:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSString: (NSString $\ast$) {\em string}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSString:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSString: ({\bf NSString} $\ast$) {\em string}}}
 \label{interface_g_d_accessibility_manager_a47b117c336fb6627353a74ab78cdd6a1}
 
 
-Set an attribute's value to an NSString. 
+Set an attribute's value to an \hyperlink{class_n_s_string}{NSString}. 
 \begin{DoxyParams}{Parameters}
-\item[{\em element}]An AXUIElementRef. \item[{\em attribute}]The accessibility attribute. \item[{\em string}]An NSString to set the attribute value to. \end{DoxyParams}
+\item[{\em element}]An AXUIElementRef. \item[{\em attribute}]The accessibility attribute. \item[{\em string}]An \hyperlink{class_n_s_string}{NSString} to set the attribute value to. \end{DoxyParams}
 \hypertarget{interface_g_d_accessibility_manager_a9a03f4ae6cc68077a661f139293ba9cc}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!forAXUIElementRef:setAttribute:toNSValue:@{forAXUIElementRef:setAttribute:toNSValue:}}
 \index{forAXUIElementRef:setAttribute:toNSValue:@{forAXUIElementRef:setAttribute:toNSValue:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{forAXUIElementRef:setAttribute:toNSValue:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: (NSString $\ast$) {\em attribute}\/ toNSValue: (NSValue $\ast$) {\em nsvalue}}}
+\subsubsection[{forAXUIElementRef:setAttribute:toNSValue:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf GDAccessibilityOperationResult} $\ast$) forAXUIElementRef: (AXUIElementRef) {\em element}\/ setAttribute: ({\bf NSString} $\ast$) {\em attribute}\/ toNSValue: (NSValue $\ast$) {\em nsvalue}}}
 \label{interface_g_d_accessibility_manager_a9a03f4ae6cc68077a661f139293ba9cc}
 
 
@@ -328,7 +328,7 @@ Get the title for an element ref.
 \hypertarget{interface_g_d_accessibility_manager_ac28b17f1ec344fc9edb3de8c0a05b40f}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!isAXUIElementRef:attributeSettable:@{isAXUIElementRef:attributeSettable:}}
 \index{isAXUIElementRef:attributeSettable:@{isAXUIElementRef:attributeSettable:}!GDAccessibilityManager@{GDAccessibilityManager}}
-\subsubsection[{isAXUIElementRef:attributeSettable:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) isAXUIElementRef: (AXUIElementRef) {\em element}\/ attributeSettable: (NSString $\ast$) {\em attribute}}}
+\subsubsection[{isAXUIElementRef:attributeSettable:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Boolean) isAXUIElementRef: (AXUIElementRef) {\em element}\/ attributeSettable: ({\bf NSString} $\ast$) {\em attribute}}}
 \label{interface_g_d_accessibility_manager_ac28b17f1ec344fc9edb3de8c0a05b40f}
 
 
@@ -382,9 +382,9 @@ Check if a CFTypeRef is a CGSize.
 \label{interface_g_d_accessibility_manager_a7383e6153121e98d5c0a7b1a01705f50}
 
 
-Check if a CFTypeRef is an NSString. 
+Check if a CFTypeRef is an \hyperlink{class_n_s_string}{NSString}. 
 \begin{DoxyParams}{Parameters}
-\item[{\em possibleString}]An object that might be an NSString. \end{DoxyParams}
+\item[{\em possibleString}]An object that might be an \hyperlink{class_n_s_string}{NSString}. \end{DoxyParams}
 \hypertarget{interface_g_d_accessibility_manager_acdce820e06d533b51a1eaec8618019c1}{
 \index{GDAccessibilityManager@{GDAccessibilityManager}!isNSValue:@{isNSValue:}}
 \index{isNSValue:@{isNSValue:}!GDAccessibilityManager@{GDAccessibilityManager}}

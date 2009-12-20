@@ -13,7 +13,7 @@
  * 
  * Category additions to NSFileManager.
  */
-@interface NSFileManager (Additions)
+@interface NSFileManager (GDAdditions)
 
 /**
  * Returns a path to a folder, creating the folder if

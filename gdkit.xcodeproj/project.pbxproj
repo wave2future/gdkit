@@ -51,6 +51,8 @@
 		075617A410DEBFB3003E07DA /* NSView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617A210DEBFB3003E07DA /* NSView+Additions.m */; };
 		075617CA10DEC46E003E07DA /* NSFileHandle+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075617CB10DEC46E003E07DA /* NSFileHandle+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */; };
+		07561A2010DEEFBF003E07DA /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07561A1E10DEEFBF003E07DA /* NSString+Additions.h */; };
+		07561A2110DEEFBF003E07DA /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07561A1F10DEEFBF003E07DA /* NSString+Additions.m */; };
 		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
 		078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E2410366CAD0033A770 /* GDASLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -158,6 +160,8 @@
 		075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+Additions.h"; path = "source/NSFileHandle+Additions.h"; sourceTree = "<group>"; };
 		075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileHandle+Additions.m"; path = "source/NSFileHandle+Additions.m"; sourceTree = "<group>"; };
 		0756198B10DEE669003E07DA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		07561A1E10DEEFBF003E07DA /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "source/NSString+Additions.h"; sourceTree = "<group>"; };
+		07561A1F10DEEFBF003E07DA /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "source/NSString+Additions.m"; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEventManager.h; path = source/GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEventManager.m; path = source/GDCarbonEventManager.m; sourceTree = "<group>"; };
 		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/GDASLLog.h; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+Additions.h */,
 				0723F6CA10314ECE00EF92B4 /* NSStatusItem+Additions.h */,
+				07561A1E10DEEFBF003E07DA /* NSString+Additions.h */,
 				0720180B103E66B50007B6E0 /* NSUserDefaults+Additions.h */,
 				075617A110DEBFB3003E07DA /* NSView+Additions.h */,
 				0720C7981030FB8400FB009B /* NSWorkspace+Additions.h */,
@@ -400,6 +405,7 @@
 				0720180C103E66B50007B6E0 /* NSUserDefaults+Additions.m */,
 				075617A210DEBFB3003E07DA /* NSView+Additions.m */,
 				0720C7991030FB8400FB009B /* NSWorkspace+Additions.m */,
+				07561A1F10DEEFBF003E07DA /* NSString+Additions.m */,
 			);
 			name = additions;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				075617A310DEBFB3003E07DA /* NSView+Additions.h in Headers */,
 				0720C79A1030FB8400FB009B /* NSWorkspace+Additions.h in Headers */,
 				07A59726105377D200F95BEA /* OSTypeFunctions.h in Headers */,
+				07561A2010DEEFBF003E07DA /* NSString+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +780,7 @@
 				0756146810DE2306003E07DA /* GDContextMenuController.m in Sources */,
 				075617A410DEBFB3003E07DA /* NSView+Additions.m in Sources */,
 				075617CB10DEC46E003E07DA /* NSFileHandle+Additions.m in Sources */,
+				07561A2110DEEFBF003E07DA /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

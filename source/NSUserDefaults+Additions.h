@@ -14,7 +14,7 @@
  *
  * Category additions to NSUserDefaults.
  */
-@interface NSUserDefaults (Additions)
+@interface NSUserDefaults (GDAdditions)
 
 /**
  * Deletes any entries identified the application's bundle id.

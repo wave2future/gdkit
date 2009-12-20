@@ -2,7 +2,7 @@
 
 #import "NSWorkspace+Additions.h"
 
-@implementation NSWorkspace (Additions)
+@implementation NSWorkspace (GDAdditions)
 
 - (void) bringApplicationToFront:(NSDictionary *) appInfo {
 	if(appInfo == nil) return;

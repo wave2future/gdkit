@@ -13,7 +13,7 @@
  * 
  * Category additions to NSFileHandle.
  */
-@interface NSFileHandle (Additions)
+@interface NSFileHandle (GDAdditions)
 
 - (id) initWithFile:(NSString *) file;
 - (id) initWithTruncatedFile:(NSString *) file;

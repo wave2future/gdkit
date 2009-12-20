@@ -55,7 +55,7 @@ The \hyperlink{interface_g_d_carbon_event}{GDCarbonEvent} is an object wrapper f
 (void) -\/ \hyperlink{interface_g_d_carbon_event_a0140fa16d6e2987aa2437f6e56a8269d}{setKeyCode:andFlags:areFlagsCocoa:}
 \begin{DoxyCompactList}\small\item\em Set keycode, and modifier flags, optionally tell it that the flags were cocoa and need to be converted to carbon modifier flags. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_g_d_carbon_event_a140777cec8832d843cf2147ca31d552d}{
-(NSString $\ast$) -\/ \hyperlink{interface_g_d_carbon_event_a140777cec8832d843cf2147ca31d552d}{keyString}}
+(\hyperlink{class_n_s_string}{NSString} $\ast$) -\/ \hyperlink{interface_g_d_carbon_event_a140777cec8832d843cf2147ca31d552d}{keyString}}
 \label{interface_g_d_carbon_event_a140777cec8832d843cf2147ca31d552d}
 
 \begin{DoxyCompactList}\small\item\em This returns a string that represents the value of the keyCode, and modifier keys all added together: keyCode+modifiers. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -73,7 +73,7 @@ Boolean \hyperlink{interface_g_d_carbon_event_a6e9b1a253f2df29a0b15fa278033b7fc}
 
 \begin{DoxyCompactList}\small\item\em Whether or not the event is installed with the carbon event manager. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_g_d_carbon_event_aaecdb5a2e5158162b9034486f9d81fc5}{
-NSString $\ast$ \hyperlink{interface_g_d_carbon_event_aaecdb5a2e5158162b9034486f9d81fc5}{sigString}}
+\hyperlink{class_n_s_string}{NSString} $\ast$ \hyperlink{interface_g_d_carbon_event_aaecdb5a2e5158162b9034486f9d81fc5}{sigString}}
 \label{interface_g_d_carbon_event_aaecdb5a2e5158162b9034486f9d81fc5}
 
 \begin{DoxyCompactList}\small\item\em The event signature string. \item\end{DoxyCompactList}\item 
@@ -106,12 +106,12 @@ EventHotKeyID \hyperlink{interface_g_d_carbon_event_a2006adab113bc7d35181e186a08
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{interface_g_d_carbon_event_a6a1d5951550d087504bd446380ec90eb}{
-NSString $\ast$ \hyperlink{interface_g_d_carbon_event_a6a1d5951550d087504bd446380ec90eb}{keyChar}}
+\hyperlink{class_n_s_string}{NSString} $\ast$ \hyperlink{interface_g_d_carbon_event_a6a1d5951550d087504bd446380ec90eb}{keyChar}}
 \label{interface_g_d_carbon_event_a6a1d5951550d087504bd446380ec90eb}
 
-\begin{DoxyCompactList}\small\item\em An NSString for the key char -\/ like 'W', 'F', etc. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em An \hyperlink{class_n_s_string}{NSString} for the key char -\/ like 'W', 'F', etc. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_g_d_carbon_event_a5820e6b5f9552f7202f7d6608b93cda0}{
-NSString $\ast$ \hyperlink{interface_g_d_carbon_event_a5820e6b5f9552f7202f7d6608b93cda0}{notificationName}}
+\hyperlink{class_n_s_string}{NSString} $\ast$ \hyperlink{interface_g_d_carbon_event_a5820e6b5f9552f7202f7d6608b93cda0}{notificationName}}
 \label{interface_g_d_carbon_event_a5820e6b5f9552f7202f7d6608b93cda0}
 
 \begin{DoxyCompactList}\small\item\em The notification name, if this carbon event is posting to a notification center. \item\end{DoxyCompactList}\item 
@@ -259,13 +259,13 @@ Set the hotkey id for a carbon hot key event.
 \hypertarget{interface_g_d_carbon_event_a06f5898aa490cf71399ea4f62f6b3d73}{
 \index{GDCarbonEvent@{GDCarbonEvent}!setHotKeySignature:@{setHotKeySignature:}}
 \index{setHotKeySignature:@{setHotKeySignature:}!GDCarbonEvent@{GDCarbonEvent}}
-\subsubsection[{setHotKeySignature:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setHotKeySignature: (NSString $\ast$) {\em signature}}}
+\subsubsection[{setHotKeySignature:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setHotKeySignature: ({\bf NSString} $\ast$) {\em signature}}}
 \label{interface_g_d_carbon_event_a06f5898aa490cf71399ea4f62f6b3d73}
 
 
 Set the hotkey signature for a carbon hot key event. 
 \begin{DoxyParams}{Parameters}
-\item[{\em signature}]An NSString to use for the signature -\/ this should be at max 4 characters -\/ it's converted into a FourCharCode. \end{DoxyParams}
+\item[{\em signature}]An \hyperlink{class_n_s_string}{NSString} to use for the signature -\/ this should be at max 4 characters -\/ it's converted into a FourCharCode. \end{DoxyParams}
 \hypertarget{interface_g_d_carbon_event_a0140fa16d6e2987aa2437f6e56a8269d}{
 \index{GDCarbonEvent@{GDCarbonEvent}!setKeyCode:andFlags:areFlagsCocoa:@{setKeyCode:andFlags:areFlagsCocoa:}}
 \index{setKeyCode:andFlags:areFlagsCocoa:@{setKeyCode:andFlags:areFlagsCocoa:}!GDCarbonEvent@{GDCarbonEvent}}
@@ -279,7 +279,7 @@ Set keycode, and modifier flags, optionally tell it that the flags were cocoa an
 \hypertarget{interface_g_d_carbon_event_a33e3feb0ec56180d02e170e8bf213b6c}{
 \index{GDCarbonEvent@{GDCarbonEvent}!setNotificationName:andNotificationCenter:@{setNotificationName:andNotificationCenter:}}
 \index{setNotificationName:andNotificationCenter:@{setNotificationName:andNotificationCenter:}!GDCarbonEvent@{GDCarbonEvent}}
-\subsubsection[{setNotificationName:andNotificationCenter:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setNotificationName: (NSString $\ast$) {\em name}\/ andNotificationCenter: (NSNotificationCenter $\ast$) {\em center}}}
+\subsubsection[{setNotificationName:andNotificationCenter:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setNotificationName: ({\bf NSString} $\ast$) {\em name}\/ andNotificationCenter: (NSNotificationCenter $\ast$) {\em center}}}
 \label{interface_g_d_carbon_event_a33e3feb0ec56180d02e170e8bf213b6c}
 
 

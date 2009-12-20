@@ -12,7 +12,7 @@
  *
  * Category additions to NSView.
  */
-@interface NSView (Additions)
+@interface NSView (GDAdditions)
 
 /**
  * Whether or not to fix the left edge.
