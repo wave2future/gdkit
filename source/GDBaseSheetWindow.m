@@ -1,3 +1,4 @@
+//copyright 2009 aaronsmith
 
 #import "GDBaseSheetWindow.h"
 #import "GDDocument.h"

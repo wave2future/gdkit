@@ -1,3 +1,4 @@
+//copyright 2009 aaronsmith
 
 #import "GDModalController.h"
 

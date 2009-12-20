@@ -1,3 +1,4 @@
+//copyright 2009 aaronsmith
 
 OSType fourCharCodeToOSType(NSString* inCode) {
 	OSType rval = 0;

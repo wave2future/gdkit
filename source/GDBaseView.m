@@ -1,3 +1,4 @@
+//copyright 2009 aaronsmith
 
 #import "GDBaseView.h"
 #import "GDDocument.h"
