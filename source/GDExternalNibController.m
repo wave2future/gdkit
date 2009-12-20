@@ -9,6 +9,7 @@
 @synthesize callback;
 @synthesize nibName;
 @synthesize disposesNibsOnWindowClose;
+@synthesize disposesNibsOnEscapeKey;
 
 - (void) reset {}
 
@@ -82,6 +83,11 @@
 }
 
 - (void) show {
+	if(!isSheet and available and windows and [windows mainWindow] and [[windows mainWindow] isVisible]) return;
+	if(available && isSheet) {
+		switchingToWindow=true;
+		[self resetSwitchFlags];
+	}
 	isSheet=false;
 	[self closeWindows];
 	[self loadNibs];
@@ -90,11 +96,21 @@
 }
 
 - (void) showAsSheetForWindow:(NSWindow *) _window {
+	if(isSheet) return;
+	if(available and !isSheet) {
+		switchingToSheet=true;
+		[self resetSwitchFlags];
+	}
 	isSheet=true;
 	[self closeWindows];
 	[self loadNibs];
 	[self reset];
 	[[NSApplication sharedApplication] beginSheet:[windows mainWindow] modalForWindow:_window modalDelegate:self didEndSelector:@selector(sheetEnded) contextInfo:nil];
+}
+
+- (void) setDisposesNibsOnEscapeKey:(BOOL) _disposeOnEscape andDisposesNibsOnWindowClose:(BOOL) _disposeOnWinClose {
+	[self setDisposesNibsOnEscapeKey:_disposeOnEscape];
+	[self setDisposesNibsOnWindowClose:_disposeOnWinClose];
 }
 
 - (void) sheetEnded {
@@ -103,7 +119,7 @@
 }
 
 - (void) onEscapeKey:(id) sender {
-	[self close:nil];
+	if(disposesNibsOnEscapeKey)[self close:nil];
 }
 
 - (void) close:(id) sender {
@@ -117,8 +133,17 @@
 	}
 }
 
+- (void) resetSwitchFlags {
+	[NSTimer scheduledTimerWithTimeInterval:.4 target:self selector:@selector(_resetSwitchFlags) userInfo:nil repeats:false];
+}
+
+- (void) _resetSwitchFlags {
+	switchingToSheet=false;
+	switchingToWindow=false;
+}
+
 - (void) disposeNibs {
-	if(!available) return;
+	if(!available || switchingToWindow || switchingToSheet) return;
 	available=false;
 	[self closeWindows];
 	GDRelease(windows);
@@ -133,6 +158,9 @@
 	GDRelease(callback);
 	GDRelease(windows);
 	available=false;
+	isSheet=false;
+	switchingToWindow=false;
+	switchingToSheet=false;
 	[super dealloc];
 }
 

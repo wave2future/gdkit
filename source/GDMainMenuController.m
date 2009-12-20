@@ -11,7 +11,9 @@
 	return self;
 }
 
-- (void) invalidate {}
+- (void) invalidate {
+	NSLog(@"invalidate");
+}
 
 - (void) dealloc {
 	#ifdef GDKIT_PRINT_DEALLOCS

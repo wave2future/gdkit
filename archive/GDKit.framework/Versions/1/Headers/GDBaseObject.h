@@ -10,8 +10,8 @@
 	IBOutlet id externalNibController;
 }
 
-@property (retain,nonatomic) IBOutlet id gd;
-@property (retain,nonatomic) IBOutlet id externalNibController;
+@property (assign,nonatomic) IBOutlet id gd;
+@property (assign,nonatomic) IBOutlet id externalNibController;
 
 - (void) setGDRefs;
 - (void) lazyInit;

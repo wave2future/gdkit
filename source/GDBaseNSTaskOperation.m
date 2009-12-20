@@ -43,8 +43,7 @@
 - (void) cancel {
 	[super cancel];
 	done=true;
-	if(task not nil) [task terminate];
-	GDRelease(task);
+	if(task not nil)[task terminate];
 }
 
 - (void) dealloc {

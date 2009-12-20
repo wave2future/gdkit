@@ -12,14 +12,12 @@
 		0756057C10DD790F003E07DA /* TModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756057B10DD790F003E07DA /* TModel.m */; };
 		07CFD5B310DB74AA002D2A34 /* GDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFD5AC10DB746A002D2A34 /* GDKit.framework */; };
 		07CFD5B410DB74B0002D2A34 /* GDKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 07CFD5AC10DB746A002D2A34 /* GDKit.framework */; };
-		07CFD63110DB7B59002D2A34 /* TWindowDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD63010DB7B59002D2A34 /* TWindowDelegate.m */; };
 		07CFD65910DB7C73002D2A34 /* TViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD65810DB7C73002D2A34 /* TViewController.m */; };
 		07CFD65C10DB7C8B002D2A34 /* TCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD65B10DB7C8B002D2A34 /* TCustomView.m */; };
 		07CFD71910DB8093002D2A34 /* TModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD71810DB8093002D2A34 /* TModalController.m */; };
 		07CFD71C10DB809A002D2A34 /* TMainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD71B10DB809A002D2A34 /* TMainMenuController.m */; };
 		07CFD73310DB818B002D2A34 /* TSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD73210DB818B002D2A34 /* TSoundController.m */; };
 		07CFD75210DB8201002D2A34 /* TOperationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD75110DB8201002D2A34 /* TOperationsController.m */; };
-		07CFDA3010DC854B002D2A34 /* TApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFDA2F10DC854B002D2A34 /* TApplicationDelegate.m */; };
 		07CFDBE710DC9CCC002D2A34 /* TWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFDBE610DC9CCC002D2A34 /* TWindowController.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* TApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TApplicationController.m */; };
@@ -67,8 +65,6 @@
 		0756057B10DD790F003E07DA /* TModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TModel.m; sourceTree = "<group>"; };
 		075609FE10DD9894003E07DA /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		07CFD5A710DB746A002D2A34 /* gdkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gdkit.xcodeproj; path = ../../gdkit.xcodeproj; sourceTree = SOURCE_ROOT; };
-		07CFD62F10DB7B59002D2A34 /* TWindowDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWindowDelegate.h; sourceTree = "<group>"; };
-		07CFD63010DB7B59002D2A34 /* TWindowDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWindowDelegate.m; sourceTree = "<group>"; };
 		07CFD65710DB7C73002D2A34 /* TViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TViewController.h; sourceTree = "<group>"; };
 		07CFD65810DB7C73002D2A34 /* TViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TViewController.m; sourceTree = "<group>"; };
 		07CFD65A10DB7C8B002D2A34 /* TCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCustomView.h; sourceTree = "<group>"; };
@@ -81,8 +77,6 @@
 		07CFD73210DB818B002D2A34 /* TSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSoundController.m; sourceTree = "<group>"; };
 		07CFD75010DB8201002D2A34 /* TOperationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOperationsController.h; sourceTree = "<group>"; };
 		07CFD75110DB8201002D2A34 /* TOperationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOperationsController.m; sourceTree = "<group>"; };
-		07CFDA2E10DC854B002D2A34 /* TApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TApplicationDelegate.h; sourceTree = "<group>"; };
-		07CFDA2F10DC854B002D2A34 /* TApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TApplicationDelegate.m; sourceTree = "<group>"; };
 		07CFDBE510DC9CCC002D2A34 /* TWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWindowController.h; sourceTree = "<group>"; };
 		07CFDBE610DC9CCC002D2A34 /* TWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWindowController.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -115,8 +109,8 @@
 		07CFD5A210DB741A002D2A34 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				075609FE10DD9894003E07DA /* macros.h */,
 				256AC3D80F4B6AC300CF3369 /* TApplicationController.h */,
-				07CFDA2E10DC854B002D2A34 /* TApplicationDelegate.h */,
 				07CFD65A10DB7C8B002D2A34 /* TCustomView.h */,
 				075601E710DCC7FB003E07DA /* TExternalNibTest.h */,
 				07CFD71A10DB809A002D2A34 /* TMainMenuController.h */,
@@ -126,8 +120,6 @@
 				07CFD73110DB818B002D2A34 /* TSoundController.h */,
 				07CFD65710DB7C73002D2A34 /* TViewController.h */,
 				07CFDBE510DC9CCC002D2A34 /* TWindowController.h */,
-				07CFD62F10DB7B59002D2A34 /* TWindowDelegate.h */,
-				075609FE10DD9894003E07DA /* macros.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -152,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				256AC3D90F4B6AC300CF3369 /* TApplicationController.m */,
-				07CFDA2F10DC854B002D2A34 /* TApplicationDelegate.m */,
 				07CFD65B10DB7C8B002D2A34 /* TCustomView.m */,
 				075601E810DCC7FB003E07DA /* TExternalNibTest.m */,
 				07CFD71B10DB809A002D2A34 /* TMainMenuController.m */,
@@ -162,7 +153,6 @@
 				07CFD73210DB818B002D2A34 /* TSoundController.m */,
 				07CFD65810DB7C73002D2A34 /* TViewController.m */,
 				07CFDBE610DC9CCC002D2A34 /* TWindowController.m */,
-				07CFD63010DB7B59002D2A34 /* TWindowDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -312,14 +302,12 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* TApplicationController.m in Sources */,
-				07CFD63110DB7B59002D2A34 /* TWindowDelegate.m in Sources */,
 				07CFD65910DB7C73002D2A34 /* TViewController.m in Sources */,
 				07CFD65C10DB7C8B002D2A34 /* TCustomView.m in Sources */,
 				07CFD71910DB8093002D2A34 /* TModalController.m in Sources */,
 				07CFD71C10DB809A002D2A34 /* TMainMenuController.m in Sources */,
 				07CFD73310DB818B002D2A34 /* TSoundController.m in Sources */,
 				07CFD75210DB8201002D2A34 /* TOperationsController.m in Sources */,
-				07CFDA3010DC854B002D2A34 /* TApplicationDelegate.m in Sources */,
 				07CFDBE710DC9CCC002D2A34 /* TWindowController.m in Sources */,
 				075601E910DCC7FB003E07DA /* TExternalNibTest.m in Sources */,
 				0756057C10DD790F003E07DA /* TModel.m in Sources */,

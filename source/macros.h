@@ -8,9 +8,8 @@
 #define is ==
 
 NS_INLINE void GDRelease(id obj) {
-	{
-		if(obj not nil) [obj release];
-		obj=nil;
-	}
-	
+	//NSLog(@"retainCount: %@ \t\t %i",obj,[obj retainCount]);
+	if(obj != NULL && [obj retainCount]>0)[obj release];
+	//NSLog(@"retainCountAfter: %@ \t\t %i",obj,[obj retainCount]);
+	obj=NULL;
 }

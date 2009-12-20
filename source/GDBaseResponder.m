@@ -20,13 +20,13 @@
 }
 
 - (void) lazyInitWithGDDocument:(GDDocument *) _gd {
-	gd=[_gd retain];
+	gd=_gd;
 	[self setGDRefs];
 	[self lazyInit];
 }
 
 - (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController {
-	gd=[_appController retain];
+	gd=_appController;
 	[self setGDRefs];
 	[self lazyInit];
 }
@@ -35,7 +35,6 @@
 	#ifdef GDKIT_PRINT_DEALLOCS
 	printf("dealloc GDBaseResponder\n");
 	#endif
-	GDRelease(gd);
 	[super dealloc];
 }
 

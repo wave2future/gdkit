@@ -15,6 +15,9 @@
 	BOOL isSheet;
 	BOOL available;
 	BOOL disposesNibsOnWindowClose;
+	BOOL disposesNibsOnEscapeKey;
+	BOOL switchingToWindow;
+	BOOL switchingToSheet;
 	NSString * nibName;
 	GDCallback * callback;
 	IBOutlet GDWindowController * windows;
@@ -23,6 +26,7 @@
 @property (copy,nonatomic) NSString * nibName;
 @property (assign,nonatomic) IBOutlet GDWindowController * windows;
 @property (assign,nonatomic) BOOL disposesNibsOnWindowClose;
+@property (assign,nonatomic) BOOL disposesNibsOnEscapeKey;
 @property (retain,nonatomic) GDCallback * callback;
 
 - (void) close:(id) sender;
@@ -34,6 +38,8 @@
 - (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController andNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
 - (void) loadNibs;
 - (void) prepare;
+- (void) resetSwitchFlags;
+- (void) setDisposesNibsOnEscapeKey:(BOOL) _disposeOnEscape andDisposesNibsOnWindowClose:(BOOL) _disposeOnWinClose;
 - (void) setNibName:(NSString *) _nibName andCallback:(GDCallback *) _callback;
 - (void) show;
 - (void) showAsSheetForWindow:(NSWindow *) _window;

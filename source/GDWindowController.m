@@ -8,7 +8,7 @@
 	#ifdef GDKIT_PRINT_DEALLOCS
 	printf("dealloc GDWindowController\n");
 	#endif
-	GDRelease(mainWindow);
+	if([mainWindow retainCount] > 1) GDRelease(mainWindow);
 	[super dealloc];
 }
 

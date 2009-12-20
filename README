@@ -10,3 +10,6 @@ checks are in place at runtime.
 
 GDKIT_PRINT_DEALLOCS - This will turn on a print message like "dealloc [Class]"
 for every object that's deallocated in gdkit.
+
+GDKIT_METHOD_CALLS - This will turn on print statements so you can follow the
+flor of method calls.

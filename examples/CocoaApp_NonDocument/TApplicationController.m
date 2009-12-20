@@ -23,18 +23,14 @@
 - (void) initControllers {
 	//NSLog(@"initControllers");
 	externalNibTest=[[TExternalNibTest alloc] initWithGDApplicationController:self andNibName:@"TestNib"];
-	[externalNibTest setDisposesNibsOnWindowClose:true];
 }
 
 - (void) initWindows {
 	//NSLog(@"initWindows");
-	[super initWindows];
 }
 
 - (void) initViews {
 	//NSLog(@"initViews");
-	[[views customView1] lazyInitWithGDApplicationController:self];
-	[super initViews];
 }
 
 - (void) startApplication {
@@ -52,18 +48,21 @@
 	[super dealloc];
 }
 
-/*************/
-//from here on down, you can expose methods for target/action, callbacks, etc.
-/*************/
+/*********/
+//from here down you can expose target/action, callbacks, etc.
+/*********/
+
 - (IBAction) hello:(id) sender {
 	NSLog(@"hello");
 }
 
 - (IBAction) loadExternalNibTest:(id) sender {
+	[externalNibTest setDisposesNibsOnEscapeKey:false andDisposesNibsOnWindowClose:true];
 	[externalNibTest show];
 }
 
 - (IBAction) loadExternalNibAsSheet:(id) sender {
+	[externalNibTest setDisposesNibsOnEscapeKey:true andDisposesNibsOnWindowClose:true];
 	[externalNibTest showAsSheetForWindow:[wins mainWindow]];
 }
 

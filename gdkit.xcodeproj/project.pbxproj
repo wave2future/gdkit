@@ -35,8 +35,6 @@
 		074F720B10D789E100CBC121 /* GDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F720910D789E100CBC121 /* GDViewController.m */; };
 		074F73B510D8E99B00CBC121 /* GDSoundController.h in Headers */ = {isa = PBXBuildFile; fileRef = 074F73B310D8E99B00CBC121 /* GDSoundController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		074F73B610D8E99B00CBC121 /* GDSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F73B410D8E99B00CBC121 /* GDSoundController.m */; };
-		074F73BA10D8EE8900CBC121 /* GDDocumentWindowDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 074F73B810D8EE8900CBC121 /* GDDocumentWindowDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		074F73BB10D8EE8900CBC121 /* GDDocumentWindowDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F73B910D8EE8900CBC121 /* GDDocumentWindowDelegate.m */; };
 		074F73D010D8EF4600CBC121 /* GDBaseResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 074F73CE10D8EF4600CBC121 /* GDBaseResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		074F73D110D8EF4600CBC121 /* GDBaseResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F73CF10D8EF4600CBC121 /* GDBaseResponder.m */; };
 		0756018710DCC281003E07DA /* GDCliProxyConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0756018510DCC281003E07DA /* GDCliProxyConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,10 +67,6 @@
 		07C3C241105B87E900A6906E /* GDAppExpiration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C3C23F105B87E900A6906E /* GDAppExpiration.m */; };
 		07CFD4A510DB2802002D2A34 /* GDApplicationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFD4A310DB2802002D2A34 /* GDApplicationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFD4A610DB2802002D2A34 /* GDApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD4A410DB2802002D2A34 /* GDApplicationController.m */; };
-		07CFD4B810DB2AFC002D2A34 /* GDWindowDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFD4B610DB2AFC002D2A34 /* GDWindowDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CFD4B910DB2AFC002D2A34 /* GDWindowDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFD4B710DB2AFC002D2A34 /* GDWindowDelegate.m */; };
-		07CFDA1C10DC849B002D2A34 /* GDApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFDA1A10DC849B002D2A34 /* GDApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CFDA1D10DC849B002D2A34 /* GDApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFDA1B10DC849B002D2A34 /* GDApplicationDelegate.m */; };
 		07CFDBDF10DC9B8A002D2A34 /* GDWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CFDBDD10DC9B8A002D2A34 /* GDWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CFDBE010DC9B8A002D2A34 /* GDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CFDBDE10DC9B8A002D2A34 /* GDWindowController.m */; };
 		07E0E4E11057734500A5130F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0E4E01057734500A5130F /* CoreServices.framework */; };
@@ -140,8 +134,6 @@
 		074F720910D789E100CBC121 /* GDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDViewController.m; path = source/GDViewController.m; sourceTree = "<group>"; };
 		074F73B310D8E99B00CBC121 /* GDSoundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDSoundController.h; path = source/GDSoundController.h; sourceTree = "<group>"; };
 		074F73B410D8E99B00CBC121 /* GDSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDSoundController.m; path = source/GDSoundController.m; sourceTree = "<group>"; };
-		074F73B810D8EE8900CBC121 /* GDDocumentWindowDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDocumentWindowDelegate.h; path = source/GDDocumentWindowDelegate.h; sourceTree = "<group>"; };
-		074F73B910D8EE8900CBC121 /* GDDocumentWindowDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDocumentWindowDelegate.m; path = source/GDDocumentWindowDelegate.m; sourceTree = "<group>"; };
 		074F73CE10D8EF4600CBC121 /* GDBaseResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBaseResponder.h; path = source/GDBaseResponder.h; sourceTree = "<group>"; };
 		074F73CF10D8EF4600CBC121 /* GDBaseResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDBaseResponder.m; path = source/GDBaseResponder.m; sourceTree = "<group>"; };
 		0756018510DCC281003E07DA /* GDCliProxyConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCliProxyConnector.h; path = source/GDCliProxyConnector.h; sourceTree = "<group>"; };
@@ -153,8 +145,8 @@
 		0756045D10DCE04E003E07DA /* doxygenconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = doxygenconfig; path = docs/doxygenconfig; sourceTree = "<group>"; };
 		0756049F10DCE27A003E07DA /* GDResponderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDResponderHelper.h; path = source/GDResponderHelper.h; sourceTree = "<group>"; };
 		075604A010DCE27A003E07DA /* GDResponderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDResponderHelper.m; path = source/GDResponderHelper.m; sourceTree = "<group>"; };
-		0756064410DD7F80003E07DA /* GDDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDrawerController.h; sourceTree = "<group>"; };
-		0756064510DD7F80003E07DA /* GDDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDrawerController.m; sourceTree = "<group>"; };
+		0756064410DD7F80003E07DA /* GDDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDrawerController.h; path = source/GDDrawerController.h; sourceTree = "<group>"; };
+		0756064510DD7F80003E07DA /* GDDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDrawerController.m; path = source/GDDrawerController.m; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEventManager.h; path = source/GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEventManager.m; path = source/GDCarbonEventManager.m; sourceTree = "<group>"; };
 		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/GDASLLog.h; sourceTree = "<group>"; };
@@ -178,10 +170,6 @@
 		07C3C23F105B87E900A6906E /* GDAppExpiration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAppExpiration.m; path = source/GDAppExpiration.m; sourceTree = "<group>"; };
 		07CFD4A310DB2802002D2A34 /* GDApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDApplicationController.h; path = source/GDApplicationController.h; sourceTree = "<group>"; };
 		07CFD4A410DB2802002D2A34 /* GDApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDApplicationController.m; path = source/GDApplicationController.m; sourceTree = "<group>"; };
-		07CFD4B610DB2AFC002D2A34 /* GDWindowDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDWindowDelegate.h; path = source/GDWindowDelegate.h; sourceTree = "<group>"; };
-		07CFD4B710DB2AFC002D2A34 /* GDWindowDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDWindowDelegate.m; path = source/GDWindowDelegate.m; sourceTree = "<group>"; };
-		07CFDA1A10DC849B002D2A34 /* GDApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDApplicationDelegate.h; path = source/GDApplicationDelegate.h; sourceTree = "<group>"; };
-		07CFDA1B10DC849B002D2A34 /* GDApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDApplicationDelegate.m; path = source/GDApplicationDelegate.m; sourceTree = "<group>"; };
 		07CFDBDD10DC9B8A002D2A34 /* GDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDWindowController.h; path = source/GDWindowController.h; sourceTree = "<group>"; };
 		07CFDBDE10DC9B8A002D2A34 /* GDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDWindowController.m; path = source/GDWindowController.m; sourceTree = "<group>"; };
 		07E0E4E01057734500A5130F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
@@ -260,7 +248,6 @@
 				07F4732E10D3B2BB00BADB21 /* GDAlertAccessoryView.h */,
 				07C3C23E105B87E900A6906E /* GDAppExpiration.h */,
 				07CFD4A310DB2802002D2A34 /* GDApplicationController.h */,
-				07CFDA1A10DC849B002D2A34 /* GDApplicationDelegate.h */,
 				074F71EC10D7836D00CBC121 /* GDApplicationInfo.h */,
 				078D5E2410366CAD0033A770 /* GDASLLog.h */,
 				078D5E3F103675880033A770 /* GDASLLogManager.h */,
@@ -278,7 +265,6 @@
 				0756018510DCC281003E07DA /* GDCliProxyConnector.h */,
 				07F4730910D3B19C00BADB21 /* GDDocument.h */,
 				07F4730D10D3B1A200BADB21 /* GDDocumentController.h */,
-				074F73B810D8EE8900CBC121 /* GDDocumentWindowDelegate.h */,
 				0756064410DD7F80003E07DA /* GDDrawerController.h */,
 				07F4731110D3B20600BADB21 /* GDExternalNibController.h */,
 				07F4732410D3B27F00BADB21 /* GDGestalt.h */,
@@ -295,7 +281,6 @@
 				074F720810D789E100CBC121 /* GDViewController.h */,
 				07F4732910D3B29700BADB21 /* GDViewLayoutManager.h */,
 				07CFDBDD10DC9B8A002D2A34 /* GDWindowController.h */,
-				07CFD4B610DB2AFC002D2A34 /* GDWindowDelegate.h */,
 				07F4735210D3B50800BADB21 /* macros.h */,
 				0720C007102F4FBB00FB009B /* NSFileManager+Additions.h */,
 				0720180B103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h */,
@@ -340,14 +325,6 @@
 			name = Plain;
 			sourceTree = "<group>";
 		};
-		0756028A10DCCE94003E07DA /* delegates */ = {
-			isa = PBXGroup;
-			children = (
-				07CFD4B710DB2AFC002D2A34 /* GDWindowDelegate.m */,
-			);
-			name = delegates;
-			sourceTree = "<group>";
-		};
 		0756049E10DCE26B003E07DA /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				07CFD4A410DB2802002D2A34 /* GDApplicationController.m */,
-				07CFDA1B10DC849B002D2A34 /* GDApplicationDelegate.m */,
 			);
 			name = "non document based";
 			sourceTree = "<group>";
@@ -370,7 +346,6 @@
 			children = (
 				07F4730A10D3B19C00BADB21 /* GDDocument.m */,
 				07F4730E10D3B1A200BADB21 /* GDDocumentController.m */,
-				074F73B910D8EE8900CBC121 /* GDDocumentWindowDelegate.m */,
 			);
 			name = "document based";
 			sourceTree = "<group>";
@@ -449,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				07F4731510D3B21400BADB21 /* controllers */,
-				0756028A10DCCE94003E07DA /* delegates */,
 				07CFD4B410DB2A65002D2A34 /* document based */,
 				074F71FD10D7865D00CBC121 /* model */,
 				07CFD4B310DB2A60002D2A34 /* non document based */,
@@ -607,7 +581,6 @@
 				07F4733010D3B2BB00BADB21 /* GDAlertAccessoryView.h in Headers */,
 				07C3C240105B87E900A6906E /* GDAppExpiration.h in Headers */,
 				07CFD4A510DB2802002D2A34 /* GDApplicationController.h in Headers */,
-				07CFDA1C10DC849B002D2A34 /* GDApplicationDelegate.h in Headers */,
 				074F71EE10D7836D00CBC121 /* GDApplicationInfo.h in Headers */,
 				078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */,
 				078D5E41103675880033A770 /* GDASLLogManager.h in Headers */,
@@ -625,7 +598,6 @@
 				0756018710DCC281003E07DA /* GDCliProxyConnector.h in Headers */,
 				07F4730B10D3B19C00BADB21 /* GDDocument.h in Headers */,
 				07F4730F10D3B1A200BADB21 /* GDDocumentController.h in Headers */,
-				074F73BA10D8EE8900CBC121 /* GDDocumentWindowDelegate.h in Headers */,
 				0756064610DD7F80003E07DA /* GDDrawerController.h in Headers */,
 				07F4731310D3B20600BADB21 /* GDExternalNibController.h in Headers */,
 				07F4732610D3B27F00BADB21 /* GDGestalt.h in Headers */,
@@ -642,7 +614,6 @@
 				074F720A10D789E100CBC121 /* GDViewController.h in Headers */,
 				07F4732B10D3B29700BADB21 /* GDViewLayoutManager.h in Headers */,
 				07CFDBDF10DC9B8A002D2A34 /* GDWindowController.h in Headers */,
-				07CFD4B810DB2AFC002D2A34 /* GDWindowDelegate.h in Headers */,
 				07F4735310D3B50800BADB21 /* macros.h in Headers */,
 				0720C008102F4FBB00FB009B /* NSFileManager+Additions.h in Headers */,
 				0720180D103E66B50007B6E0 /* NSSharedUserDefaults+Additions.h in Headers */,
@@ -745,7 +716,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nOUTPUT=archive/${FULL_PRODUCT_NAME}\nFV=$FRAMEWORK_VERSION\nVERSIONED_OUTPUT=${OUTPUT}/Versions/${FRAMEWORK_VERSION}\nmkdir -p $VERSIONED_OUTPUT\ncp -Rf ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Versions/${FRAMEWORK_VERSION}/* ${VERSIONED_OUTPUT}\n\ncd ${OUTPUT}\nrm -f $EXECUTABLE_NAME\nln -sf Versions/${FV}/${EXECUTABLE_NAME} $EXECUTABLE_NAME\nrm -f Headers\nln -sf Versions/${FV}/Headers Headers\nrm -f Resources\nln -sf Versions/${FV}/Resources Resources\ncd Versions\nrm -f Current\nln -sf ${FV} Current";
+			shellScript = "exit;\n\nOUTPUT=archive/${FULL_PRODUCT_NAME}\nFV=$FRAMEWORK_VERSION\nVERSIONED_OUTPUT=${OUTPUT}/Versions/${FRAMEWORK_VERSION}\nmkdir -p $VERSIONED_OUTPUT\ncp -Rf ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Versions/${FRAMEWORK_VERSION}/* ${VERSIONED_OUTPUT}\n\ncd ${OUTPUT}\nrm -f $EXECUTABLE_NAME\nln -sf Versions/${FV}/${EXECUTABLE_NAME} $EXECUTABLE_NAME\nrm -f Headers\nln -sf Versions/${FV}/Headers Headers\nrm -f Resources\nln -sf Versions/${FV}/Resources Resources\ncd Versions\nrm -f Current\nln -sf ${FV} Current";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -792,11 +763,8 @@
 				074F71F310D7842C00CBC121 /* GDModalController.m in Sources */,
 				074F720B10D789E100CBC121 /* GDViewController.m in Sources */,
 				074F73B610D8E99B00CBC121 /* GDSoundController.m in Sources */,
-				074F73BB10D8EE8900CBC121 /* GDDocumentWindowDelegate.m in Sources */,
 				074F73D110D8EF4600CBC121 /* GDBaseResponder.m in Sources */,
 				07CFD4A610DB2802002D2A34 /* GDApplicationController.m in Sources */,
-				07CFD4B910DB2AFC002D2A34 /* GDWindowDelegate.m in Sources */,
-				07CFDA1D10DC849B002D2A34 /* GDApplicationDelegate.m in Sources */,
 				07CFDBE010DC9B8A002D2A34 /* GDWindowController.m in Sources */,
 				0756018810DCC281003E07DA /* GDCliProxyConnector.m in Sources */,
 				0756040410DCDC15003E07DA /* GDModel.m in Sources */,
@@ -836,7 +804,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = GDKIT_PRINT_DEALLOCS;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GDKIT_METHOD_CALLS,
+					GDKIT_PRINT_DEALLOCS,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
@@ -869,7 +840,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = GDKIT_PRINT_DEALLOCS;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GDKIT_METHOD_CALLS,
+					GDKIT_PRINT_DEALLOCS,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";

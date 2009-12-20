@@ -10,15 +10,13 @@
 - (void) lazyInit{}
 
 - (void) lazyInitWithGDDocument:(GDDocument *) _gd {
-	GDRelease(gd);
-	gd=[_gd retain];
+	gd=_gd;
 	[self setGDRefs];
 	[self lazyInit];
 }
 
 - (void) lazyInitWithGDApplicationController:(GDApplicationController *) _appController {
-	GDRelease(gd);
-	gd=[_appController retain];
+	gd=_appController;
 	[self setGDRefs];
 	[self lazyInit];
 }
@@ -46,9 +44,7 @@
 - (void) dealloc {
 	#ifdef GDKIT_PRINT_DEALLOCS
 	printf("dealloc GDBaseView\n");
-	#endif	
-	GDRelease(gd);
-	GDRelease(externalNibController);
+	#endif
 	[super dealloc];
 }
 

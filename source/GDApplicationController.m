@@ -38,7 +38,7 @@
 	if(mainMenu and mainMenu not _mainMenu)GDRelease(mainMenu);
 	if(mainMenu is nil and _mainMenu not nil)mainMenu=[_mainMenu retain];
 	if(wins and wins not _windows)GDRelease(wins);
-	if(wins is nil and _windows not nil)wins=_windows;
+	if(wins is nil and _windows not nil)wins=[_windows retain];
 }
 
 - (void) initApplication {
@@ -47,6 +47,10 @@
 	[self initWindows];
 	[self initViews];
 	[self startApplication];
+}
+
+- (void) applicationDidFinishLaunching:(NSNotification *) notification {
+	[self initApplication];
 }
 
 - (void) dealloc {

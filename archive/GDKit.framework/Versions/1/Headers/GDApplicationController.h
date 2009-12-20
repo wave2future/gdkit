@@ -3,7 +3,11 @@
 #import "macros.h"
 #import "GDBaseObject.h"
 
-@interface GDApplicationController : GDBaseObject {
+#if MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_5
+@interface GDApplicationController : NSObject <NSWindowDelegate,NSApplicationDelegate> {
+#else
+@interface GDApplicationController : NSObject {
+#endif
 	BOOL awokeFromNib;
 	id model;
 	id mainMenu;
