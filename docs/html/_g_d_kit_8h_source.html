@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>GDKit: src/GDKit.h Source File</title>
+<title>GDKit: source/GDKit.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -41,24 +41,72 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>src/GDKit.h</h1><a href="_g_d_kit_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//copyright 2009 aaronsmith</span>
+<h1>source/GDKit.h</h1><a href="_g_d_kit_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//copyright 2009 aaronsmith</span>
 <a name="l00002"></a>00002 
 <a name="l00010"></a>00010 <span class="preprocessor">#import &lt;CoreServices/CoreServices.h&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_manager_8h.html" title="Header file for GDAccessibilityManager.">GDAccessibilityManager.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_notification_8h.html" title="Header file for GDAccessibilityNotification.">GDAccessibilityNotification.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_observer_8h.html" title="Header file for GDAccessibilityObserver.">GDAccessibilityObserver.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_operation_result_8h.html" title="Header file for GDAccessibilityOperationResult.">GDAccessibilityOperationResult.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_a_s_l_log_8h.html" title="Header file for GDASLLog.">GDASLLog.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_a_s_l_log_manager_8h.html" title="Header file for GDASLLogManager.">GDASLLogManager.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_carbon_event_8h.html" title="Header file for GDCarbonEvent.">GDCarbonEvent.h</a>&quot;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_carbon_event_manager_8h.html" title="Header file for GDCarbonEventManager.">GDCarbonEventManager.h</a>&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_quartz_display_8h.html" title="Header file for GDQuartzDisplay.">GDQuartzDisplay.h</a>&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_registration_8h.html" title="Header file for GDRegistration.">GDRegistration.h</a>&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_u_limit_8h.html" title="Header file for GDULimit.">GDULimit.h</a>&quot;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#import &quot;<a class="code" href="_n_s_file_manager_09_additions_8h.html" title="Header file.">NSFileManager+Additions.h</a>&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#import &quot;NSSharedUserDefaults+Additions.h&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#import &quot;NSStatusItem+Additions.h&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#import &quot;NSWorkspace+Additions.h&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="comment">//macros and definitions</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#import &quot;macros.h&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="comment">//accesibility</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_manager_8h.html" title="Header file for GDAccessibilityManager.">GDAccessibilityManager.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_notification_8h.html" title="Header file for GDAccessibilityNotification.">GDAccessibilityNotification.h</a>&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_observer_8h.html" title="Header file for GDAccessibilityObserver.">GDAccessibilityObserver.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_accessibility_operation_result_8h.html" title="Header file for GDAccessibilityOperationResult.">GDAccessibilityOperationResult.h</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="comment">//system</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_a_s_l_log_8h.html" title="Header file for GDASLLog.">GDASLLog.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_a_s_l_log_manager_8h.html" title="Header file for GDASLLogManager.">GDASLLogManager.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_u_limit_8h.html" title="Header file for GDULimit.">GDULimit.h</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="comment">//carbon</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_carbon_event_8h.html" title="Header file for GDCarbonEvent.">GDCarbonEvent.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_carbon_event_manager_8h.html" title="Header file for GDCarbonEventManager.">GDCarbonEventManager.h</a>&quot;</span>
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="comment">//quartz</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_quartz_display_8h.html" title="Header file for GDQuartzDisplay.">GDQuartzDisplay.h</a>&quot;</span>
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="comment">//additions</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#import &quot;<a class="code" href="_n_s_file_manager_09_additions_8h.html" title="Header file.">NSFileManager+Additions.h</a>&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#import &quot;NSSharedUserDefaults+Additions.h&quot;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#import &quot;NSStatusItem+Additions.h&quot;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#import &quot;NSWorkspace+Additions.h&quot;</span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="comment">//licensing</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_app_expiration_8h.html" title="Header file for GDAppExpiration.">GDAppExpiration.h</a>&quot;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#import &quot;<a class="code" href="_g_d_registration_8h.html" title="Header file for GDRegistration.">GDRegistration.h</a>&quot;</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="comment">//applications</span>
+<a name="l00044"></a>00044 <span class="preprocessor">#import &quot;GDAlertAccessoryView.h&quot;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#import &quot;GDApplicationController.h&quot;</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#import &quot;GDApplicationInfo.h&quot;</span>
+<a name="l00047"></a>00047 <span class="preprocessor">#import &quot;GDBaseNSTaskOperation.h&quot;</span>
+<a name="l00048"></a>00048 <span class="preprocessor">#import &quot;GDBaseObject.h&quot;</span>
+<a name="l00049"></a>00049 <span class="preprocessor">#import &quot;GDExternalNibController.h&quot;</span>
+<a name="l00050"></a>00050 <span class="preprocessor">#import &quot;GDBaseOperation.h&quot;</span>
+<a name="l00051"></a>00051 <span class="preprocessor">#import &quot;GDBaseResponder.h&quot;</span>
+<a name="l00052"></a>00052 <span class="preprocessor">#import &quot;GDBaseSheetWindow.h&quot;</span>
+<a name="l00053"></a>00053 <span class="preprocessor">#import &quot;GDBaseView.h&quot;</span>
+<a name="l00054"></a>00054 <span class="preprocessor">#import &quot;GDCallback.h&quot;</span>
+<a name="l00055"></a>00055 <span class="preprocessor">#import &quot;GDCliProxy.h&quot;</span>
+<a name="l00056"></a>00056 <span class="preprocessor">#import &quot;GDDocument.h&quot;</span>
+<a name="l00057"></a>00057 <span class="preprocessor">#import &quot;GDDocumentController.h&quot;</span>
+<a name="l00058"></a>00058 <span class="preprocessor">#import &quot;GDDocumentWindowDelegate.h&quot;</span>
+<a name="l00059"></a>00059 <span class="preprocessor">#import &quot;GDGestalt.h&quot;</span>
+<a name="l00060"></a>00060 <span class="preprocessor">#import &quot;GDMainMenuController.h&quot;</span>
+<a name="l00061"></a>00061 <span class="preprocessor">#import &quot;GDModalController.h&quot;</span>
+<a name="l00062"></a>00062 <span class="preprocessor">#import &quot;GDOperationsController.h&quot;</span>
+<a name="l00063"></a>00063 <span class="preprocessor">#import &quot;GDSoundController.h&quot;</span>
+<a name="l00064"></a>00064 <span class="preprocessor">#import &quot;GDViewController.h&quot;</span>
+<a name="l00065"></a>00065 <span class="preprocessor">#import &quot;GDViewLayoutManager.h&quot;</span>
+<a name="l00066"></a>00066 <span class="preprocessor">#import &quot;GDWindowDelegate.h&quot;</span>
+<a name="l00067"></a>00067 <span class="preprocessor">#import &quot;GDApplicationDelegate.h&quot;</span>
+<a name="l00068"></a>00068 <span class="preprocessor">#import &quot;GDWindowController.h&quot;</span>
+<a name="l00069"></a>00069 <span class="preprocessor">#import &quot;GDModel.h&quot;</span>
+<a name="l00070"></a>00070 <span class="preprocessor">#import &quot;GDDrawerController.h&quot;</span>
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="comment">//helpers</span>
+<a name="l00073"></a>00073 <span class="preprocessor">#import &quot;GDResponderHelper.h&quot;</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -74,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Sat Sep 12 01:14:03 2009 for GDKit by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sat Dec 19 15:53:20 2009 for GDKit by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
