@@ -11,7 +11,7 @@
 
 /**
  * The GDAlertAccessoryView is a base view you can extend and
- * use as a view for an NSAlert's accessorytView property.
+ * use as a view for an NSAlert's accessoryView property.
  */
 @interface GDAlertAccessoryView : GDBaseView {
 
