@@ -32,7 +32,7 @@
 @property (retain,nonatomic) NSMutableDictionary * dictionary;
 
 /**
- * Returns an autoreleased instance, and has alread loaded the
+ * Returns an autoreleased instance, and has already loaded the
  * main bundle's info dictionary.
  */
 + (GDApplicationInfo *) instanceFromDefaultPlist;

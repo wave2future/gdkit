@@ -105,7 +105,7 @@
  * Designated <b>lazy</b> initializer to provide values for
  * all needed properties. <b>nil's are ok</b>.
  *
- * All parameters are sent <b>[obj performSelector:\@selector(lazyInitWithGDApplicationController:) withObject:self]</b>
+ * All parameters are sent <b>[obj performSelector:\@selector(lazyInitWithGD:) withObject:self]</b>
  *
  * <b>All parameters are retained, so please send in autoreleased instances.</b>
  *
@@ -163,7 +163,7 @@
 /**
  * A hook to initialize any views - this is specifically for initializing views
  * that don't have "gd" references from nib creation time. IE: calling
- * lazyInitWithGDDocumentApplicationController:
+ * lazyInitWithGD:
  *
  * @see GDBaseObject
  */

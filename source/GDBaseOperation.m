@@ -2,6 +2,7 @@
 #import "GDBaseOperation.h"
 
 @implementation GDBaseOperation
+@synthesize callback;
 
 - (BOOL) isFinished {
 	return done;
@@ -21,6 +22,7 @@
 }
 
 - (void) dealloc {
+	GDRelease(callback);
 	done=false;
 	canceled=false;
 	[super dealloc];

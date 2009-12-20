@@ -79,7 +79,7 @@
 }
 
 - (void) windowDidBecomeMain:(NSNotification *) notification {
-	if(documentHasBeenActive)[mainMenu invalidate];
+	if(documentHasBeenActive and mainMenu)[mainMenu invalidate];
 	if(!documentHasBeenActive)documentHasBeenActive=true;
 }
 
