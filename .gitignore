@@ -13,3 +13,5 @@ gdkit.xcodeproj/*.perspectivev3
 gdkit.xcodeproj/*.pbxuser
 docs/html/
 docs/latex/
+docs/latex/doxygen.sty
+docs/latex/refman.tex
