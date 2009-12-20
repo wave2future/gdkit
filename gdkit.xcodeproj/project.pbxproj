@@ -51,7 +51,6 @@
 		075617A410DEBFB3003E07DA /* NSView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617A210DEBFB3003E07DA /* NSView+Additions.m */; };
 		075617CA10DEC46E003E07DA /* NSFileHandle+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075617CB10DEC46E003E07DA /* NSFileHandle+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */; };
-		0756196710DEE3BB003E07DA /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 0756196610DEE3BB003E07DA /* header.html */; };
 		078D52B51033A6F10033A770 /* GDCarbonEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D52B31033A6F10033A770 /* GDCarbonEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078D52B61033A6F10033A770 /* GDCarbonEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D52B41033A6F10033A770 /* GDCarbonEventManager.m */; };
 		078D5E2610366CAD0033A770 /* GDASLLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 078D5E2410366CAD0033A770 /* GDASLLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -158,7 +157,6 @@
 		075617A210DEBFB3003E07DA /* NSView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Additions.m"; path = "source/NSView+Additions.m"; sourceTree = "<group>"; };
 		075617C810DEC46E003E07DA /* NSFileHandle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+Additions.h"; path = "source/NSFileHandle+Additions.h"; sourceTree = "<group>"; };
 		075617C910DEC46E003E07DA /* NSFileHandle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileHandle+Additions.m"; path = "source/NSFileHandle+Additions.m"; sourceTree = "<group>"; };
-		0756196610DEE3BB003E07DA /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = header.html; path = docs/header.html; sourceTree = "<group>"; };
 		078D52B31033A6F10033A770 /* GDCarbonEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCarbonEventManager.h; path = source/GDCarbonEventManager.h; sourceTree = "<group>"; };
 		078D52B41033A6F10033A770 /* GDCarbonEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCarbonEventManager.m; path = source/GDCarbonEventManager.m; sourceTree = "<group>"; };
 		078D5E2410366CAD0033A770 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/GDASLLog.h; sourceTree = "<group>"; };
@@ -333,7 +331,6 @@
 				075601DF10DCC794003E07DA /* ENV */,
 				07E0E5821057885300A5130F /* README */,
 				075601E010DCC794003E07DA /* TODO */,
-				0756196610DEE3BB003E07DA /* header.html */,
 			);
 			name = Plain;
 			sourceTree = "<group>";
@@ -687,7 +684,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0756196710DEE3BB003E07DA /* header.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,8 +821,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					__GDKIT_METHOD_CALLS,
 					GDKIT_PRINT_DEALLOCS,
+					__GDKIT_METHOD_CALLS,
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
@@ -860,10 +856,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					__GDKIT_METHOD_CALLS,
-					GDKIT_PRINT_DEALLOCS,
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
