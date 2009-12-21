@@ -1,8 +1,5 @@
 
-#import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
-
-@class Protocol;
 
 /**
  * @file GDCliProxyConnector.h
@@ -45,7 +42,7 @@
 	/**
 	 * The NSDistantObjects' protocol. 
 	 */
-	id distantProtocol;
+	Protocol * distantProtocol;
 }
 
 /**
