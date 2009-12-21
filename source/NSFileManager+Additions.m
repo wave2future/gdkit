@@ -10,9 +10,10 @@
 	if(FSFindFolder(kUserDomain,folderType,create,&ref) == noErr) {
 		CFURLRef url = CFURLCreateFromFSRef(kCFAllocatorSystemDefault,&ref);
 		path = (NSString *) CFURLCopyFileSystemPath(url, kCFURLPOSIXPathStyle);
+		[path autorelease];
 		CFRelease(url);
 	}
-	return [path autorelease];
+	return path;
 }
 
 - (NSString *) applicationSupportFolder {

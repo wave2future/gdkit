@@ -17,23 +17,23 @@
 	if(awokeFromNib)return;
 	awokeFromNib=true;
 	if(model) {
-		NSLog(@"GDKit Error (GDDocument): The {model} property cannot be set from a nib");
+		NSLog(@"GDKit Error (GDApplicationController): The {model} property cannot be set from a nib");
 		model=nil;
 	}
 	if(operations) {
-		NSLog(@"GDKit Error (GDDocument): The {operations} property cannot be set from a nib");
+		NSLog(@"GDKit Error (GDApplicationController): The {operations} property cannot be set from a nib");
 		operations=nil;
 	}
 	if(mainMenu) {
-		NSLog(@"GDKit Error (GDDocument): The {mainMenu} property cannot be set from a nib");
+		NSLog(@"GDKit Error (GDApplicationController): The {mainMenu} property cannot be set from a nib");
 		mainMenu=nil;
 	}
 	if(modals) {
-		NSLog(@"GDKit Error (GDDocument): The {modals} property cannot be set from a nib");
+		NSLog(@"GDKit Error (GDApplicationController): The {modals} property cannot be set from a nib");
 		modals=nil;
 	}
 	if(sounds) {
-		NSLog(@"GDKit Error (GDDocument): The {sounds} property cannot be set from a nib");
+		NSLog(@"GDKit Error (GDApplicationController): The {sounds} property cannot be set from a nib");
 		sounds=nil;
 	}
 }
