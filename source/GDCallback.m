@@ -28,7 +28,7 @@
 - (void) setupInvoker {
 	GDRelease(signature);
 	GDRelease(invoker);
-	signature=[[self target] methodSignatureForSelector:[self action]];
+	signature=[[[self target] methodSignatureForSelector:[self action]] retain];
 	invoker=[[NSInvocation invocationWithMethodSignature:signature] retain];
 	[invoker setTarget:[self target]];
 	[invoker setSelector:[self action]];
@@ -65,6 +65,9 @@
 }
 
 - (void) dealloc {
+	#ifdef GDKIT_PRINT_DEALLOCS
+	printf("dealloc GDCallback\n");
+	#endif
 	GDRelease(invoker);
 	GDRelease(signature);
 	GDRelease(target);
