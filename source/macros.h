@@ -24,6 +24,16 @@ NS_INLINE void GDRelease(id obj) {
 	obj=nil;
 }
 
+NS_INLINE void GDPrintNSTask(NSTask * task) {
+	if([task arguments] == nil) return;
+	NSString * owt = @"";
+	id arg;
+	for(arg in [task arguments]) {
+		owt = [owt stringByAppendingString:[arg description]];
+	}
+	NSLog(@"%@",owt);
+}
+
 /**
  * Prints an NSRect formatted like: NSRect(x:%g, y:%g, w:%g, h:%g).
  */
