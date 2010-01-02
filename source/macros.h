@@ -14,15 +14,12 @@
 #define is ==
 
 /**
- * Releases and nil's out any id object.
+ * Releases and nils out any id object.
  */
-NS_INLINE void GDRelease(id obj) {
-	if(obj == nil) return;
-	//NSLog(@"retainCount: %@ \t\t %i",obj,[obj retainCount]);
-	[obj release];
-	//NSLog(@"retainCountAfter: %@ \t\t %i",obj,[obj retainCount]);
-	obj=nil;
-}
+
+#define GDRelease(x) do{ \
+	if((x)==nil){break;} \
+	[(x) release];(x)=nil;} while(0)
 
 NS_INLINE void GDPrintNSTask(NSTask * task) {
 	if([task arguments] == nil) return;
