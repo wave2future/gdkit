@@ -7,20 +7,26 @@
  * Header file that contains macros, and other c definitions.
  */
 
+#ifndef __cplusplus
 #define or ||
-#define not !=
 #define and &&
+#define not !
 #define eq ==
 #define is ==
+#endif
+
+#define neq !=
 
 /**
  * Releases and nils out any id object.
  */
-
 #define GDRelease(x) do{ \
 	if((x)==nil){break;} \
 	[(x) release];(x)=nil;} while(0)
 
+/**
+ * Prints an NSTask and it's arguments.
+ */
 NS_INLINE void GDPrintNSTask(NSTask * task) {
 	if([task arguments] == nil) return;
 	NSString * owt = @"";

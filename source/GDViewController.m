@@ -13,6 +13,7 @@
 }
 
 - (void) loadViewsInNibNamed:(NSString *) _nibName {
+	GDRelease(lastLoadedNibName);
 	lastLoadedNibName=[_nibName copy];
 	[NSBundle loadNibNamed:_nibName owner:self];
 }

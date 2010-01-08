@@ -23,7 +23,7 @@
 }
 
 - (void) keyDown:(NSEvent *) theEvent {
-	if([self delegate] not nil and [[self delegate] respondsToSelector:@selector(onEscapeKey:)]) {
+	if([self delegate] and [[self delegate] respondsToSelector:@selector(onEscapeKey:)]) {
 		[GDResponderHelper ifIsEscapeKey:theEvent sendAction:@selector(onEscapeKey:) toTarget:[self delegate]];
 		[super keyDown:theEvent];
 		return;

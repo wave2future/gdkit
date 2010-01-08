@@ -72,7 +72,7 @@
 - (void) cancel {
 	[super cancel];
 	done=true;
-	if(task not nil)[task terminate];
+	if(task)[task terminate];
 }
 
 - (void) dealloc {

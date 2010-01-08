@@ -104,7 +104,7 @@
 }
 
 - (void) closeWindows {
-	if(windows and [windows mainWindow] not nil) {
+	if(windows and [windows mainWindow]) {
 		if([[windows mainWindow] isSheet]) [[NSApplication sharedApplication] endSheet:[windows mainWindow]];
 		[[windows mainWindow] orderOut:nil];
 	}
@@ -124,7 +124,6 @@
 	available=false;
 	[self closeWindows];
 	GDRelease(windows);
-	windows=nil;
 }
 
 - (void) dealloc {

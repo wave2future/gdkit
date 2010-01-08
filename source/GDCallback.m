@@ -20,7 +20,7 @@
 	self=[super init];
 	[self setTarget:_target];
 	[self setAction:_action];
-	if(_args not nil) [self setArgs:_args];
+	if(_args) [self setArgs:_args];
 	else [self setupInvoker];
 	return self;
 }
@@ -35,7 +35,7 @@
 }
 
 - (void) setArgs:(NSArray *) _args {
-	if(args not _args) {
+	if(args neq _args) {
 		GDRelease(invoker);
 		GDRelease(signature);
 		GDRelease(args);

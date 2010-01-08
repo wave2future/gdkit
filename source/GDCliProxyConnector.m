@@ -13,7 +13,7 @@
 - (NSDistantObject *) getDistantObjectInApplication:(NSString *) _bundleIdentifier withConnectionName:(NSString *) _connectionName andLaunchAppIfNotAvailable:(BOOL) _launch {
 	NSDistantObject * proxy = [self connectWithName:_connectionName];
 	if(proxy) {
-		if(distantProtocol not nil)[proxy setProtocolForProxy:distantProtocol];
+		if(distantProtocol)[proxy setProtocolForProxy:distantProtocol];
 		return proxy;
 	}
 	if(!_launch) return nil;
@@ -25,7 +25,7 @@
 		usleep(15000);
 	}
 	if(proxy){
-		if(distantProtocol not nil)[proxy setProtocolForProxy:distantProtocol];
+		if(distantProtocol)[proxy setProtocolForProxy:distantProtocol];
 		return proxy;
 	}
 	return nil;
