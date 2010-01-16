@@ -14,8 +14,14 @@
 #define eq ==
 #define is ==
 #endif
-
 #define neq !=
+
+#ifndef nil
+#ifndef NULL
+#define NULL (void *) 0
+#endif
+#define nil NULL
+#endif
 
 /**
  * Releases and nils out any id object.
