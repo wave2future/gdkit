@@ -35,10 +35,10 @@
  */
 NS_INLINE void GDPrintNSTask(NSTask * task) {
 	if([task arguments] == nil) return;
-	NSString * owt = @"";
+	NSString * owt = [[task launchPath] stringByAppendingString:@" "];
 	id arg;
 	for(arg in [task arguments]) {
-		owt = [owt stringByAppendingString:[arg description]];
+		owt = [[owt stringByAppendingString:[arg description]] stringByAppendingString:@" "];
 	}
 	NSLog(@"%@",owt);
 }

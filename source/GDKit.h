@@ -73,3 +73,7 @@
 
 //helpers
 #import "GDResponderHelper.h"
+
+//crash
+#import "GDCrashReporter.h"
+#import "GDCrashReporterDelegate.h"

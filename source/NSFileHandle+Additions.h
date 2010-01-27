@@ -15,7 +15,9 @@
  */
 @interface NSFileHandle (GDAdditions)
 
++ (NSString *) tmpFileName;
 - (id) initWithFile:(NSString *) file;
 - (id) initWithTruncatedFile:(NSString *) file;
++ (NSFileHandle *) tmpFile:(NSString *) path;
 
 @end
