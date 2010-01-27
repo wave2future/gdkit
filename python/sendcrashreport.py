@@ -33,9 +33,9 @@ try:
 	if not os.path.exists(corefile): exit(0)
 	if comments and not os.path.exists(comments): comments=False
 	msg=MIMEMultipart()
-	msg['From']="gitybot@macendeavor.com"
-	msg['To']="support@macendeavor.com"
-	msg['Subject']="GityBot: Crash Report"
+	msg['From']="FROM_EMAIL"
+	msg['To']="TO_EMAIL"
+	msg['Subject']="SUBJECT"
 	if comments: msg.attach(MIMEText( open(comments,"r").read() ))
 	else: msg.attach(MIMEText(" "))
 	part=MIMEBase('application','octet-stream')
@@ -47,8 +47,8 @@ try:
 	mailServer.ehlo()
 	mailServer.starttls()
 	mailServer.ehlo()
-	mailServer.login('gitybot@macendeavor.com','dl49ope093ld98')
-	mailServer.sendmail('gitybot@macendeavor.com','support@macendeavor.com',msg.as_string())
+	mailServer.login('EMAIL','PASS')
+	mailServer.sendmail('FROM_EMAIL','TO_EMAIL',msg.as_string())
 	mailServer.close()
 	if comments: os.unlink(comments)
 except Exception,e:
