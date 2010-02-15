@@ -11,16 +11,8 @@
  */
 
 /**
- * The GDExternalNibController is a controller used to manage
- * an external nib. It has shortcuts for showing the nib, or showing
- * it as a sheet, and can auto dispose of the nib resources when
- * it's closed.
- */
-
-/**
  * The GDCrashReporter is a controller that implements post-trauma-pre-usage
  * crash reporting.
- *
  */
 @interface GDCrashReporter : NSObject {
 	BOOL hasCrash;
@@ -86,6 +78,9 @@
  */
 @property (copy,nonatomic) NSString * companyName;
 
+/**
+ * Whether or not the crash report should be deleted after it's reported.
+ */
 @property (assign,nonatomic) BOOL deleteCrashReport;
 
 /**

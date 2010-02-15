@@ -28,6 +28,7 @@
 
 - (void) forceCrash {
 	signal(SIGBUS,SIG_DFL);
+	//*(long*)0 = 0xDEADBEEF;
 	abort();
 }
 
@@ -82,7 +83,7 @@
 		files = [fman contentsOfDirectoryAtPath:path error:nil];
 		if(files and [files count]>0) {
 			for(file in files) {
-				if([file hasPrefix:app]){
+				if([file hasPrefix:app]) {
 					fullPath = [path stringByAppendingPathComponent:file];
 					attributes = [fman attributesOfItemAtPath:fullPath error:nil];
 					if(!attributes) continue;
@@ -146,7 +147,7 @@
 	if(!_searchPath) return;
 	NSString * c = [_searchPath copy];
 	[searchPaths addObject:c];
-	[c release]; 
+	[c release];
 }
 
 - (void) _deleteCrashReport {
@@ -158,7 +159,7 @@
 	[window orderOut:nil];
 	NSString * pyc;
 	NSBundle * mb = [NSBundle bundleForClass:[self class]];
-	if(task) [task terminate];
+	if(task and [task isRunning]) [task terminate];
 	GDRelease(task);
 	task = [[NSTask alloc] init];
 	NSMutableArray * args = [[NSMutableArray alloc] init];
@@ -169,7 +170,7 @@
 	if(!pyc)pyc=[mb pathForResource:@"sendcrashreport" ofType:@"pyc" inDirectory:@"Scripts"];
 	[args addObject:pyc];
 	[args addObject:[@"-f " stringByAppendingString:crashFile]];
-	if([comms length] > 0 && ![comms isEqual:@"Optionally provide any details you can to replicate the crash"]) {
+	if([comms length] > 0 && ![comms isEqual:placeHolderComm]) {
 		NSString * tmpFileName = [NSFileHandle tmpFileName];
 		NSFileHandle * tmp = [NSFileHandle tmpFile:tmpFileName];
 		NSData * cdata = [comms dataUsingEncoding:NSUTF8StringEncoding];
@@ -208,6 +209,7 @@
 	#endif
 	hasCrash=false;
 	GDRelease(placeHolderComm);
+	if(task and [task isRunning]) [task terminate];
 	GDRelease(task);
 	GDRelease(searchPaths);
 	GDRelease(userDefaultsPrefix);

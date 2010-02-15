@@ -973,6 +973,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../build/Release\"",
@@ -983,6 +984,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = CrashReporter;
+				STRIP_STYLE = all;
 			};
 			name = Release;
 		};

@@ -92,7 +92,7 @@
 }
 
 - (void) close {
-	asl_remove_log_file(client,fd);
+	if(fd>0)asl_remove_log_file(client,fd);
 	asl_close(client);
 }
 
