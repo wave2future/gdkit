@@ -2,6 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GDASLLog.h"
+#import <sys/resource.h>
 
 /**
  * @file GDULimit.h
@@ -10,7 +11,7 @@
  */
 
 /**
- * The GDULimit contains helpers for environment resources through ulimit.
+ * The GDULimit contains helpers for environment resources through ulimit (man ulimit).
  */
 @interface GDULimit : NSObject {
 }

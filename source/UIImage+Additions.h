@@ -4,6 +4,11 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "GDCoreGraphicsUtilities.h"
 
+/**
+ * @class UIImage
+ *
+ * Category additions to UIImage
+ */
 @interface UIImage (Additions)
 
 /**

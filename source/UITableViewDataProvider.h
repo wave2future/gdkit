@@ -15,7 +15,7 @@
  * @class UITableViewDataProvider
  *
  * The UITableViewDataProvider implements the UITableViewDataSource protocol
- * and simplifies the logic that you need for every ui table view's data source.
+ * and simplifies the logic that you need for every UITableView's data source.
  */
 @interface UITableViewDataProvider : NSObject <UITableViewDataSource> {
 	

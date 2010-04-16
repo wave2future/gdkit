@@ -9,9 +9,9 @@
  */
 
 /**
- * @class UIView+Additions
+ * @class UIView
  *
- * Additions for UIView.
+ * Category additions for UIView.
  */
 @interface UIView (Additions)
 

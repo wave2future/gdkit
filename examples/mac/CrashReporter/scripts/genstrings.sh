@@ -1,1 +1,0 @@
-genstrings -o English.lproj source/*.m -q

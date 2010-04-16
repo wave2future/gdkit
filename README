@@ -1,7 +1,8 @@
-#MACROS#
+GDKit is re-usable Mac and iPhone Objective-C code.
 
-GDKIT_PRINT_DEALLOCS - This will turn on a print message like "dealloc [Class]"
-for every object that's deallocated in gdkit.
+it contains two frameworks:
 
-GDKIT_METHOD_CALLS - This will turn on print statements so you can follow the
-flow of method calls.
+GDKit.framework for Mac
+GDKit-iPhone.a for iphone
+
+Each with their own build target.
