@@ -47,7 +47,7 @@ try:
 	mailServer.ehlo()
 	mailServer.starttls()
 	mailServer.ehlo()
-	mailServer.login('gitybot@macendeavor.com','dl49ope093ld98')
+	mailServer.login('gitybot@macendeavor.com','')
 	mailServer.sendmail('gitybot@macendeavor.com','support@macendeavor.com',msg.as_string())
 	mailServer.close()
 	if comments: os.unlink(comments)
