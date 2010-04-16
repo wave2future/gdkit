@@ -26,9 +26,6 @@
 }
 
 - (void) dealloc {
-	#ifdef GDKIT_PRINT_DEALLOCS
-	printf("dealloc GDSoundController\n");
-	#endif
 	[self clearCache];
 	[super dealloc];
 }

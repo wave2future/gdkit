@@ -1,7 +1,0 @@
-
-# Warning Macros
-
-GDKIT_WARN_1060_ONLY - There are some features in GDKit that require 10.6 or
-lower SDK. If you need to compile for 10.5 you can turn on this macro to see
-warnings about which classes or features aren't supported. Otherwise Gestalt
-checks are in place at runtime.

@@ -37,51 +37,48 @@
 }
 
 - (id) initWithPoint:(NSPoint) point {
-	if(self = [super init]) {
-		CGPoint tp;
-		tp.x = point.x;
-		tp.y = point.y;
-		CGDirectDisplayID ids[kGDMaxDisplays];
-		CGDisplayCount count;
-		CGDisplayErr e = CGGetDisplaysWithPoint(tp,kGDMaxDisplays,ids,&count);
-		if(e > 0) return nil;
-		if(count < 1) return nil;
-		if(count == 1) {
-			displayId = (CGDirectDisplayID) ids[0];
-		} else {
-			CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
-			displayId = CGDisplayPrimaryDisplay(tmp);
-		}
+	if(!(self=[super init]))return nil;
+	CGPoint tp;
+	tp.x = point.x;
+	tp.y = point.y;
+	CGDirectDisplayID ids[kGDMaxDisplays];
+	CGDisplayCount count;
+	CGDisplayErr e = CGGetDisplaysWithPoint(tp,kGDMaxDisplays,ids,&count);
+	if(e > 0) return nil;
+	if(count < 1) return nil;
+	if(count == 1) {
+		displayId = (CGDirectDisplayID) ids[0];
+	} else {
+		CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
+		displayId = CGDisplayPrimaryDisplay(tmp);
 	}
 	return self;
 }
 
 - (id) initWithRect:(NSRect) rect {
-	if(self = [super init]) {
-		CGRect tr;
-		tr.origin.x = rect.origin.x;
-		tr.origin.y = rect.origin.y;
-		tr.size.width = rect.size.width;
-		tr.size.height = rect.size.height;
-		CGDirectDisplayID ids[kGDMaxDisplays];
-		CGDisplayCount count;
-		CGDisplayErr e = CGGetDisplaysWithRect(tr,kGDMaxDisplays,ids,&count);
-		if(e > 0) return nil;
-		if(count < 1) return nil;
-		if(count == 1) {
-			displayId = (CGDirectDisplayID) ids[0];
-		} else {
-			CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
-			displayId = CGDisplayPrimaryDisplay(tmp);
-		}
+	if(!(self=[super init])) return nil;
+	CGRect tr;
+	tr.origin.x = rect.origin.x;
+	tr.origin.y = rect.origin.y;
+	tr.size.width = rect.size.width;
+	tr.size.height = rect.size.height;
+	CGDirectDisplayID ids[kGDMaxDisplays];
+	CGDisplayCount count;
+	CGDisplayErr e = CGGetDisplaysWithRect(tr,kGDMaxDisplays,ids,&count);
+	if(e > 0) return nil;
+	if(count < 1) return nil;
+	if(count == 1) {
+		displayId = (CGDirectDisplayID) ids[0];
+	} else {
+		CGDirectDisplayID tmp = (CGDirectDisplayID) ids[0];
+		displayId = CGDisplayPrimaryDisplay(tmp);
 	}
 	return self;
 }
 
 - (id) initWithDirectDisplayID:(CGDirectDisplayID) ddid {
-	if(self = [super init]) {
-		displayId = ddid;
-	}
+	if(!(self=[super init])) return nil;
+	displayId = ddid;
 	return self;
 }
 

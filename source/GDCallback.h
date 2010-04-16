@@ -1,7 +1,6 @@
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "macros.h"
-#import "GDBaseObject.h"
 
 /**
  * @file GDCallback.h

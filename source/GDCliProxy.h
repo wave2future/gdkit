@@ -1,6 +1,6 @@
 
 #import <Cocoa/Cocoa.h>
-#import "GDBaseObject.h"
+#import "macros.h"
 
 /**
  * @file GDCliProxy.h
@@ -15,7 +15,7 @@
  * You use this class inside of your app, then use GDCliProxyConnector inside of
  * your commandline tool to connect to this proxy.
  */
-@interface GDCliProxy : GDBaseObject {
+@interface GDCliProxy : NSObject {
 	
 	/**
 	 * An NSConnection for distributed objects.

@@ -1,6 +1,7 @@
 //copyright 2009 aaronsmith
 
 #import <Foundation/NSFileManager.h>
+#import <AvailabilityMacros.h>
 
 /**
  * @file NSFileManager+Additions.h
@@ -37,4 +38,5 @@
  * this app. The folder is the name of the current app.
  */
 - (NSString *) thisApplicationsSupportFolderByAppName;
+
 @end

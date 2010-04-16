@@ -1,14 +1,11 @@
 
 #import <Cocoa/Cocoa.h>
-#import "GDBaseObject.h"
 
 /**
  * @file GDMainMenuController.h
  * 
  * Header file for GDMainMenuController.
  */
-
-@class GDBaseObject;
 
 /**
  * The GDMainMenuController is controller you can use to manage
@@ -18,7 +15,7 @@
  * views, controllers, etc in the app about their state, and update the
  * main menu as needed.
  */
-@interface GDMainMenuController : GDBaseObject {
+@interface GDMainMenuController : NSObject {
 	
 	/**
 	 * A reference to the applications main menu.

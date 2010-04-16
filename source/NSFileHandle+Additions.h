@@ -1,7 +1,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 /**
  * @file NSFileHandle+Additions.h
  *

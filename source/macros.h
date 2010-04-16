@@ -1,6 +1,13 @@
 
 #import <Foundation/Foundation.h>
 
+#ifndef hGDmacros
+#define hGDmacros
+
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE) && !TARGET_OS_MAC
+	#import <UIKit/UIKit.h>
+#endif
+
 /**
  * @file macros.h
  * 
@@ -8,19 +15,20 @@
  */
 
 #ifndef __cplusplus
-#define or ||
-#define and &&
-#define not !
-#define eq ==
-#define is ==
+	#define or ||
+	#define and &&
+	#define not !
+	#define eq ==
+	#define is ==
 #endif
+
 #define neq !=
 
 #ifndef nil
-#ifndef NULL
-#define NULL (void *) 0
-#endif
-#define nil NULL
+	#ifndef NULL
+		#define NULL (void *) 0
+	#endif
+	#define nil NULL
 #endif
 
 /**
@@ -29,6 +37,9 @@
 #define GDRelease(x) do{ \
 	if((x)==nil){break;} \
 	[(x) release];(x)=nil;} while(0)
+
+
+#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
 
 /**
  * Prints an NSTask and it's arguments.
@@ -85,6 +96,8 @@ NS_INLINE void GDPrintNSSizeWithLabel(NSString * label,NSSize size) {
 	NSLog(@"[%@] NSSize(w:%g,h:%g)",label,size.width,size.height);
 }
 
+#endif
+
 /**
  * A shortcut for NSLog which will include __FILE__ and __LINE__ that the NSLog is on.
  */
@@ -94,3 +107,31 @@ NS_INLINE void GDPrintNSSizeWithLabel(NSString * label,NSSize size) {
  * A shortcut for NSLog(@"",...).
  */
 #define gdlog(s,...) NSLog(@"%@",[NSString stringWithFormat:(s),##__VA_ARGS__])
+
+
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE) && !TARGET_OS_MAC
+
+/**
+ * Print an UIAcceleration object
+ */
+NS_INLINE void GDPrintUIAcceleration(UIAcceleration * acceleration) {
+	NSLog(@"UIAcceleration(x:%g, y:%g, z:%g)",[acceleration x],[acceleration y],[acceleration z]);
+}
+
+/**
+ * Prints a CGPoint formatted like: CGPoint(x:%g,y:%g).
+ */
+NS_INLINE void GDPrintCGPoint(CGPoint point) {
+	NSLog(@"CGPoint(x:%g,y:%g)",point.x,point.y);
+}
+
+/**
+ * Prints a CGRect formatted like: CGRect(x:%g,y:%g,w:%g,h:%g).
+ */
+NS_INLINE void GDPrintCGRect(CGRect rect) {
+	NSLog(@"CGRect(x:%g,y:%g,w:%g,h:%g)",rect.origin.x,rect.origin.y,rect.size.width,rect.size.height);
+}
+
+#endif
+
+#endif

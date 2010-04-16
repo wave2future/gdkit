@@ -37,6 +37,11 @@
 @property (copy) NSString * notification;
 
 /**
+ * User info dictionary.
+ */
+@property (nonatomic,retain) NSDictionary * userInfo;
+
+/**
  * Designated initializeer - inits with required parameters.
  *
  * @param element An AXUIElementRef

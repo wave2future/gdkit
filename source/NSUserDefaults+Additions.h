@@ -1,7 +1,6 @@
 //copyright 2009 aaronsmith
 
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h>
 
 /**
  * @file NSUserDefaults+Additions.h

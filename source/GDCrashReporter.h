@@ -152,7 +152,7 @@
 /**
  * Shows the crash report nib.
  */
-- (void) show;
+- (BOOL) show;
 
 
 @end

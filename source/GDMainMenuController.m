@@ -1,14 +1,13 @@
 //copyright 2009 aaronsmith
 
 #import "GDMainMenuController.h"
-#import "GDBaseObject.h"
 
 @implementation GDMainMenuController
 
 - (id) init {
-	self=[super init];
-	NSApplication * app=[NSApplication sharedApplication];
-	mainMenu=[app mainMenu];
+	if(!(self = [super init]))return nil;
+	NSApplication * app = [NSApplication sharedApplication];
+	mainMenu = [app mainMenu];
 	return self;
 }
 

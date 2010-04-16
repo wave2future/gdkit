@@ -9,7 +9,7 @@
 @synthesize executesOnMainThread;
 
 - (id) initWithTarget:(id) _target andAction:(SEL) _action {
-	self=[super init];
+	if(!(self=[super init]))return nil;
 	[self setTarget:_target];
 	[self setAction:_action];
 	[self setupInvoker];
@@ -17,7 +17,7 @@
 }
 
 - (id) initWithTarget:(id) _target andAction:(SEL) _action andArgs:(NSArray *) _args {
-	self=[super init];
+	if(!(self=[super init]))return nil;
 	[self setTarget:_target];
 	[self setAction:_action];
 	if(_args) [self setArgs:_args];
@@ -65,9 +65,6 @@
 }
 
 - (void) dealloc {
-	#ifdef GDKIT_PRINT_DEALLOCS
-	printf("dealloc GDCallback\n");
-	#endif
 	GDRelease(invoker);
 	GDRelease(signature);
 	GDRelease(target);

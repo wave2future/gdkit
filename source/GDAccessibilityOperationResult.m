@@ -8,11 +8,9 @@
 @synthesize resultCode;
 
 - (id) init {
-	self = [super init];
-	if(self) {
-		[self setResultCode:-1];
-		[self setResult:NULL];
-	}
+	if(!(self=[super init])) return nil;
+	[self setResultCode:-1];
+	[self setResult:NULL];
 	return self;
 }
 

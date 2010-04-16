@@ -3,16 +3,14 @@
 #import "GDAccessibilityNotification.h"
 
 @implementation GDAccessibilityNotification
-
 @synthesize notification;
+@synthesize userInfo;
 
-- (id) initWithElement:(AXUIElementRef)elemnt forNotification:(NSString *)notificatn withUserInfo:(NSDictionary *) userInfow {
-	self = [super init];
-	if(self) {
-		[self setElement:elemnt];
-		[self setUserInfo:userInfow];
-		[self setNotification:notificatn];
-	}
+- (id) initWithElement:(AXUIElementRef) elemnt forNotification:(NSString *) notificatn withUserInfo:(NSDictionary *) userInfow {
+	if(!(self = [super init])) return nil;
+	[self setElement:elemnt];
+	[self setUserInfo:userInfow];
+	[self setNotification:notificatn];
 	return self;
 }
 
@@ -26,13 +24,6 @@
 
 - (AXUIElementRef) element {
 	return element;
-}
-
-- (void) setUserInfo:(NSDictionary *) userInfow {
-	if(userInfo != userInfow) {
-		[userInfo release];
-		userInfo = [userInfow retain];
-	}
 }
 
 - (NSDictionary *) userInfo {

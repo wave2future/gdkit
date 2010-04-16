@@ -27,16 +27,13 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 @synthesize modifierFlags;
 
 - (id) initWithCoder:(NSCoder *) coder {
-	if(self = [super init]) {
-		if(self = [self init]) {
-			[self setKeyCode:[coder decodeIntForKey:@"keyCode"]];
-			[self setModifierFlags:[coder decodeIntForKey:@"modifierFlags"]];
-			[self setEventKind:[coder decodeIntForKey:@"eventKind"]];
-			[self setEventClass:(FourCharCode)[coder decodeIntForKey:@"eventClass"]];
-			[self setKeyChar:[coder decodeObjectForKey:@"keyChar"]];
-			[self setUserInfo:NULL];
-		}
-	}
+	if(!(self = [self init])) return nil;
+	[self setKeyCode:[coder decodeIntForKey:@"keyCode"]];
+	[self setModifierFlags:[coder decodeIntForKey:@"modifierFlags"]];
+	[self setEventKind:[coder decodeIntForKey:@"eventKind"]];
+	[self setEventClass:(FourCharCode)[coder decodeIntForKey:@"eventClass"]];
+	[self setKeyChar:[coder decodeObjectForKey:@"keyChar"]];
+	[self setUserInfo:NULL];
 	return self;
 }
 
@@ -49,12 +46,9 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 }
 
 - (id) initWithEventClass:(FourCharCode) eventClass andEventKind:(NSUInteger) eventKind {
-	if(self = [super init]) {
-		if(self = [self init]) {
-			[self setEventClass:eventClass];
-			[self setEventKind:eventKind];
-		}
-	}
+	if(!(self = [self init])) return nil;
+	[self setEventClass:eventClass];
+	[self setEventKind:eventKind];
 	return self;
 }
 
@@ -75,9 +69,8 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
 }
 
 - (id) init {
-	if(self = [super init]) {
-		if(!gdceLookup) gdceLookup = [[NSMutableDictionary alloc] init];
-	}
+	if(!(self = [super init])) return nil;
+	if(!gdceLookup) gdceLookup = [[NSMutableDictionary alloc] init];
 	return self;
 }
 

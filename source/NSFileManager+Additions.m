@@ -24,8 +24,11 @@
 	NSString * appname = [[NSBundle mainBundle] bundleIdentifier];
 	NSString * path = [[self applicationSupportFolder] stringByAppendingPathComponent:appname];
 	if(![self fileExistsAtPath:path]) {
-		if(![self createDirectoryAtPath:path withIntermediateDirectories:TRUE attributes:nil error:nil]) path=nil;
-		//<= 10.4 if(![self createDirectoryAtPath:path attributes:nil]) path = nil;
+		#if MAC_OS_X_VERSION_MAX_ALLOWED < 1050
+			if(![self createDirectoryAtPath:path attributes:nil]) path = nil;
+		#else
+			if(![self createDirectoryAtPath:path withIntermediateDirectories:TRUE attributes:nil error:nil]) path=nil;
+		#endif
 	}
 	return path;
 }
@@ -34,8 +37,11 @@
 	NSString * appname = [[NSProcessInfo processInfo] processName];
 	NSString * path = [[self applicationSupportFolder] stringByAppendingPathComponent:appname];
 	if(![self fileExistsAtPath:path]) {
-		if(![self createDirectoryAtPath:path withIntermediateDirectories:TRUE attributes:nil error:nil]) path=nil;
-		//<= 10.4 if(![self createDirectoryAtPath:path attributes:nil]) path = nil;
+		#if MAC_OS_X_VERSION_MAX_ALLOWED < 1050
+			if(![self createDirectoryAtPath:path attributes:nil]) path = nil;	
+		#else
+			if(![self createDirectoryAtPath:path withIntermediateDirectories:TRUE attributes:nil error:nil]) path=nil;
+		#endif
 	}
 	return path;
 }

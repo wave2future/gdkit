@@ -35,10 +35,7 @@
 	[cancelables removeObject:_obj];
 }
 
-- (void) dealloc {	
-	#ifdef GDKIT_PRINT_DEALLOCS
-	printf("dealloc GDOperationsController\n");
-	#endif
+- (void) dealloc {
 	GDRelease(cancelables);
 	cancelingAll=false;
 	[super dealloc];

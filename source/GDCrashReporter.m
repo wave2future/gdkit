@@ -17,7 +17,7 @@
 }
 
 - (id) initWithUserDefaultsPrefix:(NSString *) _prefix {
-	self=[super init];
+	if(!(self=[super init]))return nil;
 	hasCrash=false;
 	deleteCrashReport=false;
 	[self setPythonBinLocation:@"/usr/bin/python"];
@@ -113,8 +113,12 @@
 	[allFiles release];
 }
 
-- (void) show {
-	[NSBundle loadNibNamed:@"CrashReport" owner:self];
+- (BOOL) show {
+	BOOL didLoadNib = [NSBundle loadNibNamed:@"CrashReport" owner:self];
+	if(!didLoadNib) {
+		NSLog(@"GDKit couldn't load the CrashReport nib.");
+		return didLoadNib;
+	}
 	NSFileHandle * fh = [NSFileHandle fileHandleForReadingAtPath:crashFile];
 	NSData * data = [fh readDataToEndOfFile];
 	NSString * crashContent = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -123,6 +127,7 @@
 	[window makeKeyAndOrderFront:nil];
 	[details setFont:[NSFont fontWithName:@"Lucida Grande" size:11]];
 	[window makeFirstResponder:send];
+	return true;
 }
 
 - (void) performCrashReporterDidFinishOnDelegate {

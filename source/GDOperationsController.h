@@ -1,7 +1,7 @@
 
-#import <Cocoa/Cocoa.h>
-#import "GDBaseObject.h"
-#import "GDBaseOperation.h"
+#import <Foundation/Foundation.h>
+#import "macros.h"
+#import "GDOperation.h"
 
 /**
  * @file GDOperationsController.h
@@ -60,7 +60,7 @@
  * make sure to override the cancelAll method, write your own logic, then call
  * [super cancelAll].
  */
-@interface GDOperationsController : GDBaseObject {
+@interface GDOperationsController : NSObject {
 	
 	/**
 	 * Whether or not the operation controller is currently canceling

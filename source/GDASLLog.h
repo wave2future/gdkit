@@ -1,16 +1,15 @@
 //copyright 2009 aaronsmith
 
+#import <Foundation/Foundation.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <asl.h>
-#import <Cocoa/Cocoa.h>
 
 /**
  * @file GDASLLog.h
  *
  * Header file for GDASLLog.
  */
-
-//Forward declaration.
-@class GDASLLogManager;
 
 /**
  * The GDASLLog is a wrapper around Apple's system log facility (man asl).
@@ -28,11 +27,6 @@
 	 * Apple Sys Log client.
 	 */
 	aslclient client;
-	
-	/**
-	 * The log manager.
-	 */
-	GDASLLogManager * manager;
 }
 
 /**
