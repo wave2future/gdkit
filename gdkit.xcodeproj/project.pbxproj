@@ -48,6 +48,7 @@
 		072082A91177FD790061B788 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 074EDCF41177EF9000441324 /* NSString+Additions.m */; };
 		072082AA1177FD790061B788 /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 074EDCF61177EF9000441324 /* NSUserDefaults+Additions.m */; };
 		07208529117803C80061B788 /* CrashReport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07208528117803C80061B788 /* CrashReport.xib */; };
+		0720864C11784E330061B788 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 074EDCEC1177EF9000441324 /* macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		074EDC811177EF3400441324 /* GDAccessibilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 074EDC7F1177EF3400441324 /* GDAccessibilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		074EDC821177EF3400441324 /* GDAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 074EDC801177EF3400441324 /* GDAccessibilityManager.m */; };
 		074EDC901177EF6C00441324 /* GDAccessibilityNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 074EDC8A1177EF6C00441324 /* GDAccessibilityNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -437,6 +438,7 @@
 				0720829C1177FD040061B788 /* GDKit-iPhone.h in Headers */,
 				0720829F1177FD3E0061B788 /* GDOperation.h in Headers */,
 				072082A01177FD3E0061B788 /* GDOperationsController.h in Headers */,
+				0720864C11784E330061B788 /* macros.h in Headers */,
 				072082A71177FD640061B788 /* NSString+Additions.h in Headers */,
 				072082A81177FD640061B788 /* NSUserDefaults+Additions.h in Headers */,
 				0720828E1177FCB30061B788 /* UIImage+Additions.h in Headers */,
