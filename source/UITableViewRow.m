@@ -9,21 +9,20 @@
 @synthesize data;
 @synthesize nibName;
 
-+ (UITableViewRow *) row {
-	UITableViewRow * row = [[UITableViewRow alloc] init];
++ (id) rowOfClass:(Class) _class withCellIdentifier:(NSString *) _cellIdentifier {
+	id row = [[_class alloc] init];
+	NSAssert([row isKindOfClass:[UITableViewRow class]],@"Assertion Failure: The Class type passed is not, or does not inherit from UITableViewRow");
+	UITableViewRow * r = (UITableViewRow *)row;
+	[r setCellIdentifier:_cellIdentifier];
 	return [row autorelease];
 }
 
-+ (UITableViewRow *) rowForCellIdentifier:(NSString *) _cellIdentifier {
-	UITableViewRow * row = [[UITableViewRow alloc] init];
-	[row setCellIdentifier:_cellIdentifier];
-	return [row autorelease];
-}
-
-+ (UITableViewRow *) rowWithNibName:(NSString *) _nibName andCellIdentifier:(NSString *) _cellIdent {
-	UITableViewRow * row = [[UITableViewRow alloc] init];
-	[row setNibName:_nibName];
-	[row setCellIdentifier:_cellIdent];
++ (id) rowOfClass:(Class) _class withNibName:(NSString *) _nibName andCellIdentifier:(NSString *) _cellIdentifier {
+	id row = [[_class alloc] init];
+	NSAssert([row isKindOfClass:[UITableViewRow class]],@"Assertion Failure: The Class type passed is not, or does not inherit from UITableViewRow");
+	UITableViewRow * r = (UITableViewRow *)row;
+	[r setNibName:_nibName];
+	[r setCellIdentifier:_cellIdentifier];
 	return [row autorelease];
 }
 
@@ -31,6 +30,10 @@
 	if(!(self=[super init]))return nil;
 	[self setCellIdentifier:@"Cell"];
 	return self;
+}
+
+- (id) getCachedRowForTable:(UITableView *) _tableView {
+	return [_tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 }
 
 - (UITableViewCell *) cellForTable:(UITableView *) _tableView {
@@ -42,12 +45,31 @@
 	return cell;
 }
 
+- (void) loadNib {
+	NSBundle * mb = [NSBundle mainBundle];
+	[self willLoadNib];
+	[mb loadNibNamed:nibName owner:self options:nil];
+	[self didLoadNib];
+}
+
+- (void) didLoadNib {
+	
+}
+
+- (void) willLoadNib {
+	
+}
+
 - (BOOL) canMoveRowInGroup:(UITableViewGroup *) _group atIndex:(NSInteger) _index {
 	return true;
 }
 
 - (void) dealloc {
-	[cellIdentifier release];
+	[self setCellIdentifier:nil];
+	[self setNibName:nil];
+	[self setData:nil];
+	isEditable=false;
+	isSelectable=false;
 	[super dealloc];
 }
 

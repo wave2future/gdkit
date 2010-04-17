@@ -91,7 +91,7 @@
 		07FAA61411770ADD0055F026 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				072083D9117800610061B788 /* GDKit.framework */,
+				072083D9117800610061B788 /* GDKit */,
 				07FAA61C11770ADD0055F026 /* libGDKit-iPhone.a */,
 			);
 			name = Products;
@@ -207,10 +207,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		072083D9117800610061B788 /* GDKit.framework */ = {
+		072083D9117800610061B788 /* GDKit */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GDKit.framework;
+			path = GDKit;
 			remoteRef = 072083D8117800610061B788 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

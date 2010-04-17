@@ -48,6 +48,11 @@
 	return [tr data];
 }
 
+- (void) setData:(id) _data forIndexPath:(NSIndexPath *) _indexPath {
+	UITableViewRow * row = [self rowForIndexPath:_indexPath];
+	if(row)[row setData:_data];
+}
+
 #pragma mark data source methods
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *) _tableView {
@@ -87,9 +92,8 @@
 	NSInteger tr = [toIndexPath indexAtPosition:1];
 	UITableViewGroup * group = [groups objectAtIndex:fc];
 	UITableViewGroup * group2;
-	if(fc == tc) {
-		[group moveRowFrom:fr to:tr];
-	} else {
+	if(fc == tc) [group moveRowFrom:fr to:tr];
+	else {
 		@synchronized(self) {
 			UITableViewRow * row = [[group rowAtIndex:fr] retain];
 			[group removeRowAtIndex:fr];

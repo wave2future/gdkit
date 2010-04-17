@@ -67,24 +67,39 @@
 @property (nonatomic,retain) id data;
 
 /**
- * Shortcut to get a row that has the nib name and cell identifier set.
- */
-+ (UITableViewRow *) rowWithNibName:(NSString *) _nibName andCellIdentifier:(NSString *) _cellIdent;
-
-/**
- * Shortcut to get a row instance.
- */
-+ (UITableViewRow *) row;
-
-/**
  * Shortcut to get a row index and set the cell re-use identifier.
  */
-+ (UITableViewRow *) rowForCellIdentifier:(NSString *) _cellIdentifier;
++ (id) rowOfClass:(Class) _class withCellIdentifier:(NSString *) _cellIdentifier;
+
+/**
+ * Shortcut to get a row that has the nib name and cell identifier set.
+ */
++ (id) rowOfClass:(Class) _class withNibName:(NSString *) _nibName andCellIdentifier:(NSString *) _cellIdentifier;
+
+/**
+ * Loads the nib specified by "nibName".
+ */
+- (void) loadNib;
+
+/**
+ * Called after the nib was loaded.
+ */
+- (void) didLoadNib;
+
+/**
+ * Called before the nib is loaded.
+ */
+- (void) willLoadNib;
 
 /**
  * Whether or not this row can be moved from a group.
  */
 - (BOOL) canMoveRowInGroup:(UITableViewGroup *) _group atIndex:(NSInteger) _index;
+
+/**
+ * A shortcut to remember to first try and grab a cached row.
+ */
+- (id) getCachedRowForTable:(UITableView *) _tableView;
 
 /**
  * Create and return a cell that displays this row's associated data.
