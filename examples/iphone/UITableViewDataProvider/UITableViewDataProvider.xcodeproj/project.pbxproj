@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07FAA62611770B220055F026 /* libGDKit-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FAA61C11770ADD0055F026 /* libGDKit-iPhone.a */; };
+		077EDBCB118A9E23004ED780 /* libGDKit-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 077EDBCA118A9E1E004ED780 /* libGDKit-iPhone.a */; };
 		07FAA6DC11770DDD0055F026 /* MyRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6DB11770DDD0055F026 /* MyRow.m */; };
 		07FAA6DF11770E440055F026 /* MyRowDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FAA6DE11770E440055F026 /* MyRowDataItem.m */; };
 		1D3623260D0F684500981E51 /* UITableViewDataProviderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* UITableViewDataProviderAppDelegate.m */; };
@@ -21,31 +21,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		072083D8117800610061B788 /* PBXContainerItemProxy */ = {
+		077EDBC9118A9E1E004ED780 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07FAA61311770ADD0055F026 /* gdkit.xcodeproj */;
+			containerPortal = 077EDBC5118A9E1E004ED780 /* gdkit-iphone.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = GDKit.framework;
-		};
-		07FAA61B11770ADD0055F026 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07FAA61311770ADD0055F026 /* gdkit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07FAA0D91176BE530055F026;
-			remoteInfo = "GDKit-iPhone";
-		};
-		07FAA61D11770AE60055F026 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07FAA61311770ADD0055F026 /* gdkit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 073FE920118533B800CBA8A3 /* GDKit-iPhone */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libGDKit-iPhone.a */;
 			remoteInfo = "GDKit-iPhone";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07FAA61311770ADD0055F026 /* gdkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gdkit.xcodeproj; path = ../../../gdkit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		077EDBC5118A9E1E004ED780 /* gdkit-iphone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "gdkit-iphone.xcodeproj"; path = "../../../gdkit-iphone.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		07FAA6DA11770DDD0055F026 /* MyRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRow.h; sourceTree = "<group>"; };
 		07FAA6DB11770DDD0055F026 /* MyRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRow.m; sourceTree = "<group>"; };
 		07FAA6DD11770E440055F026 /* MyRowDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRowDataItem.h; sourceTree = "<group>"; };
@@ -70,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07FAA62611770B220055F026 /* libGDKit-iPhone.a in Frameworks */,
+				077EDBCB118A9E23004ED780 /* libGDKit-iPhone.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -80,21 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077EDBC6118A9E1E004ED780 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				077EDBCA118A9E1E004ED780 /* libGDKit-iPhone.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		07FAA541117707BD0055F026 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				07FAA61311770ADD0055F026 /* gdkit.xcodeproj */,
+				077EDBC5118A9E1E004ED780 /* gdkit-iphone.xcodeproj */,
 			);
 			name = Projects;
-			sourceTree = "<group>";
-		};
-		07FAA61411770ADD0055F026 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				072083D9117800610061B788 /* GDKit */,
-				07FAA61C11770ADD0055F026 /* libGDKit-iPhone.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
@@ -176,7 +161,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				07FAA61E11770AE60055F026 /* PBXTargetDependency */,
 			);
 			name = UITableViewDataProvider;
 			productName = UITableViewDataProvider;
@@ -195,8 +179,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 07FAA61411770ADD0055F026 /* Products */;
-					ProjectRef = 07FAA61311770ADD0055F026 /* gdkit.xcodeproj */;
+					ProductGroup = 077EDBC6118A9E1E004ED780 /* Products */;
+					ProjectRef = 077EDBC5118A9E1E004ED780 /* gdkit-iphone.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -207,18 +191,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		072083D9117800610061B788 /* GDKit */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GDKit;
-			remoteRef = 072083D8117800610061B788 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07FAA61C11770ADD0055F026 /* libGDKit-iPhone.a */ = {
+		077EDBCA118A9E1E004ED780 /* libGDKit-iPhone.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libGDKit-iPhone.a";
-			remoteRef = 07FAA61B11770ADD0055F026 /* PBXContainerItemProxy */;
+			remoteRef = 077EDBC9118A9E1E004ED780 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -249,14 +226,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		07FAA61E11770AE60055F026 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GDKit-iPhone";
-			targetProxy = 07FAA61D11770AE60055F026 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
