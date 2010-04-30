@@ -36,17 +36,22 @@
 }
 
 - (void) installStartupLaunchdItem:(NSString *) plistName {
+	if(!plistName)return;
+	NSBundle * bndl = [NSBundle mainBundle];
 	NSFileManager * fm = [NSFileManager defaultManager];
 	NSMutableDictionary * attrs = [NSMutableDictionary dictionary];
-	NSNumber * perms = [NSNumber numberWithUnsignedLong:448]; //700 octal = 448 decimal
-	[attrs setObject:perms forKey:NSFilePosixPermissions];
+	[attrs setObject:[NSNumber numberWithUnsignedLong:448] forKey:NSFilePosixPermissions];
+	NSString * path = [bndl pathForResource:[plistName stringByDeletingPathExtension] ofType:@"plist"];
+	NSMutableDictionary * plist = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+	NSString * executablepath = [bndl executablePath];
+	[plist setObject:executablepath forKey:@"Program"];
+	NSString * dest = [[@"~/Library/LaunchAgents" stringByExpandingTildeInPath] stringByAppendingString:[@"/" stringByAppendingString:plistName]];	
+	#if MAC_OS_X_VERSION_MAX_ALLOWED > 1040
 	[fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] withIntermediateDirectories:TRUE attributes:attrs error:nil];
-	//<= 10.4 [fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] attributes:attrs];
-	NSBundle * bndl = [NSBundle mainBundle];
-	NSString * noext = [plistName stringByDeletingPathExtension];
-	NSString * path = [bndl pathForResource:noext ofType:@"plist"];
-	NSString * dest = [[@"~/Library/LaunchAgents" stringByExpandingTildeInPath] stringByAppendingString:[@"/" stringByAppendingString:plistName]];
-	[fm copyItemAtPath:path toPath:dest error:NULL];
+	#else
+	[fm createDirectoryAtPath:[@"~/Library/LaunchAgents/" stringByExpandingTildeInPath] attributes:attrs];
+	#endif
+	[plist writeToFile:dest atomically:true];
 }
 
 @end
