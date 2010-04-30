@@ -6,6 +6,12 @@
 #endif
 
 /**
+ * @file GDPrintUtils.h
+ *
+ * Header file for printing utils.
+ */
+
+/**
  * A shortcut for NSLog which will include __FILE__ and __LINE__ that the NSLog is on.
  */
 #define gdflog(s,...) NSLog(@"<%p %@:(%d)> %@",self,[[NSString stringWithUTF8String:__FILE__] lastPathComponent],__LINE__,[NSString stringWithFormat:(s), ##__VA_ARGS__])

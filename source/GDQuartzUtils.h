@@ -4,13 +4,19 @@
 #include <stdlib.h>
 #include <TargetConditionals.h>
 
-#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 	#import <ApplicationServices/ApplicationServices.h>
 #endif
 
-#if (TARGET_OS_IPHONE || TARGET_OS_EMBEDDED && !TARGET_OS_MAC)
+#if TARGET_OS_IPHONE || TARGET_OS_EMBEDDED || TARGET_IPHONE_SIMULATOR
 	#import <CoreGraphics/CoreGraphics.h>
 #endif
+
+/**
+ * @file GDQuartzUtils.h
+ *
+ * Header file for quartz utils.
+ */
 
 /**
  * @function CGCreateARGBBitmapContextFromImage
