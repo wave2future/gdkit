@@ -11,6 +11,12 @@ build/
 gdkit.xcodeproj/*.perspective
 gdkit.xcodeproj/*.perspectivev3
 gdkit.xcodeproj/*.pbxuser
+gdkit-iphone.xcodeproj/*.perspective
+gdkit-iphone.xcodeproj/*.perspectivev3
+gdkit-iphone.xcodeproj/*.pbxuser
+gdkit-mac.xcodeproj/*.perspective
+gdkit-mac.xcodeproj/*.perspectivev3
+gdkit-mac.xcodeproj/*.pbxuser
 docs/html/
 docs/latex/
 docs/latex/doxygen.sty
