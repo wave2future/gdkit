@@ -85,7 +85,7 @@ NSDictionary *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The notification name. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a719a5c28d6ad27bbcab4b864868291fa"></a><!-- doxytag: member="GDAccessibilityObserver::accessManager" ref="a719a5c28d6ad27bbcab4b864868291fa" args="" -->
 <a class="el" href="interface_g_d_accessibility_manager.html">GDAccessibilityManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa">accessManager</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Singleton instance of the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a>. <br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Singleton instance of the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a>. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10d3d1ce12d457cf53ac6bb3d86c380"></a><!-- doxytag: member="GDAccessibilityObserver::notify" ref="ac10d3d1ce12d457cf53ac6bb3d86c380" args="" -->
 <a class="el" href="interface_g_d_accessibility_notification.html">GDAccessibilityNotification</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_g_d_accessibility_observer.html#ac10d3d1ce12d457cf53ac6bb3d86c380">notify</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An instance of an <a class="el" href="interface_g_d_accessibility_notification.html" title="The GDAccessibilityNotification is the object passed to your selecter or notification...">GDAccessibilityNotification</a>. <br/></td></tr>
@@ -98,7 +98,7 @@ NSDictionary *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <div class="fragment"><pre class="fragment"> <span class="keyword">@implementation </span>MyObject : NSObject
  - (id) initWithAppInfo:(NSDictionary *) appinfo {
         <a class="code" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> * activated; <span class="comment">//should be an instance variable if it needs to hang around in memory.</span>
-        <a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> * <a class="code" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa" title="Singleton instance of the GDAccessibilityManager.">accessManager</a>; <span class="comment">//should be instance variable</span>
+        <a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a> * <a class="code" href="interface_g_d_accessibility_observer.html#a719a5c28d6ad27bbcab4b864868291fa" title="Singleton instance of the GDAccessibilityManager.">accessManager</a>; <span class="comment">//should be instance variable</span>
         <span class="keywordflow">if</span>(<span class="keyword">self</span> = [<span class="keyword">self</span> init]) {
                 appInfo = [appinfo retain];
                 appPid = (pid_t)[[appInfo valueForKey:<span class="stringliteral">@&quot;NSApplicationProcessIdentifier&quot;</span>] intValue];
@@ -109,13 +109,13 @@ NSDictionary *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" 
                         activated = [[<a class="code" href="interface_g_d_accessibility_observer.html" title="The GDAccessibilityObserver is an object oriented wrapper around accessibility notifications...">GDAccessibilityObserver</a> alloc] initWithNotification:NSAccessibilityApplicationActivatedNotification forAXUIElementRef:appRef \
                                                 callsAction:@selector(applicationDidActivate:) onTarget:self withUserInfo:appInfo];
                 } <span class="keywordflow">else</span> {
-                        <span class="keywordflow">return</span> nil;
+                        <span class="keywordflow">return</span> <a class="code" href="macros_8h.html#a7a7ca81d2a85873283b5ec82953b1b25" title="Shortcut for NULL.">nil</a>;
                 }
         }
         <span class="keywordflow">return</span> <span class="keyword">self</span>;
  }
  <span class="keyword">@end</span>
-</pre></div><p>The important thing to remember is that it can subscribe to notifications from any AXUIElementRef. Use the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> to get the right reference you need.</p>
+</pre></div><p>The important thing to remember is that it can subscribe to notifications from any AXUIElementRef. Use the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a> to get the right reference you need.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a href="http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/AXUIElement_h/CompositePage.html#//apple_ref/c/func/AXObserverCreate">http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/AXUIElement_h/CompositePage.html#//apple_ref/c/func/AXObserverCreate</a> </dd>
 <dd>
 <a href="http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/AXUIElement_h/CompositePage.html#//apple_ref/c/func/AXObserverAddNotification">http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/AXUIElement_h/CompositePage.html#//apple_ref/c/func/AXObserverAddNotification</a> </dd>
@@ -124,7 +124,7 @@ NSDictionary *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <dd>
 <a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ApplicationKit/Miscellaneous/AppKit_Functions/Reference/reference.html#//apple_ref/c/func/NSAccessibilityPostNotification">http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ApplicationKit/Miscellaneous/AppKit_Functions/Reference/reference.html#//apple_ref/c/func/NSAccessibilityPostNotification</a> </dd>
 <dd>
-Also see carbon run loops and CFRunLoopAddSource(). </dd></dl>
+Also see carbon run loops <a class="el" href="macros_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9" title="AND (&amp;&amp;) shortcut.">and</a> CFRunLoopAddSource(). </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a38b7e5cbcdd5a9d4ff0e61fef5fede37"></a><!-- doxytag: member="GDAccessibilityObserver::initWithNotification:forAXUIElementRef:callsAction:onTarget:withUserInfo:" ref="a38b7e5cbcdd5a9d4ff0e61fef5fede37" args="(NSString *notification,[forAXUIElementRef] AXUIElementRef element,[callsAction] SEL action,[onTarget] id target,[withUserInfo] NSDictionary *userInpho)" -->
 <div class="memitem">

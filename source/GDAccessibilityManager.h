@@ -45,10 +45,9 @@ typedef enum {
 /**
  * @class GDAccessibilityManager
  *
- * The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices
- * API for you.
+ * The GDAccessibilityManager handles a working with the Accessibility api for you.
  *
- * The ApplicationServices API is quite large, this manager handles most of
+ * The Accessibility API is quite large, this manager handles most of
  * the common operations.
  * 
  * @see See GDAccessibilityManager.h for typdefs.
@@ -305,12 +304,12 @@ typedef enum {
 @interface GDAccessibilityManager (Private)
 
 /**
- * @internal
+ * [Internal] Shortcut to get a preconfigured api disabled operation result.
  */
 - (GDAccessibilityOperationResult *) getAPIDisabledOperationResult;
 
 /**
- * @internal
+ * [internal] Shhortcut to get a preconfigured operation result for cases where an AXValueRef couldn't be created.
  */
 - (GDAccessibilityOperationResult *) getCannotCreateValueOperationResult;
 

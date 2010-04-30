@@ -15,24 +15,103 @@
  * crash reporting.
  */
 @interface GDCrashReporter : NSObject {
+	
+	/**
+	 * Whether or not a crash is available.
+	 */
 	BOOL hasCrash;
+	
+	/**
+	 * Whether or not the crash reporter should delete the crash report after it's been reported.
+	 */
 	BOOL deleteCrashReport;
+	
+	/**
+	 * Delegate for crash reporter hooks.
+	 */
 	id <GDCrashReporterDelegate> delegate;
+	
+	/**
+	 * Placeholder string for the comments field.
+	 */
 	NSString * placeHolderComm;
+	
+	/**
+	 * The crash file that is being reported.
+	 */
 	NSString * crashFile;
+	
+	/**
+	 * Python binary location used if the crash reporter is sending
+	 * the crash through email.
+	 */
 	NSString * pythonBinLocation;
+	
+	/**
+	 * Python send file script location. This file is searched for
+	 * in the GDKit.framework bundle.
+	 */
 	NSString * pythonSendFileScriptLocation;
+	
+	/**
+	 * The user defaults prefix to use which records information
+	 * about the last crash report that was reported.
+	 */
 	NSString * userDefaultsPrefix;
+	
+	/**
+	 * The crash reporter window title.
+	 */
 	NSString * windowTitle;
+	
+	/**
+	 * The crash message title.
+	 */
 	NSString * crashMessage;
+	
+	/**
+	 * The company name for your software.
+	 */
 	NSString * companyName;
+	
+	/**
+	 * Task used when sending the crash report.
+	 */
 	NSTask * task;
+	
+	/**
+	 * Crash file search paths - there are some defaults used.
+	 */
 	NSMutableArray * searchPaths;
+	
+	/**
+	 * Nib reference to the window.
+	 */
 	IBOutlet NSWindow * window;
+	
+	/**
+	 * Nib outlet to the send button.
+	 */
 	IBOutlet NSButton * send;
+	
+	/**
+	 * Nib outlet to the cancel button.
+	 */
 	IBOutlet NSButton * cancel;
+	
+	/**
+	 * Nib outlet to the comments field.
+	 */
 	IBOutlet NSTextView * comments;
+	
+	/**
+	 * Nib outlet to the details field.
+	 */
 	IBOutlet NSTextView * details;
+	
+	/**
+	 * Nib outlet to the message field.
+	 */
 	IBOutlet NSTextField * message;
 }
 

@@ -4,7 +4,7 @@
 }
 
 
-The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} handles a working with the ApplicationServices/‍HIServices API for you.  
+The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} handles a working with the Accessibility api for you.  
 
 
 {\ttfamily \#import $<$GDAccessibilityManager.h$>$}\subsection*{Public Member Functions}
@@ -85,15 +85,15 @@ The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} hand
 (\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_a365dbd94f222b04c86141c83c1542e68}{forAXUIElementRef:performAction:}
 \begin{DoxyCompactList}\small\item\em Performs an action on an AXUIElementRef. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_g_d_accessibility_manager_a47b0eb8fca2a6ca2ed9352ff287956d8}{
-(\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ {\bfseries getAPIDisabledOperationResult}}
+(\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_a47b0eb8fca2a6ca2ed9352ff287956d8}{getAPIDisabledOperationResult}}
 \label{interface_g_d_accessibility_manager_a47b0eb8fca2a6ca2ed9352ff287956d8}
 
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{[}Internal\mbox{]} Shortcut to get a preconfigured api disabled operation result. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_g_d_accessibility_manager_abee89ff43cfda7232f761f9855c7dddc}{
-(\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ {\bfseries getCannotCreateValueOperationResult}}
+(\hyperlink{interface_g_d_accessibility_operation_result}{GDAccessibilityOperationResult} $\ast$) -\/ \hyperlink{interface_g_d_accessibility_manager_abee89ff43cfda7232f761f9855c7dddc}{getCannotCreateValueOperationResult}}
 \label{interface_g_d_accessibility_manager_abee89ff43cfda7232f761f9855c7dddc}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{[}internal\mbox{]} Shhortcut to get a preconfigured operation result for cases where an AXValueRef couldn't be created. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -105,7 +105,7 @@ The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} hand
 
 
 \subsection{Detailed Description}
-The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} handles a working with the ApplicationServices/‍HIServices API for you. The ApplicationServices API is quite large, this manager handles most of the common operations.
+The \hyperlink{interface_g_d_accessibility_manager}{GDAccessibilityManager} handles a working with the Accessibility api for you. The Accessibility API is quite large, this manager handles most of the common operations.
 
 \begin{DoxySeeAlso}{See also}
 See \hyperlink{_g_d_accessibility_manager_8h}{GDAccessibilityManager.h} for typdefs. 

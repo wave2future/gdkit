@@ -39,7 +39,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 07FAA61311770ADD0055F026 /* gdkit.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 07207F981177FBA40061B788;
+			remoteGlobalIDString = 073FE920118533B800CBA8A3 /* GDKit-iPhone */;
 			remoteInfo = "GDKit-iPhone";
 		};
 /* End PBXContainerItemProxy section */

@@ -10,7 +10,7 @@
     }
 	UIView * subView;
 	for(subView in [self subviews]) {
-		if ([subView findAndResignFirstResonder]) return YES;
+		if([subView findAndResignFirstResonder]) return YES;
     }
 	return NO;
 }

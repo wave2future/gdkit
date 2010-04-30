@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import "GDCoreGraphicsUtilities.h"
+#import "GDQuartzUtils.h"
 
 /**
  * @class UIImage
@@ -15,5 +15,21 @@
  * Get a UIColor instance from a point in the bitmap.
  */
 - (UIColor *) getPixelColorAtPoint:(CGPoint) point;
+
+/**
+ * Get RGBA component values from a pixel location.
+ *
+ * @param _storage A float[4].
+ * @param point A CGPoint.
+ */
+- (void) getRGBAComponents:(float *) _storage forPixelAtPoint:(CGPoint) point;
+
+/**
+ * Get RGB component values from a pixel location.
+ *
+ * @param _storage A float[3].
+ * @param point A CGPoint.
+ */
+- (void) getRGBComponents:(float *) _storage forPixelAtPoint:(CGPoint) point;
 
 @end

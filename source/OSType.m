@@ -1,5 +1,7 @@
 //copyright 2009 aaronsmith
 
+#import "OSType.h"
+
 OSType fourCharCodeToOSType(NSString* inCode) {
 	OSType rval = 0;
 	NSData* data = [inCode dataUsingEncoding: NSMacOSRomanStringEncoding];

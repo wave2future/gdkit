@@ -1,11 +1,21 @@
-GDKit is re-usable Mac and iPhone Objective-C code.
+          __  __          __      
+         /\ \/\ \      __/\ \__   
+   __    \_\ \ \ \/'\ /\_\ \ ,_\  
+ /'_ `\  /'_` \ \ , < \/\ \ \ \/  
+/\ \_\ \/\ \)\ \ \ \\`\\ \ \ \ \_ 
+\ \____ \ \___,_\ \_\ \_\ \_\ \__\
+ \/___L\ \/__,_ /\/_/\/_/\/_/\/__/
+   /\____/                        
+   \_/__/
+
+Mac and iPhone Objective-C code.
 
 It contains two frameworks:
 
 GDKit.framework for Mac
 GDKit-iPhone.a for iphone
 
-Each have their own build target.
+Each have their own xcode project.
 
 Docs are here:
 http://codeendeavor.com/docs/gdkit/

@@ -45,7 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>GDAccessibilityOperationResult Class Reference</h1><!-- doxytag: class="GDAccessibilityOperationResult" -->
-<p>The <a class="el" href="interface_g_d_accessibility_operation_result.html" title="The GDAccessibilityOperationResult is a result object from an accessibility operation...">GDAccessibilityOperationResult</a> is a result object from an accessibility operation performed by the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a>.  
+<p>The <a class="el" href="interface_g_d_accessibility_operation_result.html" title="The GDAccessibilityOperationResult is a result object from an accessibility operation...">GDAccessibilityOperationResult</a> is a result object from an accessibility operation performed by the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a>.  
 <a href="#_details">More...</a></p>
 
 <p><code>#import &lt;<a class="el" href="_g_d_accessibility_operation_result_8h_source.html">GDAccessibilityOperationResult.h</a>&gt;</code></p>
@@ -158,12 +158,12 @@ NSInteger&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The result code of the operation. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>The <a class="el" href="interface_g_d_accessibility_operation_result.html" title="The GDAccessibilityOperationResult is a result object from an accessibility operation...">GDAccessibilityOperationResult</a> is a result object from an accessibility operation performed by the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a>. </p>
+<p>The <a class="el" href="interface_g_d_accessibility_operation_result.html" title="The GDAccessibilityOperationResult is a result object from an accessibility operation...">GDAccessibilityOperationResult</a> is a result object from an accessibility operation performed by the <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a>. </p>
 <p>You should always check the "wasSuccess" method before accessing the result. The result property will be NULL if there was an error which will cause your program to crash if you access it.</p>
 <p>If the result <b>wasn't</b> a success, you can use various methods to find the error. As an example: "wasInvalidAXUIElementRef".</p>
 <p>Additionally, there are a bunch of helpers to get the result as a certain type, such as an NSRect, NSSize, etc. The raw result is accessable by the "result" property.</p>
 <p>Here's an extracted example of how you use this:</p>
-<div class="fragment"><pre class="fragment"> accessManager = [<a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> sharedInstance];
+<div class="fragment"><pre class="fragment"> accessManager = [<a class="code" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a> sharedInstance];
  topApp = [[workspace activeApplication] retain];
  topApplicationName = [topApp valueForKey:<span class="stringliteral">@&quot;NSApplicationName&quot;</span>];
  pid_t appid = (pid_t)[[topApp valueForKey:<span class="stringliteral">@&quot;NSApplicationProcessIdentifier&quot;</span>] intValue];

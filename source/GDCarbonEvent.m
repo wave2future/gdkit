@@ -2,7 +2,7 @@
 
 #import "GDCarbonEvent.h"
 #import "GDCarbonEventManager.h"
-#import "OSTypeFunctions.h"
+#import "OSType.h"
 
 static NSMutableDictionary * gdceLookup = nil;
 static unsigned int eventIds = 0;

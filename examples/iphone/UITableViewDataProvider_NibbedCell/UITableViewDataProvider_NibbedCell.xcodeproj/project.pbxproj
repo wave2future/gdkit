@@ -21,18 +21,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		077FAE3C11854B2800262188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BF3B1B1179495D0043E099 /* gdkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 073FE920118533B800CBA8A3 /* GDKit-iPhone */;
+			remoteInfo = "GDKit-iPhone";
+		};
 		07BF3B211179495D0043E099 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07BF3B1B1179495D0043E099 /* gdkit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* GDKit */;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = GDKit.framework;
 		};
 		07BF3B231179495D0043E099 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07BF3B1B1179495D0043E099 /* gdkit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 07207F991177FBA40061B788 /* libGDKit-iPhone.a */;
+			remoteGlobalIDString = 07207F991177FBA40061B788;
 			remoteInfo = "GDKit-iPhone";
 		};
 /* End PBXContainerItemProxy section */
@@ -75,7 +82,7 @@
 		07BF3B1C1179495D0043E099 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07BF3B221179495D0043E099 /* GDKit */,
+				07BF3B221179495D0043E099 /* GDKit.framework */,
 				07BF3B241179495D0043E099 /* libGDKit-iPhone.a */,
 			);
 			name = Products;
@@ -167,6 +174,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				077FAE3D11854B2800262188 /* PBXTargetDependency */,
 			);
 			name = UITableViewDataProvider_NibbedCell;
 			productName = UITableViewDataProvider_NibbedCell;
@@ -197,10 +205,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		07BF3B221179495D0043E099 /* GDKit */ = {
+		07BF3B221179495D0043E099 /* GDKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GDKit;
+			path = GDKit.framework;
 			remoteRef = 07BF3B211179495D0043E099 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -239,6 +247,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		077FAE3D11854B2800262188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GDKit-iPhone";
+			targetProxy = 077FAE3C11854B2800262188 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {

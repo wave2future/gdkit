@@ -52,13 +52,9 @@
 	[self didLoadNib];
 }
 
-- (void) didLoadNib {
-	
-}
+- (void) didLoadNib {}
 
-- (void) willLoadNib {
-	
-}
+- (void) willLoadNib {}
 
 - (BOOL) canMoveRowInGroup:(UITableViewGroup *) _group atIndex:(NSInteger) _index {
 	return true;

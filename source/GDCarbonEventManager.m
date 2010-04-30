@@ -11,9 +11,19 @@ static GDCarbonEventManager * inst = nil;
  * GDCarbonEventManager.
  */
 @interface EventKeyWrapper : NSObject {
+	/**
+	 * The index of this EventKeyWrapper in the storage array.
+	 */
 	NSUInteger keyInArray;
 }
+/**
+ * The key code number.
+ */
 - (NSUInteger) key;
+
+/**
+ * Init with a key code number.
+ */
 - (id) initWithKey:(NSUInteger) key;
 @end
 

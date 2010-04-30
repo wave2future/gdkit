@@ -21,7 +21,7 @@
 + (UITableViewGroup *) groupWithRows:(NSArray *) _rows {
 	UITableViewGroup * group = [[UITableViewGroup alloc] init];
 	[group addRows:_rows];
-	return group;
+	return [group autorelease];
 }
 
 - (id) init {

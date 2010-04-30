@@ -12,6 +12,10 @@
  * The GDSoundController is a controller used to play and manage sounds.
  */
 @interface GDSoundController : NSObject {
+	
+	/**
+	 * Reference to a pop sound ([NSSound soundNamed:@"Pop"]).
+	 */
 	NSSound * popSound;
 }
 

@@ -45,7 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>GDAccessibilityManager Class Reference</h1><!-- doxytag: class="GDAccessibilityManager" -->
-<p>The <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> handles a working with the ApplicationServices/‍HIServices API for you.  
+<p>The <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a> handles a working with the Accessibility api for you.  
 <a href="#_details">More...</a></p>
 
 <p><code>#import &lt;<a class="el" href="_g_d_accessibility_manager_8h_source.html">GDAccessibilityManager.h</a>&gt;</code></p>
@@ -120,17 +120,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_g_d_accessibility_operation_result.html">GDAccessibilityOperationResult</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_g_d_accessibility_manager.html#a365dbd94f222b04c86141c83c1542e68">forAXUIElementRef:performAction:</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Performs an action on an AXUIElementRef.  <a href="#a365dbd94f222b04c86141c83c1542e68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47b0eb8fca2a6ca2ed9352ff287956d8"></a><!-- doxytag: member="GDAccessibilityManager::getAPIDisabledOperationResult" ref="a47b0eb8fca2a6ca2ed9352ff287956d8" args="()" -->
-(<a class="el" href="interface_g_d_accessibility_operation_result.html">GDAccessibilityOperationResult</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">- <b>getAPIDisabledOperationResult</b></td></tr>
+(<a class="el" href="interface_g_d_accessibility_operation_result.html">GDAccessibilityOperationResult</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_g_d_accessibility_manager.html#a47b0eb8fca2a6ca2ed9352ff287956d8">getAPIDisabledOperationResult</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">[Internal] Shortcut to get a preconfigured api disabled operation result. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abee89ff43cfda7232f761f9855c7dddc"></a><!-- doxytag: member="GDAccessibilityManager::getCannotCreateValueOperationResult" ref="abee89ff43cfda7232f761f9855c7dddc" args="()" -->
-(<a class="el" href="interface_g_d_accessibility_operation_result.html">GDAccessibilityOperationResult</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">- <b>getCannotCreateValueOperationResult</b></td></tr>
+(<a class="el" href="interface_g_d_accessibility_operation_result.html">GDAccessibilityOperationResult</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_g_d_accessibility_manager.html#abee89ff43cfda7232f761f9855c7dddc">getCannotCreateValueOperationResult</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">[internal] Shhortcut to get a preconfigured operation result for cases where an AXValueRef couldn't be created. <br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435dd479b497690d4c34fe71da196da6"></a><!-- doxytag: member="GDAccessibilityManager::sharedInstance" ref="a435dd479b497690d4c34fe71da196da6" args="()" -->
 (<a class="el" href="interface_g_d_accessibility_manager.html">GDAccessibilityManager</a> *)&nbsp;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_g_d_accessibility_manager.html#a435dd479b497690d4c34fe71da196da6">sharedInstance</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Singleton instance. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>The <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the ApplicationServices/‍HIServices...">GDAccessibilityManager</a> handles a working with the ApplicationServices/‍HIServices API for you. </p>
-<p>The ApplicationServices API is quite large, this manager handles most of the common operations.</p>
+<p>The <a class="el" href="interface_g_d_accessibility_manager.html" title="The GDAccessibilityManager handles a working with the Accessibility api for you.">GDAccessibilityManager</a> handles a working with the Accessibility api for you. </p>
+<p>The Accessibility API is quite large, this manager handles most of the common operations.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd>See <a class="el" href="_g_d_accessibility_manager_8h.html" title="Header file for GDAccessibilityManager.">GDAccessibilityManager.h</a> for typdefs. </dd>
 <dd>
 <a href="http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/index.html">http://developer.apple.com/mac/library/documentation/Accessibility/Reference/AccessibilityLowlevel/index.html</a> </dd>
