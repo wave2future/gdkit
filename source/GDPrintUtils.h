@@ -1,6 +1,10 @@
 
 #import <Foundation/Foundation.h>
 
+#if TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+	#import <UIKit/UIKit.h>
+#endif
+
 /**
  * A shortcut for NSLog which will include __FILE__ and __LINE__ that the NSLog is on.
  */
@@ -64,7 +68,7 @@ NS_INLINE void GDPrintNSSizeWithLabel(NSString * label,NSSize size) {
 
 #endif
 
-#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE) && !TARGET_OS_MAC
+#if TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 
 /**
  * Print a UIColor formatted like: UIColor(<Color Space>r:%0.f,g:%0.3f,b:%0.3f).

@@ -34,6 +34,8 @@
 		077EDAA1118A86DA004ED780 /* GDPrintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDA9F118A86DA004ED780 /* GDPrintUtils.m */; };
 		077EDB8C118A9DD2004ED780 /* GDQuartzUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */; };
+		077EDC28118AB6BB004ED780 /* GDAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDC26118AB6BB004ED780 /* GDAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDC27118AB6BB004ED780 /* GDAccelerometer.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		077EDA9F118A86DA004ED780 /* GDPrintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDPrintUtils.m; path = source/GDPrintUtils.m; sourceTree = "<group>"; };
 		077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDQuartzUtils.h; path = source/GDQuartzUtils.h; sourceTree = "<group>"; };
 		077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDQuartzUtils.m; path = source/GDQuartzUtils.m; sourceTree = "<group>"; };
+		077EDC26118AB6BB004ED780 /* GDAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccelerometer.h; path = source/GDAccelerometer.h; sourceTree = "<group>"; };
+		077EDC27118AB6BB004ED780 /* GDAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccelerometer.m; path = source/GDAccelerometer.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* gdkit_iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_iphone_Prefix.pch; path = source/gdkit_iphone_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGDKit-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGDKit-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,7 @@
 		07437B8A118A3BBD00EAD978 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				077EDC26118AB6BB004ED780 /* GDAccelerometer.h */,
 				07437ECD118A54F500EAD978 /* GDASLLog.h */,
 				07437ECF118A54F500EAD978 /* GDCallback.h */,
 				07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */,
@@ -136,6 +141,7 @@
 		08FB77AEFE84172EC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				077EDC27118AB6BB004ED780 /* GDAccelerometer.m */,
 				07437ECE118A54F500EAD978 /* GDASLLog.m */,
 				07437ED0118A54F500EAD978 /* GDCallback.m */,
 				077EDA9F118A86DA004ED780 /* GDPrintUtils.m */,
@@ -159,6 +165,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077EDC28118AB6BB004ED780 /* GDAccelerometer.h in Headers */,
 				07437ED5118A54F500EAD978 /* GDASLLog.h in Headers */,
 				07437ED7118A54F500EAD978 /* GDCallback.h in Headers */,
 				07437EC9118A54DA00EAD978 /* GDKit-iPhone.h in Headers */,
@@ -219,18 +226,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */,
+				07437ED6118A54F500EAD978 /* GDASLLog.m in Sources */,
+				07437ED8118A54F500EAD978 /* GDCallback.m in Sources */,
+				077EDAA1118A86DA004ED780 /* GDPrintUtils.m in Sources */,
+				077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */,
+				07437EDA118A54F500EAD978 /* NSString+Additions.m in Sources */,
+				07437EDC118A54F500EAD978 /* NSUserDefaults+Additions.m in Sources */,
 				07437EAB118A546B00EAD978 /* UIColor+Additions.m in Sources */,
 				07437EAD118A546B00EAD978 /* UIImage+Additions.m in Sources */,
 				07437EAF118A546B00EAD978 /* UITableViewDataProvider.m in Sources */,
 				07437EB1118A546B00EAD978 /* UITableViewGroup.m in Sources */,
 				07437EB3118A546B00EAD978 /* UITableViewRow.m in Sources */,
 				07437EB5118A546B00EAD978 /* UIView+Additions.m in Sources */,
-				07437ED6118A54F500EAD978 /* GDASLLog.m in Sources */,
-				07437ED8118A54F500EAD978 /* GDCallback.m in Sources */,
-				07437EDA118A54F500EAD978 /* NSString+Additions.m in Sources */,
-				07437EDC118A54F500EAD978 /* NSUserDefaults+Additions.m in Sources */,
-				077EDAA1118A86DA004ED780 /* GDPrintUtils.m in Sources */,
-				077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
