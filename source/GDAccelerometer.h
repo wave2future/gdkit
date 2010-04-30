@@ -66,6 +66,11 @@
 - (void) unregisterTarget:(id) _target forAcceleration:(SEL) _selector;
 
 /**
+ * Unregisters a callback to any target for a selector.
+ */
+- (void) unregisterSelectorForAllTargets:(SEL) _selector;
+
+/**
  * Sets the update interval for UIAcceleration.
  */
 - (void) setUpdateInterval:(NSTimeInterval) _interval;

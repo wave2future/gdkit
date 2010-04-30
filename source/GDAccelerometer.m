@@ -48,6 +48,18 @@ static GDAccelerometer * inst;
 	[targets removeObjectsInArray:removes];
 }
 
+- (void) unregisterSelectorForAllTargets:(SEL) _selector {
+	GDCallback * targ;
+	NSUInteger i = 0;
+	NSUInteger count = [targets count];
+	NSMutableArray * removes = [NSMutableArray array];
+	for(;i<count;i++) {
+		targ=[targets objectAtIndex:i];
+		if([targ action] == _selector) [removes addObject:targ];
+	}
+	[targets removeObjectsInArray:removes];
+}
+
 - (void) accelerometer:(UIAccelerometer *) accelerometer didAccelerate:(UIAcceleration *) acceleration {
 	if(!enabled)return;
 	if(shouldPrintAccelerometerData)GDPrintUIAcceleration(acceleration);
