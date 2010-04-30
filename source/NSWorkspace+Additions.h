@@ -4,8 +4,14 @@
 
 /**
  * @file NSWorkspace+Additions.h
- *
- * Header file for NSWorkspace cocoa additions.
+ * 
+ * Header file for NSWorkspace additions.
+ */
+
+/**
+ * @class NSWorkspace
+ * 
+ * Category additions to NSWorkspace.
  */
 
 /**
@@ -15,8 +21,6 @@
 #define kGDSystemPrefUniversalAccess @"UniversalAccessPref.prefPane"
 
 /**
- * @class NSWorkspace
- *
  * Category additions to NSWorkspace.
  */
 @interface NSWorkspace (GDAdditions)

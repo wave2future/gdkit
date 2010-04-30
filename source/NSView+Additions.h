@@ -12,6 +12,10 @@
  *
  * Category additions to NSView.
  */
+
+/**
+ * Category additions to NSView.
+ */
 @interface NSView (GDAdditions)
 
 /**

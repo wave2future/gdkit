@@ -13,6 +13,10 @@
  *
  * Category additions to NSUserDefaults.
  */
+
+/**
+ * Category additions to NSUserDefaults.
+ */
 @interface NSUserDefaults (GDAdditions)
 
 /**

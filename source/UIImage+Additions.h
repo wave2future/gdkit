@@ -5,8 +5,18 @@
 #import "GDQuartzUtils.h"
 
 /**
+ * @file UIImage+Additions.h
+ *
+ * Header file for UIImage+Additions.
+ */
+
+/**
  * @class UIImage
  *
+ * Category additions to UIImage
+ */
+
+/**
  * Category additions to UIImage
  */
 @interface UIImage (Additions)

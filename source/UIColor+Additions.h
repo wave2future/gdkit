@@ -3,8 +3,18 @@
 #import <UIKit/UIKit.h>
 
 /**
+ * @file UIColor+Additions.h
+ *
+ * Header file for UIColor+Additions.
+ */
+
+/**
  * @class UIColor
  *
+ * Category additions to UIColor.
+ */
+
+/**
  * Category additions to UIColor.
  */
 @interface UIColor (Additions)

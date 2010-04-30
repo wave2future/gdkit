@@ -12,6 +12,10 @@
  * 
  * Category additions to NSFileHandle.
  */
+
+/**
+ * Category additions to NSFileHandle.
+ */
 @interface NSFileHandle (GDAdditions)
 
 + (NSString *) tmpFileName;

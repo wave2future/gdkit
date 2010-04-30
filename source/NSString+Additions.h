@@ -12,6 +12,10 @@
  *
  * Category additions to NSString.
  */
+
+/**
+ * Category additions to NSString.
+ */
 @interface NSString (GDAdditions)
 
 /**

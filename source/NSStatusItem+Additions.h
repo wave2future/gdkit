@@ -10,7 +10,11 @@
 
 /**
  * @class NSStatusItem
- *
+ * 
+ * Category additions to NSStatusItem.
+ */
+
+/**
  * Category additions to NSStatusItem.
  */
 @interface NSStatusItem (GDAdditions)

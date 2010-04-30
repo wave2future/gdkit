@@ -127,11 +127,11 @@
  */
 - (id) initWithNotification:(NSString *) notification forAXUIElementRef:(AXUIElementRef) element callsAction:(SEL) action onTarget:(id) target withUserInfo:(NSDictionary *) userInpho;
 
-@end
-
-@interface  GDAccessibilityObserver (Private)
-
-//returns the invoker for this observer.
+/**
+ * [Internal]
+ *
+ * Returns the invoker for this observer.
+ */
 - (NSInvocation *) invoker;
 
 @end

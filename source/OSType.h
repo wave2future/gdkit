@@ -1,7 +1,7 @@
 #import <Cocoa/Cocoa.h>
 
 /**
- * @file OSTypeFunctions.h
+ * @file OSType.h
  *
  * Helper functions for OSType conversions.
  */

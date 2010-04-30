@@ -5,9 +5,9 @@
 #import "NSFileHandle+Additions.h"
 
 /**
- * @file GDBaseNSTaskOperation.h
+ * @file GDNSTaskOperation.h
  * 
- * Header file for GDBaseNSTaskOperation.
+ * Header file for GDNSTaskOperation.
  */
 
 /**

@@ -1,6 +1,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+/**
+ * @file GDCrashReporterDelegate.h
+ *
+ * Header file for GDCrashReporterDelegate.
+ */
+
+/**
+ * Optional protocol for GDCrashReporter.
+ */
 @interface NSObject (GDCrashReporterDelegate)
 
 /**

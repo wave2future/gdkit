@@ -14,6 +14,10 @@
  * 
  * Category additions to NSFileManager.
  */
+
+/**
+ * Category additions to NSFileManager.
+ */
 @interface NSFileManager (GDAdditions)
 
 /**

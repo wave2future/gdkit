@@ -5,12 +5,16 @@
 /**
  * @file UIView+Additions.h
  *
- * Header file for UIView+Additions
+ * Header file for UIView+Additions.
  */
 
 /**
  * @class UIView
  *
+ * Category additions to UIView.
+ */
+
+/**
  * Category additions for UIView.
  */
 @interface UIView (Additions)

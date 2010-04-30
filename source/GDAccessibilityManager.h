@@ -296,13 +296,6 @@ typedef enum {
  */
 - (GDAccessibilityOperationResult *) forAXUIElementRef:(AXUIElementRef) element performAction:(NSString *) action;
 
-@end
-
-/**
- * @internal
- */
-@interface GDAccessibilityManager (Private)
-
 /**
  * [Internal] Shortcut to get a preconfigured api disabled operation result.
  */
