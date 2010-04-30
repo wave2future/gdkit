@@ -11,7 +11,9 @@ The \hyperlink{interface_g_d_accessibility_observer}{GDAccessibilityObserver} is
 \begin{DoxyCompactItemize}
 \item 
 (id) -\/ \hyperlink{interface_g_d_accessibility_observer_a38b7e5cbcdd5a9d4ff0e61fef5fede37}{initWithNotification:forAXUIElementRef:callsAction:onTarget:withUserInfo:}
-\begin{DoxyCompactList}\small\item\em Designated initializer -\/ init with required parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Designated initializer -\/ init with required parameters. \item\end{DoxyCompactList}\item 
+(NSInvocation $\ast$) -\/ \hyperlink{interface_g_d_accessibility_observer_a737858a3d148653b014c752214009e3f}{invoker}
+\begin{DoxyCompactList}\small\item\em \mbox{[}Internal\mbox{]} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -134,7 +136,14 @@ Also see carbon run loops \hyperlink{macros_8h_aa3d7d535cf450b91b9cb6d9cee2edbb9
 Designated initializer -\/ init with required parameters. 
 \begin{DoxyParams}{Parameters}
 \item[{\em notification}]The notification to subscribe to. \item[{\em element}]The AXUIElementRef to listen for posted notifications from. \item[{\em action}]A callback selector. \item[{\em target}]A callback target object. \item[{\em userInpho}]A user info dictionary. \end{DoxyParams}
+\hypertarget{interface_g_d_accessibility_observer_a737858a3d148653b014c752214009e3f}{
+\index{GDAccessibilityObserver@{GDAccessibilityObserver}!invoker@{invoker}}
+\index{invoker@{invoker}!GDAccessibilityObserver@{GDAccessibilityObserver}}
+\subsubsection[{invoker}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSInvocation $\ast$) {\bf invoker} }}
+\label{interface_g_d_accessibility_observer_a737858a3d148653b014c752214009e3f}
 
+
+\mbox{[}Internal\mbox{]} Returns the invoker for this observer. 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
