@@ -19,8 +19,6 @@
  */
 
 /**
- * @function CGCreateARGBBitmapContextFromImage
- * 
  * Create an ARGBBitmapContext (taken from: [h]ttp://developer.apple.com/mac/library/qa/qa2007/qa1509.html).
  */
 CGContextRef CGCreateARGBBitmapContextFromImage(CGImageRef inImage);
