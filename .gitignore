@@ -22,3 +22,9 @@ docs/latex/
 docs/latex/doxygen.sty
 docs/latex/refman.tex
 docs/html.zip
+examples/iphone/UITableViewDataProvider/build/
+examples/iphone/UITableViewDataProvider_NibbedCell/build/
+examples/mac/CrashReporter/build/
+examples/mac/LaunchdStartup/build/
+examples/mac/Scale9/build/
+examples/mac/Scale9View/build/
