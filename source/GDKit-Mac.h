@@ -9,6 +9,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreServices/CoreServices.h>
+
+#import "GDControl.h"
+#import "GDScale9View.h"
+#import "GDScale9Button.h"
+#import "GDScale9ButtonCell.h"
+#import "GDScale3View.h"
+#import "GDTileView.h"
+
 #import "GDAccessibilityManager.h"
 #import "GDAccessibilityNotification.h"
 #import "GDAccessibilityObserver.h"
@@ -28,6 +36,8 @@
 #import "GDPrintUtils.h"
 #import "GDQuartzDisplay.h"
 #import "GDQuartzUtils.h"
+#import "GDScale9Button.h"
+#import "GDScale9ButtonCell.h"
 #import "GDSoundController.h"
 #import "GDULimit.h"
 #import "macros.h"
