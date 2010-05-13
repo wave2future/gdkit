@@ -34,7 +34,7 @@
 
 - (NSString *) applicationName {
 	NSString * app = [[[NSBundle mainBundle] localizedInfoDictionary] valueForKey: @"CFBundleExecutable"];
-	if (!app) app = [[[NSBundle mainBundle] infoDictionary] valueForKey: @"CFBundleExecutable"];
+	if(!app) app = [[[NSBundle mainBundle] infoDictionary] valueForKey: @"CFBundleExecutable"];
 	return app;
 }
 
