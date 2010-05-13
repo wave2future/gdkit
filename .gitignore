@@ -20,6 +20,7 @@ gdkit-mac.xcodeproj/*.pbxuser
 gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj/*.perspective
 gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj/*.perspectivev3
 gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj/*.pbxuser
+gdkit-mac-ibadditions/build/
 docs/
 docs/html/
 docs/latex/
