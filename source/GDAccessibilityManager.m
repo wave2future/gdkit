@@ -19,14 +19,12 @@ static GDAccessibilityManager * inst;
 	return AXAPIEnabled();
 }
 
-//internal
 - (GDAccessibilityOperationResult *) getAPIDisabledOperationResult {
 	GDAccessibilityOperationResult * res = [[[GDAccessibilityOperationResult alloc] init] autorelease];
 	[res setResultCode:kAXErrorAPIDisabled];
 	return res;
 }
 
-//internal
 - (GDAccessibilityOperationResult *) getCannotCreateValueOperationResult {
 	GDAccessibilityOperationResult * res = [[[GDAccessibilityOperationResult alloc] init] autorelease];
 	[res setResultCode:kAMCouldNotSetValue];
