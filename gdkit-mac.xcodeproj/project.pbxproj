@@ -68,8 +68,22 @@
 		07437E7B118A53BE00EAD978 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07437E7A118A53BE00EAD978 /* Carbon.framework */; };
 		07437E8E118A53F500EAD978 /* CrashReport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07437E8D118A53F500EAD978 /* CrashReport.xib */; };
 		07437E90118A53FF00EAD978 /* sendcrashreport.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */; };
+		0751CE321197849700B7453B /* GDTileView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0751CE301197849700B7453B /* GDTileView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0751CE331197849700B7453B /* GDTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751CE311197849700B7453B /* GDTileView.m */; };
+		075E81421191DEC300A4EA53 /* GDScale9Button.h in Headers */ = {isa = PBXBuildFile; fileRef = 075E81401191DEC300A4EA53 /* GDScale9Button.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075E81431191DEC300A4EA53 /* GDScale9Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E81411191DEC300A4EA53 /* GDScale9Button.m */; };
+		075E81461191DF6A00A4EA53 /* GDScale9ButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075E81471191DF6A00A4EA53 /* GDScale9ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E81451191DF6A00A4EA53 /* GDScale9ButtonCell.m */; };
+		075E82921191ED3700A4EA53 /* GDControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 075E82901191ED3700A4EA53 /* GDControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		075E82931191ED3700A4EA53 /* GDControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E82911191ED3700A4EA53 /* GDControl.m */; };
 		077EDA4A118A8449004ED780 /* GDPrintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDA49118A8449004ED780 /* GDPrintUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDA4C118A84A8004ED780 /* GDPrintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDA4B118A84A8004ED780 /* GDPrintUtils.m */; };
+		07D8AB0311955FC300266FED /* GDScale3View.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D8AB0111955FC300266FED /* GDScale3View.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07D8AB0411955FC300266FED /* GDScale3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8AB0211955FC300266FED /* GDScale3View.m */; };
+		07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC3FA7119263FC00607725 /* GDDrawingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3FA8119263FC00607725 /* GDDrawingUtils.m */; };
+		07FCE56211937E3200946548 /* GDScale9View.h in Headers */ = {isa = PBXBuildFile; fileRef = 07FCE56011937E3200946548 /* GDScale9View.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07FCE56311937E3200946548 /* GDScale9View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FCE56111937E3200946548 /* GDScale9View.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -136,8 +150,22 @@
 		07437E7A118A53BE00EAD978 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		07437E8D118A53F500EAD978 /* CrashReport.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CrashReport.xib; path = nibs/CrashReport.xib; sourceTree = "<group>"; };
 		07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; name = sendcrashreport.pyc; path = python/sendcrashreport.pyc; sourceTree = "<group>"; };
+		0751CE301197849700B7453B /* GDTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTileView.h; path = source/GDTileView.h; sourceTree = "<group>"; };
+		0751CE311197849700B7453B /* GDTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTileView.m; path = source/GDTileView.m; sourceTree = "<group>"; };
+		075E81401191DEC300A4EA53 /* GDScale9Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9Button.h; path = source/GDScale9Button.h; sourceTree = "<group>"; };
+		075E81411191DEC300A4EA53 /* GDScale9Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9Button.m; path = source/GDScale9Button.m; sourceTree = "<group>"; };
+		075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9ButtonCell.h; path = source/GDScale9ButtonCell.h; sourceTree = "<group>"; };
+		075E81451191DF6A00A4EA53 /* GDScale9ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9ButtonCell.m; path = source/GDScale9ButtonCell.m; sourceTree = "<group>"; };
+		075E82901191ED3700A4EA53 /* GDControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDControl.h; path = source/GDControl.h; sourceTree = "<group>"; };
+		075E82911191ED3700A4EA53 /* GDControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDControl.m; path = source/GDControl.m; sourceTree = "<group>"; };
 		077EDA49118A8449004ED780 /* GDPrintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDPrintUtils.h; path = source/GDPrintUtils.h; sourceTree = "<group>"; };
 		077EDA4B118A84A8004ED780 /* GDPrintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDPrintUtils.m; path = source/GDPrintUtils.m; sourceTree = "<group>"; };
+		07D8AB0111955FC300266FED /* GDScale3View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3View.h; path = source/GDScale3View.h; sourceTree = "<group>"; };
+		07D8AB0211955FC300266FED /* GDScale3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3View.m; path = source/GDScale3View.m; sourceTree = "<group>"; };
+		07DC3FA7119263FC00607725 /* GDDrawingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDrawingUtils.h; path = source/GDDrawingUtils.h; sourceTree = "<group>"; };
+		07DC3FA8119263FC00607725 /* GDDrawingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDrawingUtils.m; path = source/GDDrawingUtils.m; sourceTree = "<group>"; };
+		07FCE56011937E3200946548 /* GDScale9View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9View.h; path = source/GDScale9View.h; sourceTree = "<group>"; };
+		07FCE56111937E3200946548 /* GDScale9View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9View.m; path = source/GDScale9View.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -153,8 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				07437E7B118A53BE00EAD978 /* Carbon.framework in Frameworks */,
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +253,10 @@
 				07437D89118A525700EAD978 /* GDCarbonEventManager.h */,
 				07437D8B118A525700EAD978 /* GDCliProxy.h */,
 				07437D8D118A525700EAD978 /* GDCliProxyConnector.h */,
+				075E82901191ED3700A4EA53 /* GDControl.h */,
 				07437D8F118A525700EAD978 /* GDCrashReporter.h */,
 				07437D91118A525700EAD978 /* GDCrashReporterDelegate.h */,
+				07DC3FA7119263FC00607725 /* GDDrawingUtils.h */,
 				07437E0A118A52BE00EAD978 /* GDKit-Mac.h */,
 				07437D94118A525700EAD978 /* GDKit.h */,
 				32DBCF5E0370ADEE00C91783 /* gdkit_mac_Prefix.pch */,
@@ -237,7 +267,12 @@
 				077EDA49118A8449004ED780 /* GDPrintUtils.h */,
 				07437D9D118A525700EAD978 /* GDQuartzDisplay.h */,
 				07437D9F118A525700EAD978 /* GDQuartzUtils.h */,
+				07D8AB0111955FC300266FED /* GDScale3View.h */,
+				075E81401191DEC300A4EA53 /* GDScale9Button.h */,
+				075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */,
+				07FCE56011937E3200946548 /* GDScale9View.h */,
 				07437DA1118A525700EAD978 /* GDSoundController.h */,
+				0751CE301197849700B7453B /* GDTileView.h */,
 				07437DA3118A525700EAD978 /* GDULimit.h */,
 				07437DA5118A525700EAD978 /* macros.h */,
 				07437DA6118A525700EAD978 /* NSFileHandle+Additions.h */,
@@ -265,7 +300,9 @@
 				07437D8A118A525700EAD978 /* GDCarbonEventManager.m */,
 				07437D8C118A525700EAD978 /* GDCliProxy.m */,
 				07437D8E118A525700EAD978 /* GDCliProxyConnector.m */,
+				075E82911191ED3700A4EA53 /* GDControl.m */,
 				07437D90118A525700EAD978 /* GDCrashReporter.m */,
+				07DC3FA8119263FC00607725 /* GDDrawingUtils.m */,
 				07437D96118A525700EAD978 /* GDMainMenuController.m */,
 				07437D98118A525700EAD978 /* GDNSTaskOperation.m */,
 				07437D9A118A525700EAD978 /* GDOperation.m */,
@@ -273,7 +310,12 @@
 				077EDA4B118A84A8004ED780 /* GDPrintUtils.m */,
 				07437D9E118A525700EAD978 /* GDQuartzDisplay.m */,
 				07437DA0118A525700EAD978 /* GDQuartzUtils.m */,
+				07D8AB0211955FC300266FED /* GDScale3View.m */,
+				075E81411191DEC300A4EA53 /* GDScale9Button.m */,
+				075E81451191DF6A00A4EA53 /* GDScale9ButtonCell.m */,
+				07FCE56111937E3200946548 /* GDScale9View.m */,
 				07437DA2118A525700EAD978 /* GDSoundController.m */,
+				0751CE311197849700B7453B /* GDTileView.m */,
 				07437DA4118A525700EAD978 /* GDULimit.m */,
 				07437DA7118A525700EAD978 /* NSFileHandle+Additions.m */,
 				07437DA9118A525700EAD978 /* NSFileManager+Additions.m */,
@@ -304,8 +346,10 @@
 				07437DD0118A525700EAD978 /* GDCarbonEventManager.h in Headers */,
 				07437DD2118A525700EAD978 /* GDCliProxy.h in Headers */,
 				07437DD4118A525700EAD978 /* GDCliProxyConnector.h in Headers */,
+				075E82921191ED3700A4EA53 /* GDControl.h in Headers */,
 				07437DD6118A525700EAD978 /* GDCrashReporter.h in Headers */,
 				07437DD8118A525700EAD978 /* GDCrashReporterDelegate.h in Headers */,
+				07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */,
 				07437E0B118A52BE00EAD978 /* GDKit-Mac.h in Headers */,
 				07437DDB118A525700EAD978 /* GDKit.h in Headers */,
 				07437DDC118A525700EAD978 /* GDMainMenuController.h in Headers */,
@@ -315,7 +359,12 @@
 				077EDA4A118A8449004ED780 /* GDPrintUtils.h in Headers */,
 				07437DE4118A525700EAD978 /* GDQuartzDisplay.h in Headers */,
 				07437DE6118A525700EAD978 /* GDQuartzUtils.h in Headers */,
+				07D8AB0311955FC300266FED /* GDScale3View.h in Headers */,
+				075E81421191DEC300A4EA53 /* GDScale9Button.h in Headers */,
+				075E81461191DF6A00A4EA53 /* GDScale9ButtonCell.h in Headers */,
+				07FCE56211937E3200946548 /* GDScale9View.h in Headers */,
 				07437DE8118A525700EAD978 /* GDSoundController.h in Headers */,
+				0751CE321197849700B7453B /* GDTileView.h in Headers */,
 				07437DEA118A525700EAD978 /* GDULimit.h in Headers */,
 				07437DEC118A525700EAD978 /* macros.h in Headers */,
 				07437DED118A525700EAD978 /* NSFileHandle+Additions.h in Headers */,
@@ -396,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/doxygen docs/doxygenconfig";
+			shellScript = "#/usr/local/bin/doxygen docs/doxygenconfig";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -433,6 +482,13 @@
 				07437DFA118A525700EAD978 /* NSWorkspace+Additions.m in Sources */,
 				07437DFC118A525700EAD978 /* OSType.m in Sources */,
 				077EDA4C118A84A8004ED780 /* GDPrintUtils.m in Sources */,
+				075E81431191DEC300A4EA53 /* GDScale9Button.m in Sources */,
+				075E81471191DF6A00A4EA53 /* GDScale9ButtonCell.m in Sources */,
+				075E82931191ED3700A4EA53 /* GDControl.m in Sources */,
+				07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */,
+				07FCE56311937E3200946548 /* GDScale9View.m in Sources */,
+				07D8AB0411955FC300266FED /* GDScale3View.m in Sources */,
+				0751CE331197849700B7453B /* GDTileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +513,10 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -464,6 +524,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = source/gdkit_mac_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = GDIncludeInterfaceBuilderTemplateDrawing;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				PRODUCT_NAME = GDKit;
@@ -478,10 +539,15 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = source/gdkit_mac_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = GDIncludeInterfaceBuilderTemplateDrawing;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				PRODUCT_NAME = GDKit;

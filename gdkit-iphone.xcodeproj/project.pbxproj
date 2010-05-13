@@ -235,7 +235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/doxygen docs/doxygenconfig";
+			shellScript = "#/usr/local/bin/doxygen docs/doxygenconfig";
 		};
 /* End PBXShellScriptBuildPhase section */
 
