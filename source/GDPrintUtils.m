@@ -18,6 +18,18 @@ void GDPrintNSTask(NSTask * task) {
 	NSLog(@"%@",owt);
 }
 
+NSString * GDPrintGetPrintedNSRect(NSRect _rect) {
+	return [NSString stringWithFormat:@"NSRect(x:%g, y:%g, w:%g, h:%g)",_rect.origin.x,_rect.origin.y,_rect.size.width,_rect.size.height];
+}
+
+NSString * GDPrintGetPrintedNSSize(NSSize _size) {
+	return [NSString stringWithFormat:@"NSSize(w:%g, h:%g)",_size.width,_size.height];
+}
+
+NSString * GDPrintGetPrintedNSPoint(NSPoint _point) {
+	return [NSString stringWithFormat:@"NSPoint(x:%g, y:%g)",_point.x,_point.y];
+}
+
 #endif
 
 #if TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR

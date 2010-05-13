@@ -30,6 +30,12 @@
  */
 void GDPrintNSTask(NSTask * task);
 
+NSString * GDPrintGetPrintedNSRect(NSRect _rect);
+
+NSString * GDPrintGetPrintedNSSize(NSSize _size);
+
+NSString * GDPrintGetPrintedNSPoint(NSPoint _point);
+
 /**
  * Prints an NSRect formatted like: NSRect(x:%g, y:%g, w:%g, h:%g).
  */
