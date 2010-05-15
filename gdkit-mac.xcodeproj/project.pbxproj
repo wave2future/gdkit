@@ -70,6 +70,8 @@
 		07437E90118A53FF00EAD978 /* sendcrashreport.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */; };
 		0751CE321197849700B7453B /* GDTileView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0751CE301197849700B7453B /* GDTileView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0751CE331197849700B7453B /* GDTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751CE311197849700B7453B /* GDTileView.m */; };
+		07585526119BEA1E00EEFC0B /* GDGradientBoxView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07585527119BEA1E00EEFC0B /* GDGradientBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07585525119BEA1E00EEFC0B /* GDGradientBoxView.m */; };
 		075E81421191DEC300A4EA53 /* GDScale9Button.h in Headers */ = {isa = PBXBuildFile; fileRef = 075E81401191DEC300A4EA53 /* GDScale9Button.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075E81431191DEC300A4EA53 /* GDScale9Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E81411191DEC300A4EA53 /* GDScale9Button.m */; };
 		075E81461191DF6A00A4EA53 /* GDScale9ButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,6 +80,10 @@
 		075E82931191ED3700A4EA53 /* GDControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E82911191ED3700A4EA53 /* GDControl.m */; };
 		077EDA4A118A8449004ED780 /* GDPrintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDA49118A8449004ED780 /* GDPrintUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDA4C118A84A8004ED780 /* GDPrintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDA4B118A84A8004ED780 /* GDPrintUtils.m */; };
+		07C52C1A119DD3780094F844 /* GDScale3Button.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C52C18119DD3780094F844 /* GDScale3Button.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C52C19119DD3780094F844 /* GDScale3Button.m */; };
+		07C52C1E119DD3870094F844 /* GDScale3ButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C52C1C119DD3870094F844 /* GDScale3ButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C52C1D119DD3870094F844 /* GDScale3ButtonCell.m */; };
 		07D8AB0311955FC300266FED /* GDScale3View.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D8AB0111955FC300266FED /* GDScale3View.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07D8AB0411955FC300266FED /* GDScale3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8AB0211955FC300266FED /* GDScale3View.m */; };
 		07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC3FA7119263FC00607725 /* GDDrawingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,6 +158,8 @@
 		07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; name = sendcrashreport.pyc; path = python/sendcrashreport.pyc; sourceTree = "<group>"; };
 		0751CE301197849700B7453B /* GDTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTileView.h; path = source/GDTileView.h; sourceTree = "<group>"; };
 		0751CE311197849700B7453B /* GDTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTileView.m; path = source/GDTileView.m; sourceTree = "<group>"; };
+		07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGradientBoxView.h; path = source/GDGradientBoxView.h; sourceTree = "<group>"; };
+		07585525119BEA1E00EEFC0B /* GDGradientBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGradientBoxView.m; path = source/GDGradientBoxView.m; sourceTree = "<group>"; };
 		075E81401191DEC300A4EA53 /* GDScale9Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9Button.h; path = source/GDScale9Button.h; sourceTree = "<group>"; };
 		075E81411191DEC300A4EA53 /* GDScale9Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9Button.m; path = source/GDScale9Button.m; sourceTree = "<group>"; };
 		075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9ButtonCell.h; path = source/GDScale9ButtonCell.h; sourceTree = "<group>"; };
@@ -160,6 +168,10 @@
 		075E82911191ED3700A4EA53 /* GDControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDControl.m; path = source/GDControl.m; sourceTree = "<group>"; };
 		077EDA49118A8449004ED780 /* GDPrintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDPrintUtils.h; path = source/GDPrintUtils.h; sourceTree = "<group>"; };
 		077EDA4B118A84A8004ED780 /* GDPrintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDPrintUtils.m; path = source/GDPrintUtils.m; sourceTree = "<group>"; };
+		07C52C18119DD3780094F844 /* GDScale3Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3Button.h; path = source/GDScale3Button.h; sourceTree = "<group>"; };
+		07C52C19119DD3780094F844 /* GDScale3Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3Button.m; path = source/GDScale3Button.m; sourceTree = "<group>"; };
+		07C52C1C119DD3870094F844 /* GDScale3ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3ButtonCell.h; path = source/GDScale3ButtonCell.h; sourceTree = "<group>"; };
+		07C52C1D119DD3870094F844 /* GDScale3ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3ButtonCell.m; path = source/GDScale3ButtonCell.m; sourceTree = "<group>"; };
 		07D8AB0111955FC300266FED /* GDScale3View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3View.h; path = source/GDScale3View.h; sourceTree = "<group>"; };
 		07D8AB0211955FC300266FED /* GDScale3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3View.m; path = source/GDScale3View.m; sourceTree = "<group>"; };
 		07DC3FA7119263FC00607725 /* GDDrawingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDrawingUtils.h; path = source/GDDrawingUtils.h; sourceTree = "<group>"; };
@@ -257,6 +269,7 @@
 				07437D8F118A525700EAD978 /* GDCrashReporter.h */,
 				07437D91118A525700EAD978 /* GDCrashReporterDelegate.h */,
 				07DC3FA7119263FC00607725 /* GDDrawingUtils.h */,
+				07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */,
 				07437E0A118A52BE00EAD978 /* GDKit-Mac.h */,
 				07437D94118A525700EAD978 /* GDKit.h */,
 				32DBCF5E0370ADEE00C91783 /* gdkit_mac_Prefix.pch */,
@@ -267,6 +280,8 @@
 				077EDA49118A8449004ED780 /* GDPrintUtils.h */,
 				07437D9D118A525700EAD978 /* GDQuartzDisplay.h */,
 				07437D9F118A525700EAD978 /* GDQuartzUtils.h */,
+				07C52C18119DD3780094F844 /* GDScale3Button.h */,
+				07C52C1C119DD3870094F844 /* GDScale3ButtonCell.h */,
 				07D8AB0111955FC300266FED /* GDScale3View.h */,
 				075E81401191DEC300A4EA53 /* GDScale9Button.h */,
 				075E81441191DF6A00A4EA53 /* GDScale9ButtonCell.h */,
@@ -303,6 +318,7 @@
 				075E82911191ED3700A4EA53 /* GDControl.m */,
 				07437D90118A525700EAD978 /* GDCrashReporter.m */,
 				07DC3FA8119263FC00607725 /* GDDrawingUtils.m */,
+				07585525119BEA1E00EEFC0B /* GDGradientBoxView.m */,
 				07437D96118A525700EAD978 /* GDMainMenuController.m */,
 				07437D98118A525700EAD978 /* GDNSTaskOperation.m */,
 				07437D9A118A525700EAD978 /* GDOperation.m */,
@@ -310,6 +326,8 @@
 				077EDA4B118A84A8004ED780 /* GDPrintUtils.m */,
 				07437D9E118A525700EAD978 /* GDQuartzDisplay.m */,
 				07437DA0118A525700EAD978 /* GDQuartzUtils.m */,
+				07C52C19119DD3780094F844 /* GDScale3Button.m */,
+				07C52C1D119DD3870094F844 /* GDScale3ButtonCell.m */,
 				07D8AB0211955FC300266FED /* GDScale3View.m */,
 				075E81411191DEC300A4EA53 /* GDScale9Button.m */,
 				075E81451191DF6A00A4EA53 /* GDScale9ButtonCell.m */,
@@ -350,6 +368,7 @@
 				07437DD6118A525700EAD978 /* GDCrashReporter.h in Headers */,
 				07437DD8118A525700EAD978 /* GDCrashReporterDelegate.h in Headers */,
 				07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */,
+				07585526119BEA1E00EEFC0B /* GDGradientBoxView.h in Headers */,
 				07437E0B118A52BE00EAD978 /* GDKit-Mac.h in Headers */,
 				07437DDB118A525700EAD978 /* GDKit.h in Headers */,
 				07437DDC118A525700EAD978 /* GDMainMenuController.h in Headers */,
@@ -359,6 +378,8 @@
 				077EDA4A118A8449004ED780 /* GDPrintUtils.h in Headers */,
 				07437DE4118A525700EAD978 /* GDQuartzDisplay.h in Headers */,
 				07437DE6118A525700EAD978 /* GDQuartzUtils.h in Headers */,
+				07C52C1A119DD3780094F844 /* GDScale3Button.h in Headers */,
+				07C52C1E119DD3870094F844 /* GDScale3ButtonCell.h in Headers */,
 				07D8AB0311955FC300266FED /* GDScale3View.h in Headers */,
 				075E81421191DEC300A4EA53 /* GDScale9Button.h in Headers */,
 				075E81461191DF6A00A4EA53 /* GDScale9ButtonCell.h in Headers */,
@@ -489,6 +510,9 @@
 				07FCE56311937E3200946548 /* GDScale9View.m in Sources */,
 				07D8AB0411955FC300266FED /* GDScale3View.m in Sources */,
 				0751CE331197849700B7453B /* GDTileView.m in Sources */,
+				07585527119BEA1E00EEFC0B /* GDGradientBoxView.m in Sources */,
+				07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */,
+				07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

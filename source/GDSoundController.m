@@ -6,14 +6,14 @@
 
 - (void) pop {
 	if(popSound is nil) popSound=[[NSSound soundNamed:@"Pop"] retain];
-	@synchronized(self) {
+	@synchronized(popSound) {
 		[popSound play];
 	}
 }
 
 - (void) popAtVolume:(float) _volume {
 	if(popSound is nil) popSound=[[NSSound soundNamed:@"Pop"] retain];
-	@synchronized(self) {
+	@synchronized(popSound) {
 		float _vol = [popSound volume];
 		[popSound setVolume:_volume];
 		[popSound play];

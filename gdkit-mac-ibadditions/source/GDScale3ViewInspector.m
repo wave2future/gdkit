@@ -8,16 +8,11 @@
 }
 
 - (NSString *) label {
-	return @"Scale3 View Attributes";
+	return @"Scale Three View Attributes";
 }
 
 - (NSString *) viewNibName {
 	return @"Scale3ViewInspector";
-}
-
-- (void) refresh {
-	//NSLog(@"refresh");
-	[super refresh];
 }
 
 @end

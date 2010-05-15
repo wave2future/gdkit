@@ -1,37 +1,38 @@
 
-#import "GDScale9ButtonCell.h"
+#import "GDScale3ButtonCell.h"
 
-static int defaultCornerWidth = 7;
-static int defaultCornerHeight = 7;
+static int defaultSliceSizeWidth = 7;
+static int defaultSliceSizeHeight = 7;
 
-@implementation GDScale9ButtonCell
+@implementation GDScale3ButtonCell
 @synthesize upImage;
 @synthesize downImage;
-@synthesize cornerSize;
+@synthesize sliceSize;
 @synthesize upImageName;
 @synthesize downImageName;
-@synthesize cornerSizeHeight;
-@synthesize cornerSizeWidth;
+@synthesize sliceSizeHeight;
+@synthesize sliceSizeWidth;
+@synthesize vertical;
 
-+ (void) setDefaultCornerWidth:(int) width {
-	defaultCornerWidth = width;
++ (void) setDefaultSliceSizeWidth:(int) width {
+	defaultSliceSizeWidth = width;
 }
 
-+ (void) setDefaultCornerHeight:(int) height {
-	defaultCornerHeight = height;
++ (void) setDefaultSliceSizeHeight:(int) height {
+	defaultSliceSizeHeight = height;
 }
 
-+ (int) defaultCornerWidth {
-	return defaultCornerWidth;
++ (int) defaultSliceSizeWidth {
+	return defaultSliceSizeWidth;
 }
 
-+ (int) defaultCornerHeight {
-	return defaultCornerHeight;
++ (int) defaultSliceSizeHeight {
+	return defaultSliceSizeHeight;
 }
 
 - (id) copyWithZone:(NSZone *) zone {
-	GDScale9ButtonCell * copy;
-	copy = (GDScale9ButtonCell*)[super copyWithZone:zone];
+	GDScale3ButtonCell * copy;
+	copy = (GDScale3ButtonCell*)[super copyWithZone:zone];
 	copy->upImage = nil;
 	copy->downImage = nil;
 	copy->upSlices = nil;
@@ -46,6 +47,8 @@ static int defaultCornerHeight = 7;
 	copy->decoding = false;
 	copy->upImageNameChanged = false;
 	copy->downImageNameChanged = false;
+	copy->vertical = vertical;
+	copy->changedOrientation = false;
 	[copy setUpImage:upImage];
 	[copy setDownImage:downImage];
 	[copy setUpImageName:upImageName];
@@ -60,8 +63,8 @@ static int defaultCornerHeight = 7;
 	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
 	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
 	fileManager = [NSFileManager defaultManager];
-	if(cornerSize.width < 1) cornerSize.width = defaultCornerWidth;
-	if(cornerSize.height < 1) cornerSize.height = defaultCornerHeight;
+	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
+	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
 	[self setBezelStyle:NSRegularSquareBezelStyle];
 	return self;
 }
@@ -75,14 +78,15 @@ static int defaultCornerHeight = 7;
 	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
 	fileManager = [NSFileManager defaultManager];
 	decoding = true;
-	if([unarchiver containsValueForKey:@"GDScale9ButtonCell.upImageName"]) [self setUpImageName:[unarchiver decodeObjectForKey:@"GDScale9ButtonCell.upImageName"]];
-	if([unarchiver containsValueForKey:@"GDScale9ButtonCell.downImageName"]) [self setDownImageName:[unarchiver decodeObjectForKey:@"GDScale9ButtonCell.downImageName"]];
-	if([unarchiver containsValueForKey:@"GDScale9ButtonCell.cornerSize.width"]) cornerSize.width = [unarchiver decodeIntegerForKey:@"GDScale9ButtonCell.cornerSize.width"];
-	if([unarchiver containsValueForKey:@"GDScale9ButtonCell.cornerSize.height"]) cornerSize.height = [unarchiver decodeIntegerForKey:@"GDScale9ButtonCell.cornerSize.height"];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.upImageName"]) [self setUpImageName:[unarchiver decodeObjectForKey:@"GDScale3ButtonCell.upImageName"]];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.downImageName"]) [self setDownImageName:[unarchiver decodeObjectForKey:@"GDScale3ButtonCell.downImageName"]];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.sliceSize.width"]) sliceSize.width = [unarchiver decodeIntegerForKey:@"GDScale3ButtonCell.sliceSize.width"];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.sliceSize.height"]) sliceSize.height = [unarchiver decodeIntegerForKey:@"GDScale3ButtonCell.sliceSize.height"];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.vertical"]) vertical = [unarchiver decodeBoolForKey:@"GDScale3ButtonCell.vertical"];
 	if(!upImage && upImageName) [self setUpImage:[NSImage imageNamed:upImageName]];
 	if(!downImage && downImageName) [self setDownImage:[NSImage imageNamed:downImageName]];
-	if(cornerSize.width < 1) cornerSize.width = defaultCornerWidth;
-	if(cornerSize.height < 1) cornerSize.height = defaultCornerHeight;
+	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
+	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
 	[self setBezelStyle:NSRegularSquareBezelStyle];
 	decoding = false;
 	if([self controlView]) [[self controlView] setNeedsDisplay:true];
@@ -92,41 +96,41 @@ static int defaultCornerHeight = 7;
 - (void) encodeWithCoder:(NSCoder *) _coder {
 	[super encodeWithCoder:_coder];
 	NSKeyedArchiver * archiver = (NSKeyedArchiver *)_coder;
-	[archiver encodeObject:upImageName forKey:@"GDScale9ButtonCell.upImageName"];
-	[archiver encodeObject:downImageName forKey:@"GDScale9ButtonCell.downImageName"];
-	[archiver encodeInteger:cornerSize.width forKey:@"GDScale9ButtonCell.cornerSize.width"];
-	[archiver encodeInteger:cornerSize.height forKey:@"GDScale9ButtonCell.cornerSize.height"];
+	[archiver encodeObject:upImageName forKey:@"GDScale3ButtonCell.upImageName"];
+	[archiver encodeObject:downImageName forKey:@"GDScale3ButtonCell.downImageName"];
+	[archiver encodeInteger:sliceSize.width forKey:@"GDScale3ButtonCell.sliceSize.width"];
+	[archiver encodeInteger:sliceSize.height forKey:@"GDScale3ButtonCell.sliceSize.height"];
 }
 
-- (float) cornerSizeWidth {
-	return cornerSize.width;
+- (float) sliceSizeWidth {
+	return sliceSize.width;
 }
 
-- (void) setCornerSizeWidth:(float) _width {
-	if(cornerSize.width != _width) {
-		cornerSize.width = _width;
+- (void) setsliceSizeWidth:(float) _width {
+	if(sliceSize.width != _width) {
+		sliceSize.width = _width;
 		reslice = true;
 		if(!decoding) if([self controlView]) [[self controlView] setNeedsDisplay:true];
 	}
 }
 
-- (float) cornerSizeHeight {
-	return cornerSize.height;
+- (float) sliceSizeHeight {
+	return sliceSize.height;
 }
 
-- (void) setCornerSizeHeight:(float) _height {
-	if(cornerSize.height != _height) {
-		cornerSize.height = _height;
+- (void) setsliceSizeHeight:(float) _height {
+	if(sliceSize.height != _height) {
+		sliceSize.height = _height;
 		reslice = true;
 		if(!decoding) if([self controlView]) [[self controlView] setNeedsDisplay:true];
 	}
 }
 
-- (void) setCornerSize:(NSSize) _size {
-	if(cornerSize.width != _size.width || cornerSize.height != _size.height) {
-		cornerSize = _size;
-		if(cornerSize.width < 1) cornerSize.width = defaultCornerWidth;
-		if(cornerSize.height < 1) cornerSize.height = defaultCornerHeight;
+- (void) setsliceSize:(NSSize) _size {
+	if(sliceSize.width != _size.width || sliceSize.height != _size.height) {
+		sliceSize = _size;
+		if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
+		if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
 		reslice = true;
 		if(!decoding && [self controlView]) [[self controlView] setNeedsDisplay:true];
 	}
@@ -170,13 +174,22 @@ static int defaultCornerHeight = 7;
 	}
 }
 
+- (void) setVertical:(Boolean) _vertical {
+	if(vertical != _vertical) {
+		vertical = _vertical;
+		reslice = true;
+		changedOrientation = true;
+		if(!decoding && [self controlView])  [[self controlView] setNeedsDisplay:true];
+	}
+}
+
 - (void) drawBezelWithFrame:(NSRect) frame inView:(NSView *) controlView {
 	frame = NSInsetRect(frame,2,2);
 	frame.size.height -= 2;
 	NSString * path;
 	if(!upImage && upImageName) upImage = [[NSImage imageNamed:upImageName] retain];
 	if(!downImage && downImageName) downImage = [[NSImage imageNamed:downImageName] retain];
-	if(upImageNameChanged) {
+	if(upImageNameChanged || changedOrientation) {
 		upImageNameChanged = false;
 		GDRelease(upImage);
 		upImage = [[NSImage imageNamed:upImageName] retain];
@@ -184,12 +197,13 @@ static int defaultCornerHeight = 7;
 			if(!document) document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
 			upImage = [[document performSelector:@selector(documentImageNamed:) withObject:[upImageName stringByDeletingPathExtension]] retain];
 			if(!upImage) {
-				path = [gdKitIBBundle pathForResource:@"scale_nine_button_icon" ofType:@"png"];
+				if(!vertical) path = [gdKitIBBundle pathForResource:@"scale_three_button_icon_horizontal" ofType:@"png"];
+				else path = [gdKitIBBundle pathForResource:@"scale_three_button_icon_vertical" ofType:@"png"];
 				if([fileManager fileExistsAtPath:path]) upImage = [[NSImage alloc] initWithContentsOfFile:path];
 			}
 		}
 	}
-	if(downImageNameChanged) {
+	if(downImageNameChanged || changedOrientation) {
 		downImageNameChanged = false;
 		GDRelease(downImage);
 		downImage = [[NSImage imageNamed:downImageName] retain];
@@ -197,7 +211,8 @@ static int defaultCornerHeight = 7;
 			if(!document) document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
 			downImage = [[document performSelector:@selector(documentImageNamed:) withObject:[downImageName stringByDeletingPathExtension]] retain];
 			if(!downImage) {
-				path = [gdKitIBBundle pathForResource:@"scale_nine_button_icon_down" ofType:@"png"];
+				if(!vertical) path = [gdKitIBBundle pathForResource:@"scale_three_button_icon_horizontal_down" ofType:@"png"];
+				else path = [gdKitIBBundle pathForResource:@"scale_three_button_icon_vertical_down" ofType:@"png"];
 				if([fileManager fileExistsAtPath:path]) downImage = [[NSImage alloc] initWithContentsOfFile:path];
 			}
 		}
@@ -212,12 +227,12 @@ static int defaultCornerHeight = 7;
 	}
 	if((resliceDown || reslice || lastDownSlicedImage != downImage) && downImage) {
 		GDRelease(downSlices);
-		downSlices = [sliceImageForDrawNine(downImage,cornerSize) retain];
+		downSlices = [sliceImageForDrawThree(downImage,sliceSize,vertical) retain];
 		lastDownSlicedImage = downImage;
 	}
 	if((resliceUp || reslice || lastUpSlicedImage != upImage) && upImage) {
 		GDRelease(upSlices);
-		upSlices = [sliceImageForDrawNine(upImage,cornerSize) retain];
+		upSlices = [sliceImageForDrawThree(upImage,sliceSize,vertical) retain];
 		lastUpSlicedImage = upImage;
 	}
 	sourceSlices = nil;
@@ -226,11 +241,8 @@ static int defaultCornerHeight = 7;
 	if([self isHighlighted] && (!downImage || !downSlices) && upSlices) sourceSlices = upSlices;
 	if(![self isHighlighted] && upSlices) sourceSlices = upSlices;
 	if(![self isHighlighted] && (!upSlices || !upImage)) sourceSlices = nil;
-	if(!sourceSlices || [sourceSlices count] < 9) return;
-	NSDrawNinePartImage(frame,[sourceSlices objectAtIndex:0],[sourceSlices objectAtIndex:1],[sourceSlices objectAtIndex:2],
-						[sourceSlices objectAtIndex:3],[sourceSlices objectAtIndex:4],[sourceSlices objectAtIndex:5],
-						[sourceSlices objectAtIndex:6],[sourceSlices objectAtIndex:7],[sourceSlices objectAtIndex:8],
-						NSCompositeSourceOver,1,[controlView isFlipped]);
+	if(!sourceSlices || [sourceSlices count] < 3) return;
+	NSDrawThreePartImage(frame,[sourceSlices objectAtIndex:0],[sourceSlices objectAtIndex:1],[sourceSlices objectAtIndex:2],vertical,NSCompositeSourceOver,1,[controlView isFlipped]);
 }
 
 - (void) dealloc {
@@ -246,8 +258,8 @@ static int defaultCornerHeight = 7;
 	fileManager = nil;
 	lastUpSlicedImage = nil;
 	lastDownSlicedImage = nil;
-	cornerSizeWidth = 0;
-	cornerSizeHeight = 0;
+	sliceSizeWidth = 0;
+	sliceSizeHeight = 0;
 	IBDocument = 0;
 	isInInterfaceBuilder = false;
 	decoding = false;
@@ -256,7 +268,8 @@ static int defaultCornerHeight = 7;
 	resliceDown = false;
 	upImageNameChanged = false;
 	downImageNameChanged = false;
-	cornerSize = NSZeroSize;
+	changedOrientation = false;
+	sliceSize = NSZeroSize;
 	[super dealloc];
 }
 

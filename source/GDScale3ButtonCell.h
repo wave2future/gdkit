@@ -1,12 +1,11 @@
 
 #import <Cocoa/Cocoa.h>
-#import "macros.h"
-#import "GDPrintUtils.h"
 #import "GDDrawingUtils.h"
+#import "macros.h"
 
-@interface GDScale9ButtonCell : NSButtonCell {
+@interface GDScale3ButtonCell : NSButtonCell {
 	id document;
-	float cornerSizeWidth;
+	float sliceSizeWidth;
 	float cornerSizeHeight;
 	Class IBDocument;
 	Boolean isInInterfaceBuilder;
@@ -16,7 +15,9 @@
 	Boolean resliceDown;
 	Boolean upImageNameChanged;
 	Boolean downImageNameChanged;
-	NSSize cornerSize;
+	Boolean vertical;
+	Boolean changedOrientation;
+	NSSize sliceSize;
 	NSBundle * gdKitIBBundle;
 	NSFileManager * fileManager;
 	NSString * upImageName;
@@ -34,13 +35,14 @@
 @property (nonatomic,retain) NSImage * downImage;
 @property (nonatomic,copy) NSString * upImageName;
 @property (nonatomic,copy) NSString * downImageName;
-@property (nonatomic,assign) NSSize cornerSize;
-@property (nonatomic,assign) float cornerSizeWidth;
-@property (nonatomic,assign) float cornerSizeHeight;
+@property (nonatomic,assign) NSSize sliceSize;
+@property (nonatomic,assign) float sliceSizeWidth;
+@property (nonatomic,assign) float sliceSizeHeight;
+@property (nonatomic,assign) Boolean vertical;
 
-+ (void) setDefaultCornerWidth:(int) width;
-+ (void) setDefaultCornerHeight:(int) height;
-+ (int) defaultCornerWidth;
-+ (int) defaultCornerHeight;
++ (void) setDefaultSliceSizeWidth:(int) width;
++ (void) setDefaultSliceSizeHeight:(int) height;
++ (int) defaultSliceSizeWidth;
++ (int) defaultSliceSizeHeight;
 
 @end

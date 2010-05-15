@@ -5,16 +5,21 @@
 #import "GDDrawingUtils.h"
 
 @interface GDScale9View : NSView {
+	id document;
 	float cornerSizeWidth;
 	float cornerSizeHeight;
+	Class IBDocument;
 	Boolean decoding;
 	Boolean imageNameChanged;
 	Boolean reslice;
 	Boolean isInInterfaceBuilder;
+	NSFileManager * fileManager;
+	NSBundle * gdKitIBBundle;
 	NSSize cornerSize;
 	NSString * sourceImageName;
 	NSArray * slices;
 	NSImage * sourceImage;
+	NSImage * lastSlicedImage;
 }
 
 @property (nonatomic,retain) IBOutlet NSImage * sourceImage;

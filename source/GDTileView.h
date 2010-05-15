@@ -3,8 +3,13 @@
 #import "macros.h"
 
 @interface GDTileView : NSView {
+	id document;
 	Boolean decoding;
-	Boolean hasTileImageNameChanged;
+	Boolean imageNameChanged;
+	Boolean isInInterfaceBuilder;
+	Class IBDocument;
+	NSFileManager * fileManager;
+	NSBundle * gdKitIBBundle;
 	NSImage * tileImage;
 	NSString * tileImageName;
 }

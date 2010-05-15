@@ -46,7 +46,7 @@
 					<object class="NSButton" id="147328633">
 						<reference key="NSNextResponder" ref="284564925"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{112, 29}, {63, 18}}</string>
+						<string key="NSFrame">{{112, 30}, {63, 18}}</string>
 						<reference key="NSSuperview" ref="284564925"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="1039522595">
@@ -176,13 +176,13 @@
 					<object class="NSTextField" id="497719862">
 						<reference key="NSNextResponder" ref="284564925"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{8, 6}, {80, 14}}</string>
+						<string key="NSFrame">{{9, 7}, {80, 14}}</string>
 						<reference key="NSSuperview" ref="284564925"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="907919929">
 							<int key="NSCellFlags">67239488</int>
 							<int key="NSCellFlags2">4326400</int>
-							<string key="NSContents">Corner Size</string>
+							<string key="NSContents">Slice Size</string>
 							<object class="NSFont" key="NSSupport" id="503286907">
 								<string key="NSName">LucidaGrande-Bold</string>
 								<double key="NSSize">11</double>
@@ -589,7 +589,7 @@
 							<int key="affinity">0</int>
 						</object>
 					</object>
-					<string>{{661, 672}, {272, 77}}</string>
+					<string>{{696, 672}, {272, 77}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>

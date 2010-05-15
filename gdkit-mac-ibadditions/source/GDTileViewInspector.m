@@ -15,9 +15,4 @@
 	return @"TileViewInspector";
 }
 
-- (void) refresh {
-	//NSLog(@"refresh");
-	[super refresh];
-}
-
 @end

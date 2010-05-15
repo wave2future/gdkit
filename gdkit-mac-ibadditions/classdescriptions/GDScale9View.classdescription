@@ -1,11 +1,7 @@
 {
 	Actions = {
-		//define action descriptions here, for example
-		//"myAction:" = id;
 	};
 	Outlets = {
-		//define outlet descriptions here, for example
-		//myOutlet = NSView;
 		sourceImage = NSImage;
 	};
     ClassName = GDScale9View;

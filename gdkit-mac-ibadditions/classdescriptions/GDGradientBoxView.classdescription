@@ -2,8 +2,7 @@
 	Actions = {
 	};
 	Outlets = {
-		sourceImage = NSImage;
 	};
-    ClassName = GDScale3View;
+    ClassName = GDGradientBoxView;
     SuperClass = NSView;
 }

@@ -8,16 +8,11 @@
 }
 
 - (NSString *) label {
-	return @"Scale9 Button Attributes";
+	return @"Scale Nine Button Attributes";
 }
 
 - (NSString *) viewNibName {
 	return @"Scale9ButtonInspector";
-}
-
-- (void) refresh {
-	//NSLog(@"refresh");
-	[super refresh];
 }
 
 @end

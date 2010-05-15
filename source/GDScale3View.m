@@ -12,9 +12,29 @@ static int defaultSliceSizeHeight = 7;
 @synthesize sliceWidth;
 @synthesize sliceHeight;
 
++ (void) setDefaultSliceSizeWidth:(int) width {
+	defaultSliceSizeWidth = width;
+}
+
++ (void) setDefaultSliceSizeHeight:(int) height {
+	defaultSliceSizeHeight = height;
+}
+
++ (int) defaultSliceSizeWidth {
+	return defaultSliceSizeWidth;
+}
+
++ (int) defaultSliceSizeHeight {
+	return defaultSliceSizeHeight;
+}
+
 - (id) initWithCoder:(NSCoder *) _coder {
 	if(!(self=[super initWithCoder:_coder])) return nil;
 	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
 	NSKeyedUnarchiver * unarchiver = (NSKeyedUnarchiver *)_coder;
 	decoding = true;
 	if([unarchiver containsValueForKey:@"GDScale3View.sourceImageName"]) [self setSourceImageName:[unarchiver decodeObjectForKey:@"GDScale3View.sourceImageName"]];
@@ -26,7 +46,20 @@ static int defaultSliceSizeHeight = 7;
 	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
 	decoding = false;
 	reslice = true;
+	imageNameChanged = true;
 	[self setNeedsDisplay:true];
+	return self;
+}
+
+- (id) initWithFrame:(NSRect) framerect {
+	if(!(self=[super initWithFrame:framerect])) return nil;
+	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
+	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
+	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
 	return self;
 }
 
@@ -76,6 +109,7 @@ static int defaultSliceSizeHeight = 7;
 	if(![sourceImageName isEqual:_name]) {
 		[sourceImageName release];
 		sourceImageName = [_name copy];
+		imageNameChanged = true;
 		reslice	= true;
 		if(!decoding) [self setNeedsDisplay:true];
 	}
@@ -95,52 +129,62 @@ static int defaultSliceSizeHeight = 7;
 	if(vertical != _vertical) {
 		vertical = _vertical;
 		reslice	= true;
+		changedOrienation = true;
 		if(!decoding) [self setNeedsDisplay:true];
 	}
 }
 
 - (void) drawRect:(NSRect) dirtyrect {
 	[super drawRect:dirtyrect];
+	NSString * path;
 	if(!sourceImage && sourceImageName) sourceImage = [[NSImage imageNamed:sourceImageName] retain];
-	if(isInInterfaceBuilder) {
-		Class IBDocument = NSClassFromString(@"IBDocument");
-		id document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
-		if(document) {
-			if(imageNameChanged) {
-				imageNameChanged = false;
-				if(sourceImage) [sourceImage release];
-				sourceImage = [[document performSelector:@selector(documentImageNamed:) withObject:[sourceImageName stringByDeletingPathExtension]] retain];
-			}
+	if(imageNameChanged || changedOrienation) {
+		changedOrienation = false;
+		imageNameChanged = false;
+		GDRelease(sourceImage);
+		sourceImage = [[NSImage imageNamed:sourceImageName] retain];
+		if(!sourceImage && isInInterfaceBuilder) {
+			if(!document) document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+			sourceImage = [[document performSelector:@selector(documentImageNamed:) withObject:[sourceImageName stringByDeletingPathExtension]] retain];
 			if(!sourceImage) {
-				NSBundle * bundle = [NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"];
-				NSString * path = [bundle pathForResource:@"scale_three_view_icon_horizontal" ofType:@"png"];
-				NSFileManager * fm = [NSFileManager defaultManager];
-				if([fm fileExistsAtPath:path]) {
-					if(sourceImage) [sourceImage release];
-					sourceImage = [[NSImage alloc] initWithContentsOfFile:path];
-				}
+				if(!vertical) path = [gdKitIBBundle pathForResource:@"scale_three_view_icon_horizontal_large" ofType:@"png"];
+				else path = [gdKitIBBundle pathForResource:@"scale_three_view_icon_vertical_large" ofType:@"png"];
+				if([fileManager fileExistsAtPath:path]) sourceImage = [[NSImage alloc] initWithContentsOfFile:path];
 			}
 		}
 	}
 	if(!sourceImage) {
 		reslice = false;
+		imageNameChanged = false;
 		return;
 	}
-	if(reslice || !slices) {
+	if(reslice || lastSlicedImage != sourceImage || !slices) {
 		reslice = false;
 		[slices release];
 		slices = [sliceImageForDrawThree(sourceImage,sliceSize,vertical) retain];
+		lastSlicedImage = sourceImage;
 	}
 	if(slices) NSDrawThreePartImage([self bounds],[slices objectAtIndex:0],[slices objectAtIndex:1],[slices objectAtIndex:2],vertical,NSCompositeSourceOver,[self alphaValue],[self isFlipped]);
 }
 
 - (void) dealloc {
+	GDRelease(gdKitIBBundle);
 	GDRelease(slices);
 	GDRelease(sourceImage);
 	GDRelease(sourceImageName);
-	sliceSize=NSZeroSize;
-	decoding=false;
-	vertical=false;
+	sliceWidth = 0;
+	sliceHeight = 0;
+	document = nil;
+	IBDocument = nil;
+	lastSlicedImage = nil;
+	fileManager = nil;
+	decoding = false;
+	vertical = false;
+	reslice = false;
+	isInInterfaceBuilder = false;
+	imageNameChanged = false;
+	changedOrienation = false;
+	sliceSize = NSZeroSize;
 	[super dealloc];
 }
 

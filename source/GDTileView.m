@@ -8,10 +8,26 @@
 - (id) initWithCoder:(NSCoder *) _coder {
 	if(!(self=[super initWithCoder:_coder])) return nil;
 	NSKeyedUnarchiver * unarchiver = (NSKeyedUnarchiver *)_coder;
-	decoding=true;
+	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
+	decoding = true;
 	if([unarchiver containsValueForKey:@"GDTileView.tileImageName"]) [self setTileImageName:[unarchiver decodeObjectForKey:@"GDTileView.tileImageName"]];
-	decoding=false;
+	decoding = false;
+	imageNameChanged = true;
 	[self setNeedsDisplay:true];
+	return self;
+}
+
+- (id) initWithFrame:(NSRect) framerect {
+	if(!(self=[super initWithFrame:framerect])) return nil;
+	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
 	return self;
 }
 
@@ -33,28 +49,23 @@
 	if(tileImageName != _name) {
 		[tileImageName release];
 		tileImageName = [_name copy];
-		hasTileImageNameChanged = true;
+		imageNameChanged = true;
 		if(!decoding) [self setNeedsDisplay:true];
 	}
 }
 
 - (void) drawRect:(NSRect) dirtyrect {
 	[super drawRect:dirtyrect];
-	if([self respondsToSelector:@selector(ibPopulateKeyPaths:)]) {
-		Class IBDocument = NSClassFromString(@"IBDocument");
-		if(IBDocument) {
-			BOOL drawTemplate = false;
-			id document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
-			if(hasTileImageNameChanged) {
-				hasTileImageNameChanged = false;
-				if(tileImage) [tileImage release];
-				tileImage = [[document performSelector:@selector(documentImageNamed:) withObject:[tileImageName stringByDeletingPathExtension]] retain];
-			}
-			if(!tileImage) drawTemplate = true;
-			if(drawTemplate) {
-				NSBundle * bundle = [NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"];
-				NSString * path = [bundle pathForResource:@"diagonal_tile_small" ofType:@"png"];
-				if(path) tileImage = [[NSImage alloc] initWithContentsOfFile:path];
+	if(!tileImage && tileImageName) tileImage = [[NSImage imageNamed:tileImageName] retain];
+	if(imageNameChanged) {
+		GDRelease(tileImage);
+		tileImage = [[NSImage imageNamed:tileImageName] retain];
+		if(!tileImage && isInInterfaceBuilder) {
+			if(!document) document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+			tileImage = [[document performSelector:@selector(documentImageNamed:) withObject:[tileImageName stringByDeletingPathExtension]] retain];
+			if(!tileImage) {
+				NSString * path = [gdKitIBBundle pathForResource:@"diagonal_tile_small" ofType:@"png"];
+				if([fileManager fileExistsAtPath:path]) tileImage = [[NSImage alloc] initWithContentsOfFile:path];
 			}
 		}
 	}
@@ -75,8 +86,13 @@
 - (void) dealloc {
 	GDRelease(tileImage);
 	GDRelease(tileImageName);
-	hasTileImageNameChanged=false;
-	decoding=false;
+	GDRelease(gdKitIBBundle);
+	document = nil;
+	IBDocument = nil;
+	fileManager = nil;
+	imageNameChanged = false;
+	decoding = false;
+	isInInterfaceBuilder = false;
 	[super dealloc];
 }
 

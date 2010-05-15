@@ -11,7 +11,7 @@ static int defaultCornerHeight = 7;
 @synthesize cornerSizeWidth;
 @synthesize cornerSizeHeight;
 
-+ (void)  setDefaultCornerWidth:(int) width {
++ (void) setDefaultCornerWidth:(int) width {
 	defaultCornerWidth = width;
 }
 
@@ -31,16 +31,33 @@ static int defaultCornerHeight = 7;
 	if(!(self=[super initWithCoder:_coder])) return nil;
 	NSKeyedUnarchiver * unarchiver = (NSKeyedUnarchiver *)_coder;
 	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
-	decoding=true;
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
+	decoding = true;
 	if([unarchiver containsValueForKey:@"GDScale9View.sourceImageName"]) [self setSourceImageName:[unarchiver decodeObjectForKey:@"GDScale9View.sourceImageName"]];
 	if([unarchiver containsValueForKey:@"GDScale9View.cornerSize.width"]) cornerSize.width = [unarchiver decodeIntegerForKey:@"GDScale9View.cornerSize.width"];
 	if([unarchiver containsValueForKey:@"GDScale9View.cornerSize.height"]) cornerSize.height = [unarchiver decodeIntegerForKey:@"GDScale9View.cornerSize.height"];
-	if(!sourceImage && sourceImageName) sourceImage = [[NSImage imageNamed:sourceImageName] retain];
+	if(!sourceImage && sourceImageName) [self setSourceImage:[NSImage imageNamed:sourceImageName]];
 	if(cornerSize.width < 1) cornerSize.width = defaultCornerWidth;
 	if(cornerSize.height < 1) cornerSize.height = defaultCornerHeight;
-	decoding=false;
-	reslice=true;
+	decoding = false;
+	imageNameChanged = true;
+	reslice = true;
 	[self setNeedsDisplay:true];
+	return self;
+}
+
+- (id) initWithFrame:(NSRect) framerect {
+	if(!(self=[super initWithFrame:framerect])) return nil;
+	isInInterfaceBuilder = [self respondsToSelector:@selector(ibPopulateKeyPaths:)];
+	IBDocument = NSClassFromString(@"IBDocument");
+	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	fileManager = [NSFileManager defaultManager];
+	if(cornerSize.width < 1) cornerSize.width = defaultCornerWidth;
+	if(cornerSize.height < 1) cornerSize.height = defaultCornerHeight;
 	return self;
 }
 
@@ -110,23 +127,16 @@ static int defaultCornerHeight = 7;
 - (void) drawRect:(NSRect) dirtyrect {
 	[super drawRect:dirtyrect];
 	if(!sourceImage && sourceImageName) sourceImage = [[NSImage imageNamed:sourceImageName] retain];
-	if(isInInterfaceBuilder) {
-		Class IBDocument = NSClassFromString(@"IBDocument");
-		id document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
-		if(document) {
-			if(imageNameChanged) {
-				imageNameChanged = false;
-				if(sourceImage) [sourceImage release];
-				sourceImage = [[document performSelector:@selector(documentImageNamed:) withObject:[sourceImageName stringByDeletingPathExtension]] retain];
-			}
+	if(imageNameChanged) {
+		imageNameChanged = false;
+		GDRelease(sourceImage);
+		sourceImage = [[NSImage imageNamed:sourceImageName] retain];
+		if(!sourceImage && isInInterfaceBuilder) {
+			if(!document) document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
+			sourceImage = [[document performSelector:@selector(documentImageNamed:) withObject:[sourceImageName stringByDeletingPathExtension]] retain];
 			if(!sourceImage) {
-				NSBundle * bundle = [NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"];
-				NSString * path = [bundle pathForResource:@"scale_nine_view_icon" ofType:@"png"];
-				NSFileManager * fm = [NSFileManager defaultManager];
-				if([fm fileExistsAtPath:path]) {
-					if(sourceImage) [sourceImage release];
-					sourceImage = [[NSImage alloc] initWithContentsOfFile:path];
-				}
+				NSString * path = [gdKitIBBundle pathForResource:@"scale_nine_view_icon" ofType:@"png"];
+				if([fileManager fileExistsAtPath:path]) sourceImage = [[NSImage alloc] initWithContentsOfFile:path];
 			}
 		}
 	}
@@ -134,10 +144,11 @@ static int defaultCornerHeight = 7;
 		reslice = false;
 		return;
 	}
-	if(reslice || !slices) {
+	if(reslice || lastSlicedImage != sourceImage || !slices) {
 		reslice = false;
-		[slices release];
+		GDRelease(slices);
 		slices = [sliceImageForDrawNine(sourceImage,cornerSize) retain];
+		lastSlicedImage = sourceImage;
 	}
 	if(slices) {
 		NSDrawNinePartImage([self bounds],[slices objectAtIndex:0],[slices objectAtIndex:1],[slices objectAtIndex:2],
@@ -147,13 +158,20 @@ static int defaultCornerHeight = 7;
 }
 
 - (void) dealloc {
+	GDRelease(gdKitIBBundle);
+	GDRelease(sourceImageName);
 	GDRelease(slices);
 	GDRelease(sourceImage);
-	GDRelease(sourceImageName);
+	cornerSizeWidth = 0;
+	cornerSizeHeight = 0;
+	document = nil;
+	IBDocument = nil;
+	lastSlicedImage = nil;
+	fileManager = nil;
 	cornerSize = NSZeroSize;
 	decoding = false;
-	reslice = false;
 	imageNameChanged = false;
+	reslice = false;
 	isInInterfaceBuilder = false;
 	[super dealloc];
 }

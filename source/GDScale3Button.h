@@ -1,20 +1,21 @@
 
 #import <Cocoa/Cocoa.h>
-#import "GDScale9ButtonCell.h"
 
-@interface GDScale9Button : NSButton {
+@interface GDScale3Button : NSControl {
 }
 
-- (void) setCornerSize:(NSSize) _size;
+- (void) setSliceSize:(NSSize) _size;
 - (void) setUpImage:(NSImage *) _image;
 - (void) setDownImage:(NSImage *) _image;
 - (void) setDownImageName:(NSString *) _downImageName;
 - (void) setUpImageName:(NSString *) _upImageName;
-- (void) setCornerSizeWidth:(float) _width;
-- (void) setCornerSizeHeight:(float) _height;
-- (float) cornerSizeWidth;
-- (float) cornerSizeHeight;
-- (NSSize) cornerSize;
+- (void) setSliceSizeWidth:(float) _width;
+- (void) setSliceSizeHeight:(float) _height;
+- (void) setVertical:(Boolean) _vertical;
+- (float) sliceSizeWidth;
+- (float) sliceSizeHeight;
+- (Boolean) vertical;
+- (NSSize) sliceSize;
 - (NSImage *) upImage;
 - (NSImage *) downImage;
 - (NSString *) upImageName;
