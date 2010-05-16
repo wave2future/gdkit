@@ -22,7 +22,6 @@
 }
 
 - (void) crashReporterDidFinish:(id) sender {
-	NSLog(@"finished");
 	[crashReporter release];
 }
 

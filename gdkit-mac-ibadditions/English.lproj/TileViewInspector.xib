@@ -162,7 +162,7 @@
 					<object class="NSTextField" id="940818798">
 						<reference key="NSNextResponder" ref="701169830"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{8, 4}, {80, 14}}</string>
+						<string key="NSFrame">{{11, 5}, {80, 14}}</string>
 						<reference key="NSSuperview" ref="701169830"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="949113072">
@@ -320,7 +320,7 @@
 							<int key="affinity">0</int>
 						</object>
 					</object>
-					<string>{{564, 802}, {272, 25}}</string>
+					<string>{{575, 802}, {272, 25}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>

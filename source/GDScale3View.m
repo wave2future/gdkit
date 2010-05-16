@@ -6,6 +6,7 @@ static int defaultSliceSizeHeight = 7;
 
 @implementation GDScale3View
 @synthesize vertical;
+@synthesize horizontal;
 @synthesize sliceSize;
 @synthesize sourceImage;
 @synthesize sourceImageName;
@@ -41,6 +42,7 @@ static int defaultSliceSizeHeight = 7;
 	if([unarchiver containsValueForKey:@"GDScale3View.sliceSize.width"]) sliceSize.width = [unarchiver decodeIntegerForKey:@"GDScale3View.sliceSize.width"];
 	if([unarchiver containsValueForKey:@"GDScale3View.sliceSize.height"]) sliceSize.height = [unarchiver decodeIntegerForKey:@"GDScale3View.sliceSize.height"];
 	if([unarchiver containsValueForKey:@"GDScale3View.vertical"]) vertical = [unarchiver decodeBoolForKey:@"GDScale3View.vertical"];
+	if([unarchiver containsValueForKey:@"GDScale3View.horizontal"]) horizontal = [unarchiver decodeBoolForKey:@"GDScale3View.horizontal"];
 	if(!sourceImage && sourceImageName) sourceImage = [[NSImage imageNamed:sourceImageName] retain];
 	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
 	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
@@ -69,6 +71,7 @@ static int defaultSliceSizeHeight = 7;
 	if(sourceImageName)[archiver encodeObject:sourceImageName forKey:@"GDScale3View.sourceImageName"];
 	[archiver encodeInteger:sliceSize.width forKey:@"GDScale3View.sliceSize.width"];
 	[archiver encodeInteger:sliceSize.height forKey:@"GDScale3View.sliceSize.height"];
+	[archiver encodeBool:horizontal forKey:@"GDScale3View.horizontal"];
 	[archiver encodeBool:vertical forKey:@"GDScale3View.vertical"];
 }
 
@@ -128,7 +131,20 @@ static int defaultSliceSizeHeight = 7;
 - (void) setVertical:(Boolean) _vertical {
 	if(vertical != _vertical) {
 		vertical = _vertical;
+		if(!vertical) horizontal = true;
+		else horizontal = false;
 		reslice	= true;
+		changedOrienation = true;
+		if(!decoding) [self setNeedsDisplay:true];
+	}
+}
+
+- (void) setHorizontal:(Boolean) _horizontal {
+	if(horizontal != _horizontal) {
+		horizontal = _horizontal;
+		if(!horizontal) vertical = true;
+		else vertical = false;
+		reslice = true;
 		changedOrienation = true;
 		if(!decoding) [self setNeedsDisplay:true];
 	}
@@ -161,7 +177,7 @@ static int defaultSliceSizeHeight = 7;
 	if(reslice || lastSlicedImage != sourceImage || !slices) {
 		reslice = false;
 		[slices release];
-		slices = [sliceImageForDrawThree(sourceImage,sliceSize,vertical) retain];
+		slices = [sliceImageForDrawThree(sourceImage,sliceSize,vertical,[self isFlipped]) retain];
 		lastSlicedImage = sourceImage;
 	}
 	if(slices) NSDrawThreePartImage([self bounds],[slices objectAtIndex:0],[slices objectAtIndex:1],[slices objectAtIndex:2],vertical,NSCompositeSourceOver,[self alphaValue],[self isFlipped]);

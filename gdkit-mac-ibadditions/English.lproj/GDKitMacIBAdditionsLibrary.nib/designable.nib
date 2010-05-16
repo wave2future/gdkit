@@ -56,17 +56,52 @@
 				<int key="NSvFlags">268</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="GDScale3Button" id="806737802">
+						<reference key="NSNextResponder" ref="1000"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{460, 425}, {80, 27}}</string>
+						<reference key="NSSuperview" ref="1000"/>
+						<int key="NSTag">-1</int>
+						<bool key="NSEnabled">YES</bool>
+						<object class="GDScale3ButtonCell" key="NSCell" id="188205205">
+							<int key="NSCellFlags">67239424</int>
+							<int key="NSCellFlags2">134217728</int>
+							<string key="NSContents">Button</string>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">1044</int>
+							</object>
+							<reference key="NSControlView" ref="806737802"/>
+							<int key="NSButtonFlags">-2038284033</int>
+							<int key="NSButtonFlags2">2</int>
+							<object class="NSFont" key="NSAlternateImage">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">16</int>
+							</object>
+							<string key="NSKeyEquivalent"/>
+							<int key="NSPeriodicDelay">400</int>
+							<int key="NSPeriodicInterval">75</int>
+							<nil key="GDScale3ButtonCell.upImageName"/>
+							<nil key="GDScale3ButtonCell.downImageName"/>
+							<int key="GDScale3ButtonCell.sliceSize.width">7</int>
+							<int key="GDScale3ButtonCell.sliceSize.height">7</int>
+							<bool key="GDScale3ButtonCell.vertical">NO</bool>
+							<bool key="GDScale3ButtonCell.horizontal">YES</bool>
+						</object>
+					</object>
 					<object class="GDScale9Button" id="701284626">
 						<reference key="NSNextResponder" ref="1000"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{373, 366}, {82, 86}}</string>
+						<string key="NSFrame">{{373, 413}, {82, 39}}</string>
 						<reference key="NSSuperview" ref="1000"/>
 						<int key="NSTag">-1</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="GDScale9ButtonCell" key="NSCell" id="23236849">
 							<int key="NSCellFlags">67239424</int>
 							<int key="NSCellFlags2">134479872</int>
-							<string key="NSContents"/>
+							<string key="NSContents">Button</string>
 							<object class="NSFont" key="NSSupport" id="765176767">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">12</double>
@@ -92,6 +127,7 @@
 						<reference key="NSSuperview" ref="1000"/>
 						<int key="GDScale3View.sliceSize.width">7</int>
 						<int key="GDScale3View.sliceSize.height">7</int>
+						<bool key="GDScale3View.horizontal">NO</bool>
 						<bool key="GDScale3View.vertical">NO</bool>
 					</object>
 					<object class="GDGradientBoxView" id="371873657">
@@ -360,13 +396,6 @@
 							<reference key="NSBackgroundColor" ref="933997871"/>
 							<reference key="NSTextColor" ref="815376621"/>
 						</object>
-					</object>
-					<object class="NSCustomView" id="351382769">
-						<reference key="NSNextResponder" ref="1000"/>
-						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{462, 370}, {80, 80}}</string>
-						<reference key="NSSuperview" ref="1000"/>
-						<string key="NSClassName">GDScale3Button</string>
 					</object>
 					<object class="IBLibraryObjectTemplate" id="912504835">
 						<reference key="NSNextResponder" ref="1000"/>
@@ -835,14 +864,6 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">representedObject</string>
-						<reference key="source" ref="912504835"/>
-						<reference key="destination" ref="351382769"/>
-					</object>
-					<int key="connectionID">115</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">representedObject</string>
 						<reference key="source" ref="467700883"/>
 						<reference key="destination" ref="371873657"/>
 					</object>
@@ -879,6 +900,14 @@
 						<reference key="destination" ref="701284626"/>
 					</object>
 					<int key="connectionID">142</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">representedObject</string>
+						<reference key="source" ref="912504835"/>
+						<reference key="destination" ref="806737802"/>
+					</object>
+					<int key="connectionID">149</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -932,9 +961,9 @@
 							<reference ref="493449411"/>
 							<reference ref="912504835"/>
 							<reference ref="351467171"/>
-							<reference ref="351382769"/>
 							<reference ref="591386660"/>
 							<reference ref="848204633"/>
+							<reference ref="806737802"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Library Objects</string>
@@ -1144,11 +1173,6 @@
 						<reference key="parent" ref="1000"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">110</int>
-						<reference key="object" ref="351382769"/>
-						<reference key="parent" ref="1000"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">111</int>
 						<reference key="object" ref="351467171"/>
 						<object class="NSMutableArray" key="children">
@@ -1284,6 +1308,20 @@
 						<reference key="object" ref="23236849"/>
 						<reference key="parent" ref="701284626"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">147</int>
+						<reference key="object" ref="806737802"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="188205205"/>
+						</object>
+						<reference key="parent" ref="1000"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">148</int>
+						<reference key="object" ref="188205205"/>
+						<reference key="parent" ref="806737802"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1301,9 +1339,6 @@
 					<string>109.IBPluginDependency</string>
 					<string>109.notes</string>
 					<string>109.showNotes</string>
-					<string>110.IBPluginDependency</string>
-					<string>110.notes</string>
-					<string>110.showNotes</string>
 					<string>111.IBPluginDependency</string>
 					<string>112.IBPluginDependency</string>
 					<string>113.IBPluginDependency</string>
@@ -1328,6 +1363,8 @@
 					<string>138.IBPluginDependency</string>
 					<string>140.IBPluginDependency</string>
 					<string>141.IBPluginDependency</string>
+					<string>147.IBPluginDependency</string>
+					<string>148.IBPluginDependency</string>
 					<string>18.IBPluginDependency</string>
 					<string>18.notes</string>
 					<string>18.showNotes</string>
@@ -1402,14 +1439,6 @@ b2JqZWN0IHRvIGRlcG9zaXQuA</string>
 					</object>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<object class="NSAttributedString">
-						<string type="base64-UTF8" key="NSString">VXNlIHRoZSBpbnNwZWN0b3IgdG8gc2V0IHRoZSBjdXN0b20gY2xhc3Mgb2YgdGhpcyB2aWV3IHRvIHRo
-ZSBjbGFzcyBuYW1lIG9mIHlvdXIgdmlldy4KCldoZW4gdGhlIGxpYnJhcnkgbG9hZHMsIHlvdXIgdmll
-dyB3aWxsIHNob3cgdXAgaW4gcGxhY2Ugb2YgdGhpcyB2aWV3Lg</string>
-						<reference key="NSAttributes" ref="352503618"/>
-					</object>
-					<integer value="1"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1449,6 +1478,8 @@ b2JqZWN0IHRvIGRlcG9zaXQuA</string>
 					<string>com.macendeavor.GDKitMacIBAdditions</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.macendeavor.GDKitMacIBAdditions</string>
+					<string>com.macendeavor.GDKitMacIBAdditions</string>
 					<string>com.macendeavor.GDKitMacIBAdditions</string>
 					<string>com.macendeavor.GDKitMacIBAdditions</string>
 					<string>com.apple.InterfaceBuilder.IBSDKPlugin</string>
@@ -1542,7 +1573,7 @@ b2JqZWN0IHRvIGRlcG9zaXQuA</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">146</int>
+			<int key="maxID">149</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptionsV3.1+">

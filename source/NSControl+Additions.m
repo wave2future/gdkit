@@ -1,5 +1,5 @@
 
-#import "GDControl.h"
+#import "NSControl+Additions.h"
 
 @implementation NSControl (Additions)
 

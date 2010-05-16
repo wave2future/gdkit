@@ -8,6 +8,11 @@
 	return [GDScale3ButtonCell class];
 }
 
+- (void) triggerObserverNotificationForProperty:(NSString *) _property {
+	[self willChangeValueForKey:_property];
+	[self didChangeValueForKey:_property];
+}
+
 - (void) setSliceSize:(NSSize) _size {
 	[[self cell] setSliceSize:_size];
 }
@@ -40,8 +45,16 @@
 	[[self cell] setVertical:_vertical];
 }
 
+- (void) setHorizontal:(Boolean) _horizontal {
+	[[self cell] setHorizontal:_horizontal];
+}
+
 - (Boolean) vertical {
 	return [[self cell] vertical];
+}
+
+- (Boolean) horizontal {
+	return [[self cell] horizontal];
 }
 
 - (NSSize) sliceSize {

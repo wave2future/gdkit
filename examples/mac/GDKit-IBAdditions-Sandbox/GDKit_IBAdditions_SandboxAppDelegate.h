@@ -1,17 +1,13 @@
-//
-//  GDKit_IBAdditions_SandboxAppDelegate.h
-//  GDKit-IBAdditions-Sandbox
-//
-//  Created by Aaron Smith on 5/13/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
 
 #import <Cocoa/Cocoa.h>
+#import <GDKit/GDKit.h>
 
 @interface GDKit_IBAdditions_SandboxAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    NSWindow * window;
+	GDGradientBoxView * boxView;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic,retain) IBOutlet GDGradientBoxView * boxView;
 
 @end

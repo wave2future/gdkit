@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -47,7 +48,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{178, 5}, {73, 19}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="323923733">
 							<int key="NSCellFlags">-1804468671</int>
@@ -85,7 +85,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{251, 3}, {15, 22}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSStepperCell" key="NSCell" id="398102539">
 							<int key="NSCellFlags">68025888</int>
@@ -102,7 +101,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{10, 7}, {46, 14}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="525241517">
 							<int key="NSCellFlags">67239488</int>
@@ -143,7 +141,6 @@
 						</object>
 						<string key="NSFrame">{{178, 34}, {86, 23}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<bool key="NSIsBordered">YES</bool>
 						<object class="NSColor" key="NSColor">
@@ -163,7 +160,6 @@
 						</object>
 						<string key="NSFrame">{{84, 34}, {86, 23}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<bool key="NSIsBordered">YES</bool>
 						<object class="NSColor" key="NSColor">
@@ -176,7 +172,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{9, 38}, {80, 14}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
-						<reference key="NSWindow"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="700350567">
 							<int key="NSCellFlags">67239488</int>
@@ -191,7 +186,6 @@
 				</object>
 				<string key="NSFrameSize">{272, 61}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<string key="NSClassName">NSView</string>
 				<string key="NSExtension">NSResponder</string>
 			</object>
@@ -405,7 +399,7 @@
 							<int key="affinity">0</int>
 						</object>
 					</object>
-					<string>{{671, 828}, {272, 61}}</string>
+					<string>{{684, 828}, {272, 61}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -486,7 +480,7 @@
 					<string key="superclassName">IBInspector</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">GDGradientBoxViewInspector.h</string>
+						<string key="minorKey">source/GDGradientBoxViewInspector.h</string>
 					</object>
 				</object>
 			</object>

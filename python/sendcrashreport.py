@@ -7,7 +7,7 @@ except Exception,e:
 options=None
 args=None
 try:
-	usage = "usage: sendcrashreport.py -f /Library/Logs/CrashReports/MyFile.crash [-c /tmp/myvile"
+	usage = "usage: sendcrashreport.py -f /Library/Logs/CrashReports/MyFile.crash [-c /tmp/myvile]"
 	parser=OptionParser(usage=usage)
 	parser.add_option("-f",dest="file",help="the core dump file to send")
 	parser.add_option("-c",dest="comments",help="The file that contains the extra comments")
@@ -47,7 +47,7 @@ try:
 	mailServer.ehlo()
 	mailServer.starttls()
 	mailServer.ehlo()
-	mailServer.login('gitybot@macendeavor.com','')
+	mailServer.login('gitybot@macendeavor.com','dl49ope093ld98')
 	mailServer.sendmail('gitybot@macendeavor.com','support@macendeavor.com',msg.as_string())
 	mailServer.close()
 	if comments: os.unlink(comments)

@@ -13,6 +13,7 @@ static int defaultSliceSizeHeight = 7;
 @synthesize sliceSizeHeight;
 @synthesize sliceSizeWidth;
 @synthesize vertical;
+@synthesize horizontal;
 
 + (void) setDefaultSliceSizeWidth:(int) width {
 	defaultSliceSizeWidth = width;
@@ -62,6 +63,7 @@ static int defaultSliceSizeHeight = 7;
 	IBDocument = NSClassFromString(@"IBDocument");
 	document = [IBDocument performSelector:@selector(documentForObject:) withObject:self];
 	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
+	horizontal = true;
 	fileManager = [NSFileManager defaultManager];
 	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
 	if(sliceSize.height < 1) sliceSize.height = defaultSliceSizeHeight;
@@ -78,11 +80,13 @@ static int defaultSliceSizeHeight = 7;
 	gdKitIBBundle = [[NSBundle bundleWithIdentifier:@"com.macendeavor.GDKitMacIBAdditions"] retain];
 	fileManager = [NSFileManager defaultManager];
 	decoding = true;
+	horizontal = true;
 	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.upImageName"]) [self setUpImageName:[unarchiver decodeObjectForKey:@"GDScale3ButtonCell.upImageName"]];
 	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.downImageName"]) [self setDownImageName:[unarchiver decodeObjectForKey:@"GDScale3ButtonCell.downImageName"]];
 	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.sliceSize.width"]) sliceSize.width = [unarchiver decodeIntegerForKey:@"GDScale3ButtonCell.sliceSize.width"];
 	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.sliceSize.height"]) sliceSize.height = [unarchiver decodeIntegerForKey:@"GDScale3ButtonCell.sliceSize.height"];
 	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.vertical"]) vertical = [unarchiver decodeBoolForKey:@"GDScale3ButtonCell.vertical"];
+	if([unarchiver containsValueForKey:@"GDScale3ButtonCell.horizontal"]) horizontal = [unarchiver decodeBoolForKey:@"GDScale3ButtonCell.horizontal"];
 	if(!upImage && upImageName) [self setUpImage:[NSImage imageNamed:upImageName]];
 	if(!downImage && downImageName) [self setDownImage:[NSImage imageNamed:downImageName]];
 	if(sliceSize.width < 1) sliceSize.width = defaultSliceSizeWidth;
@@ -100,6 +104,8 @@ static int defaultSliceSizeHeight = 7;
 	[archiver encodeObject:downImageName forKey:@"GDScale3ButtonCell.downImageName"];
 	[archiver encodeInteger:sliceSize.width forKey:@"GDScale3ButtonCell.sliceSize.width"];
 	[archiver encodeInteger:sliceSize.height forKey:@"GDScale3ButtonCell.sliceSize.height"];
+	[archiver encodeBool:vertical forKey:@"GDScale3ButtonCell.vertical"];
+	[archiver encodeBool:horizontal forKey:@"GDScale3ButtonCell.horizontal"];
 }
 
 - (float) sliceSizeWidth {
@@ -177,9 +183,28 @@ static int defaultSliceSizeHeight = 7;
 - (void) setVertical:(Boolean) _vertical {
 	if(vertical != _vertical) {
 		vertical = _vertical;
+		if(!vertical) horizontal = true;
+		else horizontal = false;
+		if([[self controlView] isKindOfClass:[GDScale3Button class]]) {
+			[(GDScale3Button *)[self controlView] triggerObserverNotificationForProperty:@"horizontal"];
+		}
 		reslice = true;
 		changedOrientation = true;
-		if(!decoding && [self controlView])  [[self controlView] setNeedsDisplay:true];
+		if(!decoding && [self controlView]) [[self controlView] setNeedsDisplay:true];
+	}
+}
+
+- (void) setHorizontal:(Boolean) _horizontal {
+	if(horizontal != _horizontal) {
+		horizontal = _horizontal;
+		if(!horizontal) vertical = true;
+		else vertical = false;
+		if([[self controlView] isKindOfClass:[GDScale3Button class]]) {
+			[(GDScale3Button *)[self controlView] triggerObserverNotificationForProperty:@"vertical"];
+		}
+		reslice = true;
+		changedOrientation = true;
+		if(!decoding && [self controlView]) [[self controlView] setNeedsDisplay:true];
 	}
 }
 
@@ -227,12 +252,12 @@ static int defaultSliceSizeHeight = 7;
 	}
 	if((resliceDown || reslice || lastDownSlicedImage != downImage) && downImage) {
 		GDRelease(downSlices);
-		downSlices = [sliceImageForDrawThree(downImage,sliceSize,vertical) retain];
+		downSlices = [sliceImageForDrawThree(downImage,sliceSize,vertical,false) retain];
 		lastDownSlicedImage = downImage;
 	}
 	if((resliceUp || reslice || lastUpSlicedImage != upImage) && upImage) {
 		GDRelease(upSlices);
-		upSlices = [sliceImageForDrawThree(upImage,sliceSize,vertical) retain];
+		upSlices = [sliceImageForDrawThree(upImage,sliceSize,vertical,false) retain];
 		lastUpSlicedImage = upImage;
 	}
 	sourceSlices = nil;

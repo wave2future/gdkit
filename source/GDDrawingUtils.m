@@ -3,7 +3,7 @@
 
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-NSArray * sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, BOOL vertical) {
+NSArray * sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, Boolean vertical, Boolean flipped) {
 	NSSize sourceSize = [sourceImage size];
 	float doubleHeight = sliceSize.height * 2;
 	float doubleWidth = sliceSize.width * 2;
@@ -12,7 +12,9 @@ NSArray * sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, BOOL v
 		//top
 		NSSize topSize = NSMakeSize(sourceSize.width,sliceSize.height);
 		NSRect topRect = NSMakeRect(0,0,topSize.width,topSize.height);
-		NSRect topCutRect = NSMakeRect(0,0,topSize.width,topSize.height);
+		NSRect topCutRect;
+		if(flipped) topCutRect = NSMakeRect(0,0,topSize.width,topSize.height);
+		else topCutRect = NSMakeRect(0,sourceSize.height-sliceSize.height,topSize.width,topSize.height);
 		NSImage * top = [[NSImage alloc] initWithSize:topSize];
 		[top lockFocus];
 		[sourceImage drawInRect:topRect fromRect:topCutRect operation:NSCompositeCopy fraction:1];
@@ -28,11 +30,14 @@ NSArray * sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, BOOL v
 		//bottom
 		NSSize bottomSize = NSMakeSize(sourceSize.width,sliceSize.height);
 		NSRect bottomRect = NSMakeRect(0,0,bottomSize.width,bottomSize.height);
-		NSRect bottomCutRect = NSMakeRect(0,topSize.height+middleSize.height,bottomSize.width,bottomSize.height);
+		NSRect bottomCutRect;
+		if(flipped) bottomCutRect = NSMakeRect(0,topSize.height+middleSize.height,bottomSize.width,bottomSize.height);
+		else bottomCutRect = NSMakeRect(0,0,bottomSize.width,bottomSize.height);
 		NSImage * bottom = [[NSImage alloc] initWithSize:bottomSize];
 		[bottom lockFocus];
 		[sourceImage drawInRect:bottomRect fromRect:bottomCutRect operation:NSCompositeCopy fraction:1];
 		[bottom unlockFocus];
+		//assemble
 		slices = [NSArray arrayWithObjects:top,middle,bottom,nil];
 		[top autorelease];
 		[middle autorelease];

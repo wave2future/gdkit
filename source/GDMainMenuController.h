@@ -25,8 +25,6 @@
 
 /**
  * A hook to invalidate the main menu.
- *
- * @see GDDocument
  */
 - (void) invalidate;
 

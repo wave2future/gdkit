@@ -7,7 +7,7 @@
 
 - (void) ibPopulateKeyPaths:(NSMutableDictionary *) keyPaths {
 	[super ibPopulateKeyPaths:keyPaths];
-	[[keyPaths objectForKey:IBAttributeKeyPaths] addObjectsFromArray:[NSArray arrayWithObjects:@"sourceImage",@"sliceSize",nil]];
+	[[keyPaths objectForKey:IBAttributeKeyPaths] addObjectsFromArray:[NSArray arrayWithObjects:@"vertical",@"horizontal",@"sourceImageName",@"sourceImage",@"sliceSize",@"sliceWidth",@"sliceHeight",nil]];
 }
 
 - (void) ibPopulateAttributeInspectorClasses:(NSMutableArray *) classes {

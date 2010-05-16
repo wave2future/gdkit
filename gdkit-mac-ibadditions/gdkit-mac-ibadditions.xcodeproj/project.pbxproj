@@ -54,6 +54,8 @@
 		07E130481199D39B000DE1D7 /* blackButtonNoShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E130451199D39B000DE1D7 /* blackButtonNoShadow.png */; };
 		07EE493D119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */; };
 		07EE4955119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */; };
+		07EE4B25119FB53300E774E8 /* scale_three_view_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B23119FB53300E774E8 /* scale_three_view_test.png */; };
+		07EE4B26119FB53300E774E8 /* scale_three_view_vertical_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */; };
 		54D33B2906778E3300C9C163 /* GDScale9View.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* GDScale9View.classdescription */; };
 		8D1AC96C0486D14A00FE50C9 /* GDScale9ViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* GDScale9ViewInspector.m */; settings = {ATTRIBUTES = (); }; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
@@ -151,6 +153,8 @@
 		07E130451199D39B000DE1D7 /* blackButtonNoShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButtonNoShadow.png; path = ../assets/blackButtonNoShadow.png; sourceTree = SOURCE_ROOT; };
 		07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_horizontal_large.png; path = ../assets/scale_three_view_icon_horizontal_large.png; sourceTree = SOURCE_ROOT; };
 		07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_vertical_large.png; path = ../assets/scale_three_view_icon_vertical_large.png; sourceTree = SOURCE_ROOT; };
+		07EE4B23119FB53300E774E8 /* scale_three_view_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_test.png; path = ../assets/scale_three_view_test.png; sourceTree = SOURCE_ROOT; };
+		07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_vertical_test.png; path = ../assets/scale_three_view_vertical_test.png; sourceTree = SOURCE_ROOT; };
 		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		13F8B88907B434F6008AE28D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -223,6 +227,8 @@
 				07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */,
 				07D8AB9111956AAE00266FED /* scale_three_view_icon_vertical.png */,
 				07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */,
+				07EE4B23119FB53300E774E8 /* scale_three_view_test.png */,
+				07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */,
 				07760CA4119D0E9F0091B63F /* tile_view_icon.png */,
 				07D8A990119521B900266FED /* well.png */,
 				07D8A99A1195220A00266FED /* well_down.png */,
@@ -428,6 +434,8 @@
 				076FA88E1198FA5800A10B81 /* Scale9ButtonInspector.xib in Resources */,
 				07EE493D119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png in Resources */,
 				07EE4955119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png in Resources */,
+				07EE4B25119FB53300E774E8 /* scale_three_view_test.png in Resources */,
+				07EE4B26119FB53300E774E8 /* scale_three_view_vertical_test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

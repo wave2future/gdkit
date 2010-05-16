@@ -10,6 +10,6 @@
 
 NSArray * sliceImageForDrawNine(NSImage * sourceImage, NSSize cornerRectSize);
 
-NSArray *  sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, BOOL vertical);
+NSArray * sliceImageForDrawThree(NSImage * sourceImage, NSSize sliceSize, Boolean vertical, Boolean flipped);
 
 #endif
