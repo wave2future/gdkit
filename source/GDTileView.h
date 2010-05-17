@@ -1,6 +1,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "macros.h"
+#import "NSImage+Additions.h"
 
 /**
  * @file GDTileView.h
