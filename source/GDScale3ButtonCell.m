@@ -215,6 +215,7 @@ static int defaultSliceSizeHeight = 7;
 	if(!upImage && upImageName) upImage = [[NSImage imageNamed:upImageName] retain];
 	if(!downImage && downImageName) downImage = [[NSImage imageNamed:downImageName] retain];
 	if(upImageNameChanged || changedOrientation) {
+		changedOrientation = false;
 		upImageNameChanged = false;
 		GDRelease(upImage);
 		upImage = [[NSImage imageNamed:upImageName] retain];
@@ -229,6 +230,7 @@ static int defaultSliceSizeHeight = 7;
 		}
 	}
 	if(downImageNameChanged || changedOrientation) {
+		changedOrientation = false;
 		downImageNameChanged = false;
 		GDRelease(downImage);
 		downImage = [[NSImage imageNamed:downImageName] retain];
