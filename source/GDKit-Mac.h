@@ -43,6 +43,7 @@
 #import "NSControl+Additions.h"
 #import "NSFileHandle+Additions.h"
 #import "NSFileManager+Additions.h"
+#import "NSImage+Additions.h"
 #import "NSStatusItem+Additions.h"
 #import "NSString+Additions.h"
 #import "NSUserDefaults+Additions.h"
