@@ -177,7 +177,7 @@ static int defaultSliceSizeHeight = 7;
 	if(reslice || lastSlicedImage != sourceImage || !slices) {
 		reslice = false;
 		[slices release];
-		slices = [sliceImageForDrawThree(sourceImage,sliceSize,vertical,[self isFlipped]) retain];
+		slices = [sliceImageForDrawThree(sourceImage,sliceSize,vertical,false) retain];
 		lastSlicedImage = sourceImage;
 	}
 	if(slices) NSDrawThreePartImage([self bounds],[slices objectAtIndex:0],[slices objectAtIndex:1],[slices objectAtIndex:2],vertical,NSCompositeSourceOver,[self alphaValue],[self isFlipped]);
