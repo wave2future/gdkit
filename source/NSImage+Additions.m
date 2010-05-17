@@ -7,7 +7,6 @@
 	CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef)[self TIFFRepresentation],NULL);
 	CGImageRef ref = CGImageSourceCreateImageAtIndex(source,0,NULL);
 	CFRelease(source);
-	//CGImageRelease(ref);
 	return ref;
 }
 
