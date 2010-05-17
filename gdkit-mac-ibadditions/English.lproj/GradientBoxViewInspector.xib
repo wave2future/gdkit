@@ -46,7 +46,7 @@
 					<object class="NSTextField" id="109843036">
 						<reference key="NSNextResponder" ref="475767890"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{178, 5}, {73, 19}}</string>
+						<string key="NSFrame">{{84, 4}, {73, 19}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="323923733">
@@ -83,7 +83,7 @@
 					<object class="NSStepper" id="416697439">
 						<reference key="NSNextResponder" ref="475767890"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{251, 3}, {15, 22}}</string>
+						<string key="NSFrame">{{157, 2}, {15, 22}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSStepperCell" key="NSCell" id="398102539">
@@ -99,7 +99,7 @@
 					<object class="NSTextField" id="427867669">
 						<reference key="NSNextResponder" ref="475767890"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{10, 7}, {46, 14}}</string>
+						<string key="NSFrame">{{9, 6}, {46, 14}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="525241517">
@@ -139,7 +139,7 @@
 								<string>NSColor pasteboard type</string>
 							</object>
 						</object>
-						<string key="NSFrame">{{178, 34}, {86, 23}}</string>
+						<string key="NSFrame">{{178, 33}, {86, 23}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<bool key="NSIsBordered">YES</bool>
@@ -158,7 +158,7 @@
 								<string>NSColor pasteboard type</string>
 							</object>
 						</object>
-						<string key="NSFrame">{{84, 34}, {86, 23}}</string>
+						<string key="NSFrame">{{84, 33}, {86, 23}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<bool key="NSIsBordered">YES</bool>
@@ -170,7 +170,7 @@
 					<object class="NSTextField" id="1021445943">
 						<reference key="NSNextResponder" ref="475767890"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{9, 38}, {80, 14}}</string>
+						<string key="NSFrame">{{9, 37}, {80, 14}}</string>
 						<reference key="NSSuperview" ref="475767890"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="700350567">
@@ -184,7 +184,7 @@
 						</object>
 					</object>
 				</object>
-				<string key="NSFrameSize">{272, 61}</string>
+				<string key="NSFrameSize">{271, 60}</string>
 				<reference key="NSSuperview"/>
 				<string key="NSClassName">NSView</string>
 				<string key="NSExtension">NSResponder</string>
@@ -399,7 +399,7 @@
 							<int key="affinity">0</int>
 						</object>
 					</object>
-					<string>{{684, 828}, {272, 61}}</string>
+					<string>{{918, 769}, {271, 60}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070A6F7C11A1108900F62DFB /* NSImage+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 070A6F7A11A1108900F62DFB /* NSImage+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		070A6F7D11A1108900F62DFB /* NSImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 070A6F7B11A1108900F62DFB /* NSImage+Additions.m */; };
 		07437DC2118A525700EAD978 /* GDAccessibilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437D7B118A525700EAD978 /* GDAccessibilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07437DC3118A525700EAD978 /* GDAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437D7C118A525700EAD978 /* GDAccessibilityManager.m */; };
 		07437DC4118A525700EAD978 /* GDAccessibilityNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437D7D118A525700EAD978 /* GDAccessibilityNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +97,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070A6F7A11A1108900F62DFB /* NSImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+Additions.h"; path = "source/NSImage+Additions.h"; sourceTree = "<group>"; };
+		070A6F7B11A1108900F62DFB /* NSImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Additions.m"; path = "source/NSImage+Additions.m"; sourceTree = "<group>"; };
 		07437D7B118A525700EAD978 /* GDAccessibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityManager.h; path = source/GDAccessibilityManager.h; sourceTree = "<group>"; };
 		07437D7C118A525700EAD978 /* GDAccessibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccessibilityManager.m; path = source/GDAccessibilityManager.m; sourceTree = "<group>"; };
 		07437D7D118A525700EAD978 /* GDAccessibilityNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccessibilityNotification.h; path = source/GDAccessibilityNotification.h; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				075E82901191ED3700A4EA53 /* NSControl+Additions.h */,
 				07437DA6118A525700EAD978 /* NSFileHandle+Additions.h */,
 				07437DA8118A525700EAD978 /* NSFileManager+Additions.h */,
+				070A6F7A11A1108900F62DFB /* NSImage+Additions.h */,
 				07437DAA118A525700EAD978 /* NSStatusItem+Additions.h */,
 				07437DAC118A525700EAD978 /* NSString+Additions.h */,
 				07437DAE118A525700EAD978 /* NSUserDefaults+Additions.h */,
@@ -339,6 +344,7 @@
 				075E82911191ED3700A4EA53 /* NSControl+Additions.m */,
 				07437DA7118A525700EAD978 /* NSFileHandle+Additions.m */,
 				07437DA9118A525700EAD978 /* NSFileManager+Additions.m */,
+				070A6F7B11A1108900F62DFB /* NSImage+Additions.m */,
 				07437DAB118A525700EAD978 /* NSStatusItem+Additions.m */,
 				07437DAD118A525700EAD978 /* NSString+Additions.m */,
 				07437DAF118A525700EAD978 /* NSUserDefaults+Additions.m */,
@@ -392,6 +398,7 @@
 				075E82921191ED3700A4EA53 /* NSControl+Additions.h in Headers */,
 				07437DED118A525700EAD978 /* NSFileHandle+Additions.h in Headers */,
 				07437DEF118A525700EAD978 /* NSFileManager+Additions.h in Headers */,
+				070A6F7C11A1108900F62DFB /* NSImage+Additions.h in Headers */,
 				07437DF1118A525700EAD978 /* NSStatusItem+Additions.h in Headers */,
 				07437DF3118A525700EAD978 /* NSString+Additions.h in Headers */,
 				07437DF5118A525700EAD978 /* NSUserDefaults+Additions.h in Headers */,
@@ -530,6 +537,7 @@
 				07585527119BEA1E00EEFC0B /* GDGradientBoxView.m in Sources */,
 				07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */,
 				07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */,
+				070A6F7D11A1108900F62DFB /* NSImage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -216,7 +216,7 @@
 							<int key="NSTag">-1</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="GDScale9ButtonCell" key="NSCell" id="765557940">
-								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Scale 9 Button</string>
 								<reference key="NSSupport" ref="703578786"/>
@@ -281,7 +281,7 @@
 						<object class="GDScale3View" id="914144865">
 							<reference key="NSNextResponder" ref="651723313"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{21, 325}, {80, 35}}</string>
+							<string key="NSFrame">{{21, 328}, {80, 32}}</string>
 							<reference key="NSSuperview" ref="651723313"/>
 							<int key="GDScale3View.sliceSize.width">7</int>
 							<int key="GDScale3View.sliceSize.height">7</int>
@@ -561,9 +561,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{323, 328}, {538, 721}}</string>
+					<string>{{335, 328}, {538, 721}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{323, 328}, {538, 721}}</string>
+					<string>{{335, 328}, {538, 721}}</string>
 					<boolean value="YES"/>
 					<string>com.macendeavor.GDKitMacIBAdditions</string>
 					<string>com.macendeavor.GDKitMacIBAdditions</string>
@@ -606,7 +606,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">666</int>
+			<int key="maxID">670</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptionsV3.2+">
