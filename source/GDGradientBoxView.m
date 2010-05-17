@@ -80,4 +80,15 @@
 	if(gradient)[gradient drawInRect:[self bounds] angle:angle];
 }
 
+- (void) dealloc {
+	GDRelease(gradient);
+	GDRelease(color1);
+	GDRelease(color2);
+	angle = 0;
+	decoding = false;
+	hasUpdatedAngle = false;
+	recreateGradient = false;
+	[super dealloc];
+}
+
 @end
