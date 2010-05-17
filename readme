@@ -10,12 +10,31 @@
 
 Mac and iPhone Objective-C code.
 
-It contains two frameworks:
+## IT CONTAINS TWO FRAMEWORKS ##
 
 GDKit.framework for Mac
 GDKit-iPhone.a for iphone
 
-Each have their own xcode project.
+## THERE'S ALSO AN INTERFACE BUILDER PLUGIN FOR GDKIT-MAC CONTAINING THESE COMPONENTS ##
 
-Docs are here:
+Scale Three View
+Scale Three Button
+Scale Three Button Cell
+Scale Nine View
+Scale Nine Button
+Scale Nine Button Cell
+Tile View
+Gradient Box View
+
+## XCODE PROJECTS ##
+
+gdkit-mac.xcodeproj
+gdkit-iphone.xcodeproj
+gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj
+
+## DOCS ##
 http://codeendeavor.com/docs/gdkit/
+
+## EXAMPLES ##
+
+There are examples in the examples/ folder.
