@@ -36,6 +36,8 @@
 		077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */; };
 		077EDC28118AB6BB004ED780 /* GDAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDC26118AB6BB004ED780 /* GDAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDC27118AB6BB004ED780 /* GDAccelerometer.m */; };
+		07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2114C11A5144900651452 /* NSObject+Additions.h */; };
+		07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E2114D11A5144900651452 /* NSObject+Additions.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDQuartzUtils.m; path = source/GDQuartzUtils.m; sourceTree = "<group>"; };
 		077EDC26118AB6BB004ED780 /* GDAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccelerometer.h; path = source/GDAccelerometer.h; sourceTree = "<group>"; };
 		077EDC27118AB6BB004ED780 /* GDAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccelerometer.m; path = source/GDAccelerometer.m; sourceTree = "<group>"; };
+		07E2114C11A5144900651452 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "source/NSObject+Additions.h"; sourceTree = "<group>"; };
+		07E2114D11A5144900651452 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "source/NSObject+Additions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* gdkit_iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_iphone_Prefix.pch; path = source/gdkit_iphone_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGDKit-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGDKit-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 				077EDA9E118A86DA004ED780 /* GDPrintUtils.h */,
 				077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */,
 				07437F01118A553400EAD978 /* macros.h */,
+				07E2114C11A5144900651452 /* NSObject+Additions.h */,
 				07437ED1118A54F500EAD978 /* NSString+Additions.h */,
 				07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */,
 				07437E9E118A546A00EAD978 /* UIColor+Additions.h */,
@@ -146,6 +151,7 @@
 				07437ED0118A54F500EAD978 /* GDCallback.m */,
 				077EDA9F118A86DA004ED780 /* GDPrintUtils.m */,
 				077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */,
+				07E2114D11A5144900651452 /* NSObject+Additions.m */,
 				07437ED2118A54F500EAD978 /* NSString+Additions.m */,
 				07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */,
 				07437E9F118A546A00EAD978 /* UIColor+Additions.m */,
@@ -180,6 +186,7 @@
 				07437EB0118A546B00EAD978 /* UITableViewGroup.h in Headers */,
 				07437EB2118A546B00EAD978 /* UITableViewRow.h in Headers */,
 				07437EB4118A546B00EAD978 /* UIView+Additions.h in Headers */,
+				07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +264,7 @@
 				07437EB1118A546B00EAD978 /* UITableViewGroup.m in Sources */,
 				07437EB3118A546B00EAD978 /* UITableViewRow.m in Sources */,
 				07437EB5118A546B00EAD978 /* UIView+Additions.m in Sources */,
+				07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

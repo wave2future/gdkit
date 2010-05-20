@@ -11,6 +11,7 @@
 #import "GDCallback.h"
 #import "GDPrintUtils.h"
 #import "macros.h"
+#import "NSObject+Additions.h"
 #import "NSString+Additions.h"
 #import "NSUserDefaults+Additions.h"
 #import "UIColor+Additions.h"

@@ -90,6 +90,8 @@
 		07D8AB0411955FC300266FED /* GDScale3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8AB0211955FC300266FED /* GDScale3View.m */; };
 		07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC3FA7119263FC00607725 /* GDDrawingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3FA8119263FC00607725 /* GDDrawingUtils.m */; };
+		07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2111911A512CC00651452 /* NSObject+Additions.h */; };
+		07E2111C11A512CC00651452 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E2111A11A512CC00651452 /* NSObject+Additions.m */; };
 		07FCE56211937E3200946548 /* GDScale9View.h in Headers */ = {isa = PBXBuildFile; fileRef = 07FCE56011937E3200946548 /* GDScale9View.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07FCE56311937E3200946548 /* GDScale9View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FCE56111937E3200946548 /* GDScale9View.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
@@ -180,6 +182,8 @@
 		07D8AB0211955FC300266FED /* GDScale3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3View.m; path = source/GDScale3View.m; sourceTree = "<group>"; };
 		07DC3FA7119263FC00607725 /* GDDrawingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDDrawingUtils.h; path = source/GDDrawingUtils.h; sourceTree = "<group>"; };
 		07DC3FA8119263FC00607725 /* GDDrawingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDDrawingUtils.m; path = source/GDDrawingUtils.m; sourceTree = "<group>"; };
+		07E2111911A512CC00651452 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "source/NSObject+Additions.h"; sourceTree = "<group>"; };
+		07E2111A11A512CC00651452 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "source/NSObject+Additions.m"; sourceTree = "<group>"; };
 		07EE49F1119F940A00E774E8 /* sendcrashreport.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = sendcrashreport.py; path = python/sendcrashreport.py; sourceTree = "<group>"; };
 		07FCE56011937E3200946548 /* GDScale9View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9View.h; path = source/GDScale9View.h; sourceTree = "<group>"; };
 		07FCE56111937E3200946548 /* GDScale9View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9View.m; path = source/GDScale9View.m; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 				07437DA6118A525700EAD978 /* NSFileHandle+Additions.h */,
 				07437DA8118A525700EAD978 /* NSFileManager+Additions.h */,
 				070A6F7A11A1108900F62DFB /* NSImage+Additions.h */,
+				07E2111911A512CC00651452 /* NSObject+Additions.h */,
 				07437DAA118A525700EAD978 /* NSStatusItem+Additions.h */,
 				07437DAC118A525700EAD978 /* NSString+Additions.h */,
 				07437DAE118A525700EAD978 /* NSUserDefaults+Additions.h */,
@@ -345,6 +350,7 @@
 				07437DA7118A525700EAD978 /* NSFileHandle+Additions.m */,
 				07437DA9118A525700EAD978 /* NSFileManager+Additions.m */,
 				070A6F7B11A1108900F62DFB /* NSImage+Additions.m */,
+				07E2111A11A512CC00651452 /* NSObject+Additions.m */,
 				07437DAB118A525700EAD978 /* NSStatusItem+Additions.m */,
 				07437DAD118A525700EAD978 /* NSString+Additions.m */,
 				07437DAF118A525700EAD978 /* NSUserDefaults+Additions.m */,
@@ -405,6 +411,7 @@
 				07437DF7118A525700EAD978 /* NSView+Additions.h in Headers */,
 				07437DF9118A525700EAD978 /* NSWorkspace+Additions.h in Headers */,
 				07437DFB118A525700EAD978 /* OSType.h in Headers */,
+				07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +545,7 @@
 				07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */,
 				07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */,
 				070A6F7D11A1108900F62DFB /* NSImage+Additions.m in Sources */,
+				07E2111C11A512CC00651452 /* NSObject+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
