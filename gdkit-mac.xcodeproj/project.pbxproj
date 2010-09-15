@@ -70,6 +70,13 @@
 		07437E7B118A53BE00EAD978 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07437E7A118A53BE00EAD978 /* Carbon.framework */; };
 		07437E8E118A53F500EAD978 /* CrashReport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07437E8D118A53F500EAD978 /* CrashReport.xib */; };
 		07437E90118A53FF00EAD978 /* sendcrashreport.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */; };
+		074A578512406CE70003A03D /* GDCrashFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 074A578312406CE70003A03D /* GDCrashFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		074A578612406CE70003A03D /* GDCrashFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A578412406CE70003A03D /* GDCrashFinder.m */; };
+		074A59D012407C430003A03D /* GDCrashReporter_NSApplicationMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 074A59CE12407C430003A03D /* GDCrashReporter_NSApplicationMain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		074A59D112407C430003A03D /* GDCrashReporter_NSApplicationMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A59CF12407C430003A03D /* GDCrashReporter_NSApplicationMain.m */; };
+		074A59D412407C980003A03D /* GDBHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 074A59D212407C980003A03D /* GDBHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		074A59D512407C980003A03D /* GDBHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 074A59D312407C980003A03D /* GDBHelpers.c */; };
+		074A5AE71240865B0003A03D /* GDCrashReporter.app in Resources */ = {isa = PBXBuildFile; fileRef = 074A5AE61240865B0003A03D /* GDCrashReporter.app */; };
 		0751CE321197849700B7453B /* GDTileView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0751CE301197849700B7453B /* GDTileView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0751CE331197849700B7453B /* GDTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751CE311197849700B7453B /* GDTileView.m */; };
 		07585526119BEA1E00EEFC0B /* GDGradientBoxView.h in Headers */ = {isa = PBXBuildFile; fileRef = 07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -162,6 +169,13 @@
 		07437E7A118A53BE00EAD978 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		07437E8D118A53F500EAD978 /* CrashReport.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CrashReport.xib; path = nibs/CrashReport.xib; sourceTree = "<group>"; };
 		07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; name = sendcrashreport.pyc; path = python/sendcrashreport.pyc; sourceTree = "<group>"; };
+		074A578312406CE70003A03D /* GDCrashFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCrashFinder.h; path = source/GDCrashFinder.h; sourceTree = "<group>"; };
+		074A578412406CE70003A03D /* GDCrashFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCrashFinder.m; path = source/GDCrashFinder.m; sourceTree = "<group>"; };
+		074A59CE12407C430003A03D /* GDCrashReporter_NSApplicationMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCrashReporter_NSApplicationMain.h; path = source/GDCrashReporter_NSApplicationMain.h; sourceTree = "<group>"; };
+		074A59CF12407C430003A03D /* GDCrashReporter_NSApplicationMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCrashReporter_NSApplicationMain.m; path = source/GDCrashReporter_NSApplicationMain.m; sourceTree = "<group>"; };
+		074A59D212407C980003A03D /* GDBHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDBHelpers.h; path = source/GDBHelpers.h; sourceTree = "<group>"; };
+		074A59D312407C980003A03D /* GDBHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = GDBHelpers.c; path = source/GDBHelpers.c; sourceTree = "<group>"; };
+		074A5AE61240865B0003A03D /* GDCrashReporter.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = GDCrashReporter.app; path = projects/gdcrashreporter/build/Debug/GDCrashReporter.app; sourceTree = "<group>"; };
 		0751CE301197849700B7453B /* GDTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTileView.h; path = source/GDTileView.h; sourceTree = "<group>"; };
 		0751CE311197849700B7453B /* GDTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTileView.m; path = source/GDTileView.m; sourceTree = "<group>"; };
 		07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGradientBoxView.h; path = source/GDGradientBoxView.h; sourceTree = "<group>"; };
@@ -218,14 +232,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07437E8B118A53EC00EAD978 /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				07437E8D118A53F500EAD978 /* CrashReport.xib */,
-			);
-			name = Nibs;
-			sourceTree = "<group>";
-		};
 		0867D691FE84028FC02AAC07 /* gdkit */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +259,10 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07437E8D118A53F500EAD978 /* CrashReport.xib */,
+				074A5AE61240865B0003A03D /* GDCrashReporter.app */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
-				07437E8B118A53EC00EAD978 /* Nibs */,
 				07EE49F1119F940A00E774E8 /* sendcrashreport.py */,
 				07437E8F118A53FF00EAD978 /* sendcrashreport.pyc */,
 			);
@@ -270,12 +277,15 @@
 				07437D7F118A525700EAD978 /* GDAccessibilityObserver.h */,
 				07437D81118A525700EAD978 /* GDAccessibilityOperationResult.h */,
 				07437D83118A525700EAD978 /* GDASLLog.h */,
+				074A59D212407C980003A03D /* GDBHelpers.h */,
 				07437D85118A525700EAD978 /* GDCallback.h */,
 				07437D87118A525700EAD978 /* GDCarbonEvent.h */,
 				07437D89118A525700EAD978 /* GDCarbonEventManager.h */,
 				07437D8B118A525700EAD978 /* GDCliProxy.h */,
 				07437D8D118A525700EAD978 /* GDCliProxyConnector.h */,
+				074A578312406CE70003A03D /* GDCrashFinder.h */,
 				07437D8F118A525700EAD978 /* GDCrashReporter.h */,
+				074A59CE12407C430003A03D /* GDCrashReporter_NSApplicationMain.h */,
 				07437D91118A525700EAD978 /* GDCrashReporterDelegate.h */,
 				07DC3FA7119263FC00607725 /* GDDrawingUtils.h */,
 				07585524119BEA1E00EEFC0B /* GDGradientBoxView.h */,
@@ -322,12 +332,15 @@
 				07437D80118A525700EAD978 /* GDAccessibilityObserver.m */,
 				07437D82118A525700EAD978 /* GDAccessibilityOperationResult.m */,
 				07437D84118A525700EAD978 /* GDASLLog.m */,
+				074A59D312407C980003A03D /* GDBHelpers.c */,
 				07437D86118A525700EAD978 /* GDCallback.m */,
 				07437D88118A525700EAD978 /* GDCarbonEvent.m */,
 				07437D8A118A525700EAD978 /* GDCarbonEventManager.m */,
 				07437D8C118A525700EAD978 /* GDCliProxy.m */,
 				07437D8E118A525700EAD978 /* GDCliProxyConnector.m */,
+				074A578412406CE70003A03D /* GDCrashFinder.m */,
 				07437D90118A525700EAD978 /* GDCrashReporter.m */,
+				074A59CF12407C430003A03D /* GDCrashReporter_NSApplicationMain.m */,
 				07DC3FA8119263FC00607725 /* GDDrawingUtils.m */,
 				07585525119BEA1E00EEFC0B /* GDGradientBoxView.m */,
 				07437D96118A525700EAD978 /* GDMainMenuController.m */,
@@ -373,12 +386,15 @@
 				07437DC6118A525700EAD978 /* GDAccessibilityObserver.h in Headers */,
 				07437DC8118A525700EAD978 /* GDAccessibilityOperationResult.h in Headers */,
 				07437DCA118A525700EAD978 /* GDASLLog.h in Headers */,
+				074A59D412407C980003A03D /* GDBHelpers.h in Headers */,
 				07437DCC118A525700EAD978 /* GDCallback.h in Headers */,
 				07437DCE118A525700EAD978 /* GDCarbonEvent.h in Headers */,
 				07437DD0118A525700EAD978 /* GDCarbonEventManager.h in Headers */,
 				07437DD2118A525700EAD978 /* GDCliProxy.h in Headers */,
 				07437DD4118A525700EAD978 /* GDCliProxyConnector.h in Headers */,
+				074A578512406CE70003A03D /* GDCrashFinder.h in Headers */,
 				07437DD6118A525700EAD978 /* GDCrashReporter.h in Headers */,
+				074A59D012407C430003A03D /* GDCrashReporter_NSApplicationMain.h in Headers */,
 				07437DD8118A525700EAD978 /* GDCrashReporterDelegate.h in Headers */,
 				07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */,
 				07585526119BEA1E00EEFC0B /* GDGradientBoxView.h in Headers */,
@@ -463,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07437E8E118A53F500EAD978 /* CrashReport.xib in Resources */,
+				074A5AE71240865B0003A03D /* GDCrashReporter.app in Resources */,
 				07437E90118A53FF00EAD978 /* sendcrashreport.pyc in Resources */,
 				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
 			);
@@ -516,36 +533,39 @@
 				07437DD1118A525700EAD978 /* GDCarbonEventManager.m in Sources */,
 				07437DD3118A525700EAD978 /* GDCliProxy.m in Sources */,
 				07437DD5118A525700EAD978 /* GDCliProxyConnector.m in Sources */,
+				074A578612406CE70003A03D /* GDCrashFinder.m in Sources */,
 				07437DD7118A525700EAD978 /* GDCrashReporter.m in Sources */,
+				07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */,
+				07585527119BEA1E00EEFC0B /* GDGradientBoxView.m in Sources */,
 				07437DDD118A525700EAD978 /* GDMainMenuController.m in Sources */,
 				07437DDF118A525700EAD978 /* GDNSTaskOperation.m in Sources */,
 				07437DE1118A525700EAD978 /* GDOperation.m in Sources */,
 				07437DE3118A525700EAD978 /* GDOperationsController.m in Sources */,
+				077EDA4C118A84A8004ED780 /* GDPrintUtils.m in Sources */,
 				07437DE5118A525700EAD978 /* GDQuartzDisplay.m in Sources */,
 				07437DE7118A525700EAD978 /* GDQuartzUtils.m in Sources */,
+				07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */,
+				07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */,
+				07D8AB0411955FC300266FED /* GDScale3View.m in Sources */,
+				075E81431191DEC300A4EA53 /* GDScale9Button.m in Sources */,
+				075E81471191DF6A00A4EA53 /* GDScale9ButtonCell.m in Sources */,
+				07FCE56311937E3200946548 /* GDScale9View.m in Sources */,
 				07437DE9118A525700EAD978 /* GDSoundController.m in Sources */,
+				0751CE331197849700B7453B /* GDTileView.m in Sources */,
 				07437DEB118A525700EAD978 /* GDULimit.m in Sources */,
+				075E82931191ED3700A4EA53 /* NSControl+Additions.m in Sources */,
 				07437DEE118A525700EAD978 /* NSFileHandle+Additions.m in Sources */,
 				07437DF0118A525700EAD978 /* NSFileManager+Additions.m in Sources */,
+				070A6F7D11A1108900F62DFB /* NSImage+Additions.m in Sources */,
+				07E2111C11A512CC00651452 /* NSObject+Additions.m in Sources */,
 				07437DF2118A525700EAD978 /* NSStatusItem+Additions.m in Sources */,
 				07437DF4118A525700EAD978 /* NSString+Additions.m in Sources */,
 				07437DF6118A525700EAD978 /* NSUserDefaults+Additions.m in Sources */,
 				07437DF8118A525700EAD978 /* NSView+Additions.m in Sources */,
 				07437DFA118A525700EAD978 /* NSWorkspace+Additions.m in Sources */,
 				07437DFC118A525700EAD978 /* OSType.m in Sources */,
-				077EDA4C118A84A8004ED780 /* GDPrintUtils.m in Sources */,
-				075E81431191DEC300A4EA53 /* GDScale9Button.m in Sources */,
-				075E81471191DF6A00A4EA53 /* GDScale9ButtonCell.m in Sources */,
-				075E82931191ED3700A4EA53 /* NSControl+Additions.m in Sources */,
-				07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */,
-				07FCE56311937E3200946548 /* GDScale9View.m in Sources */,
-				07D8AB0411955FC300266FED /* GDScale3View.m in Sources */,
-				0751CE331197849700B7453B /* GDTileView.m in Sources */,
-				07585527119BEA1E00EEFC0B /* GDGradientBoxView.m in Sources */,
-				07C52C1B119DD3780094F844 /* GDScale3Button.m in Sources */,
-				07C52C1F119DD3870094F844 /* GDScale3ButtonCell.m in Sources */,
-				070A6F7D11A1108900F62DFB /* NSImage+Additions.m in Sources */,
-				07E2111C11A512CC00651452 /* NSObject+Additions.m in Sources */,
+				074A59D112407C430003A03D /* GDCrashReporter_NSApplicationMain.m in Sources */,
+				074A59D512407C980003A03D /* GDBHelpers.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +605,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				PRODUCT_NAME = GDKit;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -608,7 +629,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks/";
 				PRODUCT_NAME = GDKit;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

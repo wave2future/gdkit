@@ -12,12 +12,6 @@
 		07437EAB118A546B00EAD978 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437E9F118A546A00EAD978 /* UIColor+Additions.m */; };
 		07437EAC118A546B00EAD978 /* UIImage+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EA0118A546A00EAD978 /* UIImage+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07437EAD118A546B00EAD978 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437EA1118A546A00EAD978 /* UIImage+Additions.m */; };
-		07437EAE118A546B00EAD978 /* UITableViewDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EA2118A546A00EAD978 /* UITableViewDataProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07437EAF118A546B00EAD978 /* UITableViewDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437EA3118A546A00EAD978 /* UITableViewDataProvider.m */; };
-		07437EB0118A546B00EAD978 /* UITableViewGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EA4118A546A00EAD978 /* UITableViewGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07437EB1118A546B00EAD978 /* UITableViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437EA5118A546A00EAD978 /* UITableViewGroup.m */; };
-		07437EB2118A546B00EAD978 /* UITableViewRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EA6118A546A00EAD978 /* UITableViewRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07437EB3118A546B00EAD978 /* UITableViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437EA7118A546B00EAD978 /* UITableViewRow.m */; };
 		07437EB4118A546B00EAD978 /* UIView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EA8118A546B00EAD978 /* UIView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07437EB5118A546B00EAD978 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437EA9118A546B00EAD978 /* UIView+Additions.m */; };
 		07437EC9118A54DA00EAD978 /* GDKit-iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,12 +41,6 @@
 		07437E9F118A546A00EAD978 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "source/UIColor+Additions.m"; sourceTree = "<group>"; };
 		07437EA0118A546A00EAD978 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additions.h"; path = "source/UIImage+Additions.h"; sourceTree = "<group>"; };
 		07437EA1118A546A00EAD978 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additions.m"; path = "source/UIImage+Additions.m"; sourceTree = "<group>"; };
-		07437EA2118A546A00EAD978 /* UITableViewDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableViewDataProvider.h; path = source/UITableViewDataProvider.h; sourceTree = "<group>"; };
-		07437EA3118A546A00EAD978 /* UITableViewDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableViewDataProvider.m; path = source/UITableViewDataProvider.m; sourceTree = "<group>"; };
-		07437EA4118A546A00EAD978 /* UITableViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableViewGroup.h; path = source/UITableViewGroup.h; sourceTree = "<group>"; };
-		07437EA5118A546A00EAD978 /* UITableViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableViewGroup.m; path = source/UITableViewGroup.m; sourceTree = "<group>"; };
-		07437EA6118A546A00EAD978 /* UITableViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableViewRow.h; path = source/UITableViewRow.h; sourceTree = "<group>"; };
-		07437EA7118A546B00EAD978 /* UITableViewRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableViewRow.m; path = source/UITableViewRow.m; sourceTree = "<group>"; };
 		07437EA8118A546B00EAD978 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "source/UIView+Additions.h"; sourceTree = "<group>"; };
 		07437EA9118A546B00EAD978 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "source/UIView+Additions.m"; sourceTree = "<group>"; };
 		07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GDKit-iPhone.h"; path = "source/GDKit-iPhone.h"; sourceTree = "<group>"; };
@@ -115,9 +103,6 @@
 				07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */,
 				07437E9E118A546A00EAD978 /* UIColor+Additions.h */,
 				07437EA0118A546A00EAD978 /* UIImage+Additions.h */,
-				07437EA2118A546A00EAD978 /* UITableViewDataProvider.h */,
-				07437EA4118A546A00EAD978 /* UITableViewGroup.h */,
-				07437EA6118A546A00EAD978 /* UITableViewRow.h */,
 				07437EA8118A546B00EAD978 /* UIView+Additions.h */,
 			);
 			name = Headers;
@@ -156,9 +141,6 @@
 				07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */,
 				07437E9F118A546A00EAD978 /* UIColor+Additions.m */,
 				07437EA1118A546A00EAD978 /* UIImage+Additions.m */,
-				07437EA3118A546A00EAD978 /* UITableViewDataProvider.m */,
-				07437EA5118A546A00EAD978 /* UITableViewGroup.m */,
-				07437EA7118A546B00EAD978 /* UITableViewRow.m */,
 				07437EA9118A546B00EAD978 /* UIView+Additions.m */,
 			);
 			name = Source;
@@ -183,9 +165,6 @@
 				07437EDB118A54F500EAD978 /* NSUserDefaults+Additions.h in Headers */,
 				07437EAA118A546B00EAD978 /* UIColor+Additions.h in Headers */,
 				07437EAC118A546B00EAD978 /* UIImage+Additions.h in Headers */,
-				07437EAE118A546B00EAD978 /* UITableViewDataProvider.h in Headers */,
-				07437EB0118A546B00EAD978 /* UITableViewGroup.h in Headers */,
-				07437EB2118A546B00EAD978 /* UITableViewRow.h in Headers */,
 				07437EB4118A546B00EAD978 /* UIView+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +239,6 @@
 				07437EDC118A54F500EAD978 /* NSUserDefaults+Additions.m in Sources */,
 				07437EAB118A546B00EAD978 /* UIColor+Additions.m in Sources */,
 				07437EAD118A546B00EAD978 /* UIImage+Additions.m in Sources */,
-				07437EAF118A546B00EAD978 /* UITableViewDataProvider.m in Sources */,
-				07437EB1118A546B00EAD978 /* UITableViewGroup.m in Sources */,
-				07437EB3118A546B00EAD978 /* UITableViewRow.m in Sources */,
 				07437EB5118A546B00EAD978 /* UIView+Additions.m in Sources */,
 				07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */,
 			);
