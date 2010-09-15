@@ -90,7 +90,7 @@
 		07D8AB0411955FC300266FED /* GDScale3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8AB0211955FC300266FED /* GDScale3View.m */; };
 		07DC3FA9119263FC00607725 /* GDDrawingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC3FA7119263FC00607725 /* GDDrawingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DC3FAA119263FC00607725 /* GDDrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3FA8119263FC00607725 /* GDDrawingUtils.m */; };
-		07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2111911A512CC00651452 /* NSObject+Additions.h */; };
+		07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2111911A512CC00651452 /* NSObject+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E2111C11A512CC00651452 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E2111A11A512CC00651452 /* NSObject+Additions.m */; };
 		07FCE56211937E3200946548 /* GDScale9View.h in Headers */ = {isa = PBXBuildFile; fileRef = 07FCE56011937E3200946548 /* GDScale9View.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07FCE56311937E3200946548 /* GDScale9View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FCE56111937E3200946548 /* GDScale9View.m */; };
@@ -405,13 +405,13 @@
 				07437DED118A525700EAD978 /* NSFileHandle+Additions.h in Headers */,
 				07437DEF118A525700EAD978 /* NSFileManager+Additions.h in Headers */,
 				070A6F7C11A1108900F62DFB /* NSImage+Additions.h in Headers */,
+				07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */,
 				07437DF1118A525700EAD978 /* NSStatusItem+Additions.h in Headers */,
 				07437DF3118A525700EAD978 /* NSString+Additions.h in Headers */,
 				07437DF5118A525700EAD978 /* NSUserDefaults+Additions.h in Headers */,
 				07437DF7118A525700EAD978 /* NSView+Additions.h in Headers */,
 				07437DF9118A525700EAD978 /* NSWorkspace+Additions.h in Headers */,
 				07437DFB118A525700EAD978 /* OSType.h in Headers */,
-				07E2111B11A512CC00651452 /* NSObject+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

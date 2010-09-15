@@ -36,7 +36,7 @@
 		077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */; };
 		077EDC28118AB6BB004ED780 /* GDAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDC26118AB6BB004ED780 /* GDAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDC27118AB6BB004ED780 /* GDAccelerometer.m */; };
-		07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2114C11A5144900651452 /* NSObject+Additions.h */; };
+		07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2114C11A5144900651452 /* NSObject+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E2114D11A5144900651452 /* NSObject+Additions.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -178,6 +178,7 @@
 				077EDAA0118A86DA004ED780 /* GDPrintUtils.h in Headers */,
 				077EDB8C118A9DD2004ED780 /* GDQuartzUtils.h in Headers */,
 				07437F02118A553400EAD978 /* macros.h in Headers */,
+				07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */,
 				07437ED9118A54F500EAD978 /* NSString+Additions.h in Headers */,
 				07437EDB118A54F500EAD978 /* NSUserDefaults+Additions.h in Headers */,
 				07437EAA118A546B00EAD978 /* UIColor+Additions.h in Headers */,
@@ -186,7 +187,6 @@
 				07437EB0118A546B00EAD978 /* UITableViewGroup.h in Headers */,
 				07437EB2118A546B00EAD978 /* UITableViewRow.h in Headers */,
 				07437EB4118A546B00EAD978 /* UIView+Additions.h in Headers */,
-				07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
