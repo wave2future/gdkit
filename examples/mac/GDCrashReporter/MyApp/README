@@ -1,0 +1,12 @@
+
+Here's how to implement the GDKit Crash Reporter in your own application.
+
+1. Put GDKit-Mac in your Framework search path.
+2. Link against the GDKit-Mac Framework
+3. Add a new Copy Files build phase to copy the GDKit-Mac framework into the
+   applications Frameworks. For an example you can look at this applications
+   "Copy Frameworks" build phase. Right click on it and select Get Info.
+4. Update the Info.plist file with the necessary entries. (See this app
+   for an example).
+5. Update the main.m file to return GDCrashReporter_NSApplicationMain()
+   function call. (See this application's main.m file).
