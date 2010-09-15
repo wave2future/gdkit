@@ -74,7 +74,7 @@
 		NSGraphicsContext * context = [NSGraphicsContext currentContext];
 		CGContextRef cgcontext = (CGContextRef)[context graphicsPort];
 		CGImageRef image = [tileImage CGImage];
-		CGRect imageRect = NSMakeRect(0,0,[tileImage size].width,[tileImage size].height);
+		CGRect imageRect = CGRectMake(0,0,[tileImage size].width,[tileImage size].height);
 		CGContextClipToRect(cgcontext,CGRectMake(0.0, 0.0,[self bounds].size.width,[self bounds].size.height));
 		CGContextDrawTiledImage(cgcontext,imageRect,image);
 		CGImageRelease(image);
