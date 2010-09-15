@@ -1,0 +1,9 @@
+{
+	Actions = {
+	};
+	Outlets = {
+		tileImage = NSImage;
+	};
+    ClassName = GDTileView;
+    SuperClass = NSView;
+}

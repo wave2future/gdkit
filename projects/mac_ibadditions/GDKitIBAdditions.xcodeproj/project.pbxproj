@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07068C191196ABAF00074651 /* GDScale3ViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07068C181196ABAF00074651 /* GDScale3ViewInspector.m */; };
+		07068C1C1196ABD600074651 /* GDScale3ViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07068C1B1196ABD600074651 /* GDScale3ViewIntegration.m */; };
+		07068C3C1196AE6500074651 /* GDScale3View.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 07068C3B1196AE6500074651 /* GDScale3View.classdescription */; };
+		071A6A31119892D500CBFD29 /* scale_nine_button_icon_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 071A6A30119892D500CBFD29 /* scale_nine_button_icon_down.png */; };
+		0738F0EB1198F93100547DDE /* GDScale9Button.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 0738F0EA1198F93100547DDE /* GDScale9Button.classdescription */; };
+		074A3A6D1194C9D000B8C472 /* scale_nine_view_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 074A37A51194BF2300B8C472 /* scale_nine_view_icon.png */; };
+		074A571F12406A7D0003A03D /* GDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074A56CE1240698D0003A03D /* GDKit.framework */; };
+		0751CE391197856600B7453B /* GDTileViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751CE381197856600B7453B /* GDTileViewIntegration.m */; };
+		0751CE3C119785BC00B7453B /* GDTileViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751CE3B119785BC00B7453B /* GDTileViewInspector.m */; };
+		0751CE4C1197867900B7453B /* GDTileView.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 0751CE4B1197867900B7453B /* GDTileView.classdescription */; };
+		0751CEA111978AAB00B7453B /* diagonal_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751CEA011978AAB00B7453B /* diagonal_tile.png */; };
+		0751CEB911978B6E00B7453B /* diagonal_tile_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751CEB811978B6E00B7453B /* diagonal_tile_small.png */; };
+		0758547B119BB7D100EEFC0B /* pattern_140.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0758547A119BB7D100EEFC0B /* pattern_140.gif */; };
+		076FA8831198F9F100A10B81 /* Scale9ViewInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076FA8821198F9F100A10B81 /* Scale9ViewInspector.xib */; };
+		076FA8861198FA0300A10B81 /* Scale3ViewInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076FA8851198FA0300A10B81 /* Scale3ViewInspector.xib */; };
+		076FA8881198FA0300A10B81 /* TileViewInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076FA8871198FA0300A10B81 /* TileViewInspector.xib */; };
+		076FA88E1198FA5800A10B81 /* Scale9ButtonInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076FA88D1198FA5800A10B81 /* Scale9ButtonInspector.xib */; };
+		076FA8931198FA7300A10B81 /* GDScale9ButtonIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 076FA8921198FA7300A10B81 /* GDScale9ButtonIntegration.m */; };
+		076FA8961198FAAD00A10B81 /* GDScale9ButtonInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 076FA8951198FAAD00A10B81 /* GDScale9ButtonInspector.m */; };
+		076FAAE0119957D900A10B81 /* scale_nine_button_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 076FAADF119957D900A10B81 /* scale_nine_button_cell_icon.png */; };
+		076FAB2111995A9100A10B81 /* scale_three_button_icon_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 076FAB2011995A9100A10B81 /* scale_three_button_icon_horizontal.png */; };
+		07760C96119D0C2A0091B63F /* gradient_box_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07760C95119D0C2A0091B63F /* gradient_box_icon.png */; };
+		07760CA5119D0E9F0091B63F /* tile_view_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07760CA4119D0E9F0091B63F /* tile_view_icon.png */; };
+		07760CB7119D0F330091B63F /* GDGradientBoxViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07760CB6119D0F330091B63F /* GDGradientBoxViewIntegration.m */; };
+		07760CBA119D0F7D0091B63F /* GDGradientBoxViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07760CB9119D0F7D0091B63F /* GDGradientBoxViewInspector.m */; };
+		079D11B41194D128004A9502 /* scale_nine_button_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 079D11B31194D128004A9502 /* scale_nine_button_icon.png */; };
+		07C52AF7119DC7890094F844 /* GDGradientBoxView.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 07C52AF6119DC7890094F844 /* GDGradientBoxView.classdescription */; };
+		07C52AFB119DC7E60094F844 /* GradientBoxViewInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C52AFA119DC7E60094F844 /* GradientBoxViewInspector.xib */; };
+		07C52CD6119DFBD40094F844 /* GDScale3ButtonIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C52CD5119DFBD40094F844 /* GDScale3ButtonIntegration.m */; };
+		07C52CD9119DFBE00094F844 /* GDScale3ButtonInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C52CD8119DFBE00094F844 /* GDScale3ButtonInspector.m */; };
+		07C52CDD119DFC340094F844 /* GDScale3Button.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 07C52CDC119DFC340094F844 /* GDScale3Button.classdescription */; };
+		07C52D56119E022E0094F844 /* scale_three_button_icon_horizontal_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C52D53119E022E0094F844 /* scale_three_button_icon_horizontal_down.png */; };
+		07C52D57119E022E0094F844 /* scale_three_button_icon_vertical_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C52D54119E022E0094F844 /* scale_three_button_icon_vertical_down.png */; };
+		07C52D58119E022E0094F844 /* scale_three_button_icon_vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C52D55119E022E0094F844 /* scale_three_button_icon_vertical.png */; };
+		07C52D64119E02790094F844 /* Scale3ButtonInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C52D63119E02790094F844 /* Scale3ButtonInspector.xib */; };
+		07D53BDC119A5A9B00540936 /* scale_three_button_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D53BDB119A5A9B00540936 /* scale_three_button_cell_icon.png */; };
+		07D8A991119521B900266FED /* well.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D8A990119521B900266FED /* well.png */; };
+		07D8A99B1195220A00266FED /* well_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D8A99A1195220A00266FED /* well_down.png */; };
+		07D8AA261195253B00266FED /* blackButton2Over.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D8AA251195253B00266FED /* blackButton2Over.png */; };
+		07D8AB9211956AAE00266FED /* scale_three_view_icon_vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D8AB9111956AAE00266FED /* scale_three_view_icon_vertical.png */; };
+		07D8AB9711956B6700266FED /* scale_three_view_icon_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D8AB9611956B6700266FED /* scale_three_view_icon_horizontal.png */; };
+		07E130461199D39B000DE1D7 /* blackButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E130431199D39B000DE1D7 /* blackButton2.png */; };
+		07E130471199D39B000DE1D7 /* blackButton2Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E130441199D39B000DE1D7 /* blackButton2Down.png */; };
+		07E130481199D39B000DE1D7 /* blackButtonNoShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E130451199D39B000DE1D7 /* blackButtonNoShadow.png */; };
+		07EE493D119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */; };
+		07EE4955119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */; };
+		07EE4B25119FB53300E774E8 /* scale_three_view_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B23119FB53300E774E8 /* scale_three_view_test.png */; };
+		07EE4B26119FB53300E774E8 /* scale_three_view_vertical_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */; };
+		54D33B2906778E3300C9C163 /* GDScale9View.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* GDScale9View.classdescription */; };
+		8D1AC96C0486D14A00FE50C9 /* GDScale9ViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* GDScale9ViewInspector.m */; settings = {ATTRIBUTES = (); }; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
+		C044829F0C3328F4006E818F /* GDScale9ViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = C044829E0C3328F4006E818F /* GDScale9ViewIntegration.m */; };
+		C08787290A49DE9A00E9B151 /* GDKitMacIBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* GDKitMacIBAdditions.m */; };
+		C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
+		D1AEDE470A6C289C0010C343 /* GDKitMacIBAdditionsLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* GDKitMacIBAdditionsLibrary.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		074A56CD1240698D0003A03D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074A56C91240698D0003A03D /* gdkit-mac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = "GDKit-Mac";
+		};
+		074A56CF1240699A0003A03D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074A56C91240698D0003A03D /* gdkit-mac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "GDKit-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		074A37C11194C20500B8C472 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0259C576FE90428111CA0C5A /* GDKitMacIBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = GDKitMacIBAdditions.m; path = source/GDKitMacIBAdditions.m; sourceTree = "<group>"; };
+		0259C577FE90428111CA0C5A /* GDScale9ViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = GDScale9ViewInspector.m; path = source/GDScale9ViewInspector.m; sourceTree = "<group>"; };
+		0259C57AFE90428111CA0C5A /* GDKitMacIBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GDKitMacIBAdditions.h; path = source/GDKitMacIBAdditions.h; sourceTree = "<group>"; };
+		0259C57BFE90428111CA0C5A /* GDScale9ViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = GDScale9ViewInspector.h; path = source/GDScale9ViewInspector.h; sourceTree = "<group>"; };
+		07068C171196ABAF00074651 /* GDScale3ViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3ViewInspector.h; path = source/GDScale3ViewInspector.h; sourceTree = "<group>"; };
+		07068C181196ABAF00074651 /* GDScale3ViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3ViewInspector.m; path = source/GDScale3ViewInspector.m; sourceTree = "<group>"; };
+		07068C1B1196ABD600074651 /* GDScale3ViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3ViewIntegration.m; path = source/GDScale3ViewIntegration.m; sourceTree = "<group>"; };
+		07068C291196AC9F00074651 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Scale3ViewInspector.xib; sourceTree = "<group>"; };
+		07068C3B1196AE6500074651 /* GDScale3View.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDScale3View.classdescription; path = classdescriptions/GDScale3View.classdescription; sourceTree = "<group>"; };
+		071A6A30119892D500CBFD29 /* scale_nine_button_icon_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_nine_button_icon_down.png; path = assets/scale_nine_button_icon_down.png; sourceTree = "<group>"; };
+		0738F0EA1198F93100547DDE /* GDScale9Button.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDScale9Button.classdescription; path = classdescriptions/GDScale9Button.classdescription; sourceTree = "<group>"; };
+		074A37A51194BF2300B8C472 /* scale_nine_view_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_nine_view_icon.png; path = assets/scale_nine_view_icon.png; sourceTree = "<group>"; };
+		074A3A931194CBCF00B8C472 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GDKitMacIBAdditionsSandbox.xib; sourceTree = "<group>"; };
+		074A56C91240698D0003A03D /* gdkit-mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "gdkit-mac.xcodeproj"; path = "../../gdkit-mac.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		0751CE381197856600B7453B /* GDTileViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTileViewIntegration.m; path = source/GDTileViewIntegration.m; sourceTree = "<group>"; };
+		0751CE3A119785BC00B7453B /* GDTileViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTileViewInspector.h; path = source/GDTileViewInspector.h; sourceTree = "<group>"; };
+		0751CE3B119785BC00B7453B /* GDTileViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDTileViewInspector.m; path = source/GDTileViewInspector.m; sourceTree = "<group>"; };
+		0751CE3D1197861C00B7453B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TileViewInspector.xib; sourceTree = "<group>"; };
+		0751CE4B1197867900B7453B /* GDTileView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDTileView.classdescription; path = classdescriptions/GDTileView.classdescription; sourceTree = "<group>"; };
+		0751CEA011978AAB00B7453B /* diagonal_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diagonal_tile.png; path = assets/diagonal_tile.png; sourceTree = "<group>"; };
+		0751CEB811978B6E00B7453B /* diagonal_tile_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diagonal_tile_small.png; path = assets/diagonal_tile_small.png; sourceTree = "<group>"; };
+		0758547A119BB7D100EEFC0B /* pattern_140.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pattern_140.gif; path = assets/pattern_140.gif; sourceTree = "<group>"; };
+		076FA88B1198FA5200A10B81 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Scale9ButtonInspector.xib; sourceTree = "<group>"; };
+		076FA8921198FA7300A10B81 /* GDScale9ButtonIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9ButtonIntegration.m; path = source/GDScale9ButtonIntegration.m; sourceTree = "<group>"; };
+		076FA8941198FAAD00A10B81 /* GDScale9ButtonInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale9ButtonInspector.h; path = source/GDScale9ButtonInspector.h; sourceTree = "<group>"; };
+		076FA8951198FAAD00A10B81 /* GDScale9ButtonInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale9ButtonInspector.m; path = source/GDScale9ButtonInspector.m; sourceTree = "<group>"; };
+		076FAADF119957D900A10B81 /* scale_nine_button_cell_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_nine_button_cell_icon.png; path = assets/scale_nine_button_cell_icon.png; sourceTree = "<group>"; };
+		076FAB2011995A9100A10B81 /* scale_three_button_icon_horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_button_icon_horizontal.png; path = assets/scale_three_button_icon_horizontal.png; sourceTree = "<group>"; };
+		07760C95119D0C2A0091B63F /* gradient_box_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gradient_box_icon.png; path = assets/gradient_box_icon.png; sourceTree = "<group>"; };
+		07760CA4119D0E9F0091B63F /* tile_view_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_view_icon.png; path = assets/tile_view_icon.png; sourceTree = "<group>"; };
+		07760CB6119D0F330091B63F /* GDGradientBoxViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGradientBoxViewIntegration.m; path = source/GDGradientBoxViewIntegration.m; sourceTree = "<group>"; };
+		07760CB8119D0F7D0091B63F /* GDGradientBoxViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDGradientBoxViewInspector.h; path = source/GDGradientBoxViewInspector.h; sourceTree = "<group>"; };
+		07760CB9119D0F7D0091B63F /* GDGradientBoxViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDGradientBoxViewInspector.m; path = source/GDGradientBoxViewInspector.m; sourceTree = "<group>"; };
+		079D11B31194D128004A9502 /* scale_nine_button_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_nine_button_icon.png; path = assets/scale_nine_button_icon.png; sourceTree = "<group>"; };
+		07C52AD1119DBD260094F844 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GradientBoxViewInspector.xib; sourceTree = "<group>"; };
+		07C52AF6119DC7890094F844 /* GDGradientBoxView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDGradientBoxView.classdescription; path = classdescriptions/GDGradientBoxView.classdescription; sourceTree = "<group>"; };
+		07C52CD5119DFBD40094F844 /* GDScale3ButtonIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3ButtonIntegration.m; path = source/GDScale3ButtonIntegration.m; sourceTree = "<group>"; };
+		07C52CD7119DFBE00094F844 /* GDScale3ButtonInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDScale3ButtonInspector.h; path = source/GDScale3ButtonInspector.h; sourceTree = "<group>"; };
+		07C52CD8119DFBE00094F844 /* GDScale3ButtonInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDScale3ButtonInspector.m; path = source/GDScale3ButtonInspector.m; sourceTree = "<group>"; };
+		07C52CDA119DFC210094F844 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Scale3ButtonInspector.xib; sourceTree = "<group>"; };
+		07C52CDC119DFC340094F844 /* GDScale3Button.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDScale3Button.classdescription; path = classdescriptions/GDScale3Button.classdescription; sourceTree = "<group>"; };
+		07C52D53119E022E0094F844 /* scale_three_button_icon_horizontal_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_button_icon_horizontal_down.png; path = assets/scale_three_button_icon_horizontal_down.png; sourceTree = "<group>"; };
+		07C52D54119E022E0094F844 /* scale_three_button_icon_vertical_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_button_icon_vertical_down.png; path = assets/scale_three_button_icon_vertical_down.png; sourceTree = "<group>"; };
+		07C52D55119E022E0094F844 /* scale_three_button_icon_vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_button_icon_vertical.png; path = assets/scale_three_button_icon_vertical.png; sourceTree = "<group>"; };
+		07D53BDB119A5A9B00540936 /* scale_three_button_cell_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_button_cell_icon.png; path = assets/scale_three_button_cell_icon.png; sourceTree = "<group>"; };
+		07D8A990119521B900266FED /* well.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = well.png; path = assets/well.png; sourceTree = "<group>"; };
+		07D8A99A1195220A00266FED /* well_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = well_down.png; path = assets/well_down.png; sourceTree = "<group>"; };
+		07D8AA251195253B00266FED /* blackButton2Over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButton2Over.png; path = assets/blackButton2Over.png; sourceTree = "<group>"; };
+		07D8AB9111956AAE00266FED /* scale_three_view_icon_vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_vertical.png; path = assets/scale_three_view_icon_vertical.png; sourceTree = "<group>"; };
+		07D8AB9611956B6700266FED /* scale_three_view_icon_horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_horizontal.png; path = assets/scale_three_view_icon_horizontal.png; sourceTree = "<group>"; };
+		07E130431199D39B000DE1D7 /* blackButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButton2.png; path = assets/blackButton2.png; sourceTree = "<group>"; };
+		07E130441199D39B000DE1D7 /* blackButton2Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButton2Down.png; path = assets/blackButton2Down.png; sourceTree = "<group>"; };
+		07E130451199D39B000DE1D7 /* blackButtonNoShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButtonNoShadow.png; path = assets/blackButtonNoShadow.png; sourceTree = "<group>"; };
+		07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_horizontal_large.png; path = assets/scale_three_view_icon_horizontal_large.png; sourceTree = "<group>"; };
+		07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_icon_vertical_large.png; path = assets/scale_three_view_icon_vertical_large.png; sourceTree = "<group>"; };
+		07EE4B23119FB53300E774E8 /* scale_three_view_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_test.png; path = assets/scale_three_view_test.png; sourceTree = "<group>"; };
+		07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale_three_view_vertical_test.png; path = assets/scale_three_view_vertical_test.png; sourceTree = "<group>"; };
+		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		13F8B88907B434F6008AE28D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF980370C29C00C91783 /* GDKitMacIBAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDKitMacIBAdditions_Prefix.pch; path = source/GDKitMacIBAdditions_Prefix.pch; sourceTree = "<group>"; };
+		53DF68FE067E5B5A0090B5B0 /* GDKitIBAdditions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDKitIBAdditions-Info.plist"; sourceTree = "<group>"; };
+		54D33B2806778E3300C9C163 /* GDScale9View.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = GDScale9View.classdescription; path = classdescriptions/GDScale9View.classdescription; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* GDKitMacIBAdditions.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GDKitMacIBAdditions.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C044829E0C3328F4006E818F /* GDScale9ViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = GDScale9ViewIntegration.m; path = source/GDScale9ViewIntegration.m; sourceTree = "<group>"; };
+		C05B20D80A48CB530099B9E5 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = English; path = English.lproj/Scale9ViewInspector.xib; sourceTree = "<group>"; };
+		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AEDE460A6C289C0010C343 /* GDKitMacIBAdditionsLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = GDKitMacIBAdditionsLibrary.nib; path = English.lproj/GDKitMacIBAdditionsLibrary.nib; sourceTree = "<group>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074A571F12406A7D0003A03D /* GDKit.framework in Frameworks */,
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* GDKitIBAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				074A37B31194BFE700B8C472 /* Projects */,
+				074A383A1194C51F00B8C472 /* Headers */,
+				54D33B2506778DF000C9C163 /* Source */,
+				131E8FE8067F80F40006E0CE /* Nibs */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				54D33B2406778DD400C9C163 /* Class Descriptions */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+			);
+			name = GDKitIBAdditions;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07E130431199D39B000DE1D7 /* blackButton2.png */,
+				07E130441199D39B000DE1D7 /* blackButton2Down.png */,
+				07D8AA251195253B00266FED /* blackButton2Over.png */,
+				07E130451199D39B000DE1D7 /* blackButtonNoShadow.png */,
+				0751CEA011978AAB00B7453B /* diagonal_tile.png */,
+				0751CEB811978B6E00B7453B /* diagonal_tile_small.png */,
+				53DF68FE067E5B5A0090B5B0 /* GDKitIBAdditions-Info.plist */,
+				07760C95119D0C2A0091B63F /* gradient_box_icon.png */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
+				0758547A119BB7D100EEFC0B /* pattern_140.gif */,
+				076FAADF119957D900A10B81 /* scale_nine_button_cell_icon.png */,
+				079D11B31194D128004A9502 /* scale_nine_button_icon.png */,
+				071A6A30119892D500CBFD29 /* scale_nine_button_icon_down.png */,
+				074A37A51194BF2300B8C472 /* scale_nine_view_icon.png */,
+				07D53BDB119A5A9B00540936 /* scale_three_button_cell_icon.png */,
+				076FAB2011995A9100A10B81 /* scale_three_button_icon_horizontal.png */,
+				07C52D53119E022E0094F844 /* scale_three_button_icon_horizontal_down.png */,
+				07C52D55119E022E0094F844 /* scale_three_button_icon_vertical.png */,
+				07C52D54119E022E0094F844 /* scale_three_button_icon_vertical_down.png */,
+				07D8AB9611956B6700266FED /* scale_three_view_icon_horizontal.png */,
+				07EE493C119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png */,
+				07D8AB9111956AAE00266FED /* scale_three_view_icon_vertical.png */,
+				07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */,
+				07EE4B23119FB53300E774E8 /* scale_three_view_test.png */,
+				07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */,
+				07760CA4119D0E9F0091B63F /* tile_view_icon.png */,
+				07D8A990119521B900266FED /* well.png */,
+				07D8A99A1195220A00266FED /* well_down.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		074A37B31194BFE700B8C472 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				074A56C91240698D0003A03D /* gdkit-mac.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		074A383A1194C51F00B8C472 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				07760CB8119D0F7D0091B63F /* GDGradientBoxViewInspector.h */,
+				0259C57AFE90428111CA0C5A /* GDKitMacIBAdditions.h */,
+				32DBCF980370C29C00C91783 /* GDKitMacIBAdditions_Prefix.pch */,
+				07C52CD7119DFBE00094F844 /* GDScale3ButtonInspector.h */,
+				07068C171196ABAF00074651 /* GDScale3ViewInspector.h */,
+				076FA8941198FAAD00A10B81 /* GDScale9ButtonInspector.h */,
+				0259C57BFE90428111CA0C5A /* GDScale9ViewInspector.h */,
+				0751CE3A119785BC00B7453B /* GDTileViewInspector.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		074A56CA1240698D0003A03D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				074A56CE1240698D0003A03D /* GDKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		131E8FE8067F80F40006E0CE /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				D1AEDE460A6C289C0010C343 /* GDKitMacIBAdditionsLibrary.nib */,
+				076FA8841198FA0300A10B81 /* GDKitMacIBAdditionsSandbox.xib */,
+				07C52AFA119DC7E60094F844 /* GradientBoxViewInspector.xib */,
+				07C52D63119E02790094F844 /* Scale3ButtonInspector.xib */,
+				076FA8851198FA0300A10B81 /* Scale3ViewInspector.xib */,
+				076FA88D1198FA5800A10B81 /* Scale9ButtonInspector.xib */,
+				076FA8821198F9F100A10B81 /* Scale9ViewInspector.xib */,
+				076FA8871198FA0300A10B81 /* TileViewInspector.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* GDKitMacIBAdditions.ibplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B88807B434F6008AE28D /* AppKit.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				13F8B88907B434F6008AE28D /* CoreData.framework */,
+				13F8B88A07B434F6008AE28D /* Foundation.framework */,
+				C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54D33B2406778DD400C9C163 /* Class Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				07C52AF6119DC7890094F844 /* GDGradientBoxView.classdescription */,
+				07C52CDC119DFC340094F844 /* GDScale3Button.classdescription */,
+				07068C3B1196AE6500074651 /* GDScale3View.classdescription */,
+				0738F0EA1198F93100547DDE /* GDScale9Button.classdescription */,
+				54D33B2806778E3300C9C163 /* GDScale9View.classdescription */,
+				0751CE4B1197867900B7453B /* GDTileView.classdescription */,
+			);
+			name = "Class Descriptions";
+			sourceTree = "<group>";
+		};
+		54D33B2506778DF000C9C163 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				07760CB9119D0F7D0091B63F /* GDGradientBoxViewInspector.m */,
+				07760CB6119D0F330091B63F /* GDGradientBoxViewIntegration.m */,
+				0259C576FE90428111CA0C5A /* GDKitMacIBAdditions.m */,
+				07C52CD8119DFBE00094F844 /* GDScale3ButtonInspector.m */,
+				07C52CD5119DFBD40094F844 /* GDScale3ButtonIntegration.m */,
+				07068C181196ABAF00074651 /* GDScale3ViewInspector.m */,
+				07068C1B1196ABD600074651 /* GDScale3ViewIntegration.m */,
+				076FA8951198FAAD00A10B81 /* GDScale9ButtonInspector.m */,
+				076FA8921198FA7300A10B81 /* GDScale9ButtonIntegration.m */,
+				0259C577FE90428111CA0C5A /* GDScale9ViewInspector.m */,
+				C044829E0C3328F4006E818F /* GDScale9ViewIntegration.m */,
+				0751CE3B119785BC00B7453B /* GDTileViewInspector.m */,
+				0751CE381197856600B7453B /* GDTileViewIntegration.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* GDKitMacIBAdditions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "GDKitMacIBAdditions" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				074A37C11194C20500B8C472 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				074A56D01240699A0003A03D /* PBXTargetDependency */,
+			);
+			name = GDKitMacIBAdditions;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = GDKitIBAdditions;
+			productReference = 8D1AC9740486D14A00FE50C9 /* GDKitMacIBAdditions.ibplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "GDKitIBAdditions" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* GDKitIBAdditions */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 074A56CA1240698D0003A03D /* Products */;
+					ProjectRef = 074A56C91240698D0003A03D /* gdkit-mac.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* GDKitMacIBAdditions */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		074A56CE1240698D0003A03D /* GDKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GDKit.framework;
+			remoteRef = 074A56CD1240698D0003A03D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E130461199D39B000DE1D7 /* blackButton2.png in Resources */,
+				07E130471199D39B000DE1D7 /* blackButton2Down.png in Resources */,
+				07D8AA261195253B00266FED /* blackButton2Over.png in Resources */,
+				07E130481199D39B000DE1D7 /* blackButtonNoShadow.png in Resources */,
+				0751CEA111978AAB00B7453B /* diagonal_tile.png in Resources */,
+				0751CEB911978B6E00B7453B /* diagonal_tile_small.png in Resources */,
+				07C52AF7119DC7890094F844 /* GDGradientBoxView.classdescription in Resources */,
+				D1AEDE470A6C289C0010C343 /* GDKitMacIBAdditionsLibrary.nib in Resources */,
+				07C52CDD119DFC340094F844 /* GDScale3Button.classdescription in Resources */,
+				07068C3C1196AE6500074651 /* GDScale3View.classdescription in Resources */,
+				0738F0EB1198F93100547DDE /* GDScale9Button.classdescription in Resources */,
+				54D33B2906778E3300C9C163 /* GDScale9View.classdescription in Resources */,
+				0751CE4C1197867900B7453B /* GDTileView.classdescription in Resources */,
+				07760C96119D0C2A0091B63F /* gradient_box_icon.png in Resources */,
+				0758547B119BB7D100EEFC0B /* pattern_140.gif in Resources */,
+				076FAAE0119957D900A10B81 /* scale_nine_button_cell_icon.png in Resources */,
+				079D11B41194D128004A9502 /* scale_nine_button_icon.png in Resources */,
+				071A6A31119892D500CBFD29 /* scale_nine_button_icon_down.png in Resources */,
+				074A3A6D1194C9D000B8C472 /* scale_nine_view_icon.png in Resources */,
+				07D53BDC119A5A9B00540936 /* scale_three_button_cell_icon.png in Resources */,
+				076FAB2111995A9100A10B81 /* scale_three_button_icon_horizontal.png in Resources */,
+				07C52D56119E022E0094F844 /* scale_three_button_icon_horizontal_down.png in Resources */,
+				07C52D58119E022E0094F844 /* scale_three_button_icon_vertical.png in Resources */,
+				07C52D57119E022E0094F844 /* scale_three_button_icon_vertical_down.png in Resources */,
+				07D8AB9711956B6700266FED /* scale_three_view_icon_horizontal.png in Resources */,
+				07D8AB9211956AAE00266FED /* scale_three_view_icon_vertical.png in Resources */,
+				07760CA5119D0E9F0091B63F /* tile_view_icon.png in Resources */,
+				07D8A991119521B900266FED /* well.png in Resources */,
+				07D8A99B1195220A00266FED /* well_down.png in Resources */,
+				07C52D64119E02790094F844 /* Scale3ButtonInspector.xib in Resources */,
+				07C52AFB119DC7E60094F844 /* GradientBoxViewInspector.xib in Resources */,
+				076FA8861198FA0300A10B81 /* Scale3ViewInspector.xib in Resources */,
+				076FA8831198F9F100A10B81 /* Scale9ViewInspector.xib in Resources */,
+				076FA8881198FA0300A10B81 /* TileViewInspector.xib in Resources */,
+				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
+				076FA88E1198FA5800A10B81 /* Scale9ButtonInspector.xib in Resources */,
+				07EE493D119F4D5200E774E8 /* scale_three_view_icon_horizontal_large.png in Resources */,
+				07EE4955119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png in Resources */,
+				07EE4B25119FB53300E774E8 /* scale_three_view_test.png in Resources */,
+				07EE4B26119FB53300E774E8 /* scale_three_view_vertical_test.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08787290A49DE9A00E9B151 /* GDKitMacIBAdditions.m in Sources */,
+				07068C191196ABAF00074651 /* GDScale3ViewInspector.m in Sources */,
+				07068C1C1196ABD600074651 /* GDScale3ViewIntegration.m in Sources */,
+				8D1AC96C0486D14A00FE50C9 /* GDScale9ViewInspector.m in Sources */,
+				C044829F0C3328F4006E818F /* GDScale9ViewIntegration.m in Sources */,
+				0751CE3C119785BC00B7453B /* GDTileViewInspector.m in Sources */,
+				0751CE391197856600B7453B /* GDTileViewIntegration.m in Sources */,
+				076FA8931198FA7300A10B81 /* GDScale9ButtonIntegration.m in Sources */,
+				076FA8961198FAAD00A10B81 /* GDScale9ButtonInspector.m in Sources */,
+				07760CB7119D0F330091B63F /* GDGradientBoxViewIntegration.m in Sources */,
+				07760CBA119D0F7D0091B63F /* GDGradientBoxViewInspector.m in Sources */,
+				07C52CD6119DFBD40094F844 /* GDScale3ButtonIntegration.m in Sources */,
+				07C52CD9119DFBE00094F844 /* GDScale3ButtonInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		074A56D01240699A0003A03D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GDKit-Mac";
+			targetProxy = 074A56CF1240699A0003A03D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		076FA8821198F9F100A10B81 /* Scale9ViewInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C05B20D80A48CB530099B9E5 /* English */,
+			);
+			name = Scale9ViewInspector.xib;
+			sourceTree = "<group>";
+		};
+		076FA8841198FA0300A10B81 /* GDKitMacIBAdditionsSandbox.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				074A3A931194CBCF00B8C472 /* English */,
+			);
+			name = GDKitMacIBAdditionsSandbox.xib;
+			sourceTree = "<group>";
+		};
+		076FA8851198FA0300A10B81 /* Scale3ViewInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07068C291196AC9F00074651 /* English */,
+			);
+			name = Scale3ViewInspector.xib;
+			sourceTree = "<group>";
+		};
+		076FA8871198FA0300A10B81 /* TileViewInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0751CE3D1197861C00B7453B /* English */,
+			);
+			name = TileViewInspector.xib;
+			sourceTree = "<group>";
+		};
+		076FA88D1198FA5800A10B81 /* Scale9ButtonInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076FA88B1198FA5200A10B81 /* English */,
+			);
+			name = Scale9ButtonInspector.xib;
+			sourceTree = "<group>";
+		};
+		07C52AFA119DC7E60094F844 /* GradientBoxViewInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C52AD1119DBD260094F844 /* English */,
+			);
+			name = GradientBoxViewInspector.xib;
+			sourceTree = "<group>";
+		};
+		07C52D63119E02790094F844 /* Scale3ButtonInspector.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C52CDA119DFC210094F844 /* English */,
+			);
+			name = Scale3ButtonInspector.xib;
+			sourceTree = "<group>";
+		};
+		8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D1AC97B0486D23100FE50C9 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C056398408A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					$inherited,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(SRCROOT)/../../build/$(BUILD_STYLE)\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(DEVELOPER_DIR)/Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/GDKitMacIBAdditions_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks/GDKitMacIBAdditions.framework/Resources";
+				PRODUCT_NAME = GDKitMacIBAdditions;
+				WRAPPER_EXTENSION = ibplugin;
+			};
+			name = Debug;
+		};
+		C056398508A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					$inherited,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(SRCROOT)/../../build/$(BUILD_STYLE)\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(DEVELOPER_DIR)/Library/Frameworks\"";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/GDKitMacIBAdditions_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks/GDKitMacIBAdditions.framework/Resources";
+				PRODUCT_NAME = GDKitMacIBAdditions;
+				WRAPPER_EXTENSION = ibplugin;
+			};
+			name = Release;
+		};
+		C056398C08A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_MODEL_TUNING = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C056398D08A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_MODEL_TUNING = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "GDKitMacIBAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398408A954F8003078D8 /* Debug */,
+				C056398508A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398B08A954F8003078D8 /* Build configuration list for PBXProject "GDKitIBAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398C08A954F8003078D8 /* Debug */,
+				C056398D08A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

@@ -1,0 +1,8 @@
+{
+	Actions = {
+	};
+	Outlets = {
+	};
+    ClassName = GDGradientBoxView;
+    SuperClass = NSView;
+}

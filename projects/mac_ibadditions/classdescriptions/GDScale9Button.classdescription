@@ -1,0 +1,10 @@
+{
+	Actions = {
+	};
+	Outlets = {
+		upImage = NSImage;
+		downImage = NSImage;
+	};
+    ClassName = GDScale9Button;
+    SuperClass = NSButton;
+}

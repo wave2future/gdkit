@@ -1,0 +1,9 @@
+{
+	Actions = {
+	};
+	Outlets = {
+		sourceImage = NSImage;
+	};
+    ClassName = GDScale9View;
+    SuperClass = NSView;
+}
