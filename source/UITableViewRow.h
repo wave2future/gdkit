@@ -42,6 +42,17 @@
 	 * The nib name to load the cell from.
 	 */
 	NSString * nibName;
+	
+	/**
+	 * An outelet for a UITableCell contained in a nib. The file owner of that nib should
+	 * be a subclass of UITableViewRow.
+	 */
+	UITableViewCell * nibbedCell;
+	
+	/**
+	 * An outlet for a UITableView which is the owner of this row.
+	 */
+	UITableView * ownerTable;
 }
 
 @property (nonatomic,copy) NSString * nibName;
@@ -65,6 +76,17 @@
  * Generic data object for a row.
  */
 @property (nonatomic,retain) id data;
+
+/**
+ * An outelet for a UITableCell contained in a nib. The file owner of that nib should
+ * be a subclass of UITableViewRow.
+ */
+@property (nonatomic,retain) IBOutlet UITableViewCell * nibbedCell;
+
+/**
+ * An outlet for a UITableView which is the owner of this row.
+ */
+@property (nonatomic,retain) IBOutlet UITableView * ownerTable;
 
 /**
  * Shortcut to get a row index and set the cell re-use identifier.

@@ -8,6 +8,8 @@
 @synthesize cellIdentifier;
 @synthesize data;
 @synthesize nibName;
+@synthesize nibbedCell;
+@synthesize ownerTable;
 
 + (id) rowOfClass:(Class) _class withCellIdentifier:(NSString *) _cellIdentifier {
 	id row = [[_class alloc] init];
