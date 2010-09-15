@@ -1,8 +1,0 @@
-{
-	Actions = {
-	};
-	Outlets = {
-	};
-    ClassName = GDScale3Button;
-    SuperClass = NSButton;
-}
