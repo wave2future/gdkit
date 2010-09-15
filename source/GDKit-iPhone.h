@@ -16,7 +16,4 @@
 #import "NSUserDefaults+Additions.h"
 #import "UIColor+Additions.h"
 #import "UIImage+Additions.h"
-#import "UITableViewDataProvider.h"
-#import "UITableViewGroup.h"
-#import "UITableViewRow.h"
 #import "UIView+Additions.h"
