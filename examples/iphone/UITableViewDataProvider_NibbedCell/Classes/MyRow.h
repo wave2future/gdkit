@@ -20,7 +20,5 @@
 
 //the row
 @interface MyRow : UITableViewRow {
-	IBOutlet MyCustomCell * cell;
 }
-@property (nonatomic,retain) UITableViewCell * cell;
 @end

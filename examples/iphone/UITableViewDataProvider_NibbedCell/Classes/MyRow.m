@@ -14,9 +14,9 @@
 
 //the row
 @implementation MyRow
-@synthesize cell;
 
 - (UITableViewCell *) cellForTable:(UITableView *) _tableView {
+	[self setOwnerTable:_tableView];
 	MyDataItem * d = (MyDataItem *)data;
 	MyCustomCell * cl = (MyCustomCell *)[super getCachedRowForTable:_tableView];
 	if(cl) {
@@ -24,8 +24,8 @@
 		return cl;
 	}
 	[self loadNib];
-	[[cell uilabel] setText:[(MyDataItem *)data label]];
-	return cell;
+	[[(MyCustomCell*)nibbedCell uilabel] setText:[d label]];
+	return [nibbedCell autorelease];
 }
 
 @end
