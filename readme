@@ -37,7 +37,7 @@ Gradient Box View
 
 ## EXAMPLES ##
 
-examples/iphone/UITableDataSourceController - Example using the UITableDataSourceController class with table cells from nibs.
+examples/iphone/UITableDataSourceController - Example table table cells from nib.
 examples/mac/GDCrashReporter - Example app that uses GDCrashReporter.
 examples/mac/LaunchdStartup - Example installing a startup item.
 examples/mac/GDKit-IBAdditions-Sandbox - A sandbox I use for testing the IB additions while developing them.
