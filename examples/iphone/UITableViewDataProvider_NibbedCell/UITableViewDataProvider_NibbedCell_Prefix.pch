@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'UITableViewDataProvider_NibbedCell' target in the 'UITableViewDataProvider_NibbedCell' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif
