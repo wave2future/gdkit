@@ -55,6 +55,7 @@
 		07EE4955119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4954119F4DA900E774E8 /* scale_three_view_icon_vertical_large.png */; };
 		07EE4B25119FB53300E774E8 /* scale_three_view_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B23119FB53300E774E8 /* scale_three_view_test.png */; };
 		07EE4B26119FB53300E774E8 /* scale_three_view_vertical_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE4B24119FB53300E774E8 /* scale_three_view_vertical_test.png */; };
+		3F1A4822124D24A0005DE8F2 /* GDKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 074A56CE1240698D0003A03D /* GDKit.framework */; };
 		54D33B2906778E3300C9C163 /* GDScale9View.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* GDScale9View.classdescription */; };
 		8D1AC96C0486D14A00FE50C9 /* GDScale9ViewInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* GDScale9ViewInspector.m */; settings = {ATTRIBUTES = (); }; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
@@ -89,6 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3F1A4822124D24A0005DE8F2 /* GDKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +365,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "GDKitIBAdditions" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* GDKitIBAdditions */;
 			projectDirPath = "";
 			projectReferences = (
