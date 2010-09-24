@@ -23,45 +23,61 @@
 		07437EDA118A54F500EAD978 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437ED2118A54F500EAD978 /* NSString+Additions.m */; };
 		07437EDB118A54F500EAD978 /* NSUserDefaults+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07437EDC118A54F500EAD978 /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */; };
-		07437F02118A553400EAD978 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 07437F01118A553400EAD978 /* macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		077EDAA0118A86DA004ED780 /* GDPrintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDA9E118A86DA004ED780 /* GDPrintUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		077EDAA1118A86DA004ED780 /* GDPrintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDA9F118A86DA004ED780 /* GDPrintUtils.m */; };
 		077EDB8C118A9DD2004ED780 /* GDQuartzUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */; };
 		077EDC28118AB6BB004ED780 /* GDAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 077EDC26118AB6BB004ED780 /* GDAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077EDC27118AB6BB004ED780 /* GDAccelerometer.m */; };
 		07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E2114C11A5144900651452 /* NSObject+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E2114D11A5144900651452 /* NSObject+Additions.m */; };
+		3F1A45A0124D1082005DE8F2 /* UITableCellLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A459E124D1082005DE8F2 /* UITableCellLoader.m */; };
+		3F1A45A3124D10B5005DE8F2 /* UITableDataSourceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A45A1124D10B5005DE8F2 /* UITableDataSourceController.h */; };
+		3F1A45A4124D10B5005DE8F2 /* UITableDataSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A45A2124D10B5005DE8F2 /* UITableDataSourceController.m */; };
+		3F1A45A7124D10F9005DE8F2 /* UITableCellData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A45A5124D10F9005DE8F2 /* UITableCellData.h */; };
+		3F1A45A8124D10F9005DE8F2 /* UITableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A45A6124D10F9005DE8F2 /* UITableCellData.m */; };
+		3F1A465E124D156E005DE8F2 /* UITableCellLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A465D124D156E005DE8F2 /* UITableCellLoader.h */; };
+		3F1A466B124D15FB005DE8F2 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A466A124D15FB005DE8F2 /* macros.h */; };
+		3F1A4671124D1631005DE8F2 /* NSFileHandle+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A466F124D1631005DE8F2 /* NSFileHandle+Additions.h */; };
+		3F1A4672124D1631005DE8F2 /* NSFileHandle+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A4670124D1631005DE8F2 /* NSFileHandle+Additions.m */; };
+		3F1A4692124D16BF005DE8F2 /* GDPrintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1A4690124D16BF005DE8F2 /* GDPrintUtils.h */; };
+		3F1A4693124D16BF005DE8F2 /* GDPrintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A4691124D16BF005DE8F2 /* GDPrintUtils.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07437B39118A3B9D00EAD978 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		07437E9E118A546A00EAD978 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "source/UIColor+Additions.h"; sourceTree = "<group>"; };
-		07437E9F118A546A00EAD978 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "source/UIColor+Additions.m"; sourceTree = "<group>"; };
-		07437EA0118A546A00EAD978 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additions.h"; path = "source/UIImage+Additions.h"; sourceTree = "<group>"; };
-		07437EA1118A546A00EAD978 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additions.m"; path = "source/UIImage+Additions.m"; sourceTree = "<group>"; };
-		07437EA8118A546B00EAD978 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "source/UIView+Additions.h"; sourceTree = "<group>"; };
-		07437EA9118A546B00EAD978 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "source/UIView+Additions.m"; sourceTree = "<group>"; };
-		07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GDKit-iPhone.h"; path = "source/GDKit-iPhone.h"; sourceTree = "<group>"; };
-		07437ECD118A54F500EAD978 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/GDASLLog.h; sourceTree = "<group>"; };
-		07437ECE118A54F500EAD978 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDASLLog.m; path = source/GDASLLog.m; sourceTree = "<group>"; };
-		07437ECF118A54F500EAD978 /* GDCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCallback.h; path = source/GDCallback.h; sourceTree = "<group>"; };
-		07437ED0118A54F500EAD978 /* GDCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCallback.m; path = source/GDCallback.m; sourceTree = "<group>"; };
-		07437ED1118A54F500EAD978 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "source/NSString+Additions.h"; sourceTree = "<group>"; };
-		07437ED2118A54F500EAD978 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "source/NSString+Additions.m"; sourceTree = "<group>"; };
-		07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Additions.h"; path = "source/NSUserDefaults+Additions.h"; sourceTree = "<group>"; };
-		07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Additions.m"; path = "source/NSUserDefaults+Additions.m"; sourceTree = "<group>"; };
-		07437F01118A553400EAD978 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = source/macros.h; sourceTree = "<group>"; };
-		077EDA9E118A86DA004ED780 /* GDPrintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDPrintUtils.h; path = source/GDPrintUtils.h; sourceTree = "<group>"; };
-		077EDA9F118A86DA004ED780 /* GDPrintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDPrintUtils.m; path = source/GDPrintUtils.m; sourceTree = "<group>"; };
-		077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDQuartzUtils.h; path = source/GDQuartzUtils.h; sourceTree = "<group>"; };
-		077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDQuartzUtils.m; path = source/GDQuartzUtils.m; sourceTree = "<group>"; };
-		077EDC26118AB6BB004ED780 /* GDAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccelerometer.h; path = source/GDAccelerometer.h; sourceTree = "<group>"; };
-		077EDC27118AB6BB004ED780 /* GDAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccelerometer.m; path = source/GDAccelerometer.m; sourceTree = "<group>"; };
-		07E2114C11A5144900651452 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "source/NSObject+Additions.h"; sourceTree = "<group>"; };
-		07E2114D11A5144900651452 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "source/NSObject+Additions.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* gdkit_iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_iphone_Prefix.pch; path = source/gdkit_iphone_Prefix.pch; sourceTree = "<group>"; };
+		07437E9E118A546A00EAD978 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "source/iphone/UIColor+Additions.h"; sourceTree = "<group>"; };
+		07437E9F118A546A00EAD978 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "source/iphone/UIColor+Additions.m"; sourceTree = "<group>"; };
+		07437EA0118A546A00EAD978 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additions.h"; path = "source/iphone/UIImage+Additions.h"; sourceTree = "<group>"; };
+		07437EA1118A546A00EAD978 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additions.m"; path = "source/iphone/UIImage+Additions.m"; sourceTree = "<group>"; };
+		07437EA8118A546B00EAD978 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "source/iphone/UIView+Additions.h"; sourceTree = "<group>"; };
+		07437EA9118A546B00EAD978 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "source/iphone/UIView+Additions.m"; sourceTree = "<group>"; };
+		07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GDKit-iPhone.h"; path = "source/iphone/GDKit-iPhone.h"; sourceTree = "<group>"; };
+		07437ECD118A54F500EAD978 /* GDASLLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDASLLog.h; path = source/shared/GDASLLog.h; sourceTree = "<group>"; };
+		07437ECE118A54F500EAD978 /* GDASLLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDASLLog.m; path = source/shared/GDASLLog.m; sourceTree = "<group>"; };
+		07437ECF118A54F500EAD978 /* GDCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDCallback.h; path = source/shared/GDCallback.h; sourceTree = "<group>"; };
+		07437ED0118A54F500EAD978 /* GDCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDCallback.m; path = source/shared/GDCallback.m; sourceTree = "<group>"; };
+		07437ED1118A54F500EAD978 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "source/shared/NSString+Additions.h"; sourceTree = "<group>"; };
+		07437ED2118A54F500EAD978 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "source/shared/NSString+Additions.m"; sourceTree = "<group>"; };
+		07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Additions.h"; path = "source/shared/NSUserDefaults+Additions.h"; sourceTree = "<group>"; };
+		07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Additions.m"; path = "source/shared/NSUserDefaults+Additions.m"; sourceTree = "<group>"; };
+		077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDQuartzUtils.h; path = source/shared/GDQuartzUtils.h; sourceTree = "<group>"; };
+		077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDQuartzUtils.m; path = source/shared/GDQuartzUtils.m; sourceTree = "<group>"; };
+		077EDC26118AB6BB004ED780 /* GDAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAccelerometer.h; path = source/iphone/GDAccelerometer.h; sourceTree = "<group>"; };
+		077EDC27118AB6BB004ED780 /* GDAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAccelerometer.m; path = source/iphone/GDAccelerometer.m; sourceTree = "<group>"; };
+		07E2114C11A5144900651452 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "source/shared/NSObject+Additions.h"; sourceTree = "<group>"; };
+		07E2114D11A5144900651452 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "source/shared/NSObject+Additions.m"; sourceTree = "<group>"; };
+		3F1A459E124D1082005DE8F2 /* UITableCellLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableCellLoader.m; path = source/iphone/UITableCellLoader.m; sourceTree = "<group>"; };
+		3F1A45A1124D10B5005DE8F2 /* UITableDataSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableDataSourceController.h; path = source/iphone/UITableDataSourceController.h; sourceTree = "<group>"; };
+		3F1A45A2124D10B5005DE8F2 /* UITableDataSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableDataSourceController.m; path = source/iphone/UITableDataSourceController.m; sourceTree = "<group>"; };
+		3F1A45A5124D10F9005DE8F2 /* UITableCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableCellData.h; path = source/iphone/UITableCellData.h; sourceTree = "<group>"; };
+		3F1A45A6124D10F9005DE8F2 /* UITableCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableCellData.m; path = source/iphone/UITableCellData.m; sourceTree = "<group>"; };
+		3F1A465D124D156E005DE8F2 /* UITableCellLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableCellLoader.h; path = source/iphone/UITableCellLoader.h; sourceTree = "<group>"; };
+		3F1A466A124D15FB005DE8F2 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = source/shared/macros.h; sourceTree = "<group>"; };
+		3F1A466F124D1631005DE8F2 /* NSFileHandle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+Additions.h"; path = "source/shared/NSFileHandle+Additions.h"; sourceTree = "<group>"; };
+		3F1A4670124D1631005DE8F2 /* NSFileHandle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileHandle+Additions.m"; path = "source/shared/NSFileHandle+Additions.m"; sourceTree = "<group>"; };
+		3F1A4690124D16BF005DE8F2 /* GDPrintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDPrintUtils.h; path = source/shared/GDPrintUtils.h; sourceTree = "<group>"; };
+		3F1A4691124D16BF005DE8F2 /* GDPrintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDPrintUtils.m; path = source/shared/GDPrintUtils.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* gdkit_iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdkit_iphone_Prefix.pch; path = source/iphone/gdkit_iphone_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGDKit-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGDKit-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,18 +111,22 @@
 				07437ECF118A54F500EAD978 /* GDCallback.h */,
 				07437EC8118A54DA00EAD978 /* GDKit-iPhone.h */,
 				AA747D9E0F9514B9006C5449 /* gdkit_iphone_Prefix.pch */,
-				077EDA9E118A86DA004ED780 /* GDPrintUtils.h */,
+				3F1A4690124D16BF005DE8F2 /* GDPrintUtils.h */,
 				077EDB8A118A9DD1004ED780 /* GDQuartzUtils.h */,
-				07437F01118A553400EAD978 /* macros.h */,
+				3F1A466A124D15FB005DE8F2 /* macros.h */,
+				3F1A466F124D1631005DE8F2 /* NSFileHandle+Additions.h */,
 				07E2114C11A5144900651452 /* NSObject+Additions.h */,
 				07437ED1118A54F500EAD978 /* NSString+Additions.h */,
 				07437ED3118A54F500EAD978 /* NSUserDefaults+Additions.h */,
 				07437E9E118A546A00EAD978 /* UIColor+Additions.h */,
 				07437EA0118A546A00EAD978 /* UIImage+Additions.h */,
+				3F1A45A5124D10F9005DE8F2 /* UITableCellData.h */,
+				3F1A465D124D156E005DE8F2 /* UITableCellLoader.h */,
+				3F1A45A1124D10B5005DE8F2 /* UITableDataSourceController.h */,
 				07437EA8118A546B00EAD978 /* UIView+Additions.h */,
 			);
 			name = Headers;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		0867D691FE84028FC02AAC07 /* gdkit-iphone */ = {
 			isa = PBXGroup;
@@ -134,17 +154,21 @@
 				077EDC27118AB6BB004ED780 /* GDAccelerometer.m */,
 				07437ECE118A54F500EAD978 /* GDASLLog.m */,
 				07437ED0118A54F500EAD978 /* GDCallback.m */,
-				077EDA9F118A86DA004ED780 /* GDPrintUtils.m */,
+				3F1A4691124D16BF005DE8F2 /* GDPrintUtils.m */,
 				077EDB8B118A9DD1004ED780 /* GDQuartzUtils.m */,
+				3F1A4670124D1631005DE8F2 /* NSFileHandle+Additions.m */,
 				07E2114D11A5144900651452 /* NSObject+Additions.m */,
 				07437ED2118A54F500EAD978 /* NSString+Additions.m */,
 				07437ED4118A54F500EAD978 /* NSUserDefaults+Additions.m */,
 				07437E9F118A546A00EAD978 /* UIColor+Additions.m */,
 				07437EA1118A546A00EAD978 /* UIImage+Additions.m */,
+				3F1A45A6124D10F9005DE8F2 /* UITableCellData.m */,
+				3F1A459E124D1082005DE8F2 /* UITableCellLoader.m */,
+				3F1A45A2124D10B5005DE8F2 /* UITableDataSourceController.m */,
 				07437EA9118A546B00EAD978 /* UIView+Additions.m */,
 			);
 			name = Source;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -157,15 +181,19 @@
 				07437ED5118A54F500EAD978 /* GDASLLog.h in Headers */,
 				07437ED7118A54F500EAD978 /* GDCallback.h in Headers */,
 				07437EC9118A54DA00EAD978 /* GDKit-iPhone.h in Headers */,
-				077EDAA0118A86DA004ED780 /* GDPrintUtils.h in Headers */,
 				077EDB8C118A9DD2004ED780 /* GDQuartzUtils.h in Headers */,
-				07437F02118A553400EAD978 /* macros.h in Headers */,
 				07E2114E11A5144900651452 /* NSObject+Additions.h in Headers */,
 				07437ED9118A54F500EAD978 /* NSString+Additions.h in Headers */,
 				07437EDB118A54F500EAD978 /* NSUserDefaults+Additions.h in Headers */,
 				07437EAA118A546B00EAD978 /* UIColor+Additions.h in Headers */,
 				07437EAC118A546B00EAD978 /* UIImage+Additions.h in Headers */,
 				07437EB4118A546B00EAD978 /* UIView+Additions.h in Headers */,
+				3F1A45A3124D10B5005DE8F2 /* UITableDataSourceController.h in Headers */,
+				3F1A45A7124D10F9005DE8F2 /* UITableCellData.h in Headers */,
+				3F1A465E124D156E005DE8F2 /* UITableCellLoader.h in Headers */,
+				3F1A466B124D15FB005DE8F2 /* macros.h in Headers */,
+				3F1A4671124D1631005DE8F2 /* NSFileHandle+Additions.h in Headers */,
+				3F1A4692124D16BF005DE8F2 /* GDPrintUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "GDKit-iPhone" */;
 			buildPhases = (
-				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
 				0783BA52118BA241007EEB51 /* Gen Docs */,
+				3F1A471D124D186C005DE8F2 /* Environment */,
 			);
 			buildRules = (
 			);
@@ -197,7 +226,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "gdkit-iphone" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* gdkit-iphone */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -223,6 +259,20 @@
 			shellPath = /bin/sh;
 			shellScript = "#/usr/local/bin/doxygen docs/doxygenconfig";
 		};
+		3F1A471D124D186C005DE8F2 /* Environment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Environment;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "env > env";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -233,7 +283,6 @@
 				077EDC29118AB6BB004ED780 /* GDAccelerometer.m in Sources */,
 				07437ED6118A54F500EAD978 /* GDASLLog.m in Sources */,
 				07437ED8118A54F500EAD978 /* GDCallback.m in Sources */,
-				077EDAA1118A86DA004ED780 /* GDPrintUtils.m in Sources */,
 				077EDB8D118A9DD2004ED780 /* GDQuartzUtils.m in Sources */,
 				07437EDA118A54F500EAD978 /* NSString+Additions.m in Sources */,
 				07437EDC118A54F500EAD978 /* NSUserDefaults+Additions.m in Sources */,
@@ -241,6 +290,11 @@
 				07437EAD118A546B00EAD978 /* UIImage+Additions.m in Sources */,
 				07437EB5118A546B00EAD978 /* UIView+Additions.m in Sources */,
 				07E2114F11A5144900651452 /* NSObject+Additions.m in Sources */,
+				3F1A45A0124D1082005DE8F2 /* UITableCellLoader.m in Sources */,
+				3F1A45A4124D10B5005DE8F2 /* UITableDataSourceController.m in Sources */,
+				3F1A45A8124D10F9005DE8F2 /* UITableCellData.m in Sources */,
+				3F1A4672124D1631005DE8F2 /* NSFileHandle+Additions.m in Sources */,
+				3F1A4693124D16BF005DE8F2 /* GDPrintUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +313,11 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = source/gdkit_iphone_Prefix.pch;
+				GCC_PREFIX_HEADER = source/iphone/gdkit_iphone_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "GDKit-iPhone";
+				SDKROOT = iphonesimulator4.1;
 			};
 			name = Debug;
 		};
@@ -273,9 +329,11 @@
 				DSTROOT = /tmp/gdkit_iphone.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = source/gdkit_iphone_Prefix.pch;
+				GCC_PREFIX_HEADER = source/iphone/gdkit_iphone_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "GDKit-iPhone";
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
