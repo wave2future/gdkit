@@ -45,3 +45,19 @@ examples/mac/GDKit-IBAdditions-Sandbox - A sandbox I use for testing the IB addi
 ## MACROS ##
 
 See the MACROS file for useful macros.
+
+## BUILDING ##
+
+- GDKIT-MAC & GDCrashReporter
+  GDKit mac depends on GDCrashReporter. And GDCrashReporter depends on GDKit-Mac.
+  This circular reference means you have to build each of them twice, in this order:
+  -Build gdkit-mac.xcodeproj
+  -Build projects/gdcrashreporter/GDCrashReporter.xcodeproj
+  -Build gdkit-mac.xcodeproj
+  -Build projects/gdcrashreporter/GDCrashReporter.xcodeproj
+
+- GDKIT-IPHONE
+  -Build gdkit-iphone.xcodeproj
+
+- GDKIT IB-ADDITIONS
+  -Build projects/mac_ibadditions/GDKitIBAdditions.xcodeproj
