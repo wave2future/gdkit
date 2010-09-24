@@ -19,10 +19,10 @@ GDKitIBAdditions.framework - Interface Builder Plugin for Mac Components
 
 ## XCODE PROJECTS ##
 
-gdkit-mac.xcodeproj - GDKit-Mac project file.
-gdkit-iphone.xcodeproj - GDKit-iPhone project file.
-projects/gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj - GDKitIBAdditions project file.
-projects/gdcrashreporter/GDCrashReporter.xcodeproj - GDCrashReporter project file.
+gdkit-mac.xcodeproj - GDKit-Mac project file
+gdkit-iphone.xcodeproj - GDKit-iPhone project file
+projects/gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj - GDKitIBAdditions project file
+projects/gdcrashreporter/GDCrashReporter.xcodeproj - GDCrashReporter project file
 
 ## GDKIT IB-ADDITIONS CONTENTS ##
 
