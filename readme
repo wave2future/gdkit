@@ -10,12 +10,21 @@
 
 Mac and iPhone Objective-C code.
 
-## IT CONTAINS TWO FRAMEWORKS ##
+## CONTENTS ##
 
-GDKit.framework for Mac
-GDKit-iPhone.a for iphone
+GDKit-Mac.framework - Framework for Mac
+GDKit-iPhone.a - Static library iphone
+GDCrashReporter.app - Crash reporter application for Mac
+GDKitIBAdditions.framework - Interface Builder Plugin for Mac Components
 
-## THERE'S ALSO AN INTERFACE BUILDER PLUGIN FOR GDKIT-MAC CONTAINING THESE COMPONENTS ##
+## XCODE PROJECTS ##
+
+gdkit-mac.xcodeproj - GDKit-Mac project file.
+gdkit-iphone.xcodeproj - GDKit-iPhone project file.
+projects/gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj - GDKitIBAdditions project file.
+projects/gdcrashreporter/GDCrashReporter.xcodeproj - GDCrashReporter project file.
+
+## GDKIT IB-ADDITIONS CONTENTS ##
 
 Scale Three View
 Scale Three Button
@@ -26,15 +35,13 @@ Scale Nine Button Cell
 Tile View
 Gradient Box View
 
-## XCODE PROJECTS ##
-
-gdkit-mac.xcodeproj
-gdkit-iphone.xcodeproj
-gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj
-
-## DOCS ##
-http://codeendeavor.com/docs/gdkit/
-
 ## EXAMPLES ##
 
-There are examples in the examples/ folder.
+examples/iphone/UITableDataSourceController - Example using the UITableDataSourceController class with table cells from nibs.
+examples/mac/GDCrashReporter - Example app that uses GDCrashReporter.
+examples/mac/LaunchdStartup - Example installing a startup item.
+examples/mac/GDKit-IBAdditions-Sandbox - A sandbox I use for testing the IB additions while developing them.
+
+## MACROS ##
+
+See the MACROS file for useful macros.

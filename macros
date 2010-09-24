@@ -1,6 +1,2 @@
 These are some macros you should know about.
 
-GDIncludeInterfaceBuilderTemplateDrawing - When building the interface builder additions for gdkit-mac,
-this macro turns on any template drawing that's done in interface builder. Template drawing is where
-the default object doesn't contain enough information to draw anything, but something needs to be drawn.
-So it uses a template - see GDScale9View for an example.
