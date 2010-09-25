@@ -1,0 +1,63 @@
+          __  __          __      
+         /\ \/\ \      __/\ \__   
+   __    \_\ \ \ \/'\ /\_\ \ ,_\  
+ /'_ `\  /'_` \ \ , < \/\ \ \ \/  
+/\ \_\ \/\ \)\ \ \ \\`\\ \ \ \ \_ 
+\ \____ \ \___,_\ \_\ \_\ \_\ \__\
+ \/___L\ \/__,_ /\/_/\/_/\/_/\/__/
+   /\____/                        
+   \_/__/
+
+Mac and iPhone Objective-C code.
+
+## CONTENTS ##
+
+GDKit-Mac.framework - Framework for Mac
+GDKit-iPhone.a - Static library iphone
+GDCrashReporter.app - Crash reporter application for Mac
+GDKitIBAdditions.framework - Interface Builder Plugin for Mac Components
+
+## XCODE PROJECTS ##
+
+gdkit-mac.xcodeproj - GDKit-Mac project file
+gdkit-iphone.xcodeproj - GDKit-iPhone project file
+projects/gdkit-mac-ibadditions/gdkit-mac-ibadditions.xcodeproj - GDKitIBAdditions project file
+projects/gdcrashreporter/GDCrashReporter.xcodeproj - GDCrashReporter project file
+
+## GDKIT IB-ADDITIONS CONTENTS ##
+
+Scale Three View
+Scale Three Button
+Scale Three Button Cell
+Scale Nine View
+Scale Nine Button
+Scale Nine Button Cell
+Tile View
+Gradient Box View
+
+## EXAMPLES ##
+
+examples/iphone/UITableDataSourceController - Example table table cells from nib.
+examples/mac/GDCrashReporter - Example app that uses GDCrashReporter.
+examples/mac/LaunchdStartup - Example installing a startup item.
+examples/mac/GDKit-IBAdditions-Sandbox - A sandbox I use for testing the IB additions while developing them.
+
+## MACROS ##
+
+See the MACROS file for useful macros.
+
+## BUILDING ##
+
+- GDKIT-MAC & GDCrashReporter
+  GDKit mac depends on GDCrashReporter. And GDCrashReporter depends on GDKit-Mac.
+  This circular reference means you have to build each of them twice, in this order:
+  -Build gdkit-mac.xcodeproj
+  -Build projects/gdcrashreporter/GDCrashReporter.xcodeproj
+  -Build gdkit-mac.xcodeproj
+  -Build projects/gdcrashreporter/GDCrashReporter.xcodeproj
+
+- GDKIT-IPHONE
+  -Build gdkit-iphone.xcodeproj
+
+- GDKIT IB-ADDITIONS
+  -Build projects/mac_ibadditions/GDKitIBAdditions.xcodeproj
