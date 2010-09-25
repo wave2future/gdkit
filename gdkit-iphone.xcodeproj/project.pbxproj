@@ -208,7 +208,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
 				0783BA52118BA241007EEB51 /* Gen Docs */,
-				3F1A471D124D186C005DE8F2 /* Environment */,
 			);
 			buildRules = (
 			);
@@ -258,20 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#/usr/local/bin/doxygen docs/doxygenconfig";
-		};
-		3F1A471D124D186C005DE8F2 /* Environment */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Environment;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "env > env";
 		};
 /* End PBXShellScriptBuildPhase section */
 
