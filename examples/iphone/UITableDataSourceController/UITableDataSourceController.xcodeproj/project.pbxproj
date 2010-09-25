@@ -26,14 +26,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F1A470E124D180F005DE8F2 /* gdkit-iphone.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libGDKit-iPhone.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "GDKit-iPhone";
 		};
 		3F1A4714124D1812005DE8F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F1A470E124D180F005DE8F2 /* gdkit-iphone.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* GDKit-iPhone */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "GDKit-iPhone";
 		};
 /* End PBXContainerItemProxy section */
